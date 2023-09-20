@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import Footer from "../components/Footer/Footer";
+import Header from '../components/Header/Header';
 
 // const myFont = localFont({ src: '../NeueHaasDisplayMediu.ttf' })
 const inter = Inter({ subsets: ["latin"], variable: "--font-neue" });
@@ -17,8 +19,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} font-sans`}>{children}</body>
+    <html lang="es">
+      <body className={`${inter.variable} font-sans`}>
+        <div className="relative flex min-h-screen flex-col">
+          {/* <SiteHeader /> */}
+          <Header />
+          <div className="flex-1">{children}</div>
+          <Footer />
+        </div>
+      </body>
     </html>
   );
 }

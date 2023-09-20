@@ -1,7 +1,10 @@
 import Contact from "@/components/Contact/Contact";
 import GridClients from "@/components/Grid/GridClients";
+import GridFeatured from "@/components/Grid/GridFeatured";
 import GridFeatures from "@/components/Grid/GridFeatures";
+import GridServices from "@/components/Grid/GridServices";
 import Grid from "@/components/Grid/GridTeamMembers";
+import Slider from "@/components/Slider/Slider";
 
 const items = [
   {
@@ -63,6 +66,39 @@ const items = [
   {
     name: "Felipe Madero",
     role: "CEO/Founder Partner",
+  },
+];
+
+const sliderItems = [
+  {
+    image: "",
+    title: "inDrive ft. Martina la Peligrosa",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+  },
+  {
+    image: "",
+    title: "inDrive ft. Martina la Peligrosa 2",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+  },
+  {
+    image: "",
+    title: "inDrive ft. Martina la Peligrosa 3",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+  },
+  {
+    image: "",
+    title: "inDrive ft. Martina la Peligrosa 4",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+  },
+  {
+    image: "",
+    title: "inDrive ft. Martina la Peligrosa 5",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
   },
 ];
 
@@ -175,11 +211,13 @@ const clients = [
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gray-400">
-      <Contact />
-
       <div className="flex flex-col gap-[425px]">
+        <Contact />
+        <GridServices />
+        <GridFeatured />
         <Grid items={items} />
         <GridFeatures items={features} />
+        <Slider items={sliderItems} />
         <GridClients items={clients} />
       </div>
     </main>
