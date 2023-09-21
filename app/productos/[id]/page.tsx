@@ -1,11 +1,11 @@
 "use client";
 
 import { neueThin, neueXThin } from "@/styles/fonts";
-import { productos } from "../page";
 import RangeSlider from "../../../components/RangeSlider/RangeSlider";
 import { Input } from "@/components/ui/input";
 import { InterestCheckbox } from "@/components/Interest/InterestCheckbox";
 import { useState } from "react";
+import { productos } from "@/lib/data";
 
 export default function Page({ params }: any) {
   const { id } = params;
