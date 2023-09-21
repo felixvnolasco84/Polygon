@@ -1,15 +1,24 @@
+"use client";
+
 import { neueThin, neueXThin } from "@/styles/fonts";
 import { productos } from "../page";
 import RangeSlider from "../../../components/RangeSlider/RangeSlider";
 import { Input } from "@/components/ui/input";
 import { InterestCheckbox } from "@/components/Interest/InterestCheckbox";
+import { useState } from "react";
 
-export default function page({ params }: any) {
+export default function Page({ params }: any) {
   const { id } = params;
 
   const product: any = productos.find(
     (product: any) => product.webTitle === id
   );
+
+  const [selectedItem, setSelectedItem] = useState<number | null>(null);
+
+  const handleItemClick = (index: number) => {
+    setSelectedItem(index === selectedItem ? null : index);
+  };
 
   const { title, services, minNumber, maxNumber, textReference } = product;
   return (
@@ -25,8 +34,13 @@ export default function page({ params }: any) {
         <div className="flex gap-4 justify-center">
           {services.map((service: any, index: any) => (
             <div
-              className="flex flex-col p-6 text-black-500 min-w-[398px] min-h-[237px] bg-gray-400 rounded-[10px] gap-6"
+              className={`cursor-pointer flex flex-col p-6 text-black-500 min-w-[398px] min-h-[237px] rounded-[10px] gap-6 ${
+                index === selectedItem
+                  ? "bg-flourescentYellow"
+                  : "bg-gray-400 hover:bg-flourescentYellow"
+              }`}
               key={index}
+              onClick={() => handleItemClick(index)}
             >
               <p className={`${neueThin.className} text-3xl`}>
                 {service.title}
@@ -62,7 +76,9 @@ export default function page({ params }: any) {
         <div className="flex flex-col bg-gray-400">
           <div className="flex justify-center p-24 gap-[70px]">
             <div className="w-[239px] h-[155px] bg-flourescentYellow"></div>
-            <p className={`${neueXThin.className} text-black-500 text-2xl max-w-[578px] leading-[40px]`}>
+            <p
+              className={`${neueXThin.className} text-black-500 text-2xl max-w-[578px] leading-[40px]`}
+            >
               Nuestro equipo se pondrá en contacto contigo en las siguientes 24
               horas. La información que nos compartiste nos ayudará a tener una
               mejor idea de lo que buscas y cómo podemos ayudarte.

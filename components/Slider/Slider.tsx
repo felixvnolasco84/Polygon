@@ -3,8 +3,8 @@
 import Image from "next/image";
 import React, { useState } from "react";
 
-import leftArrow from "../../images/leftArrow.svg";
-import rightArrow from "../../images/rightArrow.svg";
+import leftArrow from "@/public/images/leftArrow.svg";
+import rightArrow from "@/public/images/rightArrow.svg";
 import { neueThin, neueXThin } from "@/styles/fonts";
 
 const Slider = ({ items }: any) => {

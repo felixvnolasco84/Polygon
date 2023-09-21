@@ -1,8 +1,12 @@
 import Contact from "@/components/Contact/Contact";
+import SuccessMessage from "@/components/Contact/SuccessMessage";
+import GridAssociate from "@/components/Grid/GridAssociate";
 import GridClients from "@/components/Grid/GridClients";
 import GridFeatured from "@/components/Grid/GridFeatured";
 import GridFeatures from "@/components/Grid/GridFeatures";
+import GridHomeHero from "@/components/Grid/GridHomeHero";
 import GridServices from "@/components/Grid/GridServices";
+import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
 
@@ -208,15 +212,54 @@ const clients = [
   },
 ];
 
+const partners = [
+  {
+    image: "/images/Partners/Meta.png",
+    imageWidth: "120",
+    imageHeight: "120",
+    title: "Digital Marketing Associate",
+    description:
+      "Nuestro enfoque se centra en entregar y seguir resultados tangibles para nuestros clientes. Medimos el éxito a través de métricas concretas y estamos constantemente buscando formas de mejorar y superar expectativas.",
+  },
+  {
+    image: "/images/Partners/Shopify.png",
+    imageWidth: "407",
+    imageHeight: "139",
+    title: "Shopify Partner",
+    description:
+      "Nuestro equipo de expertos ha superado rigurosos estándares de competencia y capacitación, lo que nos permite ofrecerte servicios de eCommerce de vanguardia respaldados por el sello distintivo de Shopify.",
+  },
+  {
+    image: "/images/Partners/Google.png",
+    imageWidth: "120",
+    imageHeight: "120",
+    title: "Google UX Design Professional Certificate",
+    description:
+      "Nuestro equipo está compuesto por expertos que se dedican a estar a la vanguardia de las últimas tendencias y plataformas de medios. Aplicamos conceptos fundamentales de UX, como el diseño centrado en el usuario, la accesibilidad y el diseño centrado en la equidad.",
+  },
+  {
+    image: "/images/Partners/Semrush.png",
+    imageWidth: "378",
+    imageHeight: "70",
+    title: "Semrush Agency Partners",
+    description:
+      "Somos un equipo hiperespecializado en diferentes disciplinas (SEO, SEM, Performance, Content, Marketing, Social Media y Branding) para lograr generar estrategias completas alineadas 100% a los objetivos de negocio.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-gray-400">
       <div className="flex flex-col gap-[425px]">
         <Contact />
+        <GridHomeHero />
         <GridServices />
         <GridFeatured />
+        <SuccessMessage />
+        <GridTalent />
         <Grid items={items} />
         <GridFeatures items={features} />
+        <GridAssociate items={partners} />
         <Slider items={sliderItems} />
         <GridClients items={clients} />
       </div>
