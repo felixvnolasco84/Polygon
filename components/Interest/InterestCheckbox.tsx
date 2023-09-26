@@ -68,7 +68,7 @@ export function InterestCheckbox() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
         <FormField
           control={form.control}
           name="items"
@@ -78,7 +78,7 @@ export function InterestCheckbox() {
                 También estoy interesado en:
               </FormLabel>
 
-              <div className="flex flex-row gap-10">
+              <div className="flex flex-row gap-10 m-auto w-full">
                 {items.map((item) => (
                   <FormField
                     key={item.id}
@@ -88,7 +88,7 @@ export function InterestCheckbox() {
                       return (
                         <FormItem
                           key={item.id}
-                          className="flex flex-row items-center space-x-3 space-y-0"
+                          className="flex flex-row items-center space-x-2 space-y-0"
                         >
                           <FormControl>
                             <Checkbox

@@ -25,7 +25,7 @@ const Slider = ({ items }: any) => {
       <div className="flex items-center h-[520px]">
         <button
           onClick={prevItem}
-          className="bg-gray-200 h-fit p-2 rounded-full"
+          className="bg-white h-fit p-2 rounded-full"
         >
           <Image src={leftArrow} alt="" />
         </button>

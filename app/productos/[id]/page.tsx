@@ -1,11 +1,11 @@
 "use client";
 
 import { neueThin, neueXThin } from "@/styles/fonts";
-import RangeSlider from "../../../components/RangeSlider/RangeSlider";
 import { Input } from "@/components/ui/input";
 import { InterestCheckbox } from "@/components/Interest/InterestCheckbox";
 import { useState } from "react";
 import { productos } from "@/lib/data";
+import { Slider } from "@/components/ui/slider"
 
 export default function Page({ params }: any) {
   const { id } = params;
@@ -22,16 +22,16 @@ export default function Page({ params }: any) {
 
   const { title, services, minNumber, maxNumber, textReference } = product;
   return (
-    <div className="flex flex-col gap-[74px]  p-24">
+    <div className="container mt-[120px] mb-[120px] flex flex-col gap-[74px]">
       <h1 className={`${neueXThin.className} text-7xl text-black-500`}>
         {title}
       </h1>
 
-      <div className="flex flex-col gap-[50px]">
+      <div className="flex flex-col justify-center max-w-[1226px] m-auto gap-[16px]">
         <h2 className={`${neueThin.className} text-[40px] text-black-500`}>
           Cuéntanos qué es lo que necesitas.
         </h2>
-        <div className="flex gap-4 justify-center">
+        <div className="flex gap-4 justify-center ">
           {services.map((service: any, index: any) => (
             <div
               className={`cursor-pointer flex flex-col p-6 text-black-500 min-w-[398px] min-h-[237px] rounded-[10px] gap-6 ${
@@ -53,14 +53,19 @@ export default function Page({ params }: any) {
         </div>
 
         <div
-          className={`${neueThin.className} flex flex-col text-[40px] py-[60px] text-black-500 w-full min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between`}
+          className={`${neueThin.className} flex flex-col text-[40px] py-[60px] text-black-500 w-full min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
         >
           <p className="text-center">¿Tienes un presupuesto aproximado?</p>
-          <RangeSlider minNumber={minNumber} maxNumber={maxNumber} />
+
+          {/* <RangeSlider minNumber={minNumber} maxNumber={maxNumber} /> */}
+          <div className="w-1/2 m-auto">
+            <Slider defaultValue={[33]} max={100} step={1} />
+          </div>
+          
         </div>
 
         <div
-          className={`${neueThin.className} flex flex-col text-[40px] py-[60px] text-black-500 w-full min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between`}
+          className={`${neueThin.className} flex flex-col text-[40px] py-[60px] text-black-500 w-full min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
         >
           <p className=" pl-6">{textReference}</p>
 
@@ -69,7 +74,7 @@ export default function Page({ params }: any) {
           </div>
         </div>
 
-        <div className="flex bg-gray-400 pl-6 py-[60px]">
+        <div className="flex bg-gray-400 px-6 py-[60px] w-full">
           <InterestCheckbox />
         </div>
 

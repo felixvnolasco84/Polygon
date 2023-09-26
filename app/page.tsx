@@ -131,82 +131,62 @@ const features = [
 
 const clients = [
   {
-    image: "",
+    image: "/images/Logo/Clients/Audible@2x.png",
     description:
       "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Carlsberg@2x.png",
     description:
       "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/InDrive@2x.png",
     description:
       "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Actinver@2x.png",
     description:
       "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Bupa@2x.png",
     description:
       "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Adobe@2x.png",
     description:
       "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Pane@2x.png",
     description:
       "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Samsung@2x.png",
     description:
       "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/MITZU@2x.png",
     description:
       "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/CirculoProveedores@2x.png",
     description:
       "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
   },
   {
-    image: "",
+    image: "/images/Logo/Clients/Titan@2x.png",
     description:
       "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
   },
   {
-    image: "",
-    description:
-      "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
-  },
-  {
-    image: "",
-    description:
-      "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
-  },
-  {
-    image: "",
-    description:
-      "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
-  },
-  {
-    image: "",
-    description:
-      "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
-  },
-  {
-    image: "",
+    image: "/images/Logo/Clients/KEXP@2x.png",
     description:
       "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
   },
