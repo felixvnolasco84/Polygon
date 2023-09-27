@@ -35,7 +35,7 @@ const FormSchema = z.object({
   phoneNumber: z.string().regex(phoneRegex, "Número de Teléfono Inválido"),
 });
 
-export function ContactForm() {
+export function ProductForm() {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
   });
@@ -55,9 +55,9 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex items-center w-2/3 rounded-2xl gap-5"
+        className="flex items-center w-10/12 rounded-2xl gap-5"
       >
-        <div className="flex bg-gray-400 p-4 gap-8 rounded-2xl">
+        <div className="flex bg-white p-4 gap-4 rounded-2xl">
           <FormField
             control={form.control}
             name="name"

@@ -1,7 +1,7 @@
 import { neueXThin } from "@/styles/fonts";
 import Image from "next/image";
 import Link from "next/link";
-import rightArrow from "@/public/images/rightArrow.svg";
+import rightArrow from '@/public/images/rightArrow.svg';
 
 const services = [
   {
@@ -42,10 +42,10 @@ const services = [
   },
 ];
 
-export default function GridServices() {
+export default function GridBlogs() {
   return (
-    <div className="flex flex-col gap-[80px] px-24">
-      <h2 className={`${neueXThin.className} text-7xl text-black-500`}>
+    <div className="flex flex-col gap-[80px]">
+      <h2 className={`${neueXThin.className} text-7xl text-white`}>
         Experiencia, pasión y resultados en cada servicio.
       </h2>
 
@@ -54,11 +54,11 @@ export default function GridServices() {
           <Link
             href={service.path}
             key={index}
-            className="group flex justify-between items-end pb-6  border-b border-gray text-black-600"
+            className="group flex justify-between items-end pb-6  border-b border-gray text-white"
           >
             <div className="relative">
               <h3
-                className={`${neueXThin.className} transition ease-out relative z-10 text-4xl group-hover:bg-flourescentYellow group-hover:translate-x-14`}
+                className={`${neueXThin.className} transition ease-out relative z-10 text-4xl group-hover:bg-flourescentYellow group-hover:translate-x-14 group-hover:text-black`}
               >
                 {service.title}
               </h3>
@@ -71,10 +71,8 @@ export default function GridServices() {
               />
             </div>
 
-            <div className="flex gap-12">
-              <p
-                className={`${neueXThin.className} text-2xl group-hover:hidden`}
-              >
+            <div className="flex gap-12 group-hover:hidden">
+              <p className={`${neueXThin.className} text-2xl`}>
                 {service.description}
               </p>
               <div className="group-hover:hidden h-fit p-2 bg-flourescentYellow rounded-full">

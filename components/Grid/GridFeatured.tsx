@@ -7,7 +7,7 @@ import InDrive from '@/public/images/Customers/InDrive.png';
 
 export default function GridFeatured() {
   return (
-    <div className="flex flex-col gap-[50px]">
+    <div className="flex flex-col gap-[50px] px-24">
       <h2 className={`${neueXThin.className} text-7xl leading-[90px]`}>
         Innovación en acción: <br /> nuestro trabajo más reciente.
       </h2>

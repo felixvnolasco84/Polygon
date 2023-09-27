@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const GridClients = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-y-[95px]">
+    <div className="flex flex-col gap-y-[95px] px-24 pb-24">
       <h4 className={`${neueXThin.className} text-7xl text-black-500 max-w-[1097px] leading-[90px]`}>
         Nuestro Compromiso: <br /> Impulsar el Éxito de Nuestros Clientes.
       </h4>
@@ -18,7 +18,7 @@ const GridClients = ({ items }: any) => {
                 className={`${neueXThin.className} text-2xl text-black-500 leading-[35px]`}
               >
                 {item.description}
-              </span>
+              </span> 
             </div>
           </div>
         ))}

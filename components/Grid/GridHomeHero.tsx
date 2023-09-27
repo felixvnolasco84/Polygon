@@ -14,19 +14,19 @@ export default function GridHomeHero() {
         </h2>
 
         <div className="group flex gap-1 items-center relative">
-          <div className="relative w-full bg-white">
+          <div className="relative w-full bg-white rounded-[15px] overflow-hidden">
             <div
-              className={` absolute left-0 top-0 bg-flourescentYellow h-full w-0 transition-all duration-300 group-hover:w-full rounded-[10px]`}
+              className={` absolute left-0 top-0 bg-flourescentYellow h-full w-0 transition-all duration-300 group-hover:w-full`}
             >              
               <p
-                className={`hidden group-hover:w-full ${neueRoman.className} text-2xl pl-10 py-4 transition`}
+                className={`hidden group-hover:w-full ${neueRoman.className} text-2xl pl-10 py-4 transition rounded-[15px]`}
               >
                 Hablemos, nuestro equipo se comunicará contigo en las siguientes
                 24 horas.
               </p>
             </div>
             <p
-              className={`${neueRoman.className} text-2xl pl-10 py-4 rounded-[10px] w-full`}
+              className={`${neueRoman.className} text-2xl pl-10 py-4 w-full`}
             >
               Hablemos, nuestro equipo se comunicará contigo en las siguientes
               24 horas.

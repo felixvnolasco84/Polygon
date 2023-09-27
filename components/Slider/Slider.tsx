@@ -21,7 +21,7 @@ const Slider = ({ items }: any) => {
   };
 
   return (
-    <div className="flex items-start gap-5">
+    <div className="flex items-start gap-5 px-24">
       <div className="flex items-center h-[520px]">
         <button
           onClick={prevItem}

@@ -6,6 +6,7 @@ import { InterestCheckbox } from "@/components/Interest/InterestCheckbox";
 import { useState } from "react";
 import { productos } from "@/lib/data";
 import { Slider } from "@/components/ui/slider"
+import { ProductForm } from "@/components/Product/ProductForm";
 
 export default function Page({ params }: any) {
   const { id } = params;
@@ -78,8 +79,8 @@ export default function Page({ params }: any) {
           <InterestCheckbox />
         </div>
 
-        <div className="flex flex-col bg-gray-400">
-          <div className="flex justify-center p-24 gap-[70px]">
+        <div className="flex flex-col p-24 gap-[110px] items-center bg-gray-400">
+          <div className="flex justify-center  gap-[70px]">
             <div className="w-[239px] h-[155px] bg-flourescentYellow"></div>
             <p
               className={`${neueXThin.className} text-black-500 text-2xl max-w-[578px] leading-[40px]`}
@@ -89,6 +90,7 @@ export default function Page({ params }: any) {
               mejor idea de lo que buscas y cómo podemos ayudarte.
             </p>
           </div>
+            <ProductForm />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { neueXThin, neueThin } from "@/fonts";
 
 const GridFeatures = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-y-[50px]">
+    <div className="flex flex-col gap-y-[50px] px-24">
       <h4 className={`${neueXThin.className} text-7xl text-black-500`}>
         Calidad Polygon, trabaja con nosotros.
       </h4>
