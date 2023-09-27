@@ -11,11 +11,11 @@ export default function Header() {
       <Link href={"/"}>
         <Image src={PolygonIcon} alt="" width={209} height={42} />
       </Link>
-      <div className={`${neueLight.className} text-2xl  flex gap-[55px]`}>
-        <Link href={"/"}>Qué hacemos</Link>
-        <Link href={"/"}>Nuestro trabajo</Link>
-        <Link href={"/"}>Ideas</Link>
-        <Link href={"/"}>Contacto</Link>
+      <div className={`${neueLight.className} text-2xl  flex gap-[55px] items-center`}>
+        <Link className="py-[12px]" href={"/"}>Qué hacemos</Link>
+        <Link className="py-[12px]" href={"/"}>Nuestro trabajo</Link>
+        <Link className="py-[12px]" href={"/"}>Ideas</Link>
+        <Link className="py-[12px]" href={"/"}>Contacto</Link>
         <ContactDialog />
       </div>
     </div>
