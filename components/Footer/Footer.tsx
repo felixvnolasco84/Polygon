@@ -35,7 +35,7 @@ export default function Footer() {
             hola@polygonag.com
           </p>
         </div>
-      FooterContact</div>
+      </div>
     </div>
   );
 }

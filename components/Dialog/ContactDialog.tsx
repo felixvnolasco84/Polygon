@@ -11,11 +11,14 @@ import rightArrow from "@/public/images/rightArrow.svg";
 
 export default function ContactDialog() {
   return (
+      //TODO:FIX "button inside p is not possible"
     <Dialog>
       <DialogTrigger>
+
+        {/* Hablemos */}
         <Button
           type="submit"
-          className="relative group bg-transparent hover:bg-transparent w-fit h-fit"
+          className="relative group bg-transparent hover:bg-transparent w-fit h-fit p-0"
         >
           <span className="relative z-10 h-fit gap-4 hover:bg-black hover:text-white px-[32px] py-[12px] rounded-[15px] text-2xl font-normal bg-white text-black">
             Hablemos
@@ -30,10 +33,10 @@ export default function ContactDialog() {
           />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white h-fit p-0 left-[50%] top-[28%]">
-        <DialogDescription className="p-24">
+      <DialogContent className="bg-white h-fit p-0 left-[50%] top-[28%]">        
+        <div className="p-24">
           <Contact />
-        </DialogDescription>
+        </div>        
       </DialogContent>
     </Dialog>
   );

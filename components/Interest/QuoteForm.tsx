@@ -21,9 +21,9 @@ import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
-import RangeSlider from '../RangeSlider/RangeSlider';
 import { Slider } from "../ui/slider";
-import { Range } from "../ui/range";
+import { phoneRegex } from "@/components/Regex/Regex";
+import { Loader2 } from "lucide-react";
 
 const interest = [
   {
@@ -48,10 +48,6 @@ const interest = [
   },
 ] as const;
 
-const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
-);
-
 export function QuoteForm({
   services,
   minNumber,
@@ -61,6 +57,7 @@ export function QuoteForm({
   minNumber: number;
   maxNumber: number;
 }) {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   let titles: any = services.map((service) => service.title);
 
   const FormSchema = z.object({
@@ -85,12 +82,17 @@ export function QuoteForm({
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
+      service: "",
+      budget: [0],
       interest: [],
       linkReference: "",
+      name: "",
+      email: "",
+      phoneNumber: "",
     },
   });
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -99,6 +101,35 @@ export function QuoteForm({
         </pre>
       ),
     });
+    try {
+      setIsLoading(true);
+      const jsonData = JSON.stringify(data);
+      const url = "https://polygon-backend.vercel.app/quote";
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: jsonData,
+      };
+      const response = await fetch(url, requestOptions);
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log("POST request successful:", responseData);
+        toast({
+          variant: "successFormMessage",
+          title: "HEY!",
+          description: "Se ha enviado correctamente el formulario",
+        });
+        setIsLoading(false);
+      } else {
+        console.error("POST request failed with status:", response.status);
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Error sending POST request:", error);
+      setIsLoading(false);
+    }
   }
 
   const [selectedItem, setSelectedItem] = useState<number | null>(null);
@@ -172,8 +203,8 @@ export function QuoteForm({
               <FormLabel className="text-center text-[40px]">
                 ¿Tienes un presupuesto aproximado?
               </FormLabel>
-              <FormControl>                                               
-                 <Slider min={minNumber} max={maxNumber} {...field} />
+              <FormControl>
+                <Slider min={minNumber} max={maxNumber} {...field} />                
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -320,20 +351,36 @@ export function QuoteForm({
               />
             </div>
             <div className="relative group">
-              <Button
-                className="relative z-10 h-fit gap-4 hover:bg-black hover:text-white text-gray-600 px-[64px] py-[16px] rounded-[15px] text-2xl font-normal bg-flourescentYellow"
-                type="submit"
-              >
-                Enviar
-              </Button>
+              {true ? (
+                <>
+                  <Button
+                    type="submit"
+                    className="bg-black w-fit h-fit cursor-not-allowed"
+                    disabled={isLoading}
+                  >
+                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                    Por favor, espere
+                  </Button>
+                </>
+              ) : (
+                <Button
+                  type="submit"
+                  className="relative group bg-transparent hover:bg-transparent w-fit h-fit"
+                  disabled={isLoading}
+                >
+                  <span className="relative z-10 h-fit gap-4 hover:bg-black hover:text-white text-gray-600 px-[64px] py-[16px] rounded-[15px] text-2xl font-normal bg-flourescentYellow">
+                    Enviar
+                  </span>
 
-              <Image
-                className="transition ease-out absolute left-[50%] top-[10%] group-hover:block group-hover:translate-x-28 h-fit p-2 bg-flourescentYellow group-hover:bg-flourescent-yellow cursor-pointer rounded-full"
-                width={48}
-                height={48}
-                src={rightArrow}
-                alt=""
-              />
+                  <Image
+                    className="transition ease-out absolute left-[50%] top-[10%] group-hover:block group-hover:translate-x-28 h-fit p-2 bg-flourescentYellow group-hover:bg-flourescent-yellow cursor-pointer rounded-full"
+                    width={48}
+                    height={48}
+                    src={rightArrow}
+                    alt=""
+                  />
+                </Button>
+              )}
             </div>
           </div>
         </div>

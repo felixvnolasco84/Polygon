@@ -11,19 +11,13 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
-import { toast } from "@/components/ui/use-toast";
 import { Input } from "../ui/input";
 import rightArrow from "@/public/images/rightArrow.svg";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { Loader2 } from "lucide-react";
-
 import { useToast } from "@/components/ui/use-toast"
-
-
-const phoneRegex = new RegExp(
-  /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/
-);
+import { phoneRegex } from "@/components/Regex/Regex";
 
 const FormSchema = z.object({
   name: z
@@ -34,7 +28,7 @@ const FormSchema = z.object({
     .max(160, {
       message: "El nombre no puede ser más de 160 carácteres.",
     }),
-  mail: z.string().email({ message: "Correo electrónico Inválido" }),
+  email: z.string().email({ message: "Correo electrónico Inválido" }),
   phoneNumber: z.string().regex(phoneRegex, "Número de Teléfono Inválido"),
 });
 
@@ -46,49 +40,46 @@ export function ContactForm() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       name: "",
-      mail: "",
+      email: "",
       phoneNumber: "",
     },
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
-      setIsLoading(true);
-      // Convert the data object to JSON
-      const jsonData = JSON.stringify(data);
-
-      // Define the URL where you want to send the POST request
-      const url = "https://polygon-backend.vercel.app/client"; // Replace with your actual API endpoint
-
-      // Define the request options including method, headers, and body
+      setIsLoading(true);      
+      const jsonData = JSON.stringify(data);      
+      const url = "https://polygon-backend.vercel.app/client";      
       const requestOptions = {
         method: "POST",
         headers: {
-          "Content-Type": "application/json", // Set the content type to JSON
+          "Content-Type": "application/json",
         },
-        body: jsonData, // Pass the JSON data as the request body
-      };
-
-      // Send the POST request using the Fetch API
-      const response = await fetch(url, requestOptions);
-
-      // Check if the response status is OK (HTTP 200-299)
-      if (response.ok) {
-        const responseData = await response.json(); // Parse the response JSON
-        console.log("POST request successful:", responseData);        
+        body: jsonData,
+      };      
+      const response: any = await fetch(url, requestOptions);      
+      if (response.ok) {    
         toast({
           variant: "successFormMessage",
           title: "HEY!",
           description: "Se ha enviado correctamente el formulario",
         })
         setIsLoading(false);
-      } else {
-        // Handle error cases
-        console.error("POST request failed with status:", response.status);
+      } else {        
+        const { message } = await response.json();
+        toast({
+          title: "Oops..",
+          variant: "warning",
+          description: (
+            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+              <code className="text-white">{message}</code>
+            </pre>
+          ),
+        });     
         setIsLoading(false);
       }
-    } catch (error) {
-      console.error("Error sending POST request:", error);
+    } catch (error: any) { 
+      console.log(error);
       setIsLoading(false);
     }
   }
@@ -99,7 +90,7 @@ export function ContactForm() {
         onSubmit={form.handleSubmit(onSubmit)}
         className="flex items-center w-2/3 rounded-2xl gap-5"
       >
-        <div className="flex bg-gray-400 p-4 gap-8 rounded-2xl">
+        <div className="flex bg-gray-400 p-4 gap-8 rounded-2xl text-black-500">
           <FormField
             control={form.control}
             name="name"
@@ -119,7 +110,7 @@ export function ContactForm() {
           />
           <FormField
             control={form.control}
-            name="mail"
+            name="email"
             render={({ field }) => (
               <FormItem>
                 <FormControl>

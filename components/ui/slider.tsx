@@ -11,21 +11,10 @@ const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 >((props, ref) => {
-  // Estado para almacenar el valor del slider
   const [sliderValue, setSliderValue] = useState<number[]>([0]);
-
-  // Función para manejar el cambio en el slider
-  const handleSliderChange = (value: number[]) => {
-    // Obtén el nuevo valor del slider
-    const newValue = value;
-
-
-    
-    
-    
+  const handleSliderChange = (value: number[]) => {    
+    const newValue = value;    
     if (newValue[0] >= (props.min || 0) && newValue[0] <= (props.max || 0)) {
-      // Actualiza el estado con el nuevo valor del slider
-      console.log(newValue);
       setSliderValue(newValue);
     }
   };
