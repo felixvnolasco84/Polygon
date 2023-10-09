@@ -204,7 +204,7 @@ export function QuoteForm({
                 ¿Tienes un presupuesto aproximado?
               </FormLabel>
               <FormControl>
-                <Slider min={minNumber} max={maxNumber} {...field} />                
+                <Slider min={minNumber} max={maxNumber} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -265,8 +265,8 @@ export function QuoteForm({
                                   ? field.onChange([...field.value, item.id])
                                   : field.onChange(
                                       field.value?.filter(
-                                        (value) => value !== item.id
-                                      )
+                                        (value) => value !== item.id,
+                                      ),
                                     );
                               }}
                             />

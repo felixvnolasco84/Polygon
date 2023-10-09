@@ -55,19 +55,19 @@
 
     --radius: 0.5rem;
 
-    --color-white: #FFFFFF;
+    --color-white: #ffffff;
 
-    --color-dark-gray: #4B4B4B;
+    --color-dark-gray: #4b4b4b;
     --color-gray: #707070;
-    --color-light-gray: #F7F7F7;
+    --color-light-gray: #f7f7f7;
 
     --color-black: #000000;
-    --color-medium-black: #150C14;
-    --color-light-black: #0B0B0B;
+    --color-medium-black: #150c14;
+    --color-light-black: #0b0b0b;
 
-    --color-flourescent-yellow: #EDFF00;
+    --color-flourescent-yellow: #edff00;
 
-    --color-dark-green: #0E3128;
+    --color-dark-green: #0e3128;
   }
 
   .dark {

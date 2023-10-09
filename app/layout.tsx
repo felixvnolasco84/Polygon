@@ -2,8 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "../components/Footer/Footer";
-import Header from '../components/Header/Header';
-import { Toaster } from "@/components/ui/toaster"
+import Header from "../components/Header/Header";
+import { Toaster } from "@/components/ui/toaster";
 
 // const myFont = localFont({ src: '../NeueHaasDisplayMediu.ttf' })
 const inter = Inter({ subsets: ["latin"], variable: "--font-neue" });

@@ -1,9 +1,9 @@
 import { neueThin, neueXThin } from "@/styles/fonts";
 import Image from "next/image";
 import React from "react";
-import Aura from '@/public/images/Customers/Aura.png';
-import Bupa from '@/public/images/Customers/Bupa.png';
-import InDrive from '@/public/images/Customers/InDrive.png';
+import Aura from "@/public/images/Customers/Aura.png";
+import Bupa from "@/public/images/Customers/Bupa.png";
+import InDrive from "@/public/images/Customers/InDrive.png";
 
 export default function GridFeatured() {
   return (
@@ -14,7 +14,11 @@ export default function GridFeatured() {
 
       <div className="grid grid-rows-2 grid-flow-col gap-4">
         <div className="col-span-1 max-w-[812px] flex flex-col gap-5">
-          <Image src={InDrive} alt="" className="min-h-[565px] rounded-[10px]"></Image>
+          <Image
+            src={InDrive}
+            alt=""
+            className="min-h-[565px] rounded-[10px]"
+          ></Image>
           <div className="flex flex-col gap-5">
             <h4 className={`${neueThin.className} text-3xl text-black-500`}>
               inDrive ft. Martina la Peligrosa
@@ -28,7 +32,11 @@ export default function GridFeatured() {
           </div>
         </div>
         <div className="col-span-1 max-w-[812px] flex flex-col justify-end gap-5">
-          <Image src={Aura} alt="" className="min-h-[565px] rounded-[10px]"></Image>
+          <Image
+            src={Aura}
+            alt=""
+            className="min-h-[565px] rounded-[10px]"
+          ></Image>
           <div className="flex flex-col gap-5">
             <h4 className={`${neueThin.className} text-3xl text-black-500`}>
               Social & Paid Media

@@ -32,7 +32,9 @@ export default function GridTalent() {
             <p className={`${neueThin.className} text-2xl text-white`}>
               {feature.title}
             </p>
-            <p className={`${neueXThin.className} text-2xl text-white leading-[35px]`}>
+            <p
+              className={`${neueXThin.className} text-2xl text-white leading-[35px]`}
+            >
               {feature.description}
             </p>
           </div>

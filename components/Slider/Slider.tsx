@@ -16,17 +16,14 @@ const Slider = ({ items }: any) => {
 
   const nextItem = () => {
     setCurrentIndex(
-      currentIndex + 1 >= items.length ? currentIndex : currentIndex + 1
+      currentIndex + 1 >= items.length ? currentIndex : currentIndex + 1,
     );
   };
 
   return (
     <div className="flex items-start gap-5 px-24">
       <div className="flex items-center h-[520px]">
-        <button
-          onClick={prevItem}
-          className="bg-white h-fit p-2 rounded-full"
-        >
+        <button onClick={prevItem} className="bg-white h-fit p-2 rounded-full">
           <Image src={leftArrow} alt="" />
         </button>
       </div>

@@ -1,7 +1,7 @@
 import { neueXThin } from "@/styles/fonts";
 import Image from "next/image";
 import Link from "next/link";
-import rightArrow from '@/public/images/rightArrow.svg';
+import rightArrow from "@/public/images/rightArrow.svg";
 
 const services = [
   {

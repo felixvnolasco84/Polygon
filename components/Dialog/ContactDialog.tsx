@@ -11,10 +11,9 @@ import rightArrow from "@/public/images/rightArrow.svg";
 
 export default function ContactDialog() {
   return (
-      //TODO:FIX "button inside p is not possible"
+    //TODO:FIX "button inside p is not possible"
     <Dialog>
       <DialogTrigger>
-
         {/* Hablemos */}
         <Button
           type="submit"
@@ -33,10 +32,10 @@ export default function ContactDialog() {
           />
         </Button>
       </DialogTrigger>
-      <DialogContent className="bg-white h-fit p-0 left-[50%] top-[28%]">        
+      <DialogContent className="bg-white h-fit p-0 left-[50%] top-[28%]">
         <div className="p-24">
           <Contact />
-        </div>        
+        </div>
       </DialogContent>
     </Dialog>
   );

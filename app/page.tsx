@@ -227,41 +227,48 @@ const partners = [
   },
 ];
 
-
 const CarrouselItems = [
   {
-    image: "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
+    image:
+      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
   },
   {
-    image: "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: ""
-  }
-]
+    image:
+      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    alt: "",
+  },
+];
 
 export default function Home() {
   return (
@@ -275,7 +282,7 @@ export default function Home() {
         <Grid items={items} />
         <GridFeatures items={features} />
         <GridAssociate items={partners} />
-        <Slider items={sliderItems} />        
+        <Slider items={sliderItems} />
         <GridClients items={clients} />
       </div>
     </main>

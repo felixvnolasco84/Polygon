@@ -16,7 +16,7 @@ import rightArrow from "@/public/images/rightArrow.svg";
 import Image from "next/image";
 import React from "react";
 import { Loader2 } from "lucide-react";
-import { useToast } from "@/components/ui/use-toast"
+import { useToast } from "@/components/ui/use-toast";
 import { phoneRegex } from "@/components/Regex/Regex";
 
 const FormSchema = z.object({
@@ -33,8 +33,8 @@ const FormSchema = z.object({
 });
 
 export function ContactForm() {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);  
-  const { toast } = useToast()
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -47,25 +47,25 @@ export function ContactForm() {
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
-      setIsLoading(true);      
-      const jsonData = JSON.stringify(data);      
-      const url = "https://polygon-backend.vercel.app/client";      
+      setIsLoading(true);
+      const jsonData = JSON.stringify(data);
+      const url = "https://polygon-backend.vercel.app/client";
       const requestOptions = {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: jsonData,
-      };      
-      const response: any = await fetch(url, requestOptions);      
-      if (response.ok) {    
+      };
+      const response: any = await fetch(url, requestOptions);
+      if (response.ok) {
         toast({
           variant: "successFormMessage",
           title: "HEY!",
           description: "Se ha enviado correctamente el formulario",
-        })
+        });
         setIsLoading(false);
-      } else {        
+      } else {
         const { message } = await response.json();
         toast({
           title: "Oops..",
@@ -75,10 +75,10 @@ export function ContactForm() {
               <code className="text-white">{message}</code>
             </pre>
           ),
-        });     
+        });
         setIsLoading(false);
       }
-    } catch (error: any) { 
+    } catch (error: any) {
       console.log(error);
       setIsLoading(false);
     }
@@ -173,7 +173,7 @@ export function ContactForm() {
               alt=""
             />
           </Button>
-        )}        
+        )}
       </form>
     </Form>
   );

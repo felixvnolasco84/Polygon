@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-export default function RangeSlider({ minNumber, maxNumber }: any,) {
+export default function RangeSlider({ minNumber, maxNumber }: any) {
   // Estado para almacenar el valor del slider
   const [sliderValue, setSliderValue] = useState<number>(minNumber);
 
