@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const GridClients = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-y-[95px] px-24 pb-24">
+    <div className="flex flex-col gap-y-[95px] px-4 pb-24 lg:px-24">
       <h4
-        className={`${neueXThin.className} text-7xl text-black-500 max-w-[1097px] leading-[90px]`}
+        className={`${neueXThin.className} text-3xl font-bold lg:font-medium lg:text-7xl text-black-500 max-w-[1097px] lg:leading-[90px]`}
       >
         Nuestro Compromiso: <br /> Impulsar el Éxito de Nuestros Clientes.
       </h4>
-      <div className="grid grid-cols-1 gap-x-4 gap-y-[200px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="px-none border-[rgba(112, 112, 112, 0.20)] grid grid-cols-2 border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-[200px] lg:border-none">
         {items.map((item: any, index: any) => (
           <div className="flex flex-col gap-[30px]" key={index}>
-            <div className="flex flex-col gap-6 w-full rounded-[10px] min-h-[450px] justify-between">
-              <div className="flex items-center justify-center h-full">
+            <div className="min-h-none border-[rgba(112, 112, 112, 0.20)] flex min-h-[200px] w-full flex-col items-center justify-between gap-6 rounded-[10px] border lg:min-h-[450px]">
+              <div className="flex h-full max-w-[120px] items-center justify-center lg:max-w-none">
                 <Image
                   className="h-fit"
                   src={item.image}
@@ -23,7 +23,7 @@ const GridClients = ({ items }: any) => {
                 />
               </div>
               <span
-                className={`${neueXThin.className} text-2xl text-black-500 leading-[35px]`}
+                className={`${neueXThin.className} hidden lg: block text-2xl text-black-500leading-[35px]`}
               >
                 {item.description}
               </span>

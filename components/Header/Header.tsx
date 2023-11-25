@@ -7,12 +7,15 @@ import ContactDialog from "../Dialog/ContactDialog";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-40 w-full h-[104px] flex justify-between items-center px-24 bg-white">
-      <Link href={"/"}>
+    <div className="sticky top-0 z-40 flex h-[104px] w-full items-center justify-between bg-white px-4 lg:px-24">
+      <Link
+        className="min-h-[22px] w-[209px] max-w-[110px] lg:max-w-none"
+        href={"/"}
+      >
         <Image src={PolygonIcon} alt="" width={209} height={42} />
       </Link>
       <div
-        className={`${neueLight.className} text-2xl  flex gap-[55px] items-center`}
+        className={`${neueLight.className} hidden lg:block text-2xl  flex gap-[55px] items-center`}
       >
         <Link className="py-[12px]" href={"/"}>
           Qué hacemos
@@ -26,8 +29,10 @@ export default function Header() {
         <Link className="py-[12px]" href={"/"}>
           Contacto
         </Link>
-        <ContactDialog />
       </div>
+      <Link className="block py-[12px] lg:hidden" href={"/"}>
+        Contacto
+      </Link>
     </div>
   );
 }

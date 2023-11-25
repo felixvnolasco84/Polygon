@@ -273,17 +273,17 @@ const CarrouselItems = [
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-gray-400">
-      <div className="flex flex-col gap-[425px]">
-        <GridHomeHero />
+      <div className="flex flex-col gap-[120px] lg:gap-[425px]">
+        {/* <GridHomeHero />
         <GridServices />
         <GridFeatured />
-        <SuccessMessage />
-        <GridTalent />
+        <SuccessMessage /> */}
+        {/* <GridTalent /> */}
         <Grid items={items} />
-        <GridFeatures items={features} />
-        <GridAssociate items={partners} />
-        <Slider items={sliderItems} />
-        <GridClients items={clients} />
+        {/* <GridFeatures items={features} />
+        <GridAssociate items={partners} /> */}
+        {/* <Slider items={sliderItems} />
+        <GridClients items={clients} /> */}
       </div>
     </main>
   );

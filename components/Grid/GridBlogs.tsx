@@ -44,26 +44,26 @@ const services = [
 
 export default function GridBlogs() {
   return (
-    <div className="flex flex-col gap-[80px]">
-      <h2 className={`${neueXThin.className} text-7xl text-white`}>
+    <div className="flex flex-col gap-[20px] lg:gap-[80px]">
+      <h2 className={`${neueXThin.className} lg:text-7xl text-white`}>
         Experiencia, pasión y resultados en cada servicio.
       </h2>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-5 lg:gap-12">
         {services.map((service: any, index: any) => (
           <Link
             href={service.path}
             key={index}
-            className="group flex justify-between items-end pb-6  border-b border-gray text-white"
+            className="group flex items-end justify-between border-b border-gray pb-5 text-white lg:pb-6"
           >
             <div className="relative">
               <h3
-                className={`${neueXThin.className} transition ease-out relative z-10 text-4xl group-hover:bg-flourescentYellow group-hover:translate-x-14 group-hover:text-black`}
+                className={`${neueXThin.className} transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-flourescentYellow lg:group-hover:translate-x-14 lg:group-hover:text-black`}
               >
                 {service.title}
               </h3>
               <Image
-                className="absolute hidden left-[0%] top-[0%] group-hover:block h-fit p-2 bg-flourescentYellow group-hover:bg-flourescent-yellow cursor-pointer rounded-full"
+                className="group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 group-hover:block"
                 width={48}
                 height={48}
                 src={rightArrow}
@@ -71,11 +71,11 @@ export default function GridBlogs() {
               />
             </div>
 
-            <div className="flex gap-12 group-hover:hidden">
+            <div className="flex hidden gap-12 group-hover:hidden lg:block">
               <p className={`${neueXThin.className} text-2xl`}>
                 {service.description}
               </p>
-              <div className="group-hover:hidden h-fit p-2 bg-flourescentYellow rounded-full">
+              <div className="h-fit rounded-full bg-flourescentYellow p-2 group-hover:hidden">
                 <Image src={rightArrow} alt="" />
               </div>
             </div>

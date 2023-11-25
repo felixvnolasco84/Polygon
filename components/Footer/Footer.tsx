@@ -5,11 +5,11 @@ import FooterContact from "./FooterContact";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-[200px] bg-black-600 p-24">
+    <div className="flex flex-col bg-black-600 p-4 lg:gap-[200px] lg:p-24">
       <GridBlogs />
       <FooterContact />
 
-      <div className="flex gap-[150px]">
+      <div className="flex flex-col gap-[150px] lg:flex-row">
         <div className="flex flex-col gap-5">
           <p
             className={`${neueThin.className} text-3xl text-white leading-none`}

@@ -7,31 +7,33 @@ import InDrive from "@/public/images/Customers/InDrive.png";
 
 export default function GridFeatured() {
   return (
-    <div className="flex flex-col gap-[50px] px-24">
-      <h2 className={`${neueXThin.className} text-7xl leading-[90px]`}>
+    <div className="flex flex-col gap-[30px] px-2 lg:gap-[50px] lg:px-24">
+      <h2
+        className={`${neueXThin.className} font-bold lg:font-medium text-3xl lg:text-7xl lg:leading-[90px]`}
+      >
         Innovación en acción: <br /> nuestro trabajo más reciente.
       </h2>
 
-      <div className="grid grid-rows-2 grid-flow-col gap-4">
-        <div className="col-span-1 max-w-[812px] flex flex-col gap-5">
+      <div className="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-4">
+        <div className="col-span-1 flex h-fit max-w-[812px] flex-col lg:gap-5">
           <Image
             src={InDrive}
             alt=""
-            className="min-h-[565px] rounded-[10px]"
+            className="min-h-[480px] rounded-[10px] lg:max-h-none lg:min-h-[565px]"
           ></Image>
-          <div className="flex flex-col gap-5">
-            <h4 className={`${neueThin.className} text-3xl text-black-500`}>
+          <div className="flex flex-col gap-2 lg:gap-5">
+            <h4 className={`${neueThin.className} text-xl lg:text-3xl text-black-500`}>
               inDrive ft. Martina la Peligrosa
             </h4>
             <p
-              className={`${neueXThin.className} text-2xl text-black-500 leading-[40px]`}
+              className={`${neueXThin.className} text-lg lg:text-2xl text-black-500 lg:leading-[40px]`}
             >
               Campaña para inDrive enfocada en generación de UGC, estrategia,
               creatividad, producción audiovisual y musical.
             </p>
           </div>
         </div>
-        <div className="col-span-1 max-w-[812px] flex flex-col justify-end gap-5">
+        <div className="col-span-1 flex max-w-[812px] flex-col justify-end gap-5">
           <Image
             src={Aura}
             alt=""
