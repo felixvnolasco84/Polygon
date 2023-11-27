@@ -6,9 +6,9 @@ import rightArrow from "@/public/images/rightArrow.svg";
 export default function GridHomeHero() {
   return (
     <div className="h-full bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1700867423/Hero/w3iaprxevielkitit5do.png')] bg-cover bg-center bg-no-repeat lg:bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236838/Hero/t7tbgy0jtorwc4lwf0uf.png')]">
-      <div className="flex h-[774px] flex-col justify-end gap-4 bg-gradient-to-b from-transparent to-[#00000085] px-4 pb-[30px] lg:px-24">
+      <div className="flex h-[774px] flex-col justify-end gap-4 bg-gradient-to-b from-transparent to-[#00000085] px-2 pb-12 lg:px-24 lg:pb-[30px]">
         <h2
-          className={`${neueXThin.className} text-3xl lg:text-7xl text-white`}
+          className={`${neueXThin.className} text-2xl lg:text-7xl text-white`}
         >
           Somos una agencia enfocada en ofrecer soluciones digitales de alta
           calidad diseñadas para impulsar el rendimiento

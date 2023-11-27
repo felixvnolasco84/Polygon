@@ -18,6 +18,7 @@ import React from "react";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { phoneRegex } from "@/components/Regex/Regex";
+import { neueThin } from "@/styles/fonts";
 
 const FormSchema = z.object({
   name: z
@@ -88,9 +89,9 @@ export function ContactForm() {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex w-full flex-col items-center gap-5 rounded-2xl lg:w-2/3 lg:flex-row"
+        className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-2/3 lg:flex-row`}
       >
-        <div className="flex w-full flex-col gap-8 rounded-2xl bg-gray-400 p-4 text-black-500 lg:flex-row">
+        <div className="flex w-full flex-col gap-8 rounded-2xl bg-transparent lg:flex-row lg:bg-gray-400 lg:p-4 lg:text-black-500">
           <FormField
             control={form.control}
             name="name"
@@ -158,10 +159,10 @@ export function ContactForm() {
         ) : (
           <Button
             type="submit"
-            className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
+            className="group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
             disabled={isLoading}
           >
-            <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-2xl font-normal text-gray-600 hover:bg-black hover:text-white">
+            <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:text-2xl">
               Enviar
             </span>
 

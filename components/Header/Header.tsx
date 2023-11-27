@@ -15,7 +15,7 @@ export default function Header() {
         <Image src={PolygonIcon} alt="" width={209} height={42} />
       </Link>
       <div
-        className={`${neueLight.className} hidden lg:block text-2xl  flex gap-[55px] items-center`}
+        className={`${neueLight.className} hidden lg:flex text-2xl gap-[55px] items-center`}
       >
         <Link className="py-[12px]" href={"/"}>
           Qué hacemos
@@ -30,7 +30,7 @@ export default function Header() {
           Contacto
         </Link>
       </div>
-      <Link className="block py-[12px] lg:hidden" href={"/"}>
+      <Link className={`${neueLight.className} block py-[12px] lg:hidden`} href={"/"}>
         Contacto
       </Link>
     </div>

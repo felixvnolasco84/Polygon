@@ -49,16 +49,16 @@ const interest = [
 ] as const;
 
 export function QuoteForm({
-  services,
+  projects,
   minNumber,
   maxNumber,
 }: {
-  services: any[];
+  projects: any[];
   minNumber: number;
   maxNumber: number;
 }) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  let titles: any = services.map((service) => service.title);
+  let titles: any = projects.map((service) => service.title);
 
   const FormSchema = z.object({
     service: z.enum(titles, {
@@ -140,7 +140,7 @@ export function QuoteForm({
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 ">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
         <FormField
           control={form.control}
           name="service"
@@ -150,12 +150,12 @@ export function QuoteForm({
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="flex gap-4 justify-center"
+                  className="flex justify-center gap-4"
                 >
-                  {services.map((service: any, index: any) => (
+                  {projects.map((service: any, index: any) => (
                     <FormItem
                       key={index}
-                      className={`relative flex flex-col text-black-500 min-w-[398px] min-h-[237px] rounded-[10px] gap-6 bg-transparent`}
+                      className={`relative flex min-h-[237px] min-w-[398px] flex-col gap-6 rounded-[10px] bg-transparent text-black-500`}
                     >
                       <FormControl
                         onClick={() => handleItemClick(index)}
@@ -168,11 +168,11 @@ export function QuoteForm({
                         `}
                       >
                         <RadioGroupItem
-                          className="rounded-[10px] -z-10 border-none"
+                          className="-z-10 rounded-[10px] border-none"
                           value={service.title}
                         />
                       </FormControl>
-                      <FormLabel className="cursor-pointer p-6 h-full">
+                      <FormLabel className="h-full cursor-pointer p-6">
                         <div className="flex flex-col gap-6">
                           <p className={`${neueThin.className} text-3xl`}>
                             {service.title}
@@ -215,14 +215,14 @@ export function QuoteForm({
           control={form.control}
           name="linkReference"
           render={({ field }) => (
-            <FormItem className="flex flex-col justify-center items-center bg-gray-400 px-6 py-[60px] w-full rounded-[10px]">
+            <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-[60px]">
               <FormLabel className={`${neueThin.className} text-[40px]`}>
                 En caso de que exista, compártenos tu página actual en la que
                 debamos trabajar. (Si no tienes una, puedes proporcionarnos una
                 referencia de lo que buscas).
               </FormLabel>
               <FormControl>
-                <div className="p-4 rounded-[10px] w-3/4 bg-white">
+                <div className="w-3/4 rounded-[10px] bg-white p-4">
                   <Input
                     className={`${neueThin.className}`}
                     placeholder="Link de página o referencia"
@@ -238,14 +238,14 @@ export function QuoteForm({
           control={form.control}
           name="interest"
           render={() => (
-            <FormItem className="flex flex-col gap-14 bg-gray-400 px-6 py-[60px] w-full">
+            <FormItem className="flex w-full flex-col gap-14 bg-gray-400 px-6 py-[60px]">
               <FormLabel
                 className={`${neueThin.className} text-[40px] leading-none`}
               >
                 También estoy interesado en:
               </FormLabel>
 
-              <div className="flex flex-row gap-10 m-auto w-full">
+              <div className="m-auto flex w-full flex-row gap-10">
                 {interest.map((item) => (
                   <FormField
                     key={item.id}
@@ -287,9 +287,9 @@ export function QuoteForm({
           )}
         />
 
-        <div className="flex flex-col p-24 gap-[110px] items-center bg-gray-400">
-          <div className="flex justify-center  gap-[70px]">
-            <div className="w-[239px] h-[155px] bg-flourescentYellow"></div>
+        <div className="flex flex-col items-center gap-[110px] bg-gray-400 p-24">
+          <div className="flex justify-center gap-[70px]">
+            <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
             <p
               className={`${neueXThin.className} text-black-500 text-2xl max-w-[578px] leading-[40px]`}
             >
@@ -300,7 +300,7 @@ export function QuoteForm({
           </div>
 
           <div className="flex gap-4">
-            <div className="flex bg-white p-4 gap-4 rounded-2xl">
+            <div className="flex gap-4 rounded-2xl bg-white p-4">
               <FormField
                 control={form.control}
                 name="name"
@@ -309,7 +309,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Nombre"
-                        className="bg-transparent resize-none py-0"
+                        className="resize-none bg-transparent py-0"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -325,7 +325,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Correo"
-                        className="bg-transparent resize-none py-0"
+                        className="resize-none bg-transparent py-0"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -341,7 +341,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Celular"
-                        className="bg-transparent resize-none py-0"
+                        className="resize-none bg-transparent py-0"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -350,12 +350,12 @@ export function QuoteForm({
                 )}
               />
             </div>
-            <div className="relative group">
+            <div className="group relative">
               {true ? (
                 <>
                   <Button
                     type="submit"
-                    className="bg-black w-fit h-fit cursor-not-allowed"
+                    className="h-fit w-fit cursor-not-allowed bg-black"
                     disabled={isLoading}
                   >
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -365,15 +365,15 @@ export function QuoteForm({
               ) : (
                 <Button
                   type="submit"
-                  className="relative group bg-transparent hover:bg-transparent w-fit h-fit"
+                  className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
                   disabled={isLoading}
                 >
-                  <span className="relative z-10 h-fit gap-4 hover:bg-black hover:text-white text-gray-600 px-[64px] py-[16px] rounded-[15px] text-2xl font-normal bg-flourescentYellow">
+                  <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-2xl font-normal text-gray-600 hover:bg-black hover:text-white">
                     Enviar
                   </span>
 
                   <Image
-                    className="transition ease-out absolute left-[50%] top-[10%] group-hover:block group-hover:translate-x-28 h-fit p-2 bg-flourescentYellow group-hover:bg-flourescent-yellow cursor-pointer rounded-full"
+                    className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
                     width={48}
                     height={48}
                     src={rightArrow}

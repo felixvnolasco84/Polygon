@@ -8,68 +8,82 @@ import GridHomeHero from "@/components/Grid/GridHomeHero";
 import GridServices from "@/components/Grid/GridServices";
 import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
+import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
 import Slider from "@/components/Slider/Slider";
+import GridBlogs from "@/components/Grid/GridBlogs";
 
 const items = [
   {
     name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    role: "CEO & Founder Partner",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Manuel Manterola",
+    role: "NB Director & Partner",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Rodrigo Ogarrio",
+    role: "CCO & Founder Partner",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Nicole Woodman",
+    role: "Business Develop Manager",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Gala Gallegos",
+    role: "Head of Operations",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Nicolas Sotelo",
+    role: "Creative Director",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Edgar Magaña",
+    role: "Data Analyst",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Mariana Recinas",
+    role: "Performance Marketing",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Pablo Noguerón",
+    role: "Content Designer",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Jimena Rivera",
+    role: "Junior Designer",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Sebastián Designer",
+    role: "Senior Designer",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Eduardo Ruiz",
+    role: "Production Director",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Lorena G. Cuaxiloa",
+    role: "Content Creator",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Elena Gas",
+    role: "Social Media Manager",
   },
   {
-    name: "Felipe Madero",
-    role: "CEO/Founder Partner",
+    name: "Pamela Ramírez",
+    role: "SEO Content Writer",
+  },
+  {
+    name: "Cid Galván",
+    role: "Content Editor",
+  },
+  {
+    name: "Liliana Moctezuma",
+    role: "Office Administrator",
+  },
+  {
+    name: "Fernando Herrera",
+    role: "Production Assistant",
   },
 ];
 
@@ -272,18 +286,20 @@ const CarrouselItems = [
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between bg-gray-400">
+    <main className="bg-gray-[#FDFDFD] flex min-h-screen flex-col items-center justify-between">
       <div className="flex flex-col gap-[120px] lg:gap-[425px]">
-        {/* <GridHomeHero />
+        <GridHomeHero />
         <GridServices />
-        <GridFeatured />
+        {/* <GridFeatured />
         <SuccessMessage /> */}
-        {/* <GridTalent /> */}
+        <GridTalent />
         <Grid items={items} />
-        {/* <GridFeatures items={features} />
-        <GridAssociate items={partners} /> */}
-        {/* <Slider items={sliderItems} />
-        <GridClients items={clients} /> */}
+        <GridAssociateCarrousel />
+        {/* <GridFeatures items={features} /> */}
+        <GridAssociate items={partners} />
+        {/* <Slider items={sliderItems} /> */}
+        <GridClients items={clients} />
+        <GridBlogs />                
       </div>
     </main>
   );
