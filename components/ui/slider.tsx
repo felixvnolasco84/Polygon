@@ -11,15 +11,16 @@ const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
 >((props, ref) => {
-  const [sliderValue, setSliderValue] = useState<number[]>([0]);
+  const [sliderValue, setSliderValue] = useState<number[]>([45000]);
   const handleSliderChange = (value: number[]) => {
     const newValue = value;
+    console.log(newValue);
     if (newValue[0] >= (props.min || 0) && newValue[0] <= (props.max || 0)) {
       setSliderValue(newValue);
     }
   };
   return (
-    <div className="flex flex-col gap-12 w-1/2">
+    <div className="flex w-1/2 flex-col gap-12">
       <p
         className={`${neueThin.className} text-center leading-none text-[40px]`}
       >
@@ -30,16 +31,16 @@ const Slider = React.forwardRef<
         onValueChange={(value) => handleSliderChange(value)} // Use the handleSliderChange function here
         className={cn(
           "relative flex w-full touch-none select-none items-center",
-          props.className,
+          props.className
         )}
         {...props}
       >
-        <SliderPrimitive.Track className="relative h-[11px] w-full grow overflow-hidden rounded-[10px] bg-white">
-          <SliderPrimitive.Range className="absolute h-full bg-flourescentYellow" />
+        <SliderPrimitive.Track className="h-[11px] w-full grow overflow-hidden rounded-[10px] bg-white">
+          <SliderPrimitive.Range className="h-full bg-flourescentYellow" />
         </SliderPrimitive.Track>
         <SliderPrimitive.Thumb className="block h-8 w-8 rounded-full border-none border-primary bg-flourescentYellow ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50">
           <Image
-            className="p-0.5 w-full h-full bg-flourescentYellow group-hover:bg-flourescent-yellow cursor-pointer rounded-full"
+            className="group-hover:bg-flourescent-yellow h-full w-full cursor-pointer rounded-full bg-flourescentYellow p-0.5"
             width={0}
             height={0}
             src={rightArrow}

@@ -24,6 +24,7 @@ import { useState } from "react";
 import { Slider } from "../ui/slider";
 import { phoneRegex } from "@/components/Regex/Regex";
 import { Loader2 } from "lucide-react";
+import { Range } from "../ui/range";
 
 const interest = [
   {
@@ -49,10 +50,12 @@ const interest = [
 ] as const;
 
 export function QuoteForm({
+  service,
   projects,
   minNumber,
   maxNumber,
 }: {
+  service: string;
   projects: any[];
   minNumber: number;
   maxNumber: number;
@@ -61,29 +64,31 @@ export function QuoteForm({
   let titles: any = projects.map((service) => service.title);
 
   const FormSchema = z.object({
-    service: z.enum(titles, {
-      required_error: "Es necesario escoger un servicio",
+    service: z.string().default(service),
+    project: z.enum(titles, {
+      required_error: "Es necesario escoger un servicio",      
     }),
-    budget: z.array(z.number()).default([1000]),
+    budget: z.string().default(""),
     interest: z.array(z.string()),
     linkReference: z.string().optional().default(""),
     name: z
       .string()
       .min(2, {
-        message: "El nombre debe de ser de al menos 2 carácteres.",
+        message: "El nombre debe tener al menos 2 carácteres.",
       })
       .max(160, {
-        message: "El nombre no puede ser más de 160 carácteres.",
+        message: "El nombre no puede tener más de 160 carácteres.",
       }),
     email: z.string().email({ message: "Correo electrónico Inválido" }),
     phoneNumber: z.string().regex(phoneRegex, "Número de Teléfono Inválido"),
   });
-
+  
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      service: "",
-      budget: [0],
+      service: service,
+      project: "",
+      budget: "",
       interest: [],
       linkReference: "",
       name: "",
@@ -92,7 +97,7 @@ export function QuoteForm({
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: z.infer<typeof FormSchema>) {    
     toast({
       title: "You submitted the following values:",
       description: (
@@ -141,9 +146,10 @@ export function QuoteForm({
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <FormField control={form.control} name="service" render={() => <></>} />
         <FormField
           control={form.control}
-          name="service"
+          name="project"
           render={({ field }) => (
             <FormItem className="space-y-3">
               <FormControl>
@@ -204,7 +210,13 @@ export function QuoteForm({
                 ¿Tienes un presupuesto aproximado?
               </FormLabel>
               <FormControl>
-                <Slider step={5000} min={minNumber} max={maxNumber} {...field} />
+                <Range min={minNumber} max={maxNumber} step={5000} {...field} />
+                {/* <Slider                
+                  step={5000}
+                  min={minNumber}
+                  max={maxNumber}                  
+                  {...field}
+                /> */}
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -265,8 +277,8 @@ export function QuoteForm({
                                   ? field.onChange([...field.value, item.id])
                                   : field.onChange(
                                       field.value?.filter(
-                                        (value) => value !== item.id,
-                                      ),
+                                        (value) => value !== item.id
+                                      )
                                     );
                               }}
                             />

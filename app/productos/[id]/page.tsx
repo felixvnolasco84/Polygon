@@ -36,7 +36,8 @@ import { Metadata, ResolvingMetadata } from "next";
 export default function Page({ params }: Props) {
   const { id } = params;
 
-  const service: any = services.find((service: any) => service.slug === id);
+  const service: any = services.find((service: any) => service.slug === id);  
+
   console.log(service);
 
   return (
@@ -115,6 +116,7 @@ export default function Page({ params }: Props) {
             Cuéntanos qué es lo que necesitas.
           </h2>
           <QuoteForm
+            service={service.title}
             projects={service.projects}
             minNumber={service.minNumber}
             maxNumber={service.maxNumber}
