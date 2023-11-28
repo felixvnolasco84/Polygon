@@ -12,6 +12,28 @@ export const services = [
     description:
       "En Polygon, la Creatividad y Estrategia son los pilares fundamentales que impulsan el éxito de las marcas. A través de una combinación excepcional de pensamiento creativo y enfoque estratégico, ofrecemos soluciones publicitarias que capturan la esencia de tu marca y la posicionan en la mente de tu audiencia de manera impactante.",
     slug: "brand-and-creative-strategy",
+    objectives: [
+      {
+        title: "Creatividad inspiradora",
+        description:
+          "Transformamos conceptos en campañas visuales y narrativas, generando contenido que trasciende y resuena en la audiencia. Cada proyecto es una oportunidad para sorprender, aportar frescura y contar historias que conectan de manera profunda con tus clientes potenciales.",
+      },
+      {
+        title: "Estrategia personalizada",
+        description:
+          "No hay una estrategia única que se adapte a todos. Comprendemos tu mercado, tu audiencia y tu competencia para trazar un plan de acción que te coloque en una posición ventajosa. Cada estrategia se enfoca en maximizar el impacto y garantizar resultados medibles y significativos.",
+      },
+      {
+        title: "Comunicación efectiva",
+        description:
+          "La comunicación es clave. Nos esforzamos por forjar conexiones auténticas entre tu marca y tu audiencia. Utilizamos un enfoque centrado en el cliente, identificando sus deseos, necesidades y valores para entregar mensajes que resuenen.",
+      },
+      {
+        title: "Impacto medible",
+        description:
+          "Nuestra Creatividad y Estrategia van de la mano con la medición constante de resultados, métricas y análisis de datos. Esto garantiza que obtengas un retorno de inversión sólido y permite ajustar estrategias según los datos en tiempo real.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -49,6 +71,28 @@ export const services = [
     description:
       "Nuestra agencia ofrece un completo servicio de Social Media Marketing diseñado para impulsar la presencia de tu marca en las redes sociales. A través de una estrategia personalizada, establecemos objetivos medibles, identificamos tu audiencia objetivo, creamos contenido de calidad y gestionamos tus perfiles en plataformas relevantes.",
     slug: "social-media-marketing",
+    objectives: [
+      {
+        title: "Fortalecer presencia",
+        description:
+          "Nuestro servicio de Social Media Marketing está diseñado para construir y fortalecer tu presencia en redes sociales, aumentar la interacción con tu audiencia e impulsar el crecimiento de tu marca en el mundo digital.",
+      },
+      {
+        title: "Tono de marca coherente",
+        description:
+          "Nuestro enfoque se basa en el desarrollo de una voz y tono de marca coherentes, la planificación de un calendario editorial eficiente y el estímulo de la interacción con tu audiencia.",
+      },
+      {
+        title: "Maximizar resultados",
+        description:
+          "Analizamos y ajustamos nuestra estrategia para maximizar resultados y mantenernos actualizados con las últimas tendencias en redes sociales.",
+      },
+      {
+        title: "Visión clara",
+        description:
+          "Evaluamos el retorno de inversión (ROI) para que tengas una visión clara de cómo nuestro servicio impacta en tus objetivos comerciales.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -58,19 +102,19 @@ export const services = [
     ],
     projects: [
       {
-        title: "Branding.",
-        description:
-          "Creación de marca, diseño de logo, nombre, guía de identidad y tono.",
-      },
-      {
         title: "Estrategia.",
         description:
-          "Creación de estrategia de marca, linea de comunicación, ejecución y monitoreo.",
+          "Aterrizaje de tu estrategia de comunicación por cada canal o plataforma.",
       },
       {
-        title: "Consultoría.",
+        title: "Contenido.",
         description:
-          "Investigación y diagnóstico, identificación KPI`s, desarrollo de plan de acción.",
+          "Creación de contenido para la publicación en tus redes sociales.",
+      },
+      {
+        title: "Campañas.",
+        description:
+          "Aterrizaje de estrategia, creación de contenido, implementación, publicación y seguimiento.",
       },
     ],
     minNumber: 45000,
@@ -86,6 +130,28 @@ export const services = [
     description:
       "Un servicio de publicidad digital impulsado por datos y KPIs. Nuestra misión es llevar tu marca al siguiente nivel a través de estrategias de pago altamente optimizadas y orientadas a resultados medibles.",
     slug: "paid-media-marketing",
+    objectives: [
+      {
+        title: "Estrategia Basada en KPIs",
+        description:
+          "Los indicadores guían nuestras campañas y nos permiten evaluar el rendimiento de manera cuantitativa. Diseñamos nuestras estrategias para alcanzar estos objetivos y superarlos.",
+      },
+      {
+        title: "Publicidad Programática",
+        description:
+          "Nuestras campañas se ejecutan en tiempo real, y empleamos algoritmos de aprendizaje automático para optimizar las pujas y maximizar la eficiencia en cada impresión publicitaria. Esto nos permite llegar a las personas adecuadas en el momento adecuado.",
+      },
+      {
+        title: "Seguimiento y Atribución",
+        description:
+          "Utilizamos modelos de atribución multicanal para asignar el valor correcto a cada punto de contacto en el proceso de conversión. Esto nos permite identificar qué canales y estrategias son los más efectivos.",
+      },
+      {
+        title: "Optimización Continua",
+        description:
+          "Evaluamos el retorno de inversión (ROI) para que tengas una visión clara de cómo nuestro servicio impacta en tus objetivos comerciales.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -95,19 +161,19 @@ export const services = [
     ],
     projects: [
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Campañas.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Nos enfocamos en campañas de reconocimiento, tráfico, generación de clientes potenciales y conversión.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Estrategia Digital.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Análisis, resolución e implementación de la estrategia, ayudando al crecimiento de la marca.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Consultoría.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Investigación y diagnóstico, identificación KPI`s, desarrollo de plan de acción.",
       },
     ],
     minNumber: 45000,
@@ -123,6 +189,28 @@ export const services = [
     description:
       "Diseñamos estrategias y contenido de calidad para persuadir a Google. Eleva tu visibilidad y atrae tráfico orgánico con nuestra metodología profesional.",
     slug: "seo-and-content",
+    objectives: [
+      {
+        title: "Posicionamiento orgánico",
+        description:
+          "Ofrecemos SEO de alta calidad para tu marca. Logramos que aparezcas entre los primeros resultados en Google sin necesidad de publicidad.",
+      },
+      {
+        title: "SEO personalizado",
+        description:
+          "Valoramos tu marca y trabajamos para tu éxito. Nuestro enfoque es generar ventas y alcanzar tus metas comerciales.",
+      },
+      {
+        title: "Metodología de posicionamiento",
+        description:
+          "Consta de 4 elementos clave: SEO Técnico, Autoridad de dominio, Calidad del sitio y Visibilidad orgánica.",
+      },
+      {
+        title: "Objetivos tangibles",
+        description:
+          "El objetivo de nuestro trabajo es generar un impacto positivo que produzca mayores ventas y nutra tus objetivos de negocio.",
+      },
+    ],
     features: [
       {
         title: "SEO Técnico",
@@ -147,19 +235,19 @@ export const services = [
     ],
     projects: [
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "SEO Técnico.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Optimización de un sitio web para mejorar su visibilidad en los motores de búsqueda.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "SEO Content.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Creación y optimización de contenido para atraer tráfico de calidad.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Consultoría.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Asesoramiento especializado para desarrollar estrategias efectivas de SEO.",
       },
     ],
     minNumber: 45000,
@@ -175,6 +263,28 @@ export const services = [
     description:
       "Una oferta integral de servicios de desarrollo web. Nuestro enfoque técnico y avanzado impulsa la creación de sitios web de alto rendimiento y funcionalidad excepcional desde páginas plenamente informativas hasta e-commerce de alta escala.",
     slug: "key-web-development-services",
+    objectives: [
+      {
+        title: "Diseño personalizado",
+        description:
+          "Desarrollamos sitios web a medida con un enfoque en UX/UI. Creamos interfaces atractivas y funcionales que ofrecen una experiencia de usuario.",
+      },
+      {
+        title: "Desarrollo técnico avanzado",
+        description:
+          "Utilizamos tecnologías de desarrollo líderes como HTML5, CSS3 y JavaScript. Garantizamos la seguridad, escalabilidad y eficiencia de tu sitio mediante la programación eficiente.",
+      },
+      {
+        title: "SEO integrado",
+        description:
+          "Integramos estrategias de SEO desde el inicio. Optimizamos la estructura, contenido y rendimiento del sitio para mejorar su visibilidad en los motores de búsqueda.",
+      },
+      {
+        title: "Mantenimiento y actualizaciones",
+        description:
+          "Continuas Ofrecemos servicios de mantenimiento continuo, incluyendo parches de seguridad y actualizaciones de tecnología. Mantenemos tu sitio en pleno funcionamiento y al día con las últimas tendencias web.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -212,6 +322,28 @@ export const services = [
     description:
       "Proporcionamos un servicio especializado en la creación y gestión de contenido digital. Ofrecemos una amplia variedad de formatos, incluyendo contenido gráfico, fotografía de producto, fotografía situacional, contenido audiovisual, animación 2D y 3D, así como contenido generado con HTML para satisfacer tus necesidades de contenido en línea.",
     slug: "content-solutions",
+    objectives: [
+      {
+        title: "Estrategia de contenido",
+        description:
+          "Desarrollamos estrategias de contenido basadas en tus objetivos comerciales. Identificamos oportunidades de crecimiento y creamos un plan que abarca múltiples formatos de contenido.",
+      },
+      {
+        title: "Contenido de impacto",
+        description:
+          "Nuestro equipo especializado en contenido genera piezas gráficas, fotografías, contenido audiovisual de alta calidad, animaciones 2D y 3D y contenido interactivo mediante HTML.",
+      },
+      {
+        title: "Distribución estratégica",
+        description:
+          "Además de la creación, planificamos y ejecutamos la distribución estratégica de contenido en múltiples canales en línea, aprovechando la versatilidad de los diferentes formatos para amplificar tu presencia y llegar a una audiencia más amplia.",
+      },
+      {
+        title: "Medición y optimización",
+        description:
+          "Utilizamos análisis de datos para medir el rendimiento de cada formato de contenido. A través de la optimización constante, garantizamos que tu contenido digital se mantenga en evolución, maximizando su impacto y su capacidad para cumplir tus objetivos comerciales.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -221,19 +353,19 @@ export const services = [
     ],
     projects: [
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Video.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Creatividad, producción, guión y edición de contenido para comunicar mensajes efectivos.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Animación",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Creatividad, guión, storyboard, ilustración y animación en 2D y 3D.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Gráfico.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal, NIVEA.",
+          "Desde logotipos y material impreso hasta elementos visuales para medios digitales.",
       },
     ],
     minNumber: 45000,
@@ -297,7 +429,7 @@ export default function GridServices() {
             key={index}
             className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:pb-6"
           >
-            <div className="relative w-4/12">
+            <div className="relative w-full lg:w-4/12">
               <h3
                 className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-flourescentYellow lg:group-hover:translate-x-14`}
               >
@@ -312,7 +444,7 @@ export default function GridServices() {
               />
             </div>
 
-            <div className="flex w-8/12 items-center gap-12">
+            <div className="flex items-center gap-12 lg:w-8/12">
               <p
                 className={`${neueXThin.className} hidden lg:block lg:text-2xl group-hover:text-transparent w-11/12`}
               >
