@@ -204,7 +204,7 @@ export function QuoteForm({
                 ¿Tienes un presupuesto aproximado?
               </FormLabel>
               <FormControl>
-                <Slider min={minNumber} max={maxNumber} {...field} />
+                <Slider step={5000} min={minNumber} max={maxNumber} {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>

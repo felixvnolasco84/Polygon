@@ -12,6 +12,7 @@ import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel
 import Slider from "@/components/Slider/Slider";
 import GridBlogs from "@/components/Grid/GridBlogs";
 
+
 const items = [
   {
     name: "Felipe Madero",
@@ -283,8 +284,9 @@ const CarrouselItems = [
     alt: "",
   },
 ];
-
+  
 export default function Home() {
+
   return (
     <main className="bg-gray-[#FDFDFD] flex min-h-screen flex-col items-center justify-between">
       <div className="flex flex-col gap-[120px] lg:gap-[425px]">
