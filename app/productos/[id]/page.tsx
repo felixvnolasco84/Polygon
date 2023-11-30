@@ -38,8 +38,6 @@ export default function Page({ params }: Props) {
 
   const service: any = services.find((service: any) => service.slug === id);  
 
-  console.log(service);
-
   return (
     <>
       <Head>

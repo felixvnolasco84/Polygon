@@ -10,10 +10,8 @@ const Range = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
       const [sliderValue, setSliderValue] = React.useState<number[]>([45000]);
       const handleSliderChange = (value: number[]) => {
-        const newValue = value;
-        console.log(newValue);        
-          setSliderValue(newValue);
-        
+        const newValue = value;        
+          setSliderValue(newValue);        
       };
     return (
       <div className="flex w-1/2 flex-col gap-12">

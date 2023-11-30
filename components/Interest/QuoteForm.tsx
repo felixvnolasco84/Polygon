@@ -2,8 +2,8 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { Resend } from "resend";
 import * as z from "zod";
-
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
@@ -25,6 +25,7 @@ import { Slider } from "../ui/slider";
 import { phoneRegex } from "@/components/Regex/Regex";
 import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
+import ContactFormEmail from "@/emails/emails/contact-form-email";
 
 const interest = [
   {
@@ -66,7 +67,7 @@ export function QuoteForm({
   const FormSchema = z.object({
     service: z.string().default(service),
     project: z.enum(titles, {
-      required_error: "Es necesario escoger un servicio",      
+      required_error: "Es necesario escoger un servicio",
     }),
     budget: z.string().default(""),
     interest: z.array(z.string()),
@@ -82,7 +83,7 @@ export function QuoteForm({
     email: z.string().email({ message: "Correo electrónico Inválido" }),
     phoneNumber: z.string().regex(phoneRegex, "Número de Teléfono Inválido"),
   });
-  
+
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -97,7 +98,7 @@ export function QuoteForm({
     },
   });
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {    
+  async function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
       title: "You submitted the following values:",
       description: (
@@ -106,35 +107,59 @@ export function QuoteForm({
         </pre>
       ),
     });
+
+    const { name, email, phoneNumber, service, project, budget, interest } =
+      data;
+
     try {
-      setIsLoading(true);
-      const jsonData = JSON.stringify(data);
-      const url = "https://polygon-backend.vercel.app/quote";
-      const requestOptions = {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonData,
-      };
-      const response = await fetch(url, requestOptions);
-      if (response.ok) {
-        const responseData = await response.json();
-        console.log("POST request successful:", responseData);
-        toast({
-          variant: "successFormMessage",
-          title: "HEY!",
-          description: "Se ha enviado correctamente el formulario",
-        });
-        setIsLoading(false);
-      } else {
-        console.error("POST request failed with status:", response.status);
-        setIsLoading(false);
-      }
+      const resend = new Resend(process.env.RESEND_API_KEY);
+      const data = await resend.emails.send({
+        from: "felix@polygonag.com",
+        to: [email],
+        subject: "Nuevo contacto",        
+        react: ContactFormEmail({
+          name,
+          email,
+          phoneNumber,
+          service,
+          project,
+          budget,
+          interest,
+        }),
+      });
+      return { success: true, data };
     } catch (error) {
-      console.error("Error sending POST request:", error);
-      setIsLoading(false);
-    }
+      return { success: false, error };
+    }    
+    // try {
+    //   setIsLoading(true);
+    //   const jsonData = JSON.stringify(data);
+    //   const url = "https://polygon-backend.vercel.app/quote";
+    //   const requestOptions = {
+    //     method: "POST",
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //     },
+    //     body: jsonData,
+    //   };
+    //   const response = await fetch(url, requestOptions);
+    //   if (response.ok) {
+    //     const responseData = await response.json();
+    //     console.log("POST request successful:", responseData);
+    //     toast({
+    //       variant: "successFormMessage",
+    //       title: "HEY!",
+    //       description: "Se ha enviado correctamente el formulario",
+    //     });
+    //     setIsLoading(false);
+    //   } else {
+    //     console.error("POST request failed with status:", response.status);
+    //     setIsLoading(false);
+    //   }
+    // } catch (error) {
+    //   console.error("Error sending POST request:", error);
+    //   setIsLoading(false);
+    // }
   }
 
   const [selectedItem, setSelectedItem] = useState<number | null>(null);

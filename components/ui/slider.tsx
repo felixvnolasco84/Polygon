@@ -13,8 +13,7 @@ const Slider = React.forwardRef<
 >((props, ref) => {
   const [sliderValue, setSliderValue] = useState<number[]>([45000]);
   const handleSliderChange = (value: number[]) => {
-    const newValue = value;
-    console.log(newValue);
+    const newValue = value;    
     if (newValue[0] >= (props.min || 0) && newValue[0] <= (props.max || 0)) {
       setSliderValue(newValue);
     }
