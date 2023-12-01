@@ -113,12 +113,12 @@ export default function Page({ params }: Props) {
           <h2 className={`${neueThin.className} text-[40px] text-black-500`}>
             Cuéntanos qué es lo que necesitas.
           </h2>
-          {/* <QuoteForm
+          <QuoteForm
             service={service.title}
             projects={service.projects}
             minNumber={service.minNumber}
             maxNumber={service.maxNumber}
-          /> */}
+          />
         </div>
       </div>
     </>
