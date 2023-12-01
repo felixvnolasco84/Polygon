@@ -26,13 +26,11 @@ export default function Header() {
         <Link className="py-[12px]" href={"/"}>
           Ideas
         </Link>
-        <Link className="py-[12px]" href={"/"}>
-          Contacto
-        </Link>
+        <ContactDialog type="header" />
       </div>
-      <Link className={`${neueLight.className} block py-[12px] lg:hidden`} href={"/"}>
-        Contacto
-      </Link>
+      <div className="block lg:hidden">
+        <ContactDialog type="header" />
+      </div>
     </div>
   );
 }

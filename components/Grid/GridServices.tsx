@@ -11,6 +11,8 @@ export const services = [
     title: "Brand & Creative Strategy",
     description:
       "En Polygon, la Creatividad y Estrategia son los pilares fundamentales que impulsan el éxito de las marcas. A través de una combinación excepcional de pensamiento creativo y enfoque estratégico, ofrecemos soluciones publicitarias que capturan la esencia de tu marca y la posicionan en la mente de tu audiencia de manera impactante.",
+    itemdescription:
+      "La creatividad y estrategia son los pilares fundamentales que impulsan el éxito de las marcas.",
     slug: "brand-and-creative-strategy",
     objectives: [
       {
@@ -70,6 +72,8 @@ export const services = [
     title: "Social Media Marketing",
     description:
       "Nuestra agencia ofrece un completo servicio de Social Media Marketing diseñado para impulsar la presencia de tu marca en las redes sociales. A través de una estrategia personalizada, establecemos objetivos medibles, identificamos tu audiencia objetivo, creamos contenido de calidad y gestionamos tus perfiles en plataformas relevantes.",
+    itemdescription:
+      "Establecemos objetivos medibles, dentificamos tu audiencia objetivo y creamos contenido de calidad",
     slug: "social-media-marketing",
     objectives: [
       {
@@ -129,6 +133,8 @@ export const services = [
     title: "Paid Media Marketing",
     description:
       "Un servicio de publicidad digital impulsado por datos y KPIs. Nuestra misión es llevar tu marca al siguiente nivel a través de estrategias de pago altamente optimizadas y orientadas a resultados medibles.",
+    itemdescription:
+      "Un servicio de publicidad digital impulsado por datos y KPls.",
     slug: "paid-media-marketing",
     objectives: [
       {
@@ -188,6 +194,8 @@ export const services = [
     title: "SEO & Content",
     description:
       "Diseñamos estrategias y contenido de calidad para persuadir a Google. Eleva tu visibilidad y atrae tráfico orgánico con nuestra metodología profesional.",
+    itemdescription:
+      "El objetivo de nuestro trabajo es generar un impacto positivo que produzca mayores ventas y nutra tus objetivos.",
     slug: "seo-and-content",
     objectives: [
       {
@@ -262,6 +270,8 @@ export const services = [
     title: "Key Web Development Services",
     description:
       "Una oferta integral de servicios de desarrollo web. Nuestro enfoque técnico y avanzado impulsa la creación de sitios web de alto rendimiento y funcionalidad excepcional desde páginas plenamente informativas hasta e-commerce de alta escala.",
+    itemdescription:
+      "Nuestro enfoque técnico y avanzado impulsa la creación de sitios web de alto rendimiento.",
     slug: "key-web-development-services",
     objectives: [
       {
@@ -321,6 +331,8 @@ export const services = [
     title: "Content Solutions",
     description:
       "Proporcionamos un servicio especializado en la creación y gestión de contenido digital. Ofrecemos una amplia variedad de formatos, incluyendo contenido gráfico, fotografía de producto, fotografía situacional, contenido audiovisual, animación 2D y 3D, así como contenido generado con HTML para satisfacer tus necesidades de contenido en línea.",
+    itemdescription:
+      "Proporcionamos un servicio espedializado en la creación y gestión de contenido digital.",
     slug: "content-solutions",
     objectives: [
       {
@@ -380,6 +392,8 @@ export const services = [
     title: "Data Analysis",
     description:
       "Data Analysis, un servicio especializado en el análisis de datos para potenciar estrategias publicitarias. Convertimos datos en insights accionables para impulsar el éxito de tu marca.",
+    itemdescription:
+      "Un servicio especializado en el análisis de datos para potenciar estrategias publicitarias.",
     slug: "data-analysis",
     features: [
       {
@@ -431,12 +445,12 @@ export default function GridServices() {
           >
             <div className="relative w-full lg:w-4/12">
               <h3
-                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-flourescentYellow lg:group-hover:translate-x-14`}
+                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-white lg:group-hover:translate-x-14`}
               >
                 {service.title}
               </h3>
               <Image
-                className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-flourescentYellow lg:group-hover:block"
+                className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-gray-400 lg:group-hover:block"
                 width={48}
                 height={48}
                 src={rightArrow}
@@ -448,9 +462,9 @@ export default function GridServices() {
               <p
                 className={`${neueXThin.className} hidden lg:block lg:text-2xl group-hover:text-transparent w-11/12`}
               >
-                {service.description}
+                {service.itemdescription}
               </p>
-              <div className="hidden h-fit max-h-[64px] max-w-[64px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
+              <div className="hidden h-fit max-h-[40px] max-w-[40px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
                 <Image src={rightArrow} width={48} height={48} alt="" />
               </div>
             </div>

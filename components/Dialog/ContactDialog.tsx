@@ -9,30 +9,35 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 
-export default function ContactDialog() {
+export default function ContactDialog({ type }: any) {
   return (
-    //TODO:FIX "button inside p is not possible"
     <Dialog>
       <DialogTrigger>
-        {/* Hablemos */}
-        <Button
-          type="submit"
-          className="relative group bg-transparent hover:bg-transparent w-fit h-fit p-0"
+        <div          
+          className="group relative h-fit w-fit bg-transparent p-0 hover:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
         >
-          <span className="relative z-10 h-fit gap-4 hover:bg-black hover:text-white px-[32px] py-[12px] rounded-[15px] text-2xl font-normal bg-white text-black">
-            Hablemos
-          </span>
-
-          <Image
-            className="transition ease-out absolute left-[50%] top-[10%] group-hover:block group-hover:translate-x-28 h-fit p-2 bg-flourescentYellow group-hover:bg-flourescent-black cursor-pointer rounded-full"
-            width={48}
-            height={48}
-            src={rightArrow}
-            alt=""
-          />
-        </Button>
+          {type == "header" ? (
+            <>
+              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-white px-[32px] py-[12px] text-2xl font-normal text-black hover:bg-black hover:text-white">
+                Hablemos
+              </span>
+              <Image
+                className="group-hover:bg-flourescent-black absolute left-[50%] top-[-20%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
+                width={48}
+                height={48}
+                src={rightArrow}
+                alt=""
+              />
+            </>
+          ) : (
+            <div className="h-fit rounded-full bg-gray-200 p-2 group-hover:bg-white">
+              
+              <Image src={rightArrow} alt="" />
+            </div>
+          )}
+        </div>
       </DialogTrigger>
-      <DialogContent className="bg-white h-fit p-0 left-[50%] top-[28%]">
+      <DialogContent className="left-[50%] top-[28%] h-fit bg-white p-0">
         <div className="p-24">
           <Contact />
         </div>

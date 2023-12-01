@@ -1,11 +1,10 @@
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { Slider } from "@/components/ui/slider";
 import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
 import { QuoteForm } from "@/components/Interest/QuoteForm";
 import { services } from "@/components/Grid/GridServices";
 import Head from "next/head";
 import { Metadata, ResolvingMetadata } from "next";
+import SliderComponent from "@/components/Slider/SliderComponent";
 
   type Props = {
     params: { id: string };
@@ -68,7 +67,7 @@ export default function Page({ params }: Props) {
           </div>
         </div>
         {/* MOBILE */}
-        <div className="block border-t-4 border-white px-4 lg:hidden lg:px-24">
+        {/* <div className="block border-t-4 border-white px-4 lg:hidden lg:px-24">
           {service?.features.slice(1, 2).map((feature: any, index: any) => (
             <div key={index} className="flex flex-col gap-[12px] lg:gap-[26px]">
               <p
@@ -83,9 +82,10 @@ export default function Page({ params }: Props) {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
         {/* DESKTOP */}
-        <div className="hidden gap-4 bg-black-600 px-4 lg:flex lg:px-32 lg:py-32">
+        <SliderComponent  />
+        {/* <div className="hidden gap-4 bg-black-600 px-4 lg:flex lg:px-32 lg:py-32">
           {service?.features.map((feature: any, index: any) => (
             <div key={index} className="flex flex-col gap-[12px] lg:gap-[26px]">
               {feature?.title && (
@@ -103,7 +103,7 @@ export default function Page({ params }: Props) {
               </p>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       <div className="container mb-[120px] mt-[120px] flex flex-col gap-[74px]">
         <h1 className={`${neueXThin.className} text-7xl text-black-500`}>
@@ -113,12 +113,12 @@ export default function Page({ params }: Props) {
           <h2 className={`${neueThin.className} text-[40px] text-black-500`}>
             Cuéntanos qué es lo que necesitas.
           </h2>
-          <QuoteForm
+          {/* <QuoteForm
             service={service.title}
             projects={service.projects}
             minNumber={service.minNumber}
             maxNumber={service.maxNumber}
-          />
+          /> */}
         </div>
       </div>
     </>

@@ -26,6 +26,7 @@ import { phoneRegex } from "@/components/Regex/Regex";
 import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
 import ContactFormEmail from "@/emails/emails/contact-form-email";
+import { sendEmail } from "@/app/_actions";
 
 const interest = [
   {
@@ -107,30 +108,8 @@ export function QuoteForm({
         </pre>
       ),
     });
-
-    const { name, email, phoneNumber, service, project, budget, interest } =
-      data;
-
-    try {
-      const resend = new Resend(process.env.RESEND_API_KEY);
-      const data = await resend.emails.send({
-        from: "felix@polygonag.com",
-        to: [email],
-        subject: "Nuevo contacto",        
-        react: ContactFormEmail({
-          name,
-          email,
-          phoneNumber,
-          service,
-          project,
-          budget,
-          interest,
-        }),
-      });
-      return { success: true, data };
-    } catch (error) {
-      return { success: false, error };
-    }    
+      await sendEmail(data);
+   
     // try {
     //   setIsLoading(true);
     //   const jsonData = JSON.stringify(data);
