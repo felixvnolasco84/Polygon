@@ -7,7 +7,7 @@ const GridTeamMembers = ({ items }: any) => {
       <h4 className={`${neueXThin.className} text-2xl lg:text-7xl`}>
         Conoce al equipo
       </h4>
-      <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-24 2xl:grid-cols-5">
+      <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-24 2xl:grid-cols-5">
         {items.map((item: any, index: any) => (
           <div className="flex flex-col gap-2 lg:gap-[30px]" key={index}>
             <Image
