@@ -55,7 +55,7 @@ const SliderVideoComponent: React.FC<SliderProps> = ({ features }) => {
             {features[activeIndex].title}
           </p>
         )}
-        <p className={`${neueThin.className} lg:text-4xl lg:leading-[60px]`}>
+        <p className={`${neueThin.className} mt-2 lg:text-4xl lg:leading-[60px]`}>
           {features[activeIndex].description}
         </p>
       </div>
