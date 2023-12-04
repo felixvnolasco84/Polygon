@@ -18,7 +18,7 @@ export default function ContactDialog({ type }: any) {
         >
           {type == "header" ? (
             <>
-              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-white px-[32px] py-[12px] text-2xl font-normal text-black hover:bg-black hover:text-white">
+              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-white px-[32px] py-[12px] text-lg font-normal text-black hover:bg-black hover:text-white lg:text-2xl">
                 Hablemos
               </span>
               <Image
@@ -38,7 +38,7 @@ export default function ContactDialog({ type }: any) {
         </div>
       </DialogTrigger>
       <DialogContent className="left-[50%] top-[28%] h-fit bg-white p-0">
-        <div className="p-24">
+        <div className="lg:p-24">
           <Contact />
         </div>
       </DialogContent>

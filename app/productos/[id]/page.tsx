@@ -36,6 +36,7 @@ export default function Page({ params }: Props) {
   const { id } = params;
 
   const service: any = services.find((service: any) => service.slug === id);  
+  
 
   return (
     <>
@@ -66,44 +67,8 @@ export default function Page({ params }: Props) {
             ))}
           </div>
         </div>
-        {/* MOBILE */}
-        {/* <div className="block border-t-4 border-white px-4 lg:hidden lg:px-24">
-          {service?.features.slice(1, 2).map((feature: any, index: any) => (
-            <div key={index} className="flex flex-col gap-[12px] lg:gap-[26px]">
-              <p
-                className={`${neueLight.className} text-xl lg:text-2xl text-white`}
-              >
-                {feature.title}
-              </p>
-              <p
-                className={`${neueXThin.className} lg:text-2xl text-white lg:leading-[35px]`}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div> */}
-        {/* DESKTOP */}
-        <SliderComponent  />
-        {/* <div className="hidden gap-4 bg-black-600 px-4 lg:flex lg:px-32 lg:py-32">
-          {service?.features.map((feature: any, index: any) => (
-            <div key={index} className="flex flex-col gap-[12px] lg:gap-[26px]">
-              {feature?.title && (
-                <p
-                  className={`${neueLight.className} text-xl lg:text-4xl text-white`}
-                >
-                  {feature.title}
-                </p>
-              )}
 
-              <p
-                className={`${neueThin.className} lg:text-4xl text-white lg:leading-[60px] border-t-4 border-white pt-11`}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div> */}
+        <SliderComponent features={service.features}  />        
       </div>
       <div className="container mb-[120px] mt-[120px] flex flex-col gap-[74px]">
         <h1 className={`${neueXThin.className} text-7xl text-black-500`}>

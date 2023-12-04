@@ -1,4 +1,5 @@
 import { neueThin, neueXThin } from "@/styles/fonts";
+import SliderComponent from "../Slider/SliderComponent";
 
 export default function GridTalent() {
   const features = [
@@ -25,32 +26,16 @@ export default function GridTalent() {
   ];
 
   return (
-    <div className="flex flex-col lg:gap-[50px]">
+    <div className="flex flex-col gap-3 lg:gap-[50px]">
       <h3
-        className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14  lg:px-24 px-4`}
+        className={`${neueThin.className} text-2xl transition ease-out relative z-10 lg:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14  lg:px-24 px-4`}
       >
         Talento y tecnología en cada proyecto digital
       </h3>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
         <div className="flex h-[774px] items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:px-24">
           <div className="block lg:hidden">
-            {features.slice(1, 2).map((feature: any, index: any) => (
-              <div
-                key={index}
-                className="flex flex-col gap-[12px] lg:gap-[26px]"
-              >
-                <p
-                  className={`${neueThin.className} text-xl lg:text-2xl text-white`}
-                >
-                  {feature.title}
-                </p>
-                <p
-                  className={`${neueXThin.className} lg:text-2xl text-white lg:leading-[35px]`}
-                >
-                  {feature.description}
-                </p>
-              </div>
-            ))}
+            <SliderComponent features={features} type="talent" />
           </div>
           <div className="hidden gap-4 lg:flex">
             {features.map((feature: any, index: any) => (
@@ -58,9 +43,7 @@ export default function GridTalent() {
                 key={index}
                 className="flex flex-col gap-[12px] text-white lg:gap-[10px]"
               >
-                <p
-                  className={`${neueThin.className} text-xl lg:text-2xl`}
-                >
+                <p className={`${neueThin.className} text-xl lg:text-2xl`}>
                   {feature.title}
                 </p>
                 <p

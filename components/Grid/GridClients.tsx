@@ -11,27 +11,28 @@ const GridClients = ({ items }: any) => {
       </h4>
       <div className="px-none grid grid-cols-2 border-[0.5px] border-[#70707033] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-[200px] lg:border-none">
         {items.map((item: any, index: any) => (
-          <div className="flex flex-col gap-[30px]" key={index}>
-            <div className="min-h-none flex w-full flex-col items-start justify-between gap-12 border border-[#70707033] lg:min-h-[450px] lg:border-none">
-              <div className="flex h-full min-w-[240px] items-center justify-center lg:max-w-none">
-                <div className="relative h-full w-full">
-                  <Image
-                    className=""
-                    src={item.image}
-                    layout="fill"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div className="flex h-full w-full items-start">
-                <span
-                  className={`${neueXThin.className} hidden lg:block text-2xl text-black-500 leading-[35px]`}
-                >
-                  {item.description}
-                </span>
+          <div
+            className="flex max-w-[398px] flex-col justify-between border border-gray-400 lg:border-none"
+            key={index}
+          >
+            <div className="flex h-[200px] items-center justify-center lg:justify-start">
+              <div className={`flex h-fit justify-center lg:justify-start`}>
+                <Image
+                  src={item.image}
+                  width={item.width}
+                  height={item.height}
+                  // fill={true}
+                  // sizes="(max-width: 768px) 100vw, 33vw"
+                  alt=""
+                />
               </div>
             </div>
+
+            <span
+              className={`${neueXThin.className} hidden lg:block text-2xl text-black-500 leading-[35px] h-full w-full`}
+            >
+              {item.description}
+            </span>
           </div>
         ))}
       </div>
