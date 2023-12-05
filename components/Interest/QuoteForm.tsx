@@ -115,12 +115,11 @@ export function QuoteForm({
 
     try {
       setIsLoading(true);
-      // await sendEmail(data);
-      // await fetch("/api/quotes", {
-      //   method: "POST",
-      //   body: JSON.stringify(data),
-      // });
-      // console.log(data);
+      await sendEmail(data);
+      await fetch("/api/quotes", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });      
       setIsLoading(false);
     } catch (error) {
       console.log(error);
@@ -177,12 +176,12 @@ export function QuoteForm({
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:auto-cols-min xl:grid-flow-col"
+                  className="flex w-full flex-shrink flex-grow flex-col flex-wrap gap-4 lg:flex-row"
                 >
                   {projects.map((service: any, index: any) => (
                     <FormItem
                       key={index}
-                      className={`relative flex min-h-[237px] w-full min-w-[398px] flex-col gap-6 rounded-[10px] bg-transparent text-black-500`}
+                      className={`relative flex min-h-[237px] w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:max-w-[398px]`}
                     >
                       <FormControl
                         onClick={() => handleItemClick(index)}
