@@ -21,36 +21,11 @@ import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { useState } from "react";
-import { Slider } from "../ui/slider";
 import { phoneRegex } from "@/components/Regex/Regex";
 import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
-import ContactFormEmail from "@/emails/emails/contact-form-email";
 import { sendEmail } from "@/app/_actions";
 import { services } from "../Grid/GridServices";
-
-const interest = [
-  {
-    id: "Social Media Marketing",
-    label: "Social Media Marketing",
-  },
-  {
-    id: "Paid Media",
-    label: "Paid Media",
-  },
-  {
-    id: "SEO",
-    label: "SEO",
-  },
-  {
-    id: "Web Development",
-    label: "Web Development",
-  },
-  {
-    id: "Video",
-    label: "Video",
-  },
-] as const;
 
 export function QuoteForm({
   service,
@@ -104,57 +79,39 @@ export function QuoteForm({
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    toast({
-      title: "You submitted the following values:",
-      description: (
-        <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-          <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-        </pre>
-      ),
-    });    
+    // toast({
+    //   title: "You submitted the following values:",
+    //   description: (
+    //     <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
+    //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
+    //     </pre>
+    //   ),
+    // });    
 
     try {
       setIsLoading(true);
       await sendEmail(data);
-      await fetch("/api/quotes", {
+      const response = await fetch("/api/quotes", {
         method: "POST",
         body: JSON.stringify(data),
-      });      
-      setIsLoading(false);
+      });            
+      if (response.ok) {
+        toast({
+          variant: "successFormMessage",
+          title: "HEY!",
+          description: "Se ha enviado correctamente el formulario",
+        });
+        setIsLoading(false);
+      }       
     } catch (error) {
-      console.log(error);
-      setIsLoading(false);
+      console.log(error);            
+        toast({
+          variant: "destructive",
+          title: "OH!",
+          description: "No se ha enviado correctamente el formulario",
+        });
+        setIsLoading(false);            
     }
-
-    // try {
-    //   setIsLoading(true);
-    //   const jsonData = JSON.stringify(data);
-    //   const url = "https://polygon-backend.vercel.app/quote";
-    //   const requestOptions = {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: jsonData,
-    //   };
-    //   const response = await fetch(url, requestOptions);
-    //   if (response.ok) {
-    //     const responseData = await response.json();
-    //     console.log("POST request successful:", responseData);
-    //     toast({
-    //       variant: "successFormMessage",
-    //       title: "HEY!",
-    //       description: "Se ha enviado correctamente el formulario",
-    //     });
-    //     setIsLoading(false);
-    //   } else {
-    //     console.error("POST request failed with status:", response.status);
-    //     setIsLoading(false);
-    //   }
-    // } catch (error) {
-    //   console.error("Error sending POST request:", error);
-    //   setIsLoading(false);
-    // }
   }
 
   const [selectedItem, setSelectedItem] = useState<number | null>(null);

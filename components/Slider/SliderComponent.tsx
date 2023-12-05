@@ -37,7 +37,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
           />
         ))}
       </div>
-      <div className="flex h-36 text-white">
+      <div className="flex h-64 text-white">
         <div className="w-full pt-12 opacity-100 transition-opacity duration-500">
           {features[activeIndex]?.title && (
             <p
