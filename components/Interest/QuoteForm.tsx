@@ -124,7 +124,7 @@ export function QuoteForm({
 
   return (
     <>
-      {showModalMessage && <SuccessMessage />}
+      {<SuccessMessage isOpen={showModalMessage} />}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField

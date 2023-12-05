@@ -4,15 +4,13 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+  DialogTitle,  
 } from "@/components/ui/dialog";
 import Link from "next/link";
 
-export default function SuccessMessage() {
+export default function SuccessMessage({isOpen}: {isOpen: boolean}) {
   return (
-    <Dialog open={true}>
-      <DialogTrigger>Open</DialogTrigger>
+    <Dialog defaultOpen={true}>
       <DialogContent>
         <DialogHeader>
           <DialogTitle
