@@ -111,9 +111,7 @@ export function QuoteForm({
           <code className="text-white">{JSON.stringify(data, null, 2)}</code>
         </pre>
       ),
-    });
-
-    console.log(data);
+    });    
 
     try {
       setIsLoading(true);
