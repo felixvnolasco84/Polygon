@@ -27,6 +27,7 @@ import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
 import ContactFormEmail from "@/emails/emails/contact-form-email";
 import { sendEmail } from "@/app/_actions";
+import { services } from "../Grid/GridServices";
 
 const interest = [
   {
@@ -62,8 +63,11 @@ export function QuoteForm({
   minNumber: number;
   maxNumber: number;
 }) {
+  
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  let titles: any = projects.map((service) => service.title);
+  let titles: any = projects.map((service) => service.title);  
+  const title = service;
+  const interests = services.filter((service) => service.title !== title);  
 
   const FormSchema = z.object({
     service: z.string().default(service),
@@ -108,8 +112,23 @@ export function QuoteForm({
         </pre>
       ),
     });
-      await sendEmail(data);
-   
+
+    console.log(data);
+
+    try {
+      setIsLoading(true);
+      // await sendEmail(data);
+      // await fetch("/api/quotes", {
+      //   method: "POST",
+      //   body: JSON.stringify(data),
+      // });
+      // console.log(data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error);
+      setIsLoading(false);
+    }
+
     // try {
     //   setIsLoading(true);
     //   const jsonData = JSON.stringify(data);
@@ -160,12 +179,12 @@ export function QuoteForm({
                 <RadioGroup
                   onValueChange={field.onChange}
                   defaultValue={field.value}
-                  className="flex justify-center gap-4"
+                  className="grid grid-cols-1 gap-4 lg:grid-cols-2 xl:auto-cols-min xl:grid-flow-col"
                 >
                   {projects.map((service: any, index: any) => (
                     <FormItem
                       key={index}
-                      className={`relative flex min-h-[237px] min-w-[398px] flex-col gap-6 rounded-[10px] bg-transparent text-black-500`}
+                      className={`relative flex min-h-[237px] w-full min-w-[398px] flex-col gap-6 rounded-[10px] bg-transparent text-black-500`}
                     >
                       <FormControl
                         onClick={() => handleItemClick(index)}
@@ -184,11 +203,13 @@ export function QuoteForm({
                       </FormControl>
                       <FormLabel className="h-full cursor-pointer p-6">
                         <div className="flex flex-col gap-6">
-                          <p className={`${neueThin.className} text-3xl`}>
+                          <p
+                            className={`${neueThin.className} text-2xl lg:text-3xl`}
+                          >
                             {service.title}
                           </p>
                           <p
-                            className={`${neueXThin.className} text-2xl max-w-[320px]`}
+                            className={`${neueXThin.className} text-xl lg:text-2xl max-w-[320px]`}
                           >
                             {service.description}
                           </p>
@@ -208,19 +229,13 @@ export function QuoteForm({
           name="budget"
           render={({ field }) => (
             <FormItem
-              className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
+              className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
             >
-              <FormLabel className="text-center text-[40px]">
+              <FormLabel className="text-center text-2xl lg:text-[40px]">
                 ¿Tienes un presupuesto aproximado?
               </FormLabel>
               <FormControl>
                 <Range min={minNumber} max={maxNumber} step={5000} {...field} />
-                {/* <Slider                
-                  step={5000}
-                  min={minNumber}
-                  max={maxNumber}                  
-                  {...field}
-                /> */}
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -231,16 +246,18 @@ export function QuoteForm({
           control={form.control}
           name="linkReference"
           render={({ field }) => (
-            <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-[60px]">
-              <FormLabel className={`${neueThin.className} text-[40px]`}>
+            <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-12 lg:gap-6 lg:py-[60px]">
+              <FormLabel
+                className={`${neueThin.className} text-xl lg:text-3xl mb-4 lg:mb-0 lg:leading-[40px]`}
+              >
                 En caso de que exista, compártenos tu página actual en la que
                 debamos trabajar. (Si no tienes una, puedes proporcionarnos una
                 referencia de lo que buscas).
               </FormLabel>
               <FormControl>
-                <div className="w-3/4 rounded-[10px] bg-white p-4">
+                <div className="w-full rounded-[10px] bg-white p-4 lg:w-3/4">
                   <Input
-                    className={`${neueThin.className}`}
+                    className={`${neueThin.className} text-sm lg:text-3xl`}
                     placeholder="Link de página o referencia"
                     {...field}
                   />
@@ -254,43 +271,43 @@ export function QuoteForm({
           control={form.control}
           name="interest"
           render={() => (
-            <FormItem className="flex w-full flex-col gap-14 bg-gray-400 px-6 py-[60px]">
+            <FormItem className="flex w-full flex-col gap-8 overflow-hidden rounded-md bg-gray-400 px-6 py-12 lg:gap-12 lg:py-[60px]">
               <FormLabel
-                className={`${neueThin.className} text-[40px] leading-none`}
+                className={`${neueThin.className} text-2xl lg:text-[40px] leading-none`}
               >
                 También estoy interesado en:
               </FormLabel>
 
-              <div className="m-auto flex w-full flex-row gap-10">
-                {interest.map((item) => (
+              <div className="m-auto flex w-full flex-col gap-4 lg:flex-row lg:gap-10">
+                {interests.map((item) => (
                   <FormField
-                    key={item.id}
+                    key={item.pageTitle}
                     control={form.control}
                     name="interest"
                     render={({ field }) => {
                       return (
                         <FormItem
-                          key={item.id}
+                          key={item.title}
                           className="flex flex-row items-center space-x-2 space-y-0"
                         >
                           <FormControl>
                             <Checkbox
-                              checked={field.value?.includes(item.id)}
+                              checked={field.value?.includes(item.title)}
                               onCheckedChange={(checked) => {
                                 return checked
-                                  ? field.onChange([...field.value, item.id])
+                                  ? field.onChange([...field.value, item.title])
                                   : field.onChange(
                                       field.value?.filter(
-                                        (value) => value !== item.id
+                                        (value) => value !== item.title
                                       )
                                     );
                               }}
                             />
                           </FormControl>
                           <FormLabel
-                            className={`${neueThin.className} text-3xl font-normal`}
+                            className={`${neueThin.className} text-xl lg:text-3xl font-normal`}
                           >
-                            {item.label}
+                            {item.title}
                           </FormLabel>
                         </FormItem>
                       );
@@ -303,11 +320,11 @@ export function QuoteForm({
           )}
         />
 
-        <div className="flex flex-col items-center gap-[110px] bg-gray-400 p-24">
-          <div className="flex justify-center gap-[70px]">
+        <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
+          <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
             <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
             <p
-              className={`${neueXThin.className} text-black-500 text-2xl max-w-[578px] leading-[40px]`}
+              className={`${neueXThin.className} text-black-500 text-xl lg:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
             >
               Nuestro equipo se pondrá en contacto contigo en las siguientes 24
               horas. La información que nos compartiste nos ayudará a tener una
@@ -315,8 +332,8 @@ export function QuoteForm({
             </p>
           </div>
 
-          <div className="flex gap-4">
-            <div className="flex gap-4 rounded-2xl bg-white p-4">
+          <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center">
+            <div className="flex flex-col gap-4 rounded-2xl bg-white p-4 lg:flex-row">
               <FormField
                 control={form.control}
                 name="name"
@@ -325,7 +342,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Nombre"
-                        className="resize-none bg-transparent py-0"
+                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -341,7 +358,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Correo"
-                        className="resize-none bg-transparent py-0"
+                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -357,7 +374,7 @@ export function QuoteForm({
                     <FormControl>
                       <Input
                         placeholder="Celular"
-                        className="resize-none bg-transparent py-0"
+                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
                         {...field}
                       ></Input>
                     </FormControl>
@@ -366,8 +383,8 @@ export function QuoteForm({
                 )}
               />
             </div>
-            <div className="group relative">
-              {true ? (
+            <div className="group relative flex justify-end">
+              {isLoading ? (
                 <>
                   <Button
                     type="submit"

@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const plugin = require("tailwindcss/plugin");
+
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -21,7 +24,7 @@ module.exports = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",        
+        foreground: "hsl(var(--foreground))",
         gray: {
           600: "var(--color-dark-gray)",
           500: "var(--color-gray)",
@@ -86,5 +89,18 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    plugin(function ({ addUtilities }) {
+      addUtilities({
+        ".hide-scrollbar-utility": {
+          "scrollbar-width": "none",
+          "-ms-overflow-style": "none",
+        },
+        ".hide-scrollbar-utility::-webkit-scrollbar ": {
+          display: "none",
+        },
+      });
+    }),
+  ],
 };

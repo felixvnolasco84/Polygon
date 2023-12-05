@@ -376,9 +376,9 @@ export default function Home() {
         {/* <SuccessMessage /> */}
         <GridTalent />
         <Grid items={items} />
-        <GridAssociateCarrousel />
         {/* <GridFeatures items={features} /> */}
         <GridAssociate items={partners} />
+        <GridAssociateCarrousel />
         {/* <Slider items={sliderItems} /> */}
         <GridClients items={clients} />
         <GridBlogs />                

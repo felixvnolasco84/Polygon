@@ -15,17 +15,10 @@ import SliderComponent from "@/components/Slider/SliderComponent";
     { params, searchParams }: Props,
     parent: ResolvingMetadata
   ): Promise<Metadata> {
-    // read route params
+    
     const id = params.id;
-
-    // fetch data
-    // const service = await fetch(`https://.../${id}`).then((res) => res.json());
-
     const service = services.find((service: any) => service.slug === id);
-
-    // // optionally access and extend (rather than replace) parent metadata
-    // const previousImages = (await parent).openGraph?.images || [];
-
+    
     return {
       title: service?.pageTitle,
       description: service?.metadescription
@@ -45,21 +38,21 @@ export default function Page({ params }: Props) {
         <meta name="description" content={service.metadescription} />
       </Head>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1701196725/Hero/aw5sgcciztsdpzpbx9hi.png')] bg-no-repeat">
-        <div className="from-2% flex h-[1024px] flex-col justify-end gap-24 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:px-24">
-          <h1 className={`${neueXThin.className} text-7xl text-white`}>
+        <div className="from-2% flex h-[420px] flex-col justify-end gap-24 bg-gradient-to-t from-black to-transparent to-60% px-4 pb-[30px] lg:h-[1024px] lg:px-24">
+          <h1 className={`${neueXThin.className} text-4xl  lg:text-7xl text-white`}>
             {service.title}
           </h1>
-          <div className="flex items-start gap-4">
+          <div className="hidden items-start gap-4 lg:flex">
             {service?.objectives.map((objective: any, index: any) => (
               <div key={index} className="flex flex-col gap-4">
                 <p
-                  className={`${neueLight.className} text-[28px] text-white lg:leading-none`}
+                  className={`${neueLight.className} lg:text-[28px] text-white lg:leading-none`}
                 >
                   {objective.title}
                 </p>
 
                 <p
-                  className={`${neueThin.className} text-xl text-white lg:leading-[35px] max-w-[398px]`}
+                  className={`${neueThin.className} lg:text-xl text-white lg:leading-[35px] max-w-[398px]`}
                 >
                   {objective.description}
                 </p>
@@ -67,15 +60,14 @@ export default function Page({ params }: Props) {
             ))}
           </div>
         </div>
-
-        <SliderComponent features={service.features}  />        
+        <SliderComponent features={service.features} type=""  />        
       </div>
-      <div className="container mb-[120px] mt-[120px] flex flex-col gap-[74px]">
-        <h1 className={`${neueXThin.className} text-7xl text-black-500`}>
+      <div className="flex flex-col gap-[74px] px-4 xl:container lg:mb-[120px] lg:mt-[120px]">
+        <h1 className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}>
           {service.tile}
         </h1>
-        <div className="m-auto flex max-w-[1226px] flex-col justify-center gap-[16px]">
-          <h2 className={`${neueThin.className} text-[40px] text-black-500`}>
+        <div className="m-auto mb-8 flex max-w-[1226px] flex-col justify-start gap-2 lg:mb-0 lg:justify-center lg:gap-[16px]">
+          <h2 className={`${neueThin.className} text-3xl lg:text-[40px] text-black-500`}>
             Cuéntanos qué es lo que necesitas.
           </h2>
           <QuoteForm

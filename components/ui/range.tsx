@@ -14,9 +14,9 @@ const Range = React.forwardRef<HTMLInputElement, InputProps>(
           setSliderValue(newValue);        
       };
     return (
-      <div className="flex w-1/2 flex-col gap-12">
+      <div className="lg: flex w-3/4 flex-col gap-8 lg:w-1/2 lg:gap-12">
         <p
-          className={`${neueThin.className} text-center leading-none text-[40px]`}
+          className={`${neueThin.className} text-center leading-none text-xl lg:text-[40px]`}
         >
           ${sliderValue} - ${props.max}
         </p>

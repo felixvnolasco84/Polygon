@@ -12,7 +12,7 @@ const GridClients = ({ items }: any) => {
       <div className="px-none grid grid-cols-2 border-[0.5px] border-[#70707033] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-x-4 lg:gap-y-[200px] lg:border-none">
         {items.map((item: any, index: any) => (
           <div
-            className="flex max-w-[398px] flex-col justify-between border border-gray-400 lg:border-none"
+            className="flex max-w-[398px] flex-col justify-between border border-gray-400 p-6 lg:border-none lg:p-0"
             key={index}
           >
             <div className="flex h-[200px] items-center justify-center lg:justify-start">

@@ -26,7 +26,7 @@ const SliderVideoComponent: React.FC<SliderProps> = ({ features }) => {
   };
 
   return (
-    <div className="flex flex-col gap-4 px-4 py-0 text-black-500 lg:px-24">
+    <div className="flex flex-col gap-4 px-4 py-0 text-black-500 lg:hidden lg:px-24">
       <div className="relative min-h-[480px] w-full overflow-hidden rounded-md bg-cover bg-center bg-no-repeat">
         <Image
           src={features[activeIndex].img}
