@@ -21,10 +21,13 @@ model Customer {
 
 model Quote { 
   id        String   @id @default(cuid()) @map("_id")
-  title     String
-  content   String
-  author    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  service     String
+  project   String
+  budget    String
+  interest  String[] 
+  linkReference String
+  name String
+  email String
+  phoneNumber String
 }
 

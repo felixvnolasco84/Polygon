@@ -395,6 +395,28 @@ export const services = [
     itemdescription:
       "Un servicio especializado en el análisis de datos para potenciar estrategias publicitarias.",
     slug: "data-analysis",
+    objectives: [
+      {
+        title: "Recopilación de datos",
+        description:
+          "Reunimos y procesamos datos de diversas fuentes, incluyendo métricas publicitarias y comportamiento del usuario. Transformamos datos crudos en información estructurada y de calidad.",
+      },
+      {
+        title: "Análisis e interpretación",
+        description:
+          "Nuestros analistas profundizan en los datos, descubriendo patrones y tendencias ocultas. Interpretamos resultados de manera experta y brindamos una comprensión enriquecedora para guiar decisiones estratégicas.",
+      },
+      {
+        title: "Optimización en tiempo real",
+        description:
+          "Utilizamos datos para la optimización constante de tus campañas. Ajustamos pujas, segmentación y creatividades en función de análisis en tiempo real para maximizar el rendimiento y eficiencia.",
+      },
+      {
+        title: "Dashboarding",
+        description:
+          "Implementamos dashboards personalizados para ofrecer lecturas de datos transparentes en tiempo real. Esto te permite acceder a información crítica de manera instantánea y tomar decisiones informadas para el éxito de tu publicidad.",
+      },
+    ],
     features: [
       {
         title: "",
@@ -404,20 +426,19 @@ export const services = [
     ],
     projects: [
       {
-        title: "Campaña de lanzamiento de marca",
+        title: "Básico.",
         description:
-          "Creamos una campaña de lanzamiento de marca para la nueva línea de productos de la marca de cuidado personal.",
-        client: "NIVEA",
+          "Plataformas de medición (GA4 o similar) con conexión de pixel para lectura de datos de campañas.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
-        description: "Creamos una campaña de lanzamiento de marca.",
-        client: "NIVEA",
+        title: "Avanzado.",
+        description:
+          "Básico + Implementación de eventos desde Tag Manager, auditoría y corrección de código.",
       },
       {
-        title: "Campaña de lanzamiento de marca",
-        description: "Creamos una campaña de lanzamiento de marca.",
-        client: "NIVEA",
+        title: "Completa.",
+        description:
+          "Avanzado + Creación de Dashboard en lookerstudio para visualización de datos en tiempo real.",
       },
     ],
     minNumber: 45000,

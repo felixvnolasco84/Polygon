@@ -66,7 +66,7 @@ export default function Page({ params }: Props) {
         <h1 className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}>
           {service.tile}
         </h1>
-        <div className="m-auto mb-8 flex max-w-[1226px] flex-col justify-start gap-2 lg:mb-0 lg:justify-center lg:gap-[16px]">
+        <div className="m-auto mb-8 flex max-w-[1226px] flex-col justify-start gap-2 lg:mb-0 lg:justify-center lg:gap-10">
           <h2 className={`${neueThin.className} text-3xl lg:text-[40px] text-black-500`}>
             Cuéntanos qué es lo que necesitas.
           </h2>
