@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function SuccessMessage() {
   return (
-    <Dialog>
+    <Dialog open={true}>
       <DialogTrigger>Open</DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -25,7 +25,7 @@ export default function SuccessMessage() {
           >
             <div className="flex flex-col gap-[28px]">
               <Link href={"/"}>Regresar al inicio.</Link>
-              <Link href={"/productos/web"}>Ver proyectos relacionados.</Link>
+              {/* <Link href={"/productos/web"}>Ver proyectos relacionados.</Link> */}
             </div>
           </DialogDescription>
         </DialogHeader>

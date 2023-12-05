@@ -26,6 +26,7 @@ import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
 import { sendEmail } from "@/app/_actions";
 import { services } from "../Grid/GridServices";
+import SuccessMessage from "../Contact/SuccessMessage";
 
 export function QuoteForm({
   service,
@@ -38,11 +39,11 @@ export function QuoteForm({
   minNumber: number;
   maxNumber: number;
 }) {
-  
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  let titles: any = projects.map((service) => service.title);  
+  const [showModalMessage, setShowModalMessage] = useState<boolean>(false);
+  let titles: any = projects.map((service) => service.title);
   const title = service;
-  const interests = services.filter((service) => service.title !== title);  
+  const interests = services.filter((service) => service.title !== title);
 
   const FormSchema = z.object({
     service: z.string().default(service),
@@ -86,7 +87,7 @@ export function QuoteForm({
     //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
     //     </pre>
     //   ),
-    // });    
+    // });
 
     try {
       setIsLoading(true);
@@ -94,23 +95,24 @@ export function QuoteForm({
       const response = await fetch("/api/quotes", {
         method: "POST",
         body: JSON.stringify(data),
-      });            
+      });
       if (response.ok) {
-        toast({
-          variant: "successFormMessage",
-          title: "HEY!",
-          description: "Se ha enviado correctamente el formulario",
-        });
+        // toast({
+        //   variant: "successFormMessage",
+        //   title: "HEY!",
+        //   description: "Se ha enviado correctamente el formulario",
+        // });
+        setShowModalMessage(true);
         setIsLoading(false);
-      }       
+      }
     } catch (error) {
-      console.log(error);            
-        toast({
-          variant: "destructive",
-          title: "OH!",
-          description: "No se ha enviado correctamente el formulario",
-        });
-        setIsLoading(false);            
+      console.log(error);
+      toast({
+        variant: "destructive",
+        title: "OH!",
+        description: "No se ha enviado correctamente el formulario",
+      });
+      setIsLoading(false);
     }
   }
 
@@ -121,257 +123,272 @@ export function QuoteForm({
   };
 
   return (
-    <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-        <FormField control={form.control} name="service" render={() => <></>} />
-        <FormField
-          control={form.control}
-          name="project"
-          render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormControl>
-                <RadioGroup
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                  className="flex w-full flex-shrink flex-grow flex-col flex-wrap gap-4 lg:flex-row"
-                >
-                  {projects.map((service: any, index: any) => (
-                    <FormItem
-                      key={index}
-                      className={`relative flex min-h-[237px] w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:max-w-[398px]`}
-                    >
-                      <FormControl
-                        onClick={() => handleItemClick(index)}
-                        className={`absolute bottom-0 left-0 w-full h-full
+    <>
+      {showModalMessage && <SuccessMessage />}
+      <Form {...form}>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+          <FormField
+            control={form.control}
+            name="service"
+            render={() => <></>}
+          />
+          <FormField
+            control={form.control}
+            name="project"
+            render={({ field }) => (
+              <FormItem className="space-y-3">
+                <FormControl>
+                  <RadioGroup
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                    className="flex w-full flex-shrink flex-grow flex-col flex-wrap gap-4 lg:flex-row"
+                  >
+                    {projects.map((service: any, index: any) => (
+                      <FormItem
+                        key={index}
+                        className={`relative flex min-h-[237px] w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:max-w-[398px]`}
+                      >
+                        <FormControl
+                          onClick={() => handleItemClick(index)}
+                          className={`absolute bottom-0 left-0 w-full h-full
                         ${
                           index === selectedItem
                             ? "bg-flourescentYellow"
                             : "bg-gray-400 hover:bg-flourescentYellow"
                         }
                         `}
-                      >
-                        <RadioGroupItem
-                          className="-z-10 rounded-[10px] border-none"
-                          value={service.title}
-                        />
-                      </FormControl>
-                      <FormLabel className="h-full cursor-pointer p-6">
-                        <div className="flex flex-col gap-6">
-                          <p
-                            className={`${neueThin.className} text-2xl lg:text-3xl`}
-                          >
-                            {service.title}
-                          </p>
-                          <p
-                            className={`${neueXThin.className} text-xl lg:text-2xl max-w-[320px]`}
-                          >
-                            {service.description}
-                          </p>
-                        </div>
-                      </FormLabel>
-                    </FormItem>
-                  ))}
-                </RadioGroup>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                        >
+                          <RadioGroupItem
+                            className="-z-10 rounded-[10px] border-none"
+                            value={service.title}
+                          />
+                        </FormControl>
+                        <FormLabel className="h-full cursor-pointer p-6">
+                          <div className="flex flex-col gap-6">
+                            <p
+                              className={`${neueThin.className} text-2xl lg:text-3xl`}
+                            >
+                              {service.title}
+                            </p>
+                            <p
+                              className={`${neueXThin.className} text-xl lg:text-2xl max-w-[320px]`}
+                            >
+                              {service.description}
+                            </p>
+                          </div>
+                        </FormLabel>
+                      </FormItem>
+                    ))}
+                  </RadioGroup>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <FormField
-          control={form.control}
-          name="budget"
-          render={({ field }) => (
-            <FormItem
-              className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
-            >
-              <FormLabel className="text-center text-2xl lg:text-[40px]">
-                ¿Tienes un presupuesto aproximado?
-              </FormLabel>
-              <FormControl>
-                <Range min={minNumber} max={maxNumber} step={5000} {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="linkReference"
-          render={({ field }) => (
-            <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-12 lg:gap-6 lg:py-[60px]">
-              <FormLabel
-                className={`${neueThin.className} text-xl lg:text-3xl mb-4 lg:mb-0 lg:leading-[40px]`}
+          <FormField
+            control={form.control}
+            name="budget"
+            render={({ field }) => (
+              <FormItem
+                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
               >
-                En caso de que exista, compártenos tu página actual en la que
-                debamos trabajar. (Si no tienes una, puedes proporcionarnos una
-                referencia de lo que buscas).
-              </FormLabel>
-              <FormControl>
-                <div className="w-full rounded-[10px] bg-white p-4 lg:w-3/4">
-                  <Input
-                    className={`${neueThin.className} text-sm lg:text-3xl`}
-                    placeholder="Link de página o referencia"
+                <FormLabel className="text-center text-2xl lg:text-[40px]">
+                  ¿Tienes un presupuesto aproximado?
+                </FormLabel>
+                <FormControl>
+                  <Range
+                    min={minNumber}
+                    max={maxNumber}
+                    step={5000}
                     {...field}
                   />
-                </div>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="interest"
-          render={() => (
-            <FormItem className="flex w-full flex-col gap-8 overflow-hidden rounded-md bg-gray-400 px-6 py-12 lg:gap-12 lg:py-[60px]">
-              <FormLabel
-                className={`${neueThin.className} text-2xl lg:text-[40px] leading-none`}
-              >
-                También estoy interesado en:
-              </FormLabel>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-              <div className="m-auto flex w-full flex-col gap-4 lg:flex-row lg:gap-10">
-                {interests.map((item) => (
-                  <FormField
-                    key={item.pageTitle}
-                    control={form.control}
-                    name="interest"
-                    render={({ field }) => {
-                      return (
-                        <FormItem
-                          key={item.title}
-                          className="flex flex-row items-center space-x-2 space-y-0"
-                        >
-                          <FormControl>
-                            <Checkbox
-                              checked={field.value?.includes(item.title)}
-                              onCheckedChange={(checked) => {
-                                return checked
-                                  ? field.onChange([...field.value, item.title])
-                                  : field.onChange(
-                                      field.value?.filter(
-                                        (value) => value !== item.title
-                                      )
-                                    );
-                              }}
-                            />
-                          </FormControl>
-                          <FormLabel
-                            className={`${neueThin.className} text-xl lg:text-3xl font-normal`}
+          <FormField
+            control={form.control}
+            name="linkReference"
+            render={({ field }) => (
+              <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-12 lg:gap-6 lg:py-[60px]">
+                <FormLabel
+                  className={`${neueThin.className} text-xl lg:text-3xl mb-4 lg:mb-0 lg:leading-[40px]`}
+                >
+                  En caso de que exista, compártenos tu página actual en la que
+                  debamos trabajar. (Si no tienes una, puedes proporcionarnos
+                  una referencia de lo que buscas).
+                </FormLabel>
+                <FormControl>
+                  <div className="w-full rounded-[10px] bg-white p-4 lg:w-3/4">
+                    <Input
+                      className={`${neueThin.className} text-sm lg:text-3xl`}
+                      placeholder="Link de página o referencia"
+                      {...field}
+                    />
+                  </div>
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="interest"
+            render={() => (
+              <FormItem className="flex w-full flex-col gap-8 overflow-hidden rounded-md bg-gray-400 px-6 py-12 lg:gap-12 lg:py-[60px]">
+                <FormLabel
+                  className={`${neueThin.className} text-2xl lg:text-[40px] leading-none`}
+                >
+                  También estoy interesado en:
+                </FormLabel>
+
+                <div className="m-auto flex w-full flex-col gap-4 lg:flex-row lg:gap-10">
+                  {interests.map((item) => (
+                    <FormField
+                      key={item.pageTitle}
+                      control={form.control}
+                      name="interest"
+                      render={({ field }) => {
+                        return (
+                          <FormItem
+                            key={item.title}
+                            className="flex flex-row items-center space-x-2 space-y-0"
                           >
-                            {item.title}
-                          </FormLabel>
-                        </FormItem>
-                      );
-                    }}
-                  />
-                ))}
-              </div>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+                            <FormControl>
+                              <Checkbox
+                                checked={field.value?.includes(item.title)}
+                                onCheckedChange={(checked) => {
+                                  return checked
+                                    ? field.onChange([
+                                        ...field.value,
+                                        item.title,
+                                      ])
+                                    : field.onChange(
+                                        field.value?.filter(
+                                          (value) => value !== item.title
+                                        )
+                                      );
+                                }}
+                              />
+                            </FormControl>
+                            <FormLabel
+                              className={`${neueThin.className} text-xl lg:text-3xl font-normal`}
+                            >
+                              {item.title}
+                            </FormLabel>
+                          </FormItem>
+                        );
+                      }}
+                    />
+                  ))}
+                </div>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
 
-        <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
-          <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
-            <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
-            <p
-              className={`${neueXThin.className} text-black-500 text-xl lg:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
-            >
-              Nuestro equipo se pondrá en contacto contigo en las siguientes 24
-              horas. La información que nos compartiste nos ayudará a tener una
-              mejor idea de lo que buscas y cómo podemos ayudarte.
-            </p>
-          </div>
-
-          <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center">
-            <div className="flex flex-col gap-4 rounded-2xl bg-white p-4 lg:flex-row">
-              <FormField
-                control={form.control}
-                name="name"
-                render={({ field }) => (
-                  <FormItem className="space-y-0">
-                    <FormControl>
-                      <Input
-                        placeholder="Nombre"
-                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
-                        {...field}
-                      ></Input>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="email"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        placeholder="Correo"
-                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
-                        {...field}
-                      ></Input>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
-              <FormField
-                control={form.control}
-                name="phoneNumber"
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input
-                        placeholder="Celular"
-                        className="resize-none bg-transparent py-0 text-sm lg:text-lg"
-                        {...field}
-                      ></Input>
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )}
-              />
+          <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
+            <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
+              <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
+              <p
+                className={`${neueXThin.className} text-black-500 text-xl lg:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
+              >
+                Nuestro equipo se pondrá en contacto contigo en las siguientes
+                24 horas. La información que nos compartiste nos ayudará a tener
+                una mejor idea de lo que buscas y cómo podemos ayudarte.
+              </p>
             </div>
-            <div className="group relative flex justify-end">
-              {isLoading ? (
-                <>
+
+            <div className="flex w-full flex-col gap-4 lg:flex-row lg:items-center">
+              <div className="flex flex-col gap-4 rounded-2xl bg-white p-4 lg:flex-row">
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem className="space-y-0">
+                      <FormControl>
+                        <Input
+                          placeholder="Nombre"
+                          className="resize-none bg-transparent py-0 text-sm lg:text-lg"
+                          {...field}
+                        ></Input>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="Correo"
+                          className="resize-none bg-transparent py-0 text-sm lg:text-lg"
+                          {...field}
+                        ></Input>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+                <FormField
+                  control={form.control}
+                  name="phoneNumber"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormControl>
+                        <Input
+                          placeholder="Celular"
+                          className="resize-none bg-transparent py-0 text-sm lg:text-lg"
+                          {...field}
+                        ></Input>
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+              </div>
+              <div className="group relative flex justify-end">
+                {isLoading ? (
+                  <>
+                    <Button
+                      type="submit"
+                      className="h-fit w-fit cursor-not-allowed bg-black"
+                      disabled={isLoading}
+                    >
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Por favor, espere
+                    </Button>
+                  </>
+                ) : (
                   <Button
                     type="submit"
-                    className="h-fit w-fit cursor-not-allowed bg-black"
+                    className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
                     disabled={isLoading}
                   >
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Por favor, espere
-                  </Button>
-                </>
-              ) : (
-                <Button
-                  type="submit"
-                  className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
-                  disabled={isLoading}
-                >
-                  <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-2xl font-normal text-gray-600 hover:bg-black hover:text-white">
-                    Enviar
-                  </span>
+                    <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-2xl font-normal text-gray-600 hover:bg-black hover:text-white">
+                      Enviar
+                    </span>
 
-                  <Image
-                    className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
-                    width={48}
-                    height={48}
-                    src={rightArrow}
-                    alt=""
-                  />
-                </Button>
-              )}
+                    <Image
+                      className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
+                      width={48}
+                      height={48}
+                      src={rightArrow}
+                      alt=""
+                    />
+                  </Button>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </form>
-    </Form>
+        </form>
+      </Form>
+    </>
   );
 }
