@@ -50,7 +50,7 @@ export function QuoteForm({
     project: z.enum(titles, {
       required_error: "Es necesario escoger un servicio",
     }),
-    budget: z.string().default(""),
+    budget: z.string().default("45000"),
     interest: z.array(z.string()),
     linkReference: z.string().optional().default(""),
     name: z
@@ -80,15 +80,6 @@ export function QuoteForm({
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-    // toast({
-    //   title: "You submitted the following values:",
-    //   description: (
-    //     <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-    //       <code className="text-white">{JSON.stringify(data, null, 2)}</code>
-    //     </pre>
-    //   ),
-    // });
-
     try {
       setIsLoading(true);
       await sendEmail(data);
@@ -96,12 +87,7 @@ export function QuoteForm({
         method: "POST",
         body: JSON.stringify(data),
       });
-      if (response.ok) {
-        // toast({
-        //   variant: "successFormMessage",
-        //   title: "HEY!",
-        //   description: "Se ha enviado correctamente el formulario",
-        // });
+      if (response.ok) {        
         setShowModalMessage(true);
         setIsLoading(false);
       }

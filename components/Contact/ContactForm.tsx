@@ -14,11 +14,13 @@ import {
 import { Input } from "../ui/input";
 import rightArrow from "@/public/images/rightArrow.svg";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { phoneRegex } from "@/components/Regex/Regex";
 import { neueThin } from "@/styles/fonts";
+import { sendContactEmail, sendEmail } from "@/app/_actions";
+import SuccessMessage from "./SuccessMessage";
 
 const FormSchema = z.object({
   name: z
@@ -34,7 +36,8 @@ const FormSchema = z.object({
 });
 
 export function ContactForm() {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [showModalMessage, setShowModalMessage] = useState<boolean>(false);
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -49,133 +52,120 @@ export function ContactForm() {
   async function onSubmit(data: z.infer<typeof FormSchema>) {
     try {
       setIsLoading(true);
-      const jsonData = JSON.stringify(data);
-      const url = "https://polygon-backend.vercel.app/client";
-      const requestOptions = {
+      await sendContactEmail(data);
+      const response = await fetch("/api/customers", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: jsonData,
-      };
-      const response: any = await fetch(url, requestOptions);
+        body: JSON.stringify(data),
+      });
       if (response.ok) {
-        toast({
-          variant: "successFormMessage",
-          title: "HEY!",
-          description: "Se ha enviado correctamente el formulario",
-        });
-        setIsLoading(false);
-      } else {
-        const { message } = await response.json();
-        toast({
-          title: "Oops..",
-          variant: "warning",
-          description: (
-            <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-              <code className="text-white">{message}</code>
-            </pre>
-          ),
-        });
+        setShowModalMessage(true);
         setIsLoading(false);
       }
-    } catch (error: any) {
+    } catch (error) {
       console.log(error);
+      toast({
+        variant: "destructive",
+        title: "OH!",
+        description: "No se ha enviado correctamente el formulario",
+      });
       setIsLoading(false);
     }
   }
 
   return (
-    <Form {...form}>
-      <form
-        onSubmit={form.handleSubmit(onSubmit)}
-        className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-2/3 lg:flex-row`}
-      >
-        <div className="flex w-full flex-col gap-8 rounded-2xl bg-transparent lg:flex-row lg:bg-gray-400 lg:p-4 lg:text-black-500">
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => (
-              <FormItem className="space-y-0">
-                <FormControl>
-                  <Input
-                    placeholder="Nombre"
-                    className="resize-none bg-transparent py-0"
-                    disabled={isLoading}
-                    {...field}
-                  ></Input>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="Correo"
-                    className="resize-none bg-transparent py-0"
-                    disabled={isLoading}
-                    {...field}
-                  ></Input>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="phoneNumber"
-            render={({ field }) => (
-              <FormItem>
-                <FormControl>
-                  <Input
-                    placeholder="Celular"
-                    className={"resize-none bg-transparent py-0"}
-                    disabled={isLoading}
-                    {...field}
-                  ></Input>
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        </div>
+    <>
+      {showModalMessage && <SuccessMessage isOpen={showModalMessage} />}
+      <Form {...form}>
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-2/3 lg:flex-row`}
+        >
+          <div className="flex w-full flex-col gap-8 rounded-2xl bg-transparent lg:flex-row lg:bg-gray-400 lg:p-4 lg:text-black-500">
+            <FormField
+              control={form.control}
+              name="name"
+              render={({ field }) => (
+                <FormItem className="space-y-0">
+                  <FormControl>
+                    <Input
+                      placeholder="Nombre"
+                      className="resize-none bg-transparent py-0"
+                      disabled={isLoading}
+                      {...field}
+                    ></Input>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="Correo"
+                      className="resize-none bg-transparent py-0"
+                      disabled={isLoading}
+                      {...field}
+                    ></Input>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="phoneNumber"
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl>
+                    <Input
+                      placeholder="Celular"
+                      className={"resize-none bg-transparent py-0"}
+                      disabled={isLoading}
+                      {...field}
+                    ></Input>
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+          </div>
 
-        {isLoading ? (
-          <>
+          {isLoading ? (
+            <>
+              <Button
+                type="submit"
+                className="h-fit w-fit bg-black hover:bg-transparent"
+                disabled={isLoading}
+              >
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Por favor, espere
+              </Button>
+            </>
+          ) : (
             <Button
               type="submit"
-              className="h-fit w-fit bg-black hover:bg-transparent"
+              className="group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
               disabled={isLoading}
             >
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Por favor, espere
-            </Button>
-          </>
-        ) : (
-          <Button
-            type="submit"
-            className="group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
-            disabled={isLoading}
-          >
-            <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:text-2xl">
-              Enviar
-            </span>
+              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:text-2xl">
+                Enviar
+              </span>
 
-            <Image
-              className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
-              width={48}
-              height={48}
-              src={rightArrow}
-              alt=""
-            />
-          </Button>
-        )}
-      </form>
-    </Form>
+              <Image
+                className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
+                width={48}
+                height={48}
+                src={rightArrow}
+                alt=""
+              />
+            </Button>
+          )}
+        </form>
+      </Form>
+    </>
   );
 }
