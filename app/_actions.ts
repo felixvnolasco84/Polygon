@@ -48,9 +48,7 @@ export async function sendEmail(data: any) {
 }
 
 export async function sendContactEmail(data: any) {
-  const { name, email, phoneNumber } = data;
-
-  console.log(data);
+  const { name, email, phoneNumber } = data;  
   try {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
@@ -62,7 +60,6 @@ export async function sendContactEmail(data: any) {
         phoneNumber,
       }),
     });
-    console.log(data);
     return { success: true, data };
   } catch (error) {
     return { success: false, error };
