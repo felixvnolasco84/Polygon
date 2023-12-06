@@ -13,8 +13,9 @@ datasource db {
 
 model Customer { 
   id        String   @id @default(cuid()) @map("_id")
-  email     String  @unique
-  password  String
+  name      String
+  email     String  
+  phoneNumber String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt  
 }
@@ -28,6 +29,6 @@ model Quote {
   linkReference String
   name String
   email String
-  phoneNumber String
+  phoneNumber String  
+  createdAt DateTime @default(now())  
 }
-

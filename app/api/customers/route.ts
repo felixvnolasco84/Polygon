@@ -8,6 +8,8 @@ export const POST = async (req: any) => {
     const customer = await prisma.customer.create({
       data: { ...body },
     });
+
+    console.log(customer);
     return new NextResponse(JSON.stringify(customer));
   } catch (err) {
     console.log(err);
