@@ -16,6 +16,7 @@ const ContactFormEmail = ({
     <p>Servicio: {service}</p>
     <p>Proyecto: {project}</p>
     <p>Presupuesto: {budget}</p>
+    <p>Intereses:</p>
     <ul>
       {interest.map((interest: any) => (
         <li>{interest}</li>
