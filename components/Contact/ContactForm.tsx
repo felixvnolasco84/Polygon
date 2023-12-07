@@ -89,7 +89,7 @@ export function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="Nombre"
-                      className="resize-none bg-transparent py-0"
+                      className="resize-none bg-transparent py-0 text-sm lg:text-lg"
                       disabled={isLoading}
                       {...field}
                     ></Input>
@@ -106,7 +106,7 @@ export function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="Correo"
-                      className="resize-none bg-transparent py-0"
+                      className="resize-none bg-transparent py-0 text-sm lg:text-lg"
                       disabled={isLoading}
                       {...field}
                     ></Input>
@@ -123,7 +123,7 @@ export function ContactForm() {
                   <FormControl>
                     <Input
                       placeholder="Celular"
-                      className={"resize-none bg-transparent py-0"}
+                      className={"resize-none bg-transparent py-0 text-sm lg:text-lg"}
                       disabled={isLoading}
                       {...field}
                     ></Input>
@@ -151,7 +151,7 @@ export function ContactForm() {
               className="group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
               disabled={isLoading}
             >
-              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:text-2xl">
+              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
                 Enviar
               </span>
 

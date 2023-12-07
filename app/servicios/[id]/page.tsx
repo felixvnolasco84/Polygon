@@ -38,7 +38,7 @@ export default function Page({ params }: Props) {
         <meta name="description" content={service.metadescription} />
       </Head>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1701196725/Hero/aw5sgcciztsdpzpbx9hi.png')] bg-no-repeat">
-        <div className="from-2% flex h-[420px] flex-col justify-end gap-24 bg-gradient-to-t from-black to-transparent to-60% px-4 pb-[30px] lg:h-[1024px] lg:px-24">
+        <div className="from-2% flex h-[420px] flex-col justify-end gap-24 bg-gradient-to-t from-black to-transparent to-60% px-4 pb-[30px] lg:h-[1024px] lg:px-12 xl:px-24">
           <h1
             className={`${neueXThin.className} text-4xl lg:text-5xl xl:text-7xl text-white`}
           >
@@ -64,13 +64,13 @@ export default function Page({ params }: Props) {
         </div>
         <SliderComponent features={service.features} type="" />
       </div>
-      <div className="flex flex-col gap-12 px-4 xl:container lg:mb-[120px] lg:mt-[120px] lg:gap-[74px]">
+      <div className="flex flex-col gap-12 px-4 xl:container lg:px-12 xl:mb-20 xl:mt-20 xl:gap-[74px] xl:px-0">
         <h1
           className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}
         >
           {service.tile}
         </h1>
-        <div className="m-auto mb-8 flex max-w-full flex-col justify-start gap-2 lg:mb-0 lg:justify-center lg:gap-10 xl:max-w-[1226px]">
+        <div className="m-auto mb-8 flex max-w-full flex-col justify-start gap-5 lg:mb-0 lg:justify-center lg:gap-8 xl:max-w-[1226px] xl:gap-10">
           <h2
             className={`${neueThin.className} text-2xl md:text-3xl xl:text-[40px] text-black-500`}
           >

@@ -210,7 +210,7 @@ export function QuoteForm({
                 <FormControl>
                   <div className="w-full rounded-[10px] bg-white p-4 lg:w-3/4">
                     <Input
-                      className={`${neueThin.className} text-sm lg:text-2xl xl:text-3xl`}
+                      className={`${neueThin.className} text-sm lg:text-xl xl:text-2xl`}
                       placeholder="Link de página o referencia"
                       {...field}
                     />
@@ -357,7 +357,7 @@ export function QuoteForm({
                     className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
                     disabled={isLoading}
                   >
-                    <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-2 text-lg font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[64px] lg:py-[16px] lg:text-2xl">
+                    <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-2 text-lg font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
                       Enviar
                     </span>
 
