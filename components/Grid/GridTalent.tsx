@@ -28,12 +28,12 @@ export default function GridTalent() {
   return (
     <div className="flex flex-col gap-3 lg:gap-[50px]">
       <h3
-        className={`${neueThin.className} text-2xl transition ease-out relative z-10 lg:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14  lg:px-24 px-4`}
+        className={`${neueThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14 lg:px-12 xl:px-24 px-4`}   
       >
         Talento y tecnología en cada proyecto digital
       </h3>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
-        <div className="flex h-[640px] items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-24">
+        <div className="flex h-[640px] items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-12 xl:px-24">
           <div className="block lg:hidden">
             <SliderComponent features={features} type="talent" />
           </div>
@@ -43,11 +43,11 @@ export default function GridTalent() {
                 key={index}
                 className="flex flex-col gap-[12px] text-white lg:gap-[10px]"
               >
-                <p className={`${neueThin.className} text-xl lg:text-2xl`}>
+                <p className={`${neueThin.className} lg:h-12 text-xl xl:text-2xl`}>
                   {feature.title}
                 </p>
                 <p
-                  className={`${neueXThin.className} text-lg lg:text-2xl lg:leading-[35px] lg:max-w-[398px]`}
+                  className={`${neueXThin.className} text-lg xl:text-2xl xl:leading-[35px] lg:max-w-[398px]`}
                 >
                   {feature.description}
                 </p>

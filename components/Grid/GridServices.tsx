@@ -450,9 +450,9 @@ export const services = [
 
 export default function GridServices() {
   return (
-    <div className="flex flex-col gap-4 px-4 lg:gap-12 lg:px-24">
+    <div className="flex flex-col gap-4 px-4 lg:gap-12 lg:px-12 xl:px-24">
       <h2
-        className={`${neueLight.className} text-3xl lg:text-7xl text-black-500`}
+        className={`${neueLight.className} text-3xl lg:text-5xl xl:text-7xl text-black-500`}
       >
         Experiencia, pasión y resultados en cada servicio.
       </h2>
@@ -462,11 +462,11 @@ export default function GridServices() {
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:pb-6"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-6"
           >
             <div className="relative w-full lg:w-4/12">
               <h3
-                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-white lg:group-hover:translate-x-14`}
+                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-3xl xl:text-4xl lg:group-hover:bg-white lg:group-hover:translate-x-14`}
               >
                 {service.title}
               </h3>
@@ -481,7 +481,7 @@ export default function GridServices() {
 
             <div className="flex items-center gap-12 lg:w-8/12">
               <p
-                className={`${neueXThin.className} hidden lg:block lg:text-2xl group-hover:text-transparent w-11/12`}
+                className={`${neueXThin.className} hidden lg:block lg:text-lg xl:text-2xl group-hover:text-transparent w-11/12`}
               >
                 {service.itemdescription}
               </p>

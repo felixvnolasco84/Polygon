@@ -7,9 +7,9 @@ import { services } from "./GridServices";
 
 export default function GridBlogs() {
   return (
-    <div className="flex flex-col gap-[20px] bg-black-600 px-4 py-24 lg:gap-[80px] lg:px-24">
+    <div className="flex flex-col gap-[20px] bg-black-600 px-4 py-24 lg:gap-[80px] lg:px-12 xl:px-24">
       <h2
-        className={`${neueLight.className} text-2xl md:text-4xl lg:text-7xl text-white`}
+        className={`${neueLight.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white`}
       >
         Experiencia, pasión y resultados en cada servicio.
       </h2>
@@ -19,11 +19,11 @@ export default function GridBlogs() {
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-white lg:pb-6"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-white lg:gap-4 lg:pb-6 xl:gap-0"
           >
             <div className="relative w-full lg:w-4/12">
               <h3
-                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-black-600 lg:group-hover:translate-x-14`}
+                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-3xl xl:text-4xl lg:group-hover:bg-black-600 lg:group-hover:translate-x-14`}
               >
                 {service.title}
               </h3>
@@ -38,7 +38,7 @@ export default function GridBlogs() {
 
             <div className="flex items-center gap-12 lg:w-8/12">
               <p
-                className={`${neueXThin.className} hidden lg:block lg:text-2xl group-hover:text-transparent w-11/12`}
+                className={`${neueXThin.className} hidden lg:block lg:text-lg xl:text-2xl group-hover:text-transparent w-11/12`}
               >
                 {service.itemdescription}
               </p>

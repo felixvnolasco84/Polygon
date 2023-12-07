@@ -31,9 +31,9 @@ const featuredWork = [
 export default function GridFeatured() {
   return (
     <>
-      <div className="hidden flex-col gap-[30px] px-2 lg:flex lg:gap-[50px] lg:px-24">
+      <div className="hidden flex-col gap-[30px] px-2 lg:flex lg:gap-[50px] lg:px-12 xl:px-24">
         <h2
-          className={`${neueXThin.className} font-bold lg:font-medium text-3xl lg:text-7xl lg:leading-[90px]`}
+          className={`${neueXThin.className} font-bold lg:font-medium text-3xl lg:text-5xl xl:text-7xl xl:leading-[90px]`}
         >
           Innovación en acción: <br /> nuestro trabajo más reciente.
         </h2>
@@ -42,16 +42,16 @@ export default function GridFeatured() {
             <Image
               src={InDrive}
               alt=""
-              className="min-h-[480px] rounded-[10px] object-cover lg:max-h-none lg:min-h-[565px]"
+              className="min-h-[480px] rounded-[10px] object-cover lg:max-h-none xl:min-h-[565px]"
             ></Image>
             <div className="flex flex-col gap-2 lg:gap-5">
               <h4
-                className={`${neueThin.className} text-xl lg:text-3xl text-black-500`}
+                className={`${neueThin.className} text-xl lg:text-2xl xl:text-3xl text-black-500`}
               >
                 inDrive ft. Martina la Peligrosa
               </h4>
               <p
-                className={`${neueXThin.className} text-lg lg:text-2xl text-black-500 lg:leading-[40px]`}
+                className={`${neueXThin.className} text-lg lg:text-xl xl:text-2xl text-black-500 xl:leading-[40px]`}
               >
                 Campaña para inDrive enfocada en generación de UGC, estrategia,
                 creatividad, producción audiovisual y musical.
@@ -59,14 +59,14 @@ export default function GridFeatured() {
             </div>
           </div>
 
-          <div className="row-span-2 flex min-h-full flex-col lg:gap-5">
-            <Image src={Bupa} alt="" className="h-full rounded-[10px]" />
+          <div className="flex flex-col lg:max-h-[480px] lg:gap-5 xl:row-span-2 xl:max-h-full">
+            <Image src={Bupa} alt="" className="h-full rounded-[10px] object-cover object-center" />
             <div className="flex flex-col gap-5">
-              <h4 className={`${neueThin.className} text-3xl text-black-500`}>
+              <h4 className={`${neueThin.className} lg:text-2xl xl:text-3xl text-black-500`}>
                 Content Bupa Nacional Vital
               </h4>
               <p
-                className={`${neueXThin.className} text-2xl text-black-500 leading-[40px]`}
+                className={`${neueXThin.className} lg:text-xl xl:text-2xl text-black-500 leading-[40px]`}
               >
                 Nuestro equipo está constantemente generando ideas frescas e
                 innovadoras para ayudar a nuestros clientes a destacar y
@@ -74,18 +74,18 @@ export default function GridFeatured() {
               </p>
             </div>
           </div>
-          <div className="col-span-1 flex flex-col justify-end lg:gap-5">
+          <div className="col-span-1 flex flex-col lg:justify-start lg:gap-5 xl:justify-end">
             <Image
               src={Aura}
               alt=""
               className="max-h-[485px] rounded-[10px] object-cover"
             ></Image>
             <div className="flex flex-col">
-              <h4 className={`${neueThin.className} text-3xl text-black-500`}>
+              <h4 className={`${neueThin.className} lg:text-2xl xl:text-3xl text-black-500`}>
                 Social & Paid Media
               </h4>
               <p
-                className={`${neueXThin.className} text-2xl text-black-500 leading-[40px]`}
+                className={`${neueXThin.className} lg:text-xl xl:text-2xl text-black-500 leading-[40px]`}
               >
                 Contenido redes sociales para Círculo Laboral, Cícrulo de
                 Proveedores y Aura, campañas de performance marketing en
