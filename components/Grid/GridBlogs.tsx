@@ -2,45 +2,8 @@ import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
 import Image from "next/image";
 import Link from "next/link";
 import rightArrow from "@/public/images/rightArrow.svg";
+import { services } from "./GridServices";
 
-const services = [
-  {
-    title: "Brand & Creative Strategy",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-  {
-    title: "Social Media Marketing",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-  {
-    title: "Paid Media Marketing",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-  {
-    title: "SEO & Data Analysis",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-  {
-    title: "Key Web Development Services",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-  {
-    title: "Content Solutions",
-    description:
-      "Transformación en marketing de redes sociales, talento y tecnología para amplificar tu economía de la atención.",
-    path: "/productos/web",
-  },
-];
 
 export default function GridBlogs() {
   return (
@@ -51,21 +14,21 @@ export default function GridBlogs() {
         Experiencia, pasión y resultados en cada servicio.
       </h2>
 
-      <div className="flex flex-col gap-5 lg:gap-12">
+      <div className="flex flex-col gap-12">
         {services.map((service: any, index: any) => (
           <Link
-            href={service.path}
+            href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-end justify-between border-b border-gray pb-3 text-black-600 lg:pb-6"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-white lg:pb-6"
           >
-            <div className="relative">
+            <div className="relative w-full lg:w-4/12">
               <h3
-                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-flourescentYellow lg:group-hover:translate-x-14 text-white lg:group-hover:text-black-600`}
+                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-4xl lg:group-hover:bg-black-600 lg:group-hover:translate-x-14`}
               >
                 {service.title}
               </h3>
               <Image
-                className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-flourescentYellow lg:group-hover:block"
+                className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-gray-400 lg:group-hover:block"
                 width={48}
                 height={48}
                 src={rightArrow}
@@ -73,14 +36,14 @@ export default function GridBlogs() {
               />
             </div>
 
-            <div className="flex gap-12">
+            <div className="flex items-center gap-12 lg:w-8/12">
               <p
-                className={`${neueXThin.className} hidden lg:block lg:text-2xl lg:group-hover:hidden text-white`}
+                className={`${neueXThin.className} hidden lg:block lg:text-2xl group-hover:text-transparent w-11/12`}
               >
-                {service.description}
+                {service.itemdescription}
               </p>
-              <div className="hidden h-fit rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:hidden">
-                <Image src={rightArrow} alt="" />
+              <div className="hidden h-fit max-h-[40px] max-w-[40px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
+                <Image src={rightArrow} width={48} height={48} alt="" />
               </div>
             </div>
           </Link>

@@ -460,7 +460,7 @@ export default function GridServices() {
       <div className="flex flex-col gap-12">
         {services.map((service: any, index: any) => (
           <Link
-            href={`/productos/${service.slug}`}
+            href={`/servicios/${service.slug}`}
             key={index}
             className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:pb-6"
           >

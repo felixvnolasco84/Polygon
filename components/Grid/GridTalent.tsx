@@ -33,7 +33,7 @@ export default function GridTalent() {
         Talento y tecnología en cada proyecto digital
       </h3>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
-        <div className="flex h-[774px] items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:px-24">
+        <div className="flex h-[640px] items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-24">
           <div className="block lg:hidden">
             <SliderComponent features={features} type="talent" />
           </div>
@@ -47,7 +47,7 @@ export default function GridTalent() {
                   {feature.title}
                 </p>
                 <p
-                  className={`${neueXThin.className} lg:text-2xl lg:leading-[35px] lg:max-w-[398px]`}
+                  className={`${neueXThin.className} text-lg lg:text-2xl lg:leading-[35px] lg:max-w-[398px]`}
                 >
                   {feature.description}
                 </p>

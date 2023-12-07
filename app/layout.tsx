@@ -21,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${inter.variable} font-sans`}>
+      <body
+        className={`${inter.variable} container font-sans hide-scrollbar-utility`}
+      >
         <div className="relative flex min-h-screen flex-col">
           {/* <SiteHeader /> */}
           <Header />

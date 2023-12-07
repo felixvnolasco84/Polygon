@@ -12,10 +12,9 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,
-      padding: "8.8rem",
+      center: true,       
       screens: {
-        "2xl": "1920px",
+        "2xl": "1920px",        
       },
     },
     extend: {
@@ -99,7 +98,7 @@ module.exports = {
         },
         ".hide-scrollbar-utility::-webkit-scrollbar ": {
           display: "none",
-        },
+        }        
       });
     }),
   ],

@@ -1,11 +1,10 @@
 import React from "react";
 import clsx from "clsx";
 import { ChevronLeftCircleIcon, ChevronRightCircleIcon } from "lucide-react";
+import leftArrow from "@/public/images/leftArrow.svg";
+import rightArrow from "@/public/images/rightArrow.svg";
 
-export const renderCenterLeftControls = ({
-  previousDisabled,
-  previousSlide,
-}: any) => (
+export const renderCenterLeftControls = ({ previousDisabled, previousSlide }: any) => (
   <button
     className={clsx(
       "bg-transparent border-none",
@@ -17,6 +16,7 @@ export const renderCenterLeftControls = ({
     onClick={previousSlide}
     aria-label="Go to previous slide"
   >
+    {/* <img src={leftArrow} alt="" /> */}    
     <ChevronLeftCircleIcon size={32} />
   </button>
 );
@@ -33,6 +33,7 @@ export const renderCenterRightControls = ({ nextDisabled, nextSlide }: any) => (
     onClick={nextSlide}
     aria-label="Go to next slide"
   >
+    {/* <img src={rightArrow} alt="" /> */}
     <ChevronRightCircleIcon size={32} />
   </button>
 );

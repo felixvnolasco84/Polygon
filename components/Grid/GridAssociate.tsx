@@ -1,7 +1,11 @@
-import { neueXThin, neueThin } from "@/fonts";
+import { neueXThin, neueThin, neueRoman } from "@/fonts";
 import Image from "next/image";
+import ContactDialog from "../Dialog/ContactDialog";
 
 const GridAssociate = ({ items }: any) => {
+  const message =
+    "Hablemos, nuestro equipo se comunicará contigo en las siguientes 24 horas.";
+
   return (
     <div className="hidden flex-col gap-y-7 px-4 lg:flex lg:gap-12 lg:px-24">
       <h4
@@ -18,7 +22,7 @@ const GridAssociate = ({ items }: any) => {
               >
                 <Image src={item.image} alt="" width={380} height={80} />
               </div>
-              <div className="flex flex-col gap-2 lg:gap-4">                
+              <div className="flex flex-col gap-2 lg:gap-4">
                 <span
                   className={`${neueThin.className} text-xl lg:text-[40px] text-black-500 leading-none`}
                 >
@@ -33,6 +37,23 @@ const GridAssociate = ({ items }: any) => {
             </div>
           </div>
         ))}
+      </div>
+      <div className="group relative hidden items-center gap-1 lg:flex">
+        <div className="relative w-full overflow-hidden rounded-[15px] bg-flourescentYellow">
+          <div
+            className={`absolute left-0 top-0 h-full w-0 bg-gray-400 transition-all duration-300 group-hover:w-full`}
+          >
+            <p
+              className={`invisible group-hover:visible transition-opacity delay-700 text-black ${neueRoman.className} lg:text-2xl pl-10 py-4 transition rounded-[15px]`}
+            >
+              {message}
+            </p>
+          </div>
+          <p className={`${neueRoman.className} lg:text-2xl pl-10 py-4 w-full`}>
+            {message}
+          </p>
+        </div>
+        <ContactDialog type="" />
       </div>
     </div>
   );

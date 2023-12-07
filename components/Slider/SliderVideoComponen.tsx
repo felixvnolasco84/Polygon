@@ -92,8 +92,7 @@ const SliderVideoComponent: React.FC<SliderProps> = ({ features }) => {
           <motion.img
             className="absolute h-full w-full bg-center object-cover object-center"
             key={activeIndex}
-            src={features[activeIndex].img}
-            layout={"preserve-aspect"}
+            src={features[activeIndex].img}            
             loading="lazy"
             // initial={direction === "right" ? "hiddenRight" : "hiddenLeft"}
             animate="visible"          

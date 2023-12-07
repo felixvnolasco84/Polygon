@@ -39,7 +39,9 @@ export default function Page({ params }: Props) {
       </Head>
       <div className="bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1701196725/Hero/aw5sgcciztsdpzpbx9hi.png')] bg-no-repeat">
         <div className="from-2% flex h-[420px] flex-col justify-end gap-24 bg-gradient-to-t from-black to-transparent to-60% px-4 pb-[30px] lg:h-[1024px] lg:px-24">
-          <h1 className={`${neueXThin.className} text-4xl  lg:text-7xl text-white`}>
+          <h1
+            className={`${neueXThin.className} text-4xl  lg:text-7xl text-white`}
+          >
             {service.title}
           </h1>
           <div className="hidden items-start gap-4 lg:flex">
@@ -60,14 +62,18 @@ export default function Page({ params }: Props) {
             ))}
           </div>
         </div>
-        <SliderComponent features={service.features} type=""  />        
+        <SliderComponent features={service.features} type="" />
       </div>
       <div className="flex flex-col gap-[74px] px-4 xl:container lg:mb-[120px] lg:mt-[120px]">
-        <h1 className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}>
+        <h1
+          className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}
+        >
           {service.tile}
         </h1>
         <div className="m-auto mb-8 flex max-w-[1226px] flex-col justify-start gap-2 lg:mb-0 lg:justify-center lg:gap-10">
-          <h2 className={`${neueThin.className} text-3xl lg:text-[40px] text-black-500`}>
+          <h2
+            className={`${neueThin.className} text-3xl lg:text-[40px] text-black-500`}
+          >
             Cuéntanos qué es lo que necesitas.
           </h2>
           <QuoteForm

@@ -14,19 +14,17 @@ return (
   <div className="relative h-full bg-cover bg-center bg-no-repeat">
     <Image
       src={bgImageMobile}
-      layout="fill"
-      objectFit="cover"
-      objectPosition="center"
+      fill
+      sizes="(max-width: 768px) 100vw"
       alt=""
-      className="lg:hidden"
+      className="object-cover object-center lg:hidden"
     />
     <Image
       src={bgImageDesktop}
-      layout="fill"
-      objectFit="cover"
-      objectPosition="center"
+      fill
+      sizes="(max-width: 768px) 100vw"
       alt=""
-      className="hidden lg:block"
+      className="hidden object-cover object-center lg:block"
     />
     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
     <div className="relative flex h-[774px] flex-col justify-end gap-10 px-2 pb-12 lg:px-24 lg:pb-[30px]">

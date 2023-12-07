@@ -1,14 +1,10 @@
-import Contact from "@/components/Contact/Contact";
-import SuccessMessage from "@/components/Contact/SuccessMessage";
 import GridAssociate from "@/components/Grid/GridAssociate";
 import GridClients from "@/components/Grid/GridClients";
 import GridFeatured from "@/components/Grid/GridFeatured";
-import GridFeatures from "@/components/Grid/GridFeatures";
 import GridHomeHero from "@/components/Grid/GridHomeHero";
 import GridServices from "@/components/Grid/GridServices";
 import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
-import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
 import Slider from "@/components/Slider/Slider";
 import GridBlogs from "@/components/Grid/GridBlogs";
 
@@ -113,62 +109,6 @@ const items = [
     name: "Fernando Herrera",
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffernando_herrera.png?alt=media&token=11414ffc-6f62-482d-93d8-c4171ac51327",
     role: "Production Assistant",
-  },
-];
-
-const sliderItems = [
-  {
-    image: "",
-    title: "inDrive ft. Martina la Peligrosa",
-    description:
-      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-  {
-    image: "",
-    title: "inDrive ft. Martina la Peligrosa 2",
-    description:
-      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-  {
-    image: "",
-    title: "inDrive ft. Martina la Peligrosa 3",
-    description:
-      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-  {
-    image: "",
-    title: "inDrive ft. Martina la Peligrosa 4",
-    description:
-      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-  {
-    image: "",
-    title: "inDrive ft. Martina la Peligrosa 5",
-    description:
-      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-];
-
-const features = [
-  {
-    title: "Results Driven Marketing",
-    description:
-      "Nuestro enfoque se centra en entregar y seguir resultados tangibles para nuestros clientes. Medimos el éxito a través de métricas concretas y estamos constantemente buscando formas de mejorar y superar expectativas.",
-  },
-  {
-    title: "In-house Production",
-    description:
-      "Manejamos cada aspecto de la producción, desde la estrategia y la creatividad hasta la ejecución y el análisis. Esto nos permite mantener un alto nivel de control de calidad como empresa y ofrecer resultados consistentes a nuestros clientes.",
-  },
-  {
-    title: "Social Focused",
-    description:
-      "Nuestro equipo está compuesto por expertos que se dedican a estar a la vanguardia de las últimas tendencias y plataformas de medios. Creamos contenido y campañas específicamente adaptados a cada canal de redes sociales para maximizar el impacto.",
-  },
-  {
-    title: "Idea Factory",
-    description:
-      "Nuestro equipo está constantemente generando ideas frescas e innovadoras para ayudar a nuestros clientes a destacar y alcanzar sus objetivos en línea. Siempre estamos ideando formas nuevas y emocionantes de interactuar con las audiencias.",
   },
 ];
 
@@ -322,64 +262,19 @@ const partners = [
   },
 ];
 
-const CarrouselItems = [
-  {
-    image:
-      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/13450045/pexels-photo-13450045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-  {
-    image:
-      "https://images.pexels.com/photos/16884746/pexels-photo-16884746/free-photo-of-punto-de-referencia-puerta-alemania-medieval.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "",
-  },
-];
   
 export default function Home() {
 
   return (
     <main className="bg-gray-[#FDFDFD] flex min-h-screen flex-col items-center justify-between">
-      <div className="flex flex-col gap-16 lg:gap-[425px]">
+      <div className="flex flex-col gap-16 lg:gap-24">
         <GridHomeHero />
         <GridServices />
-        <GridFeatured />
-        {/* <SuccessMessage /> */}
+        <GridFeatured />        
         <GridTalent />
-        <Grid items={items} />
-        {/* <GridFeatures items={features} /> */}
-        <GridAssociate items={partners} />
-        <GridAssociateCarrousel />
-        {/* <Slider items={sliderItems} /> */}
+        <Grid items={items} />        
+        <GridAssociate items={partners} />        
+        <Slider />
         <GridClients items={clients} />
         <GridBlogs />                
       </div>

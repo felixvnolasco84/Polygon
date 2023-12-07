@@ -23,7 +23,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
   return (
     <div
       className={`flex ${(type == "talent"
-        ? "bg-transparent flex-col-reverse gap-12"
+        ? "bg-transparent flex-col-reverse gap-8"
         : "flex-col bg-black-600 pb-48 pt-24 px-4")}    lg:px-24`}
     >
       <div className="flex w-full justify-center space-x-2 py-4">
@@ -37,8 +37,8 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
           />
         ))}
       </div>
-      <div className="flex h-64 text-white">
-        <div className="w-full pt-12 opacity-100 transition-opacity duration-500">
+      <div className="flex h-fit text-white">
+        <div className="w-full opacity-100 transition-opacity duration-500">
           {features[activeIndex]?.title && (
             <p
               className={`${neueThin.className} text-xl lg:text-4xl lg:leading-none`}
@@ -47,7 +47,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
             </p>
           )}
 
-          <p className={`${neueXThin.className} text-2xl lg:text-4xl lg:leading-[60px]`}>
+          <p className={`${neueXThin.className} text-lg lg:text-4xl lg:leading-[60px]`}>
             {features[activeIndex].description}
           </p>
         </div>

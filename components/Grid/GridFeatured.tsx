@@ -38,11 +38,11 @@ export default function GridFeatured() {
           Innovación en acción: <br /> nuestro trabajo más reciente.
         </h2>
         <div className="grid w-fit grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-2 lg:gap-4">
-          <div className="col-span-1 flex h-fit max-w-[812px] flex-col lg:gap-5">
+          <div className="col-span-1 flex h-fit flex-col lg:gap-5">
             <Image
               src={InDrive}
               alt=""
-              className="min-h-[480px] rounded-[10px] lg:max-h-none lg:min-h-[565px]"
+              className="min-h-[480px] rounded-[10px] object-cover lg:max-h-none lg:min-h-[565px]"
             ></Image>
             <div className="flex flex-col gap-2 lg:gap-5">
               <h4
@@ -59,8 +59,8 @@ export default function GridFeatured() {
             </div>
           </div>
 
-          <div className="row-span-2 flex max-w-[812px] flex-col lg:gap-5">
-            <Image src={Bupa} alt="" className="h-full rounded-[10px]"></Image>
+          <div className="row-span-2 flex min-h-full flex-col lg:gap-5">
+            <Image src={Bupa} alt="" className="h-full rounded-[10px]" />
             <div className="flex flex-col gap-5">
               <h4 className={`${neueThin.className} text-3xl text-black-500`}>
                 Content Bupa Nacional Vital
@@ -74,11 +74,11 @@ export default function GridFeatured() {
               </p>
             </div>
           </div>
-          <div className="col-span-1 flex max-w-[812px] flex-col justify-end lg:gap-5">
+          <div className="col-span-1 flex flex-col justify-end lg:gap-5">
             <Image
               src={Aura}
               alt=""
-              className="max-h-[485px] rounded-[10px]"
+              className="max-h-[485px] rounded-[10px] object-cover"
             ></Image>
             <div className="flex flex-col">
               <h4 className={`${neueThin.className} text-3xl text-black-500`}>
@@ -95,7 +95,7 @@ export default function GridFeatured() {
           </div>
         </div>
       </div>
-      <SliderVideoComponent features={featuredWork} />
+      {/* <SliderVideoComponent features={featuredWork} /> */}
     </>
   );
 }
