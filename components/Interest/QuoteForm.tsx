@@ -127,12 +127,12 @@ export function QuoteForm({
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    className="flex w-full flex-shrink flex-grow flex-col flex-wrap gap-4 lg:flex-row"
+                    className="flex w-full flex-col gap-4 lg:flex-row xl:flex-grow"
                   >
                     {projects.map((service: any, index: any) => (
                       <FormItem
                         key={index}
-                        className={`relative flex min-h-[237px] w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:max-w-[398px]`}
+                        className={`relative flex min-h-fit w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:w-4/12 xl:min-h-[237px] xl:max-w-[398px]`}
                       >
                         <FormControl
                           onClick={() => handleItemClick(index)}
@@ -150,14 +150,14 @@ export function QuoteForm({
                           />
                         </FormControl>
                         <FormLabel className="h-full cursor-pointer p-6">
-                          <div className="flex flex-col gap-6">
+                          <div className="flex flex-col gap-2 lg:gap-6">
                             <p
-                              className={`${neueThin.className} text-2xl lg:text-3xl`}
+                              className={`${neueThin.className} text-2xl xl:text-3xl`}
                             >
                               {service.title}
                             </p>
                             <p
-                              className={`${neueXThin.className} text-xl lg:text-2xl max-w-[320px]`}
+                              className={`${neueXThin.className} text-xl xl:text-2xl max-w-[320px]`}
                             >
                               {service.description}
                             </p>
@@ -177,9 +177,9 @@ export function QuoteForm({
             name="budget"
             render={({ field }) => (
               <FormItem
-                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between `}
+                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between`}
               >
-                <FormLabel className="text-center text-2xl lg:text-[40px]">
+                <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
                 <FormControl>
@@ -201,7 +201,7 @@ export function QuoteForm({
             render={({ field }) => (
               <FormItem className="flex w-full flex-col items-center justify-center rounded-[10px] bg-gray-400 px-6 py-12 lg:gap-6 lg:py-[60px]">
                 <FormLabel
-                  className={`${neueThin.className} text-xl lg:text-3xl mb-4 lg:mb-0 lg:leading-[40px]`}
+                  className={`${neueThin.className} text-xl lg:text-2xl xl:text-3xl mb-4 lg:mb-0 xl:leading-[40px]`}
                 >
                   En caso de que exista, compártenos tu página actual en la que
                   debamos trabajar. (Si no tienes una, puedes proporcionarnos
@@ -210,7 +210,7 @@ export function QuoteForm({
                 <FormControl>
                   <div className="w-full rounded-[10px] bg-white p-4 lg:w-3/4">
                     <Input
-                      className={`${neueThin.className} text-sm lg:text-3xl`}
+                      className={`${neueThin.className} text-sm lg:text-2xl xl:text-3xl`}
                       placeholder="Link de página o referencia"
                       {...field}
                     />
@@ -224,9 +224,9 @@ export function QuoteForm({
             control={form.control}
             name="interest"
             render={() => (
-              <FormItem className="flex w-full flex-col gap-8 overflow-hidden rounded-md bg-gray-400 px-6 py-12 lg:gap-12 lg:py-[60px]">
+              <FormItem className="flex w-full flex-col gap-4 overflow-hidden rounded-md bg-gray-400 px-6 py-12 lg:gap-12 lg:py-[60px]">
                 <FormLabel
-                  className={`${neueThin.className} text-2xl lg:text-[40px] leading-none`}
+                  className={`${neueThin.className} text-2xl lg:text-3xl xl:text-[40px] leading-none`}
                 >
                   También estoy interesado en:
                 </FormLabel>
@@ -261,7 +261,7 @@ export function QuoteForm({
                               />
                             </FormControl>
                             <FormLabel
-                              className={`${neueThin.className} text-xl lg:text-3xl font-normal`}
+                              className={`${neueThin.className} text-xl xl:text-3xl font-normal`}
                             >
                               {item.title}
                             </FormLabel>
@@ -280,7 +280,7 @@ export function QuoteForm({
             <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
               <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
               <p
-                className={`${neueXThin.className} text-black-500 text-xl lg:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
+                className={`${neueXThin.className} text-black-500 text-xl xl:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
               >
                 Nuestro equipo se pondrá en contacto contigo en las siguientes
                 24 horas. La información que nos compartiste nos ayudará a tener

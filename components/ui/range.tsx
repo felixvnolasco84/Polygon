@@ -16,7 +16,7 @@ const Range = React.forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="lg: flex w-3/4 flex-col gap-8 lg:w-1/2 lg:gap-12">
         <p
-          className={`${neueThin.className} text-center leading-none text-xl lg:text-[40px]`}
+          className={`${neueThin.className} text-center xl:leading-none text-xl lg:text-3xl xl:text-[40px]`}
         >
           ${sliderValue} - ${props.max}
         </p>
@@ -25,7 +25,7 @@ const Range = React.forwardRef<HTMLInputElement, InputProps>(
           defaultValue={sliderValue}
           onInput={(e:any) => handleSliderChange(e.target.value)} // Use the handleSliderChange function here
           className={cn(
-            "flex h-10 w-full border-b border-gray px-3 py-2 text-2xl file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 text-flourescentYellow",
+            "flex h-10 w-full border-b border-gray px-3 py-2 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 text-flourescentYellow",
             className
           )}
           ref={ref}

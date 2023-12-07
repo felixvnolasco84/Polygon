@@ -47,7 +47,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
             </p>
           )}
 
-          <p className={`${neueXThin.className} text-lg lg:text-4xl lg:leading-[60px]`}>
+          <p className={`${neueXThin.className} text-lg lg:text-2xl xl:text-4xl xl:leading-[60px]`}>
             {features[activeIndex].description}
           </p>
         </div>
