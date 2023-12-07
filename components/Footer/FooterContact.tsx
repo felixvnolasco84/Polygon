@@ -7,12 +7,12 @@ import {
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 import Contact from "../Contact/Contact";
-import { neueXThin } from "@/styles/fonts";
+import { neueRoman, neueXThin } from "@/styles/fonts";
 import { ContactForm } from "../Contact/ContactForm";
 
 export default function FooterContact() {
   return (
-    <div className="flex flex-col gap-5 bg-transparent text-white">
+    <div className="flex flex-col gap-8 bg-transparent text-white">
       <h2
         className={`${neueXThin.className} text-2xl md:text-3xl lg:text-[70px] lg:leading-[80px] tracking-normal`}
       >
@@ -24,7 +24,7 @@ export default function FooterContact() {
       <Dialog>
         <DialogTrigger className="block lg:hidden">
           <div className="flex h-fit w-fit items-center gap-2 bg-transparent p-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
-            <span className="z-10 h-fit rounded-[15px] bg-white px-12 py-4 text-lg font-normal text-black lg:text-2xl">
+            <span className={`${neueRoman.className} z-10 h-fit rounded-[15px] bg-white px-12 py-4 text-lg font-normal text-black lg:text-2xl`}>
               Hablemos
             </span>
             <Image

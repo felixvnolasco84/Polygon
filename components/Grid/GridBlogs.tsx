@@ -14,7 +14,7 @@ export default function GridBlogs() {
         Experiencia, pasión y resultados en cada servicio.
       </h2>
 
-      <div className="flex flex-col gap-12">
+      <div className="flex flex-col gap-4 lg:gap-12">
         {services.map((service: any, index: any) => (
           <Link
             href={`/servicios/${service.slug}`}

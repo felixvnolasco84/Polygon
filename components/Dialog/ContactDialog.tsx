@@ -8,17 +8,18 @@ import Contact from "@/components/Contact/Contact";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
+import { neueRoman } from "@/styles/fonts";
 
 export default function ContactDialog({ type }: any) {
   return (
     <Dialog>
       <DialogTrigger>
-        <div          
-          className="group relative h-fit w-fit bg-transparent p-0 hover:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-        >
+        <div className="group relative h-fit w-fit bg-transparent p-0 hover:bg-transparent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
           {type == "header" ? (
             <>
-              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-12 lg:py-4 lg:text-2xl">
+              <span
+                className={`${neueRoman.className}  relative z-10 h-fit gap-4 rounded-[15px] bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-12 lg:py-4 lg:text-2xl`}
+              >
                 Hablemos
               </span>
               <Image
@@ -30,7 +31,7 @@ export default function ContactDialog({ type }: any) {
               />
             </>
           ) : (
-            <div className="h-fit rounded-full bg-gray-200 p-2 group-hover:bg-white lg:block">              
+            <div className="h-fit rounded-full bg-gray-200 p-2 group-hover:bg-white lg:block">
               <Image src={rightArrow} alt="" />
             </div>
           )}

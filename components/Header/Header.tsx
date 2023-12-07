@@ -17,15 +17,6 @@ export default function Header() {
       <div
         className={`${neueLight.className} hidden lg:flex text-2xl gap-[55px] items-center`}
       >
-        <Link className="py-[12px]" href={"/"}>
-          Qué hacemos
-        </Link>
-        <Link className="py-[12px]" href={"/"}>
-          Nuestro trabajo
-        </Link>
-        <Link className="py-[12px]" href={"/"}>
-          Ideas
-        </Link>
         <ContactDialog type="header" />
       </div>
       <div className="block lg:hidden">

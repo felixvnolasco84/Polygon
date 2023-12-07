@@ -357,12 +357,12 @@ export function QuoteForm({
                     className="group relative h-fit w-fit bg-transparent hover:bg-transparent"
                     disabled={isLoading}
                   >
-                    <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-[64px] py-[16px] text-2xl font-normal text-gray-600 hover:bg-black hover:text-white">
+                    <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-2 text-lg font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[64px] lg:py-[16px] lg:text-2xl">
                       Enviar
                     </span>
 
                     <Image
-                      className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
+                      className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] hidden h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28 lg:block"
                       width={48}
                       height={48}
                       src={rightArrow}

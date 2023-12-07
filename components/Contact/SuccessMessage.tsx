@@ -14,16 +14,15 @@ export default function SuccessMessage({isOpen}: {isOpen: boolean}) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle
-            className={`${neueXThin.className} text-7xl text-black-500 leading-[70px] mb-11`}
+            className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500 leading-[70px] mb-11`}
           >
             Gracias, en menos de 24 horas nos <br /> pondremos en contacto.
           </DialogTitle>
           <DialogDescription
-            className={`${neueXThin.className} text-4xl text-black-500 leading-none`}
+            className={`${neueXThin.className} text-xl lg:text-4xl text-black-500 leading-none`}
           >
             <div className="flex flex-col gap-[28px]">
-              <Link href={"/"}>Regresar al inicio.</Link>
-              {/* <Link href={"/productos/web"}>Ver proyectos relacionados.</Link> */}
+              <Link href={"/"}>Regresar al inicio.</Link>              
             </div>
           </DialogDescription>
         </DialogHeader>

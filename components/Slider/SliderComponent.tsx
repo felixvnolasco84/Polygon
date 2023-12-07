@@ -24,7 +24,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
     <div
       className={`flex ${(type == "talent"
         ? "bg-transparent flex-col-reverse gap-8"
-        : "flex-col bg-black-600 pb-48 pt-24 px-4")}    lg:px-24`}
+        : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4")}    lg:px-24`}
     >
       <div className="flex w-full justify-center space-x-2 py-4">
         {features.map((_, index) => (
