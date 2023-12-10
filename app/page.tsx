@@ -7,7 +7,7 @@ import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
 import GridBlogs from "@/components/Grid/GridBlogs";
-
+import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
 
 const items = [
   {
@@ -262,21 +262,22 @@ const partners = [
   },
 ];
 
-  
 export default function Home() {
-
   return (
     <main className="bg-gray-[#FDFDFD] flex min-h-screen flex-col items-center justify-between">
       <div className="flex flex-col gap-16 lg:gap-24 xl:gap-48">
         <GridHomeHero />
         <GridServices />
-        <GridFeatured />        
+        <GridFeatured />
         <GridTalent />
-        <Grid items={items} />        
-        <GridAssociate items={partners} />        
+        <Grid items={items} />
+        <GridAssociate items={partners} />
+        <div className="w-screen">
+          <GridAssociateCarrousel />
+        </div>        
         <Slider />
         <GridClients items={clients} />
-        <GridBlogs />                
+        <GridBlogs />
       </div>
     </main>
   );

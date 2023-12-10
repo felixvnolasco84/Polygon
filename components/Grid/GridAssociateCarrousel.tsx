@@ -77,14 +77,14 @@ export const GridAssociateCarrousel = () => {
 
   return (
     <div
-      className={`lg:hidden flex flex-col gap-7 px-4 lg:px-24 ${neueLight.className}`}
+      className={`w-full lg:hidden flex flex-col gap-7 px-4 lg:px-24 ${neueLight.className}`}
     >
       <h2 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl lg:leading-tight lg:tracking-tighter xl:text-4xl">
         Calidad Polygon, certificaciones y partners.
       </h2>
 
       <div
-        className="flex max-w-sm cursor-grab gap-4 overflow-x-auto hide-scrollbar-utility active:cursor-grabbing"
+        className="flex max-w-full cursor-grab gap-4 overflow-x-auto hide-scrollbar-utility active:cursor-grabbing"
         ref={TeamCarrouselRef}
         onMouseDown={handleMouseDown}
         onMouseLeave={handleMouseLeave}
@@ -93,9 +93,9 @@ export const GridAssociateCarrousel = () => {
       >
         {partners.map((item: any, index: any) => (
           <div className="flex flex-grow flex-col lg:gap-[30px]" key={index}>
-            <div className="flex min-w-[350px] flex-col justify-center gap-16 rounded-[10px] bg-gray-400 px-6 py-6 lg:pl-6">
+            <div className="flex h-full min-w-[350px] flex-col justify-center gap-2 rounded-[10px] bg-gray-400 px-6 py-6 lg:pl-6">
               <div
-                className={`flex h-[80px] w-[80px] items-center justify-center rounded-[10px] lg:h-[120px] lg:w-[120px]`}
+                className={`flex h-32 items-center justify-center rounded-[10px] lg:h-[120px] lg:w-[120px]`}
               >
                 {/* FIT image to the container */}
                 <div className={`flex h-fit justify-center lg:justify-start`}>
@@ -103,6 +103,7 @@ export const GridAssociateCarrousel = () => {
                     src={item.image}
                     width={item.imageWidth}
                     height={item.imageHeight}
+                    className="p-6 md:p-12"
                     // fill={true}
                     // sizes="(max-width: 768px) 100vw, 33vw"
                     alt=""
@@ -110,7 +111,7 @@ export const GridAssociateCarrousel = () => {
                 </div>
               </div>
 
-              <div className="flex h-full flex-col items-stretch gap-2 lg:gap-4">
+              <div className="flex h-full flex-col items-stretch justify-end gap-2 lg:gap-4">
                 <span
                   className={`${neueThin.className} text-xl lg:text-[40px] text-black-500 leading-none`}
                 >

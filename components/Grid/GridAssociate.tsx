@@ -17,11 +17,16 @@ const GridAssociate = ({ items }: any) => {
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {items.map((item: any, index: any) => (
           <div className="flex flex-col lg:gap-4 xl:gap-[30px]" key={index}>
-            <div className="flex h-[477px] w-full flex-col justify-center rounded-[10px] bg-gray-400 p-6 lg:gap-8 lg:pl-[53px] xl:gap-16">
+            <div className="flex h-[477px] w-full flex-col justify-center rounded-[10px] bg-gray-400 p-6 lg:gap-8 lg:p-8 xl:gap-16">
               <div
                 className={`lg:w-[${item.imageWidth}px] lg:h-[${item.imageHeight}px]`}
               >
-                <Image src={item.image} alt="" width={380} height={80} />
+                <Image
+                  src={item.image}
+                  className="" alt=""
+                  width={item.imageWidth}
+                  height={item.imageHeight}
+                />
               </div>
               <div className="flex flex-col gap-2 lg:gap-4">
                 <span
@@ -30,7 +35,7 @@ const GridAssociate = ({ items }: any) => {
                   {item.title}
                 </span>
                 <span
-                  className={`${neueXThin.className} text-lg lg:text-xl xl:text-2xl text-black-500 lg:leading-[40px] max-w-[694px]`}
+                  className={`${neueXThin.className} text-lg lg:text-xl xl:text-2xl text-black-500 xl:leading-[40px] max-w-[694px]`}
                 >
                   {item.description}
                 </span>
