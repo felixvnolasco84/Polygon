@@ -43,7 +43,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
       <AnimatePresence >
         <motion.div
           key={activeIndex}
-          className="flex h-fit text-white"
+          className="flex h-32 text-white"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1}}
           exit={{ opacity: 0, scale: 0.9 }}
