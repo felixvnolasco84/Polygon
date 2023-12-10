@@ -1,6 +1,7 @@
 import { neueXThin, neueThin, neueRoman } from "@/fonts";
 import Image from "next/image";
 import ContactDialog from "../Dialog/ContactDialog";
+import TalkDialog from "../Dialog/TalkDialog";
 
 const GridAssociate = ({ items }: any) => {
   const message =
@@ -38,23 +39,14 @@ const GridAssociate = ({ items }: any) => {
           </div>
         ))}
       </div>
-      <div className="group relative hidden items-center gap-1 lg:flex">
-        <div className="relative w-full overflow-hidden rounded-[15px] bg-flourescentYellow">
-          <div
-            className={`absolute left-0 top-0 h-full w-0 bg-gray-400 transition-all duration-300 group-hover:w-full`}
-          >
-            <p
-              className={`invisible group-hover:visible transition-opacity delay-700 text-black ${neueRoman.className} lg:text-xl xl:text-2xl pl-10 py-4 transition rounded-[15px]`}
-            >
-              {message}
-            </p>
-          </div>
-          <p className={`${neueRoman.className} lg:text-xl xl:text-2xl pl-10 py-4 w-full`}>
-            {message}
-          </p>
-        </div>
-        <ContactDialog type="" />
-      </div>
+
+      <TalkDialog
+        message={message}
+        bgColor="bg-flourescentYellow"
+        bgHoverColor="bg-gray-400"
+        bgButtonColor="bg-gray-400"
+        bgButtonHoverColor="bg-white"
+      />
     </div>
   );
 };

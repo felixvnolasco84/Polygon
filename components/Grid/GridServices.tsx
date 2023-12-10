@@ -472,8 +472,8 @@ export default function GridServices() {
               </h3>
               <Image
                 className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-gray-400 lg:group-hover:block"
-                width={48}
-                height={48}
+                width={40}
+                height={40}
                 src={rightArrow}
                 alt=""
               />

@@ -267,7 +267,7 @@ export default function Home() {
 
   return (
     <main className="bg-gray-[#FDFDFD] flex min-h-screen flex-col items-center justify-between">
-      <div className="flex flex-col gap-16 lg:gap-24">
+      <div className="flex flex-col gap-16 lg:gap-24 xl:gap-48">
         <GridHomeHero />
         <GridServices />
         <GridFeatured />        

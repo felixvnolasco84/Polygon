@@ -1,11 +1,9 @@
 import {
   Dialog,
-  DialogContent,
-  DialogDescription,
+  DialogContent,  
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Contact from "@/components/Contact/Contact";
-import { Button } from "../ui/button";
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 import { neueRoman } from "@/styles/fonts";

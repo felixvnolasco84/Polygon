@@ -95,6 +95,7 @@ module.exports = {
         ".hide-scrollbar-utility": {
           "scrollbar-width": "none",
           "-ms-overflow-style": "none",
+          "max-width": "100vw",
         },
         ".hide-scrollbar-utility::-webkit-scrollbar ": {
           display: "none",
