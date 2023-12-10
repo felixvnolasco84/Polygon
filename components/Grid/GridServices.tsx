@@ -452,7 +452,7 @@ export default function GridServices() {
   return (
     <div className="flex flex-col gap-4 px-4 lg:gap-12 lg:px-12 xl:px-24">
       <h2
-        className={`${neueLight.className} text-3xl lg:text-5xl xl:text-7xl text-black-500`}
+        className={`${neueXThin.className} text-3xl lg:text-5xl xl:text-7xl text-black-500`}
       >
         Experiencia, pasión y resultados en cada servicio.
       </h2>

@@ -71,7 +71,7 @@ const Slider = () => {
           <Carousel
             defaultControlsConfig={{
               containerClassName: "absolute top-5 w-full",
-              pagingDotsContainerClassName: "gap-4 spacing-dots",
+              pagingDotsContainerClassName: "gap-[10px] spacing-dots",
               pagingDotsClassName: "w-full px-4 bg-white rounded-md",
               pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
             }}

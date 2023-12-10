@@ -9,7 +9,7 @@ export default function GridBlogs() {
   return (
     <div className="flex flex-col gap-[20px] bg-black-600 px-4 py-24 lg:gap-[80px] lg:px-12 xl:px-24">
       <h2
-        className={`${neueLight.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white`}
+        className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white`}
       >
         Experiencia, pasión y resultados en cada servicio.
       </h2>
