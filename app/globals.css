@@ -111,6 +111,81 @@
   }
 }
 
-.slider-container  {
+.slider-container {
   width: 100%;
+}
+
+.range-slider {
+  -webkit-appearance: none;
+  /* Override default CSS styles */
+  appearance: none;
+  width: 100%;
+  /* Full-width */
+  height: 25px;
+  /* Specified height */
+  background: #d3d3d3;
+  /* Grey background */
+  outline: none;
+  /* Remove outline */
+  opacity: 0.7;
+  /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s;
+  /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+.range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance: none;
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background-color: #000000;
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.range-slider::-moz-range-thumb {
+  width: 25px;
+  /* Set a specific slider handle width */
+  height: 25px;
+  /* Slider handle height */
+  background: url("/public/images/rightArrow.svg");
+  /* Green background */
+  cursor: pointer;
+  /* Cursor on hover */
+}
+
+.range-slider::-webkit-slider-runnable-track {
+  background: var(--color-flourescent-yellow);
+}
+
+.range-slider::-moz-range-track {
+  background: var(--color-flourescent-yellow);
+}
+
+.spacing-dots {
+  padding: 0 1rem 0 1rem !important;  
+}
+
+.spacing-dots button svg circle {
+  display: none;
+}
+
+/* media query for desktop */
+
+@media (min-width: 768px) {
+  .spacing-dots {
+    padding: 0 1rem 0 1rem !important;
+  }
+}
+
+/* media query for large laptops */
+@media (min-width: 1024px) {
+  .spacing-dots {
+    padding: 0 1rem 0 1rem !important;
+  }
 }

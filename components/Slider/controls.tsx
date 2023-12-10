@@ -7,7 +7,7 @@ import rightArrow from "@/public/images/rightArrow.svg";
 export const renderCenterLeftControls = ({ previousDisabled, previousSlide }: any) => (
   <button
     className={clsx(
-      "bg-transparent border-none",
+      "hidden bg-transparent border-none",
       "cursor-pointer disabled:cursor-not-allowed",
       "appearance-none flex items-center m-3",
       "text-black opacity-70 hover:opacity-100 disabled:opacity-30"
@@ -24,7 +24,8 @@ export const renderCenterLeftControls = ({ previousDisabled, previousSlide }: an
 export const renderCenterRightControls = ({ nextDisabled, nextSlide }: any) => (
   <button
     className={clsx(
-      "bg-transparent border-none",
+      
+      "hidden bg-transparent border-none",
       "cursor-pointer disabled:cursor-not-allowed",
       "appearance-none flex items-center m-3",
       "text-black opacity-70 hover:opacity-100 disabled:opacity-30"

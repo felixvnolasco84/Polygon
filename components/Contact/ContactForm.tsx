@@ -151,12 +151,12 @@ export function ContactForm() {
               className="group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
               disabled={isLoading}
             >
-              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
+              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-3 py-2 text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
                 Enviar
               </span>
 
               <Image
-                className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28"
+                className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] hidden h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28 lg:block"
                 width={48}
                 height={48}
                 src={rightArrow}

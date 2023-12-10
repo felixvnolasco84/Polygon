@@ -1,8 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import Carousel from "nuka-carousel";
+import Carousel, { PagingDots } from "nuka-carousel";
 import { Cards, MobileCards } from "./cards";
+import {
+  renderCenterLeftControls,
+  renderCenterRightControls,
+} from "./controls";
 
 const Slider = () => {
   return (
@@ -62,9 +66,15 @@ const Slider = () => {
         </Carousel>
       </div>
 
-      <div className="w-screen">
-        <div className="flex w-full items-center justify-center gap-5 px-4">
+      <div className="w-screen lg:w-full">
+        <div className="flex w-full items-center justify-center gap-5 px-4 lg:px-12 xl:px-4">
           <Carousel
+            defaultControlsConfig={{
+              containerClassName: "absolute top-5 w-full",
+              pagingDotsContainerClassName: "gap-4 spacing-dots",
+              pagingDotsClassName: "w-full px-4 bg-white rounded-md",
+              pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
+            }}
             className="block xl:hidden"
             frameAriaLabel="Carousel Demo 2"
             slideIndex={0}
@@ -72,7 +82,10 @@ const Slider = () => {
             slidesToShow={1}
             autoplay={true}
             autoplayInterval={2000}
-            withoutControls={true}
+            withoutControls={false}
+            tabbed={true}
+            renderCenterLeftControls={renderCenterLeftControls}
+            renderCenterRightControls={renderCenterRightControls}
           >
             {MobileCards}
           </Carousel>

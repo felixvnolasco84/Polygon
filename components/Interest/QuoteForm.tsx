@@ -27,6 +27,7 @@ import { Range } from "../ui/range";
 import { sendEmail } from "@/app/_actions";
 import { services } from "../Grid/GridServices";
 import SuccessMessage from "../Contact/SuccessMessage";
+import { Slider } from "../ui/slider";
 
 export function QuoteForm({
   service,
@@ -182,8 +183,9 @@ export function QuoteForm({
                 <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
-                <FormControl>
+                <FormControl>                  
                   <Range
+                    className="range-slider"
                     min={minNumber}
                     max={maxNumber}
                     step={5000}
@@ -261,7 +263,7 @@ export function QuoteForm({
                               />
                             </FormControl>
                             <FormLabel
-                              className={`${neueThin.className} text-xl xl:text-3xl font-normal`}
+                              className={`${neueThin.className} text-lg xl:text-2xl font-normal`}
                             >
                               {item.title}
                             </FormLabel>
