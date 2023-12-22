@@ -25,10 +25,10 @@ export default function TalkDialog({
             className={`relative w-full overflow-hidden rounded-[15px] ${bgColor}`}
           >
             <div
-              className={`absolute left-0 top-0 h-full w-0 ${bgHoverColor} transition-all duration-300 group-hover:w-full`}
+              className={`absolute left-0 top-0 h-full w-0 ${bgHoverColor} transition-all duration-700 group-hover:w-full`}
             >
               <p
-                className={`invisible group-hover:visible transition-opacity delay-700 text-black ${neueRoman.className} lg:text-xl xl:text-2xl pl-10 py-4 transition rounded-[15px] text-left`}
+                className={`invisible group-hover:visible transition-opacity text-black ${neueRoman.className} lg:text-xl xl:text-2xl pl-10 py-4 transition-all rounded-[15px] text-left`}
               >
                 {message}
               </p>

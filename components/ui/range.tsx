@@ -14,22 +14,31 @@ const Range = forwardRef<HTMLInputElement, InputProps>(
       setSliderValue(newValue);
     };
 
-    function formatCurrency(value: number, currency: string = "USD"): string {
+    function formatCurrency(value: number, currency: string): string {
       return new Intl.NumberFormat("en-US", {
-        style: "currency",
-        currency,
+        style: "decimal",
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0,
       }).format(value);
     }
 
     return (
       <div className="lg: flex w-3/4 flex-col gap-8 lg:w-1/2 lg:gap-12">
-        <p
-          className={`${neueThin.className} text-center xl:leading-none text-xl lg:text-3xl xl:text-[40px]`}
-        >
-          {formatCurrency(Number(sliderValue), "MXN") +
-            " - " +
-            formatCurrency(Number(props.max), "MXN")}
-        </p>
+        <div className="flex items-center justify-center gap-1">
+          <p
+            className={`${neueThin.className} text-center xl:leading-none text-xl lg:text-3xl xl:text-[40px]`}
+          >
+            ${formatCurrency(Number(sliderValue), "MXN")}
+          </p>
+          <span>MXN</span>
+
+          <p
+            className={`${neueThin.className} text-center xl:leading-none text-xl lg:text-3xl xl:text-[40px]`}
+          >
+            - ${formatCurrency(Number(props.max), "MXN")}
+          </p>
+          <span>MXN</span>
+        </div>
         <input
           type="range"
           defaultValue={sliderValue}

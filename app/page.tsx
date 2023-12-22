@@ -277,7 +277,7 @@ export default function Home() {
         </div>        
         <Slider />
         <GridClients items={clients} />
-        <GridBlogs />
+        {/* <GridBlogs /> */}
       </div>
     </main>
   );

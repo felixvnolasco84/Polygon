@@ -28,6 +28,7 @@ import { sendEmail } from "@/app/_actions";
 import { services } from "../Grid/GridServices";
 import SuccessMessage from "../Contact/SuccessMessage";
 import { Slider } from "../ui/slider";
+import PolygonIsoLogo from "@/public/images/Logo/PolygonIsoLogo.png";
 
 export function QuoteForm({
   service,
@@ -88,7 +89,7 @@ export function QuoteForm({
         method: "POST",
         body: JSON.stringify(data),
       });
-      if (response.ok) {        
+      if (response.ok) {
         setShowModalMessage(true);
         setIsLoading(false);
       }
@@ -183,7 +184,7 @@ export function QuoteForm({
                 <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
-                <FormControl>                  
+                <FormControl>
                   <Range
                     className="range-slider"
                     min={minNumber}
@@ -280,7 +281,9 @@ export function QuoteForm({
 
           <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
             <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
-              <div className="h-[155px] w-[239px] bg-flourescentYellow"></div>
+              
+                <Image className="px-12 md:px-12 lg:px-8 xl:px-4" src={PolygonIsoLogo} width={239} height={155} alt="" />
+              
               <p
                 className={`${neueXThin.className} text-black-500 text-xl xl:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
               >

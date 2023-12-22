@@ -43,11 +43,11 @@ export default function GridTalent() {
                 key={index}
                 className="flex flex-col gap-[12px] text-white lg:gap-[10px]"
               >
-                <p className={`${neueThin.className} lg:h-12 text-xl xl:text-2xl`}>
+                <p className={`${neueThin.className} lg:h-12 xl:h-8 text-xl xl:text-2xl`}>
                   {feature.title}
                 </p>
                 <p
-                  className={`${neueXThin.className} text-lg xl:text-2xl xl:leading-[35px] lg:max-w-[398px]`}
+                  className={`${neueXThin.className} text-lg xl:text-[22px] xl:leading-[35px] lg:max-w-[398px]`}
                 >
                   {feature.description}
                 </p>

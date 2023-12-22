@@ -16,7 +16,7 @@ export default function ContactDialog({ type }: any) {
           {type == "header" ? (
             <>
               <span
-                className={`${neueRoman.className}  relative z-10 h-fit gap-4 rounded-[15px] bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-12 lg:py-4 lg:text-2xl`}
+                className={`${neueRoman.className}  relative z-10 h-fit gap-4 rounded-[15px] bg-transparent lg:bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-12 lg:py-4 lg:text-2xl`}
               >
                 Hablemos
               </span>

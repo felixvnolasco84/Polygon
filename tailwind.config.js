@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     container: {
       center: true,       
-      screens: {
+      screens: {        
         "2xl": "1920px",        
       },
     },
