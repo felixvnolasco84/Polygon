@@ -12,7 +12,7 @@ export default function PolygonLogo({ fillColor }: { fillColor: string }) {
       const green = Math.floor(255 - scrollPercent * 2.55);
       const layer1 = document.getElementById("Layer_1");
       if (layer1) {
-        layer1.style.fill = "rgb(" + red + "," + green + ",0)"; // Change the fill color
+        layer1.style.backgroundColor = "rgb(" + red + "," + green + ",0)"; // Change the fill color
       }
     };
 
@@ -31,7 +31,7 @@ export default function PolygonLogo({ fillColor }: { fillColor: string }) {
       height={42}
       viewBox="0 0 1241 355"
       fill="currentColor"
-      style={{ mixBlendMode: "difference", backgroundColor: "white" }}
+      style={{ mixBlendMode: "difference" }}
     >
       <path
         className="cls-1"

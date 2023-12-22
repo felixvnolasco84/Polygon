@@ -8,7 +8,7 @@ import PolygonLogo from "../Logo/PolygonLogo";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-40 flex h-16 w-full items-center justify-between bg-transparent px-4 lg:h-20 lg:px-12 xl:h-[104px] xl:px-24">
+    <div className="sticky top-0 z-40 flex h-16 w-full items-center justify-between bg-gray-400 px-4 lg:h-20 lg:px-12 xl:h-[104px] xl:px-24">
       <Link
         className="min-h-[22px] w-[209px] max-w-[110px] lg:max-w-none"
         href={"/"}
