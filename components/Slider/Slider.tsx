@@ -11,20 +11,21 @@ import {
 const Slider = () => {
   return (
     <>
-      <div className="flex items-center justify-center gap-5 px-24">
-        <Carousel
-          className="hidden xl:block"
-          frameAriaLabel="Carousel Demo"
-          slideIndex={0}
-          wrapAround={true}
-          slidesToShow={2}
-          autoplay={false}
-          cellSpacing={24}
-          autoplayInterval={2000}
-          withoutControls={true}
-        >
-          {Cards}
-        </Carousel>
+      <div className="w-screen">        
+        <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
+          <Carousel
+            className="hidden lg:block"
+            frameAriaLabel="Carousel Demo"
+            slideIndex={0}
+            wrapAround={true}
+            slidesToShow={2}
+            autoplay={false}
+            cellSpacing={24}          
+            withoutControls={true}
+          >
+            {Cards}
+          </Carousel>
+        </div>
       </div>
       <div className="w-screen lg:w-full">
         <div className="flex w-full items-center justify-center gap-5 px-4 lg:px-12 xl:px-4">
@@ -35,7 +36,7 @@ const Slider = () => {
               pagingDotsClassName: "w-full px-4 bg-white rounded-md",
               pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
             }}
-            className="block xl:hidden"
+            className="block lg:hidden"
             frameAriaLabel="Carousel Demo 2"
             slideIndex={0}
             wrapAround={true}
