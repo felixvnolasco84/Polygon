@@ -1,7 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
-import Aura from "@/public/images/Customers/Aura.png";
 import Bupa from "@/public/images/Customers/Bupa.png";
 import InDrive from "@/public/images/Customers/InDrive.png";
 import Bursanet from "@/public/images/Customers/Bursanet.png";

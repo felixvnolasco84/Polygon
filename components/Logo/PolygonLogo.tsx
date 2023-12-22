@@ -3,25 +3,25 @@
 import { useEffect } from "react";
 
 export default function PolygonLogo({ fillColor }: { fillColor: string }) {
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPercent =
-        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
-        100;
-      const red = Math.floor(scrollPercent * 2.55);
-      const green = Math.floor(255 - scrollPercent * 2.55);
-      const layer1 = document.getElementById("Layer_1");
-      if (layer1) {
-        layer1.style.backgroundColor = "rgb(" + red + "," + green + ",0)"; // Change the fill color
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPercent =
+  //       (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
+  //       100;
+  //     const red = Math.floor(scrollPercent * 2.55);
+  //     const green = Math.floor(255 - scrollPercent * 2.55);
+  //     const layer1 = document.getElementById("Layer_1");
+  //     if (layer1) {
+  //       layer1.style.fill = "rgb(" + red + "," + green + ",0)"; // Change the fill color
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   return (
     <svg
       id="Layer_1"
@@ -31,7 +31,7 @@ export default function PolygonLogo({ fillColor }: { fillColor: string }) {
       height={42}
       viewBox="0 0 1241 355"
       fill="currentColor"
-      style={{ mixBlendMode: "difference" }}
+      style={{ backgroundColor: 'transparent' }}
     >
       <path
         className="cls-1"
