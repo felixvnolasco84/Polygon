@@ -112,7 +112,7 @@ export function QuoteForm({
 
   return (
     <>
-      {showModalMessage && <SuccessMessage isOpen={showModalMessage} />}
+      {showModalMessage && <SuccessMessage type="quote" />}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
@@ -281,9 +281,14 @@ export function QuoteForm({
 
           <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
             <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
-              
-                <Image className="px-12 md:px-12 lg:px-8 xl:px-4" src={PolygonIsoLogo} width={239} height={155} alt="" />
-              
+              <Image
+                className="px-12 md:px-12 lg:px-8 xl:px-4"
+                src={PolygonIsoLogo}
+                width={239}
+                height={155}
+                alt=""
+              />
+
               <p
                 className={`${neueXThin.className} text-black-500 text-xl xl:text-2xl lg:max-w-[578px] lg:leading-[40px]`}
               >

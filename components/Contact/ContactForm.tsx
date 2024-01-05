@@ -74,11 +74,11 @@ export function ContactForm() {
 
   return (
     <>
-      {showModalMessage && <SuccessMessage isOpen={showModalMessage} />}
+      {showModalMessage && <SuccessMessage type="contact" />}
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-2/3 lg:flex-row`}
+          className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-10/12 xl:w-8/12 lg:flex-row`}
         >
           <div className="flex w-full flex-col gap-8 rounded-2xl bg-transparent lg:flex-row lg:bg-gray-400 lg:p-4 lg:text-black-500">
             <FormField

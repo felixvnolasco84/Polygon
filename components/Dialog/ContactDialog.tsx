@@ -1,8 +1,4 @@
-import {
-  Dialog,
-  DialogContent,  
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Contact from "@/components/Contact/Contact";
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
@@ -16,7 +12,7 @@ export default function ContactDialog({ type }: any) {
           {type == "header" ? (
             <>
               <span
-                className={`${neueRoman.className}  relative z-10 h-fit gap-4 rounded-[15px] bg-transparent lg:bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-12 lg:py-4 lg:text-2xl`}
+                className={`${neueRoman.className}  relative z-10 h-fit gap-4 rounded-[15px] bg-transparent lg:bg-white text-lg font-normal text-black hover:bg-black hover:text-white lg:px-6 xl:px-12 lg:py-3 xl:py-4 lg:text-xl xl:text-2xl`}
               >
                 Hablemos
               </span>
@@ -35,10 +31,8 @@ export default function ContactDialog({ type }: any) {
           )}
         </div>
       </DialogTrigger>
-      <DialogContent className="left-[50%] top-[28%] h-fit bg-white p-0">
-        <div className="lg:p-24">
-          <Contact />
-        </div>
+      <DialogContent className="h-fit bg-white p-0 md:p-12 xl:p-24">
+        <Contact />
       </DialogContent>
     </Dialog>
   );
