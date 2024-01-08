@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import Carousel, { PagingDots } from "nuka-carousel";
+import Carousel from "nuka-carousel";
 import { Cards, MobileCards } from "./cards";
 import {
   renderCenterLeftControls,
   renderCenterRightControls,
-} from "./controls";
+} from "./controls"; 
 
 const Slider = () => {
   return (

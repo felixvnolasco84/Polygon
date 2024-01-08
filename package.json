@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev & npx next-video sync -w",
     "prepare": "husky install",
     "build": "next build",
     "start": "next start",
@@ -33,7 +33,8 @@
     "eslint-config-next": "^14.0.3",
     "framer-motion": "^10.16.14",
     "lucide-react": "^0.277.0",
-    "next": "^14.0.3",
+    "next": "^14.0.4",
+    "next-video": "^0.11.1",
     "nuka-carousel": "^7.0.0",
     "postcss": "8.4.29",
     "prettier": "^3.0.3",

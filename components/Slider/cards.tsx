@@ -1,17 +1,20 @@
 import { useState } from "react";
 import clsx from "clsx";
-import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
+import { neueThin, neueXThin } from "@/styles/fonts";
 import Bupa from "@/public/images/Customers/Bupa.png";
 import InDrive from "@/public/images/Customers/InDrive.png";
-// import InDriveVideo from "@/public/videos/Bursanet_Video.mp4";
+import InDriveVideo from "@/public/videos/Bursanet_Video.mp4";
 import Bursanet from "@/public/images/Customers/Bursanet.png";
-// import BursanetVideo from "@/public/videos/Bursanet_Video.mp4";
+import BursanetVideo from "@/public/videos/Bursanet_Video.mp4";
 import CCP from "@/public/images/Customers/CCP.png";
 import CCPTaqueria from "@/public/images/Customers/CCP-Taqueria.png";
-// import CCPTaqueriaVideo from "@/public/videos/Taqueria_CCP_Video.mp4";
+import CCPTaqueriaVideo from "@/public/videos/Taqueria_CCP_Video.mp4";
 import Copa from "@/public/images/Customers/Copa.png";
-// import CopaVideo from "@/public/videos/Copa_Video.mp4";
+import CopaVideo from "@/public/videos/Copa_Video.mp4";
 import Image from "next/image";
+import LinkComponent from "../Link/LinkComponent";
+import Video from "next-video";
+import VideoComponent from "../Video/VideoComponent";
 
 type CardProps = {
   className?: string;
@@ -29,20 +32,18 @@ export const Card = ({ className, slideId, item }: CardProps) => {
     >
       <div className="h-[520px] overflow-hidden rounded-lg lg:h-[280px] xl:h-[520px]">
         {isPlaying ? (
-          // <video
-          //   className="h-full w-full bg-center object-cover object-center"
-          //   src={item.video}
-          //   autoPlay
-          //   controls
-          // />
-          <Image
-            className="h-full w-full bg-center object-cover object-center"
-            src={item.image}
-            width={1650}
-            height={1040}
-            alt=""
-            onClick={() => setIsPlaying(true)}
-          />
+          item.videoComponent ? (
+            item.videoComponent
+          ) : (
+            <Image
+              className="h-full w-full bg-center object-cover object-center"
+              src={item.image}
+              width={1650}
+              height={1040}
+              alt=""
+              onClick={() => setIsPlaying(true)}
+            />
+          )
         ) : (
           <Image
             className="h-full w-full bg-center object-cover object-center"
@@ -57,16 +58,17 @@ export const Card = ({ className, slideId, item }: CardProps) => {
 
       <div className="flex flex-col gap-2">
         <h2
-          className={`${neueLight.className} leading-none lg:text-2xl xl:text-3xl text-black-500`}
+          className={`${neueThin.className} leading-none lg:text-2xl xl:text-3xl text-black-500`}
         >
           {item.title}
         </h2>
         <p
-          className={`${neueThin.className} leading-[40px] lg:text-xl xl:text-2xl text-black-500`}
+          className={`${neueXThin.className} leading-[40px] lg:text-xl xl:text-2xl text-black-500`}
         >
           {item.description}
         </p>
       </div>
+      {item.linkComponent && item.linkComponent}
     </div>
   );
 };
@@ -105,10 +107,16 @@ export const Cards = [
     key="amber-card"
     item={{
       image: Copa,
-      // video: CopaVideo,
+      videoComponent: <VideoComponent video={CopaVideo} />,
       title: "Copa",
       description:
         "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
+      linkComponent: (
+        <LinkComponent
+          link={"https://copapadel.com/"}
+          title="Visitar sitio web."
+        />
+      ),
     }}
   />,
   <Card
@@ -116,7 +124,7 @@ export const Cards = [
     key="amber-card"
     item={{
       image: InDrive,
-      // video: InDriveVideo,
+      // videoComponent: <VideoComponent video={InDriveVideo} />,
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -127,7 +135,7 @@ export const Cards = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
-      // video: CCPTaqueriaVideo,
+      // videoComponent: <VideoComponent video={CCPTaqueriaVideo} />,
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -138,10 +146,16 @@ export const Cards = [
     key="amber-card"
     item={{
       image: Bursanet,
-      // video: BursanetVideo,
+      // videoComponent: <VideoComponent video={BursanetVideo} />,
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
+      linkComponent: (
+        <LinkComponent
+          link={"https://www.youtube.com/watch?v=n6B3NwBiZfQ"}
+          title="Ir a ver el contenido"
+        />
+      ),
     }}
   />,
   <Card
