@@ -14,7 +14,7 @@ const message =
 
 export default function GridHomeHero() {
   return (
-    <div className="relative h-full w-screen bg-cover bg-center bg-no-repeat">
+    <div className="relative h-full min-h-[774px] w-screen bg-cover bg-center bg-no-repeat md:min-h-full">
       <Video
         minResolution="1080p"
         loop={true}
@@ -26,7 +26,7 @@ export default function GridHomeHero() {
       />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-      <div className="absolute bottom-0 left-0 flex min-h-[774px] flex-col justify-end px-2 pb-12 md:min-h-full lg:gap-5 lg:px-12 lg:pb-[30px] xl:gap-10 xl:px-24">
+      <div className="absolute bottom-0 left-0 flex flex-col justify-end px-2 pb-12 md:min-h-full lg:gap-5 lg:px-12 lg:pb-[30px] xl:gap-10 xl:px-24">
         <h1
           className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white z-10 lg:leading-[70px]`}
         >
