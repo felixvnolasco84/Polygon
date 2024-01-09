@@ -25,12 +25,11 @@ type CardProps = {
 export const Card = ({ className, slideId, item }: CardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  return (    
+  return (
     <div
       data-slide={slideId}
       className={clsx(className, "flex w-full flex-col gap-5")}
     >
-      
       <div className="h-[520px] overflow-hidden rounded-lg lg:h-[280px] xl:h-[520px]">
         {isPlaying ? (
           item.videoComponent ? (
@@ -58,12 +57,12 @@ export const Card = ({ className, slideId, item }: CardProps) => {
       </div>
       <div className="flex flex-col gap-2">
         <h2
-          className={`${neueThin.className} leading-none lg:text-2xl xl:text-3xl text-black-500`}
+          className={`${neueThin.className} leading-none text-xl md:text-2xl lg:text-2xl xl:text-3xl text-black-500`}
         >
           {item.title}
         </h2>
         <p
-          className={`${neueXThin.className} leading-[40px] lg:text-xl xl:text-2xl text-black-500`}
+          className={`${neueXThin.className} md:leading-[40px] text-lg md:text-xl lg:text-xl xl:text-2xl text-black-500`}
         >
           {item.description}
         </p>
@@ -73,33 +72,55 @@ export const Card = ({ className, slideId, item }: CardProps) => {
   );
 };
 
-export const Mobile = ({ className, slideId, item }: CardProps) => (
-  <div
-    data-slide={slideId}
-    className={clsx(className, "flex w-full flex-col gap-5")}
-  >
-    <div className="h-[480px] overflow-hidden rounded-lg">
-      <Image
-        className="h-full w-full bg-center object-cover object-center"
-        src={item.image}
-        width={520}
-        height={520}
-        alt=""
-      />
-    </div>
+export const Mobile = ({ className, slideId, item }: CardProps) => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  return (
+    <div
+      data-slide={slideId}
+      className={clsx(className, "flex w-full flex-col gap-5")}
+    >
+      <div className="h-[480px] overflow-hidden rounded-lg">
+        {isPlaying ? (
+          item.videoComponent ? (
+            item.videoComponent
+          ) : (
+            <Image
+              className="h-full w-full bg-center object-cover object-center"
+              src={item.image}
+              width={1650}
+              height={1040}
+              alt=""
+              onClick={() => setIsPlaying(true)}
+            />
+          )
+        ) : (
+          <Image
+            className="h-full w-full bg-center object-cover object-center"
+            src={item.image}
+            width={1650}
+            height={1040}
+            alt=""
+            onClick={() => setIsPlaying(true)}
+          />
+        )}
+      </div>
 
-    <div className="flex flex-col gap-1">
-      <h2
-        className={`${neueThin.className} leading-none text-xl md:text-2xl text-black-500`}
-      >
-        {item.title}
-      </h2>
-      <p className={`${neueXThin.className} text-lg md:text-xl text-black-500`}>
-        {item.description}
-      </p>
+      <div className="flex flex-col gap-1">
+        <h2
+          className={`${neueThin.className} leading-none text-xl md:text-2xl text-black-500`}
+        >
+          {item.title}
+        </h2>
+        <p
+          className={`${neueXThin.className} text-lg md:text-xl text-black-500`}
+        >
+          {item.description}
+        </p>
+      </div>
+      {item.linkComponent && item.linkComponent}
     </div>
-  </div>
-);
+  );
+}
 
 export const Cards = [
   <Card

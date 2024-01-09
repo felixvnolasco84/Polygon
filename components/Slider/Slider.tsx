@@ -10,7 +10,7 @@ import {
 const Slider = () => {
   return (
     <>
-      <div className="w-screen">        
+      <div className="w-screen">
         <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
           <Carousel
             className="hidden lg:block"
@@ -19,7 +19,7 @@ const Slider = () => {
             wrapAround={true}
             slidesToShow={2}
             autoplay={false}
-            cellSpacing={24}          
+            cellSpacing={24}
             withoutControls={true}
           >
             {Cards}
@@ -41,13 +41,14 @@ const Slider = () => {
             wrapAround={true}
             slidesToShow={1}
             autoplay={false}
+            cellSpacing={12}
             autoplayInterval={2000}
             withoutControls={false}
             tabbed={true}
             renderCenterLeftControls={renderCenterLeftControls}
             renderCenterRightControls={renderCenterRightControls}
           >
-            {MobileCards}
+            {Cards}
           </Carousel>
         </div>
       </div>
