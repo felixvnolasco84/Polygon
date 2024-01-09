@@ -19,7 +19,7 @@ export default function GridHomeHero() {
         minResolution="1080p"
         loop={true}
         autoPlay={true}
-        controls={true}
+        controls={false}
         muted={true}
         className="absolute h-full w-full object-cover"
         src={HeroIntro}
