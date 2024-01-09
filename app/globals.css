@@ -168,7 +168,7 @@
 }
 
 .spacing-dots {
-  padding: 0 1rem 0 1rem !important;  
+  padding: 0 1rem 0 1rem !important;
 }
 
 .spacing-dots button svg circle {
@@ -197,4 +197,9 @@
 
 .cls-1 {
   stroke-width: 0px;
+}
+
+
+[data-next-video] {
+  height: 100% !important;
 }
