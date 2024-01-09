@@ -16,7 +16,6 @@ import CCPVideo from '@/videos/CCP.mp4';
 import CopaVideo from '@/videos/Copa.mp4';
 import InDriveVideo from '@/videos/InDrive.mp4';
 
-
 type CardProps = {
   className?: string;
   slideId: string;
@@ -26,11 +25,12 @@ type CardProps = {
 export const Card = ({ className, slideId, item }: CardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
-  return (
+  return (    
     <div
       data-slide={slideId}
       className={clsx(className, "flex w-full flex-col gap-5")}
     >
+      
       <div className="h-[520px] overflow-hidden rounded-lg lg:h-[280px] xl:h-[520px]">
         {isPlaying ? (
           item.videoComponent ? (
@@ -56,7 +56,6 @@ export const Card = ({ className, slideId, item }: CardProps) => {
           />
         )}
       </div>
-
       <div className="flex flex-col gap-2">
         <h2
           className={`${neueThin.className} leading-none lg:text-2xl xl:text-3xl text-black-500`}
@@ -163,8 +162,7 @@ export const Cards = [
     slideId="Slide 1"
     key="amber-card"
     item={{
-      image: CCP,
-      // video: BursanetVideo,
+      image: CCP,      
       title: "CCP Reposicionamiento Mujeres",
       description:
         "Campaña centrada en reposicionar la línea de ropa femenina, que incluye producción audiovisual y marketing de rendimiento.",
