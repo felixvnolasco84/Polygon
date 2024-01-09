@@ -203,3 +203,11 @@
 [data-next-video] {
   height: 100% !important;
 }
+
+/* video {
+  object-fit: cover !important;
+}
+
+.next-video-container > mux-player > mux-video video {
+  object-fit: cover !important;
+} */
