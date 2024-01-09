@@ -8,7 +8,7 @@ export default function VideoComponent({ video }: { video: any }) {
   return (
     <div className="h-full" onClick={() => setIsPaused(!isPaused)}>
       <Video
-        minResolution="1080p"
+        minResolution="1080p"        
         loop={true}
         autoPlay={true}
         controls={true}
