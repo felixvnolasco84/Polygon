@@ -6,10 +6,7 @@ import GridServices from "@/components/Grid/GridServices";
 import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
-import GridBlogs from "@/components/Grid/GridBlogs";
 import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
-import Video from "next-video";
-import HeroIntro from "@/videos/HeroIntro.mp4";
 
 const items = [
   {

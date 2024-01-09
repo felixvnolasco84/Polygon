@@ -10,7 +10,7 @@ export default function VideoComponent({ video }: { video: any }) {
     <div className="h-full" onClick={() => setIsPaused(!isPaused)}>
       <Video
         minResolution="1080p"
-        accentColor="#edff00"        
+        accentColor="#edff00"                
         // as={ReactPlayerAsVideo}
         loop={true}
         autoPlay={true}
