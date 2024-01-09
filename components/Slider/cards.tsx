@@ -3,18 +3,19 @@ import clsx from "clsx";
 import { neueThin, neueXThin } from "@/styles/fonts";
 import Bupa from "@/public/images/Customers/Bupa.png";
 import InDrive from "@/public/images/Customers/InDrive.png";
-import InDriveVideo from "@/public/videos/Bursanet_Video.mp4";
 import Bursanet from "@/public/images/Customers/Bursanet.png";
-import BursanetVideo from "@/public/videos/Bursanet_Video.mp4";
 import CCP from "@/public/images/Customers/CCP.png";
 import CCPTaqueria from "@/public/images/Customers/CCP-Taqueria.png";
-import CCPTaqueriaVideo from "@/public/videos/Taqueria_CCP_Video.mp4";
 import Copa from "@/public/images/Customers/Copa.png";
-import CopaVideo from "@/public/videos/Copa_Video.mp4";
 import Image from "next/image";
 import LinkComponent from "../Link/LinkComponent";
-import Video from "next-video";
 import VideoComponent from "../Video/VideoComponent";
+
+import BursanetVideo from '@/videos/Bursanet.mp4';
+import CCPVideo from '@/videos/CCP.mp4';
+import CopaVideo from '@/videos/Copa.mp4';
+import InDriveVideo from '@/videos/InDrive.mp4';
+
 
 type CardProps = {
   className?: string;
@@ -124,7 +125,7 @@ export const Cards = [
     key="amber-card"
     item={{
       image: InDrive,
-      // videoComponent: <VideoComponent video={InDriveVideo} />,
+      videoComponent: <VideoComponent video={InDriveVideo} />,
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -135,7 +136,7 @@ export const Cards = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
-      // videoComponent: <VideoComponent video={CCPTaqueriaVideo} />,
+      videoComponent: <VideoComponent video={CCPVideo} />,
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -146,7 +147,7 @@ export const Cards = [
     key="amber-card"
     item={{
       image: Bursanet,
-      // videoComponent: <VideoComponent video={BursanetVideo} />,
+      videoComponent: <VideoComponent video={BursanetVideo} />,
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
