@@ -37,7 +37,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
         <div
           className={
             type != "talent"
-              ? "h-24 xl:h-36 w-full opacity-100 transition-opacity duration-500"
+              ? "h-fit w-full opacity-100 transition-opacity duration-500"
               : "h-fit w-full opacity-100 transition-opacity duration-500"
           }
         >
