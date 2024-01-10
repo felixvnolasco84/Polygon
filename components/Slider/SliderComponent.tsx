@@ -19,40 +19,34 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
 
   const handleDotClick = (index: number) => {
     setActiveIndex(index);
-  };  
+  };
+
+    const handleDragEnd = (event: any, info: any) => {
+      if (info.offset.x > 50) {
+        setActiveIndex((prev) => (prev === 0 ? features.length - 1 : prev - 1));
+      } else if (info.offset.x < -50) {
+        setActiveIndex((prev) => (prev === features.length - 1 ? 0 : prev + 1));
+      }
+    };
 
   return (
     <div
       className={`flex ${
         type == "talent"
-          ? "bg-transparent flex-col-reverse gap-2"
+          ? "bg-transparent flex-col gap-10"
           : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4"
       } lg:px-12 xl:px-24`}
     >
-      <ul className="flex w-full justify-center space-x-2 py-4">
-        {features.map((_, index) => (
-          <li
-            key={index}
-            className={`w-full h-1 rounded-full cursor-pointer ${
-              index === activeIndex ? "bg-white" : "bg-gray-600"
-            }`}
-            onClick={() => handleDotClick(index)}
-          >
-            {/* {index === activeIndex ? (
-              <motion.div className="underline" layoutId="underline" />
-            ) : null} */}
-          </li>
-        ))}
-      </ul>
       <AnimatePresence>
         <motion.div
           key={activeIndex ? activeIndex : "empty"}
           className="flex text-white"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.9 }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-          layout
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // exit={{ opacity: 0 }}
+          // transition={{ duration: 0.5, ease: "easeInOut" }}
+          drag="x"
+          onDragEnd={handleDragEnd}
         >
           <div className="h-32 w-full opacity-100 transition-opacity duration-500">
             {features[activeIndex]?.title && (
@@ -71,6 +65,17 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
           </div>
         </motion.div>
       </AnimatePresence>
+      <ul className="flex w-full justify-center space-x-2">
+        {features.map((_, index) => (
+          <li
+            key={index}
+            className={`w-full h-1 rounded-full cursor-pointer ${
+              index === activeIndex ? "bg-white" : "bg-gray-600"
+            }`}
+            onClick={() => handleDotClick(index)}
+          ></li>
+        ))}
+      </ul>
     </div>
   );
 };
