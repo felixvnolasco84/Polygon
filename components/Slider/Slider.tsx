@@ -27,7 +27,7 @@ const Slider = () => {
         </div>
       </div>
       <div className="w-screen lg:w-full">
-        <div className="flex w-full items-center justify-center gap-5 px-4 lg:px-12 xl:px-4">
+        <div className="flex w-full items-center justify-center gap-5 px-2 lg:px-12 xl:px-4">
           <Carousel
             defaultControlsConfig={{
               containerClassName: "absolute top-5 w-full",
