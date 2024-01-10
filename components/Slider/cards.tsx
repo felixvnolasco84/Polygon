@@ -18,8 +18,53 @@ import InDriveVideo from '@/videos/InDrive.mp4';
 
 type CardProps = {
   className?: string;
-  slideId: string;
+  slideId?: string;
   item: any;
+};
+
+export const CardShowCase = ({item}: CardProps) => {
+
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <div className="flex h-fit flex-col lg:gap-5">
+      {isPlaying ? (
+        item.videoComponent ? (
+          item.videoComponent
+        ) : (
+          <Image
+            src={item.image}
+            alt=""
+            className="min-h-[420px] rounded-[10px] object-cover lg:max-h-none xl:min-h-[565px]"
+            width={1650}
+            height={1040}
+            onClick={() => setIsPlaying(true)}
+          ></Image>
+        )
+      ) : (
+        <Image
+          src={item.image}
+          alt=""
+          className="min-h-[420px] rounded-[10px] object-cover lg:max-h-none xl:min-h-[565px]"
+          width={1650}
+          height={1040}
+          onClick={() => setIsPlaying(true)}
+        ></Image>
+      )}
+      <div className="flex flex-col gap-2 lg:gap-5">
+        <h4
+          className={`${neueThin.className} text-xl lg:text-2xl xl:text-3xl text-black-500`}
+        >
+          {item.title}
+        </h4>
+        <p
+          className={`${neueXThin.className} text-lg lg:text-xl xl:text-2xl text-black-500 xl:leading-[40px]`}
+        >
+          {item.description}
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export const Card = ({ className, slideId, item }: CardProps) => {
@@ -67,7 +112,7 @@ export const Card = ({ className, slideId, item }: CardProps) => {
           {item.description}
         </p>
       </div>
-      {item.linkComponent && item.linkComponent}
+      
     </div>
   );
 };
