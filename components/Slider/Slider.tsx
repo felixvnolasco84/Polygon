@@ -5,15 +5,20 @@ import { Cards, MobileCards } from "./cards";
 import {
   renderCenterLeftControls,
   renderCenterRightControls,
-} from "./controls"; 
+} from "./controls";
+import { neueXThin } from "@/styles/fonts";
 
 const Slider = () => {
   return (
-    <>
-      <div className="w-screen">
+    <div className="flex flex-col gap-8 lg:gap-12">
+      <h4
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-7xl leading-none px-4 lg:px-12 xl:px-24`}
+      >
+        Nuestro Trabajo
+      </h4>
+      <div className="hidden w-screen lg:block">
         <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
           <Carousel
-            className="hidden lg:block"
             frameAriaLabel="Carousel Demo"
             slideIndex={0}
             wrapAround={true}
@@ -26,7 +31,7 @@ const Slider = () => {
           </Carousel>
         </div>
       </div>
-      <div className="w-screen lg:w-full">
+      <div className="block w-screen lg:hidden lg:w-full">
         <div className="flex w-full items-center justify-center gap-5 px-2 lg:px-12 xl:px-4">
           <Carousel
             defaultControlsConfig={{
@@ -35,7 +40,6 @@ const Slider = () => {
               pagingDotsClassName: "w-full px-4 bg-white rounded-md",
               pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
             }}
-            className="block lg:hidden"
             frameAriaLabel="Carousel Demo 2"
             slideIndex={0}
             wrapAround={true}
@@ -52,7 +56,7 @@ const Slider = () => {
           </Carousel>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
