@@ -21,13 +21,13 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
     setActiveIndex(index);
   };
 
-    const handleDragEnd = (event: any, info: any) => {
-      if (info.offset.x > 50) {
-        setActiveIndex((prev) => (prev === 0 ? features.length - 1 : prev - 1));
-      } else if (info.offset.x < -50) {
-        setActiveIndex((prev) => (prev === features.length - 1 ? 0 : prev + 1));
-      }
-    };
+    // const handleDragEnd = (event: any, info: any) => {
+    //   if (info.offset.x > 50) {
+    //     setActiveIndex((prev) => (prev === 0 ? features.length - 1 : prev - 1));
+    //   } else if (info.offset.x < -50) {
+    //     setActiveIndex((prev) => (prev === features.length - 1 ? 0 : prev + 1));
+    //   }
+    // };
 
   return (
     <div
@@ -37,16 +37,16 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
           : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4"
       } lg:px-12 xl:px-24`}
     >
-      <AnimatePresence>
-        <motion.div
+      {/* <AnimatePresence> */}
+        <div
           key={activeIndex ? activeIndex : "empty"}
           className="flex text-white"
           // initial={{ opacity: 0 }}
           // animate={{ opacity: 1 }}
           // exit={{ opacity: 0 }}
           // transition={{ duration: 0.5, ease: "easeInOut" }}
-          drag="x"
-          onDragEnd={handleDragEnd}
+          // drag="x"
+          // onDragEnd={handleDragEnd}
         >
           <div className="h-32 w-full opacity-100 transition-opacity duration-500">
             {features[activeIndex]?.title && (
@@ -63,8 +63,8 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
               {features[activeIndex].description}
             </p>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </div>
+      {/* </AnimatePresence> */}
       <ul className="flex w-full justify-center space-x-2">
         {features.map((_, index) => (
           <li
