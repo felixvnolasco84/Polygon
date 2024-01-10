@@ -21,10 +21,10 @@ export default function RangeSlider({ minNumber, maxNumber }: any) {
   return (
     // Condición para renderizar el componente
     // showComponent es true y sliderValue > 3.0
-    <div className="flex flex-col gap-10 w-1/2">
+    <div className="flex w-1/2 flex-col gap-10">
       <div className="flex justify-center">
         <span className="text-4xl">
-          ${sliderValue.toFixed(1)} - ${maxNumber}
+          ${sliderValue} - ${maxNumber}
         </span>
       </div>
       <input

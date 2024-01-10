@@ -7,7 +7,7 @@ export interface InputProps
 
 const Range = forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
-    const [sliderValue, setSliderValue] = useState<string>("45000");
+    const [sliderValue, setSliderValue] = useState<string>("100000");
 
     const handleSliderChange = (value: string) => {
       const newValue = value;
@@ -41,7 +41,6 @@ const Range = forwardRef<HTMLInputElement, InputProps>(
         </div>
         <input
           type="range"
-          defaultValue={sliderValue}
           onInput={(e: any) => handleSliderChange(e.target.value)} // Use the handleSliderChange function here
           className={cn(
             "range-slider flex h-10 w-full border-b border-gray px-3 py-2 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 text-flourescentYellow",

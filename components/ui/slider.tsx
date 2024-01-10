@@ -12,22 +12,13 @@ export interface InputProps
 
 const Slider = React.forwardRef<HTMLInputElement, InputProps>(
   ({ className, type, ...props }, ref) => {
-    const [sliderValue, setSliderValue] = useState<number[]>([45000]);
-    const handleSliderChange = (value: number[]) => {
-      const newValue = value[0];
-      if (
-        newValue >= Number(props.min || 0) &&
-        newValue <= Number(props.max || 0)
-      ) {
-        setSliderValue([newValue]); // Ensure sliderValue is always an array
-      }
-    };
+
     return (
       <div className="flex w-1/2 flex-col gap-12">
         <p
           className={`${neueThin.className} text-center leading-none text-[40px]`}
         >
-          ${sliderValue[0]} - ${props.max}
+          {/* ${sliderValue[0]} - ${props.max} */}
         </p>
         <SliderPrimitive.Root
           ref={ref}
@@ -38,8 +29,8 @@ const Slider = React.forwardRef<HTMLInputElement, InputProps>(
           // @ts-ignore
           step={props.step}
           // @ts-ignore
-          value={sliderValue}
-          onValueChange={(value) => handleSliderChange(value)}
+          // value={sliderValue}
+          // onValueChange={(value) => handleSliderChange(value)}
           className={cn(
             "relative flex w-full touch-none select-none items-center",
             className

@@ -112,7 +112,7 @@ export const Card = ({ className, slideId, item }: CardProps) => {
           {item.description}
         </p>
       </div>
-      
+      {item.linkComponent && item.linkComponent}
     </div>
   );
 };

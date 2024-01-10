@@ -21,49 +21,41 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
     setActiveIndex(index);
   };
 
-    // const handleDragEnd = (event: any, info: any) => {
-    //   if (info.offset.x > 50) {
-    //     setActiveIndex((prev) => (prev === 0 ? features.length - 1 : prev - 1));
-    //   } else if (info.offset.x < -50) {
-    //     setActiveIndex((prev) => (prev === features.length - 1 ? 0 : prev + 1));
-    //   }
-    // };
-
   return (
     <div
       className={`flex ${
         type == "talent"
           ? "bg-transparent flex-col gap-10"
-          : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4"
+          : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4 gap-10"
       } lg:px-12 xl:px-24`}
     >
       {/* <AnimatePresence> */}
+      <div
+        key={activeIndex ? activeIndex : "empty"}
+        className="flex text-white"
+      >
         <div
-          key={activeIndex ? activeIndex : "empty"}
-          className="flex text-white"
-          // initial={{ opacity: 0 }}
-          // animate={{ opacity: 1 }}
-          // exit={{ opacity: 0 }}
-          // transition={{ duration: 0.5, ease: "easeInOut" }}
-          // drag="x"
-          // onDragEnd={handleDragEnd}
+          className={
+            type != "talent"
+              ? "h-24 xl:h-36 w-full opacity-100 transition-opacity duration-500"
+              : "h-fit w-full opacity-100 transition-opacity duration-500"
+          }
         >
-          <div className="h-fit w-full opacity-100 transition-opacity duration-500">
-            {features[activeIndex]?.title && (
-              <p
-                className={`${neueThin.className} text-xl lg:text-4xl lg:leading-none`}
-              >
-                {features[activeIndex].title}
-              </p>
-            )}
-
+          {features[activeIndex]?.title && (
             <p
-              className={`${neueXThin.className} text-lg lg:text-2xl xl:text-4xl xl:leading-[60px]`}
+              className={`${neueThin.className} text-xl lg:text-4xl lg:leading-none`}
             >
-              {features[activeIndex].description}
+              {features[activeIndex].title}
             </p>
-          </div>
+          )}
+
+          <p
+            className={`${neueXThin.className} text-lg lg:text-2xl xl:text-4xl xl:leading-[60px]`}
+          >
+            {features[activeIndex].description}
+          </p>
         </div>
+      </div>
       {/* </AnimatePresence> */}
       <ul className="flex w-full justify-center space-x-2">
         {features.map((_, index) => (

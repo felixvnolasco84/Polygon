@@ -29,6 +29,7 @@ import { services } from "../Grid/GridServices";
 import SuccessMessage from "../Contact/SuccessMessage";
 import { Slider } from "../ui/slider";
 import PolygonIsoLogo from "@/public/images/Logo/PolygonIsoLogo.png";
+import RangeSlider from "../RangeSlider/RangeSlider";
 
 export function QuoteForm({
   service,
@@ -52,7 +53,7 @@ export function QuoteForm({
     project: z.enum(titles, {
       required_error: "Es necesario escoger un servicio",
     }),
-    budget: z.string().default("45000"),
+    budget: z.string().default("100000"),
     interest: z.array(z.string()),
     linkReference: z.string().optional().default(""),
     name: z
@@ -184,7 +185,7 @@ export function QuoteForm({
                 <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
-                <FormControl>
+                <FormControl>                                                                        
                   <Range
                     className="range-slider"
                     min={minNumber}
@@ -280,9 +281,9 @@ export function QuoteForm({
           />
 
           <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
-            <div className="flex flex-col items-center justify-center gap-4 lg:flex-row lg:gap-[70px]">
+            <div className="flex flex-col items-start justify-center gap-4 md:items-center lg:flex-row lg:gap-[70px]">
               <Image
-                className="px-12 md:px-12 lg:px-8 xl:px-4"
+                className="pr-20 md:px-12 lg:px-8 xl:px-4"
                 src={PolygonIsoLogo}
                 width={239}
                 height={155}

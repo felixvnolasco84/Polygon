@@ -138,22 +138,33 @@
   -webkit-appearance: none;
   /* Override default look */
   appearance: none;
-  width: 25px;
+  position: relative;
+  width: 32px;
+  border-radius: 50%;
   /* Set a specific slider handle width */
-  height: 25px;
+  height: 32px;
+  background-color: #f7f7f7;
   /* Slider handle height */
-  background-color: #000000;
+  background-image: url("https://www.svgrepo.com/show/533621/arrow-sm-right.svg");
+  background-size: contain;
+    background-repeat: no-repeat;
+  object-fit: fill;
+  /* background-color: #000000; */
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
 }
 
 .range-slider::-moz-range-thumb {
-  width: 25px;
+  width: 32px;
   /* Set a specific slider handle width */
-  height: 25px;
+  height: 32px;
+  border-radius: 50%;
   /* Slider handle height */
-  background: url("/public/images/rightArrow.svg");
+  background-image: url("https://www.svgrepo.com/show/533621/arrow-sm-right.svg");
+  background-size: contain;
+    background-repeat: no-repeat;
+  object-fit: fill;
   /* Green background */
   cursor: pointer;
   /* Cursor on hover */
