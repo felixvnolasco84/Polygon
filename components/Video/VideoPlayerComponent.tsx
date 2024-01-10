@@ -9,9 +9,12 @@ export function ReactPlayerAsVideo(props: any) {
   let { src, ...rest } = props;
 
   return (
-    <div className="h-full w-full" onClick={() => setisPlaying(!isPlaying)}>
+    <div
+      className="h-full max-h-[800px] w-full"
+      onClick={() => setisPlaying(!isPlaying)}
+    >
       {/* {true && ( */}
-        {!isLoading && (
+      {!isLoading && (
         <div className="absolute h-full w-full animate-pulse bg-gray-400">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
             <svg
@@ -34,7 +37,9 @@ export function ReactPlayerAsVideo(props: any) {
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
               ></path>
             </svg>
-            <p className={`${neueXThin.className} mt-2 text-sm text-black-400`}>Cargando...</p>
+            <p className={`${neueXThin.className} mt-2 text-sm text-black-400`}>
+              Cargando...
+            </p>
           </div>
         </div>
       )}
