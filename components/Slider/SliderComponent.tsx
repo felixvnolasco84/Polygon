@@ -48,7 +48,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
           // drag="x"
           // onDragEnd={handleDragEnd}
         >
-          <div className="h-32 w-full opacity-100 transition-opacity duration-500">
+          <div className="h-fit w-full opacity-100 transition-opacity duration-500">
             {features[activeIndex]?.title && (
               <p
                 className={`${neueThin.className} text-xl lg:text-4xl lg:leading-none`}
