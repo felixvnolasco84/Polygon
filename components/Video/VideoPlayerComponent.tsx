@@ -10,8 +10,8 @@ export function ReactPlayerAsVideo(props: any) {
 
   return (
     <div className="h-full w-full" onClick={() => setisPlaying(!isPlaying)}>
-      {true && (
-        // {!isLoading && (
+      {/* {true && ( */}
+        {!isLoading && (
         <div className="absolute h-full w-full animate-pulse bg-gray-400">
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
             <svg
