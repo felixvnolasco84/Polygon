@@ -1,29 +1,34 @@
-import { neueThin, neueXThin } from "@/styles/fonts";
-import SliderComponent from "../Slider/SliderComponent";
+"use client";
+
+import { neueXThin } from "@/styles/fonts";
+import Video from "next-video";
+import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
+import IntroE05 from "@/videos/IntroE05.mov";
+// import SliderComponent from "../Slider/SliderComponent";
 
 export default function GridTalent() {
-  const features = [
-    {
-      title: "Tus objetivos comerciales importan",
-      description:
-        "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
-    },
-    {
-      title: "Profesionalismo",
-      description:
-        "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
-    },
-    {
-      title: "Centrados en las personas",
-      description:
-        "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
-    },
-    {
-      title: "Una experiencia óptima",
-      description:
-        "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
-    },
-  ];
+  // const features = [
+  //   {
+  //     title: "Tus objetivos comerciales importan",
+  //     description:
+  //       "La confianza es fundamental para construir relaciones a largo plazo con nuestros clientes, y la única manera de ganar esa confianza es brindando resultados tangibles para su negocio.",
+  //   },
+  //   {
+  //     title: "Profesionalismo",
+  //     description:
+  //       "El diablo está en los detalles, por lo que trabajamos arduamente para crear productos que funcionen y luzcan perfectos, manteniendo una reputación bien ganada por la calidad y la atención al detalle.",
+  //   },
+  //   {
+  //     title: "Centrados en las personas",
+  //     description:
+  //       "Nuestro negocio se basa en este sencillo principio: poner a las personas primero y buscar el mejor entorno posible para que el talento y los clientes trabajen. El negocio inevitablemente prosperará.",
+  //   },
+  //   {
+  //     title: "Una experiencia óptima",
+  //     description:
+  //       "El servicio tiene tanto que ver con el viaje como con el objetivo final. Siempre nos esforzamos al máximo para proporcionar una experiencia de trabajo flexible, positiva e inspiradora para nuestros clientes.",
+  //   },
+  // ];
 
   return (
     <div className="flex flex-col gap-3 lg:gap-[50px]">
@@ -32,7 +37,14 @@ export default function GridTalent() {
       >
         Talento y tecnología en cada proyecto digital
       </h3>
-      <div className="flex h-[640px] items-end bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
+      <Video
+        minResolution="1080p"
+        as={ReactPlayerAsVideo}
+        controls={false}
+        className="hidden h-full w-full md:block"
+        src={IntroE05}
+      />
+      {/* <div className="flex h-[640px] items-end bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
         <div className="flex h-fit items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-12 xl:px-24">
           <div className="block lg:hidden">
             <SliderComponent features={features} type="talent" />
@@ -57,7 +69,7 @@ export default function GridTalent() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

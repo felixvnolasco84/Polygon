@@ -26,7 +26,7 @@ const SliderComponent: React.FC<SliderProps> = ({ features, type }) => {
       className={`flex ${
         type == "talent"
           ? "bg-transparent flex-col gap-10"
-          : "flex-col bg-black-600 pb-12 pt-0 lg:pb-48 lg:pt-24 px-4 gap-10"
+          : "flex-col bg-black-600 pb-12 pt-0 lg:pb-24 lg:pt-12 xl:pb-48 xl:pt-24 px-4 gap-10"
       } lg:px-12 xl:px-24`}
     >
       {/* <AnimatePresence> */}

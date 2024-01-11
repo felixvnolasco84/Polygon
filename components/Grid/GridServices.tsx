@@ -1,10 +1,30 @@
-import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
+import { neueThin, neueXThin } from "@/styles/fonts";
+
 import Image from "next/image";
 import Link from "next/link";
 import rightArrow from "@/public/images/rightArrow.svg";
 
+import Data_Analysis from "@/public/images/Hero/Data Analysis.jpg";
+import Data_Analysis_Mobile from "@/public/images/Hero/Data-Analysis_Mobile.jpg";
+
+import Key_Web_Development from "@/public/images/Hero/Key-Web-Development.jpg";
+import Key_Web_Development_Mobile from "@/public/images/Hero/Key-Web-Development_Mobile.jpg";
+
+import Paid_Media_Marketing from "@/public/images/Hero/Paid Media Marketing.jpg";
+import Paid_Media_Marketing_Mobile from "@/public/images/Hero/Paid-Media-Marketing_Mobile.jpg";
+
+import SEO_and_Content from "@/public/images/Hero/SEO & Content.jpg";
+import SEO_and_Content_Mobile from "@/public/images/Hero/SEO-&-Content_Mobile.jpg";
+
+import Social_Media_Marketing from "@/public/images/Hero/Social Media Marketing.jpg";
+import Social_Media_Marketing_Mobile from "@/public/images/Hero/SEO-&-Content_Mobile.jpg";
+
+import Content_Solutions from "@/videos/Content Solutions.mp4";
+import Brand_and_Creative_Strategy from "@/videos/Brand & Creative Strategy.mp4";
+
 export const services = [
   {
+    backgroundVideo: Brand_and_Creative_Strategy,    
     pageTitle: "Brand & Creative Strategy - Polygon Agency",
     metadescription:
       "Construimos marcas fuertes y estrategias creativas impactantes. Descubre cómo Polygon Agency puede llevar tu marca a la mente de las personas y al éxito.",
@@ -66,6 +86,8 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundImageDesktop: Social_Media_Marketing,
+    backgroundImageMobile: Social_Media_Marketing_Mobile,
     pageTitle: "Social Media Marketing - Polygon Agency",
     metadescription:
       "Conquista las redes sociales con nosotros. Estrategias diseñadas para aumentar la visibilidad, creatividad, reporte y sugerencias para mejorar tu comunidad.",
@@ -127,6 +149,8 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundImageDesktop: Paid_Media_Marketing,
+    backgroundImageMobile: Paid_Media_Marketing_Mobile,
     pageTitle: "Paid Media Marketing - Polygon Agency",
     metadescription:
       "Aumenta tu visibilidad con nuestro servicio de Paid Media Marketing. Descubre cómo maximizamos tu inversión para obtener resultados tangibles y crecimiento sostenible.",
@@ -188,6 +212,8 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundImageDesktop: SEO_and_Content,
+    backgroundImageMobile: SEO_and_Content_Mobile,
     pageTitle: "SEO & Content - Polygon Agency",
     metadescription:
       "Hacemos que tu sitio sea rastreable e indexable por Google. Realizamos auditorías y optimizaciones técnicas para mejorar la visibilidad de tu sitio en Google.",
@@ -264,6 +290,8 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundImageDesktop: Key_Web_Development,
+    backgroundImageMobile: Key_Web_Development_Mobile,
     pageTitle: "Web Development Profesional - Polygon Agency",
     metadescription:
       "Impulsa tu presencia online con nuestro servicio de desarrollo web. Diseño responsive, velocidad, y funcionalidades avanzadas para destacar en Google.",
@@ -325,6 +353,7 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundVideo: Content_Solutions,
     pageTitle: "Content Solutions - Polygon Agency",
     metadescription:
       "Contenido que destaca, conecta y convierte. Descubre las soluciones de contenido personalizadas de Polygon Agency para potenciar tu presencia online de manera significativa.",
@@ -386,6 +415,8 @@ export const services = [
       "En caso de que exista, compártenos tu página actual en la que debamos trabajar. (Si no tienes una, puedes proporcionarnos una referencia de lo que buscas).",
   },
   {
+    backgroundImageDesktop: Data_Analysis,
+    backgroundImageMobile: Data_Analysis_Mobile,
     pageTitle: "Data Analysis - Polygon Agency",
     metadescription:
       "Convierte datos en decisiones con Polygon Agency. Nuestro enfoque analítico te proporciona información clave para optimizar tu estrategia digital y lograr resultados medibles.",

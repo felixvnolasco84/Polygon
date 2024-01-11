@@ -16,7 +16,7 @@ export function ReactPlayerAsVideo(props: any) {
       {/* {true && ( */}
       {!isLoading && (
         <div className="absolute h-full w-full animate-pulse bg-gray-400">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+          <div className="absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 transform">
             <svg
               className="h-12 w-12 animate-spin text-[#edff00]"
               xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +45,7 @@ export function ReactPlayerAsVideo(props: any) {
       )}
       <ReactPlayer
         onReady={() => setisLoading(true)}
-        playing={isPlaying}
+        playing={true}
         playsinline={true}
         loop={true}
         muted={true}
