@@ -36,11 +36,11 @@ export default function Page({ params }: Props) {
         <meta name="description" content={service.metadescription} />
       </Head>
       <div className="flex flex-col">
-        <div className="relative min-h-[600px] lg:min-h-[800px] xl:min-h-[1400px]">
+        <div className="relative min-h-[600px] lg:min-h-[800px] xl:min-h-[1000px]">
           <BackgroundTemplate
-            backgroundImageDesktop={service.backgroundImageDesktop}
-            backgroundImageMobile={service.backgroundImageMobile}
-            backgroundVideo={service.backgroundVideo}
+            backgroundImageDesktop={service?.backgroundImageDesktop}
+            backgroundImageMobile={service?.backgroundImageMobile}
+            backgroundVideo={service?.backgroundVideo}
           />
 
           <div className="absolute bottom-0 left-0 h-fit w-full lg:h-full">

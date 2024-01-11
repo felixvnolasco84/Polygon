@@ -16,7 +16,7 @@ export default function BackgroundTemplate({
   children?: React.ReactNode;
 }) {
   return (
-    <div className="absolute h-full">
+    <div className="absolute h-full w-full">
       {backgroundVideo && (
         <Video
           minResolution="1080p"
