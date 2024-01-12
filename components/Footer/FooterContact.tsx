@@ -36,7 +36,7 @@ export default function FooterContact() {
             />
           </div>
         </DialogTrigger>
-        <DialogContent className="left-[50%] top-[28%] h-fit bg-white p-0">
+        <DialogContent className="h-fit bg-white p-0">
           <div className="lg:p-24">
             <Contact />
           </div>
