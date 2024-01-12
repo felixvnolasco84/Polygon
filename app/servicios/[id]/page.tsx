@@ -71,7 +71,7 @@ export default function Page({ params }: Props) {
           </div>
         </div>
         <SliderComponent features={service.features} type="" />
-        <div className="flex flex-col gap-12 px-4 xl:container lg:px-12 xl:gap-[74px] xl:px-0">
+        <div className="flex flex-col gap-12 px-4 xl:container lg:mb-12 lg:px-12 xl:gap-[74px] xl:px-0">
           <h1
             className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}
           >
