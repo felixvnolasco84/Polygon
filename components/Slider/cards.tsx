@@ -120,14 +120,14 @@ export const Card = ({ className, slideId, item }: CardProps) => {
 };
 
 export const Mobile = ({ className, slideId, item }: CardProps) => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  // const [isPlaying, setIsPlaying] = useState(true);
   return (
     <div
       data-slide={slideId}
       className={clsx(className, "flex w-full flex-col gap-5")}
     >
       <div className="h-[480px] overflow-hidden rounded-lg">
-        {isPlaying ? (
+        {true ? (
           item.videoComponent 
           ? (
             item.videoComponent
@@ -139,7 +139,7 @@ export const Mobile = ({ className, slideId, item }: CardProps) => {
               width={1650}
               height={1040}
               alt=""
-              onClick={() => setIsPlaying(true)}
+              // onClick={() => setIsPlaying(true)}
             />
           )
         ) : (          
@@ -149,7 +149,7 @@ export const Mobile = ({ className, slideId, item }: CardProps) => {
             width={1650}
             height={1040}
             alt=""
-            onClick={() => setIsPlaying(true)}
+            // onClick={() => setIsPlaying(true)}
           />
         )
         }

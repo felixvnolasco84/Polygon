@@ -7,8 +7,16 @@ import {
   renderCenterRightControls,
 } from "./controls";
 import { neueXThin } from "@/styles/fonts";
+import { useEffect, useState } from "react";
 
 const Slider = () => {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return <></>;
+
   return (
     <div className="flex flex-col gap-8 lg:gap-12">
       <h4
