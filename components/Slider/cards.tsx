@@ -120,7 +120,7 @@ export const Card = ({ className, slideId, item }: CardProps) => {
 };
 
 export const Mobile = ({ className, slideId, item }: CardProps) => {
-  // const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true);
   return (
     <div
       data-slide={slideId}
@@ -233,8 +233,7 @@ export const Cards = [
     slideId="Slide 1"
     key="amber-card"
     item={{
-      image: Bupa,
-      // video: BursanetVideo,
+      image: Bupa,      
       title: "Diseño Bupa Nacional Vital ID Cards",
       description:
         "En 2021, nuestro equipo de diseño trabajó en las nuevas tarjetas de identificación para Bupa Nacional Vital.",

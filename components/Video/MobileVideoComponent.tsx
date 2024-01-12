@@ -1,5 +1,5 @@
 import Video from "next-video";
-// import { MobileReactPlayerAsVideo } from "./MobileReactPlayerAsVideo";
+import { MobileReactPlayerAsVideo } from "./MobileReactPlayerAsVideo";
 import { ReactPlayerAsVideo } from "./VideoPlayerComponent";
 
 export default function MobileVideoComponent({

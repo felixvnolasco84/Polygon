@@ -3,6 +3,7 @@
 // import TalkDialog from "../Dialog/TalkDialog";
 import Video from "next-video";
 import HeroIntro from "@/videos/HeroIntro.mp4";
+import HeroIntroMobile_v2 from "@/videos/HeroIntroMobile_v2.mp4";
 import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
 
 // const bgImageMobile =
@@ -22,8 +23,15 @@ export default function GridHomeHero() {
           minResolution="1080p"
           as={ReactPlayerAsVideo}
           controls={false}
-          className="h-full w-full object-cover object-center"
+          className="hidden h-full w-full object-cover object-center md:block"
           src={HeroIntro}
+        />
+        <Video
+          minResolution="1080p"
+          as={ReactPlayerAsVideo}
+          controls={false}
+          className="block h-full w-full object-cover object-center md:hidden"
+          src={HeroIntroMobile_v2}
         />
       </div>
 
