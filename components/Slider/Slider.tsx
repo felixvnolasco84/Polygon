@@ -12,7 +12,7 @@ const Slider = () => {
   return (
     <div className="flex flex-col gap-8 lg:gap-12">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-7xl leading-none px-4 lg:px-12 xl:px-24`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 lg:px-12 xl:px-24`}
       >
         Nuestro Trabajo
       </h4>

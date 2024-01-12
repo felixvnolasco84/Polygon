@@ -33,7 +33,7 @@ export default function GridTalent() {
   return (
     <div className="flex flex-col gap-3 lg:gap-[50px] xl:overflow-hidden">
       <h3
-        className={`${neueXThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14 lg:px-12 xl:px-24 px-4`}
+        className={`${neueXThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-6xl lg:group-hover:bg-white lg:group-hover:translate-x-14 lg:px-12 xl:px-24 px-4`}
       >
         Talento y tecnología en cada proyecto digital
       </h3>

@@ -29,7 +29,7 @@ export const CardShowCase = ({item}: CardProps) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="flex h-fit flex-col lg:gap-5">
+    <div className="flex h-fit cursor-pointer flex-col lg:gap-5">
       {isPlaying ? (
         item.videoComponent ? (
           item.videoComponent

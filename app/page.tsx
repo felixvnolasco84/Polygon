@@ -263,7 +263,7 @@ const partners = [
 
 export default function Home() {
   return (
-    <main className="bg-gray-[#FDFDFD] flex min-h-screen w-screen flex-col items-center justify-between overflow-hidden lg:gap-6 xl:gap-12">
+    <main className="bg-gray-[#FDFDFD] flex min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden lg:gap-24 xl:gap-48">
       <GridHomeHero />
       <div className="flex flex-col gap-16 lg:gap-24 xl:gap-48">
         <GridServices />

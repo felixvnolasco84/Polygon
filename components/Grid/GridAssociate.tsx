@@ -10,7 +10,7 @@ const GridAssociate = ({ items }: any) => {
   return (
     <div className="hidden flex-col gap-y-7 px-4 lg:flex lg:gap-12 lg:px-12 xl:px-24">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-7xl text-black-500 lg:leading-none`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl text-black-500 lg:leading-none`}
       >
         Lo que nos hace diferentes
       </h4>
