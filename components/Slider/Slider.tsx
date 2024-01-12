@@ -52,7 +52,7 @@ const Slider = () => {
             renderCenterLeftControls={renderCenterLeftControls}
             renderCenterRightControls={renderCenterRightControls}
           >
-            {Cards}
+            {MobileCards}
           </Carousel>
         </div>
       </div>

@@ -118,7 +118,7 @@ export const Card = ({ className, slideId, item }: CardProps) => {
 };
 
 export const Mobile = ({ className, slideId, item }: CardProps) => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div
       data-slide={slideId}
@@ -253,9 +253,16 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: Copa,
+      videoComponent: <VideoComponent video={CopaVideo} />,
       title: "Copa",
       description:
         "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
+      linkComponent: (
+        <LinkComponent
+          link={"https://copapadel.com/"}
+          title="Visitar sitio web."
+        />
+      ),
     }}
   />,
   <Mobile
@@ -263,6 +270,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: InDrive,
+      videoComponent: <VideoComponent video={InDriveVideo} />,
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -273,6 +281,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
+      videoComponent: <VideoComponent video={CCPVideo} />,
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -283,9 +292,16 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: Bursanet,
+      videoComponent: <VideoComponent video={BursanetVideo} />,
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
+      linkComponent: (
+        <LinkComponent
+          link={"https://www.youtube.com/watch?v=n6B3NwBiZfQ"}
+          title="Ir a ver el contenido"
+        />
+      ),
     }}
   />,
   <Mobile

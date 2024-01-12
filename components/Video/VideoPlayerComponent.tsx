@@ -3,7 +3,7 @@ import { useState } from "react";
 import ReactPlayer from "react-player";
 
 export function ReactPlayerAsVideo(props: any) {
-  const [isPlaying, setisPlaying] = useState(true);
+  // const [isPlaying, setisPlaying] = useState(true);
   const [isLoading, setisLoading] = useState(false);
 
   let { src, ...rest } = props;
@@ -11,7 +11,7 @@ export function ReactPlayerAsVideo(props: any) {
   return (
     <div
       className="h-full max-h-[1200px] w-full"
-      onClick={() => setisPlaying(!isPlaying)}
+      // onClick={() => setisPlaying(!isPlaying)}
     >
       {/* {true && ( */}
       {!isLoading && (
