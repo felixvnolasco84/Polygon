@@ -4,7 +4,7 @@
 // import Image from "next/image";
 // import TalkDialog from "../Dialog/TalkDialog";
 import Video from "next-video";
-import HeroIntro from "@/videos/Intro_12-01.mov";
+import HeroIntro from "@/videos/HeroIntro.mp4";
 import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
 import Image from "next/image";
 

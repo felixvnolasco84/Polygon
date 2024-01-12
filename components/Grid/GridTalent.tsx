@@ -3,7 +3,7 @@
 import { neueXThin } from "@/styles/fonts";
 import Video from "next-video";
 import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
-import IntroE05 from "@/videos/IntroE05.mov";
+import IntroE05 from "@/videos/Intro_12-01.mov";
 // import SliderComponent from "../Slider/SliderComponent";
 
 export default function GridTalent() {
