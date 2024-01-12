@@ -1,12 +1,9 @@
-"use client";
-
 // import { neueXThin } from "@/styles/fonts";
 // import Image from "next/image";
 // import TalkDialog from "../Dialog/TalkDialog";
 import Video from "next-video";
 import HeroIntro from "@/videos/HeroIntro.mp4";
 import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
-import Image from "next/image";
 
 // const bgImageMobile =
 //   "https://res.cloudinary.com/dirtcb7dj/image/upload/v1700867423/Hero/w3iaprxevielkitit5do.png";

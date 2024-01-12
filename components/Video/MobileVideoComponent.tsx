@@ -1,5 +1,6 @@
 import Video from "next-video";
-import { MobileReactPlayerAsVideo } from "./MobileReactPlayerAsVideo";
+// import { MobileReactPlayerAsVideo } from "./MobileReactPlayerAsVideo";
+import { ReactPlayerAsVideo } from "./VideoPlayerComponent";
 
 export default function MobileVideoComponent({
   video,
@@ -10,7 +11,7 @@ export default function MobileVideoComponent({
 }) {
   return (
     <Video
-      as={MobileReactPlayerAsVideo }
+      as={ReactPlayerAsVideo }
       className={`absolute h-full w-full ${className}`}
       controls={false}
       src={video}

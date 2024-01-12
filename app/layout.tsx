@@ -25,7 +25,6 @@ export default function RootLayout({
         className={`${inter.variable} container font-sans hide-scrollbar-utility`}
       >
         <div className="relative flex min-h-screen flex-col">
-          {/* <SiteHeader /> */}
           <Header />
           <div className="flex-1">{children}</div>
           <Toaster />

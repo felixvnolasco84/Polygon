@@ -1,11 +1,18 @@
-import { neueXThin } from "@/styles/fonts";
-import { useState } from "react";
+"use client";
+
+import { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
 export function ReactPlayerAsVideo(props: any) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   // const [isLoading, setisLoading] = useState(false);
 
   let { src, ...rest } = props;
+
+  if (!mounted) return <></>;
 
   return (
     <div className="relative h-full w-full">
