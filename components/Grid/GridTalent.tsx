@@ -31,17 +31,19 @@ export default function GridTalent() {
   // ];
 
   return (
-    <div className="flex flex-col gap-3 lg:gap-[50px]">
+    <div className="flex flex-col gap-3 lg:gap-[50px] xl:overflow-hidden">
       <h3
         className={`${neueXThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-7xl lg:group-hover:bg-white lg:group-hover:translate-x-14 lg:px-12 xl:px-24 px-4`}
       >
         Talento y tecnología en cada proyecto digital
       </h3>
-      <Video
+
+      
+      <Video    
         minResolution="1080p"
         as={ReactPlayerAsVideo}
         controls={false}
-        className="hidden h-full w-full md:block"
+        className="h-full w-full"
         src={IntroE05}
       />
       {/* <div className="flex h-[640px] items-end bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">

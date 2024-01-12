@@ -10,7 +10,7 @@ export function ReactPlayerAsVideo(props: any) {
 
   return (
     <div
-      className="h-full max-h-[800px] w-full"
+      className="h-full max-h-[1200px] w-full"
       onClick={() => setisPlaying(!isPlaying)}
     >
       {/* {true && ( */}
