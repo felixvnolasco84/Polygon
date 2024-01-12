@@ -3,14 +3,14 @@ import { useState } from "react";
 import ReactPlayer from "react-player";
 
 export function ReactPlayerAsVideo(props: any) {
-  const [isLoading, setisLoading] = useState(false);
+  // const [isLoading, setisLoading] = useState(false);
 
   let { src, ...rest } = props;
 
   return (
     <div className="relative h-full w-full">
       {/* {true && ( */}
-      {true && (
+      {/* {isLoading && (
         <div className="absolute left-1/2 top-1/2 h-12 w-12 -translate-x-5">
           <svg
             className="h-full w-full animate-spin text-[#edff00]"
@@ -36,9 +36,9 @@ export function ReactPlayerAsVideo(props: any) {
             Cargando...
           </p>
         </div>
-      )}
+      )} */}
       <ReactPlayer
-        onReady={() => setisLoading(true)}
+        // onReady={() => setisLoading(true)}
         playing={true}
         playsinline={true}
         loop={true}
