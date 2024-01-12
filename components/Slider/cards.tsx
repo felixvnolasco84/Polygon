@@ -68,7 +68,7 @@ export const CardShowCase = ({item}: CardProps) => {
 };
 
 export const Card = ({ className, slideId, item }: CardProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   return (
     <div
@@ -118,7 +118,7 @@ export const Card = ({ className, slideId, item }: CardProps) => {
 };
 
 export const Mobile = ({ className, slideId, item }: CardProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   return (
     <div
       data-slide={slideId}

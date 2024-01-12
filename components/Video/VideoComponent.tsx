@@ -9,7 +9,7 @@ export default function VideoComponent({
   className?: string;
 }) {
   return (
-    <Video
+    <Video      
       as={ReactPlayerAsVideo}
       className={`absolute h-full w-full ${className}`}
       controls={false}
