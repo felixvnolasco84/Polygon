@@ -2,16 +2,17 @@ import { neueXThin } from "@/styles/fonts";
 import { useState } from "react";
 import ReactPlayer from "react-player";
 
-export function ReactPlayerAsVideo(props: any) {  
+export function MobileReactPlayerAsVideo(props: any) {
+  const [isPlaying, setisPlaying] = useState(true);
   const [isLoading, setisLoading] = useState(false);
 
   let { src, ...rest } = props;
 
   return (
     <div
-      className="h-full max-h-[1200px] w-full"      
-    >
-      {/* {true && ( */}
+      className="h-full max-h-[1200px] w-full"
+      onClick={() => setisPlaying(!isPlaying)}
+    >      
       {!isLoading && (
         <div className="absolute h-full w-full animate-pulse bg-gray-400">
           <div className="absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 transform">
@@ -43,7 +44,7 @@ export function ReactPlayerAsVideo(props: any) {
       )}
       <ReactPlayer
         onReady={() => setisLoading(true)}
-        playing={true}
+        playing={isPlaying}
         playsinline={true}
         loop={true}
         muted={true}
