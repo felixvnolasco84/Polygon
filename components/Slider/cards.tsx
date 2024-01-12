@@ -127,7 +127,7 @@ export const Mobile = ({ className, slideId, item }: CardProps) => {
       className={clsx(className, "flex w-full flex-col gap-5")}
     >
       <div className="h-[480px] overflow-hidden rounded-lg">
-        {true ? (
+        {        
           item.videoComponent 
           ? (
             item.videoComponent
@@ -141,17 +141,7 @@ export const Mobile = ({ className, slideId, item }: CardProps) => {
               alt=""
               // onClick={() => setIsPlaying(true)}
             />
-          )
-        ) : (          
-          <Image
-            className="h-full w-full bg-center object-cover object-center"
-            src={item.image}
-            width={1650}
-            height={1040}
-            alt=""
-            // onClick={() => setIsPlaying(true)}
-          />
-        )
+          )        
         }
       </div>
 
