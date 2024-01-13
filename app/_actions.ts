@@ -52,7 +52,7 @@ export async function sendContactEmail(data: any) {
   try {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
-      to: ["hola@polygonag.com", email],
+      to: ["hola@polygonag.com"],
       subject: "Nuevo contacto",
       react: SimpleContactEmail({
         name,
