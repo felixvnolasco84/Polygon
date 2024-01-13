@@ -7,6 +7,7 @@ import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
 import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
+import SliderHome from "@/components/Slider/SliderHome";
 
 const items = [
   {
@@ -63,6 +64,11 @@ const items = [
     name: "Pablo Noguerón",
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fpablo_nogueron.png?alt=media&token=9548753f-0572-4bf1-a3b9-3de01cc9313f",
     role: "Content Designer",
+  },
+  {
+    name: "Franciso Hernández",
+    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffrancisco_hernandez.png?alt=media&token=ab7b4d1c-031f-4f6f-b5dd-c6f4e04d87c7",
+    role: "Creative Art Manager",
   },
   {
     name: "Jimena Rivera",
@@ -267,6 +273,7 @@ export default function Home() {
       <GridHomeHero />
       <div className="flex flex-col gap-16 lg:gap-24 xl:gap-48">
         <GridServices />
+        <SliderHome />
         <GridFeatured />
         <GridTalent />
         <Grid items={items} />

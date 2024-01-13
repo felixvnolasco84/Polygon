@@ -238,3 +238,7 @@ video {
   height: 100% !important;
   object-fit: cover !important;
 }
+
+.slide, .slide-current, .slide-visible, .slider-list, .prev-cloned {
+  height: fit-content;
+}

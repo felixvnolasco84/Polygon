@@ -14,7 +14,7 @@ export default function SuccessMessage({ type }: { type: string }) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle
-            className={`${neueXThin.className} text-left text-5xl lg:text-6xl xl:text-7xl text-black-500 md:leading-relaxed lg:leading-[70px] md:mb-3 lg:mb-6 xl:mb-12`}
+            className={`${neueXThin.className} font-medium text-left text-5xl lg:text-6xl xl:text-7xl text-black-400 md:leading-relaxed lg:leading-[70px] md:mb-3 lg:mb-6 xl:mb-12`}
           >
             Gracias, en menos de 24 horas nos <br /> pondremos en contacto.
           </DialogTitle>
