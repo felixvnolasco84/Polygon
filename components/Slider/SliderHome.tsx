@@ -22,7 +22,7 @@ const SliderHome = () => {
       <h4
         className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 lg:px-12 xl:px-24`}
       >
-        Nuestro Trabajo
+        Innovación en acción: <br /> nuestro trabajo más reciente.
       </h4>
       <div className="hidden w-screen lg:block">
         <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
