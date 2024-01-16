@@ -27,13 +27,13 @@ export default function FooterContact() {
             <span className={`${neueRoman.className} z-10 h-fit rounded-[15px] bg-white px-12 py-4 text-lg font-normal text-black lg:text-2xl`}>
               Hablemos
             </span>
-            <Image
+            {/* <Image
               className="h-fit cursor-pointer rounded-full bg-flourescentYellow p-2"
               width={48}
               height={48}
               src={rightArrow}
               alt=""
-            />
+            /> */}
           </div>
         </DialogTrigger>
         <DialogContent className="h-fit bg-white p-0">

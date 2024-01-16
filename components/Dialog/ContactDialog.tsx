@@ -16,18 +16,19 @@ export default function ContactDialog({ type }: any) {
               >
                 Hablemos
               </span>
-              <Image
+              {/* <Image
                 className="group-hover:bg-flourescent-black absolute left-[50%] top-[-20%] hidden h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28 lg:block"
                 width={48}
                 height={48}
                 src={rightArrow}
                 alt=""
-              />
+              /> */}
             </>
           ) : (
-            <div className="h-fit rounded-full bg-gray-200 p-2 group-hover:bg-white lg:block">
-              <Image src={rightArrow} alt="" />
-            </div>
+            null
+            // <div className="h-fit rounded-full bg-gray-200 p-2 group-hover:bg-white lg:block">
+            //   <Image src={rightArrow} alt="" />
+            // </div>
           )}
         </div>
       </DialogTrigger>
