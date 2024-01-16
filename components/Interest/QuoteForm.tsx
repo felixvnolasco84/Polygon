@@ -27,7 +27,7 @@ import { Range } from "../ui/range";
 import { sendEmail } from "@/app/_actions";
 import { services } from "../Grid/GridServices";
 import SuccessMessage from "../Contact/SuccessMessage";
-import { Slider } from "../ui/slider";
+import { Slider } from "@/components/ui/slider";
 import PolygonIsoLogo from "@/public/images/Logo/PolygonIsoLogo.png";
 import RangeSlider from "../RangeSlider/RangeSlider";
 
@@ -53,7 +53,7 @@ export function QuoteForm({
     project: z.enum(titles, {
       required_error: "Es necesario escoger un servicio",
     }),
-    budget: z.string().default("100000"),
+    budget: z.array(z.number({})),
     interest: z.array(z.string()),
     linkReference: z.string().optional().default(""),
     name: z
@@ -73,7 +73,7 @@ export function QuoteForm({
     defaultValues: {
       service: service,
       project: "",
-      budget: "",
+      budget: [0],
       interest: [],
       linkReference: "",
       name: "",
@@ -83,6 +83,7 @@ export function QuoteForm({
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
+  
     try {
       setIsLoading(true);
       await sendEmail(data);
@@ -180,20 +181,35 @@ export function QuoteForm({
             name="budget"
             render={({ field }) => (
               <FormItem
-                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center justify-between`}
+                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center gap-4 lg:gap-6 xl:gap-12`}
               >
                 <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
-                <FormControl>                                                                        
-                  <Range
+                <div className="flex w-3/4 flex-col gap-4 md:w-3/5 lg:w-1/2 lg:gap-6 xl:gap-12">
+
+                <p className="text-center text-xl lg:text-2xl xl:text-4xl">
+                  {" "}
+                  {`$${field.value}`} MXN - {`$${maxNumber}`} MXN
+                </p>
+                <FormControl>
+                  <Slider
+                    {...field}
+                    onValueChange={field.onChange}
+                    defaultValue={[50000]}
+                    min={Number(minNumber)}
+                    max={maxNumber}
+                    step={5000}
+                  />
+                  {/* <Range
                     className="range-slider"
                     min={minNumber}
                     max={maxNumber}
                     step={5000}
                     {...field}
-                  />
+                  /> */}
                 </FormControl>
+                </div>
                 <FormMessage />
               </FormItem>
             )}

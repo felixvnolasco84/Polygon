@@ -24,7 +24,7 @@ import Brand_and_Creative_Strategy from "@/videos/Brand & Creative Strategy.mp4"
 
 export const services = [
   {
-    backgroundVideo: Brand_and_Creative_Strategy,    
+    backgroundVideo: Brand_and_Creative_Strategy,
     pageTitle: "Brand & Creative Strategy - Polygon Agency",
     metadescription:
       "Construimos marcas fuertes y estrategias creativas impactantes. Descubre cómo Polygon Agency puede llevar tu marca a la mente de las personas y al éxito.",
@@ -318,9 +318,9 @@ export const services = [
           "Integramos estrategias de SEO desde el inicio. Optimizamos la estructura, contenido y rendimiento del sitio para mejorar su visibilidad en los motores de búsqueda.",
       },
       {
-        title: "Mantenimiento y actualizaciones",
+        title: "Mantenimiento y Actualizaciones Continuas ",
         description:
-          "Continuas Ofrecemos servicios de mantenimiento continuo, incluyendo parches de seguridad y actualizaciones de tecnología. Mantenemos tu sitio en pleno funcionamiento y al día con las últimas tendencias web.",
+          "Ofrecemos servicios de mantenimiento continuo, incluyendo parches de seguridad y actualizaciones de tecnología. Mantenemos tu sitio en pleno funcionamiento y al día con las últimas tendencias web.",
       },
     ],
     features: [
