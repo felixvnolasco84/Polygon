@@ -24,7 +24,7 @@ export async function sendEmail(data: any) {
   try {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
-      to: ["hola@polygonag.com", email],
+      to: ["hola@polygonag.com"],
       subject: "Nuevo contacto",
       react: ContactFormEmail({
         name,
@@ -48,7 +48,7 @@ export async function sendEmail(data: any) {
 }
 
 export async function sendContactEmail(data: any) {
-  const { name, email, phoneNumber } = data;  
+  const { name, email, phoneNumber } = data;
   try {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",

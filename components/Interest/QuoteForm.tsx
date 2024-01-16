@@ -181,12 +181,12 @@ export function QuoteForm({
             name="budget"
             render={({ field }) => (
               <FormItem
-                className={`${neueThin.className} flex flex-col py-[60px] text-black-500 w-full lg:min-h-[335px] bg-gray-400 rounded-[10px] items-center gap-4 lg:gap-6 xl:gap-12`}
+                className={`${neueThin.className} flex flex-col py-[36px] xl:py-[60px] text-black-500 w-full xl:min-h-[335px] bg-gray-400 rounded-[10px] items-center gap-4 lg:gap-6 xl:gap-12`}
               >
                 <FormLabel className="text-center text-2xl lg:text-3xl xl:text-[40px]">
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
-                <div className="flex w-3/4 flex-col gap-4 md:w-3/5 lg:w-1/2 lg:gap-6 xl:gap-12">
+                <div className="flex w-3/4 flex-col gap-6 md:w-3/5 lg:w-1/2 xl:gap-12">
 
                 <p className="text-center text-xl lg:text-2xl xl:text-4xl">
                   {" "}
@@ -321,12 +321,12 @@ export function QuoteForm({
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem className="space-y-0">
-                      <FormControl>
+                    <FormItem className="space-y-0">                      
+                      <FormControl>                                                    
                         <Input
-                          placeholder="Nombre"
+                          placeholder="Nombre"                    
                           className="resize-none bg-transparent py-0 text-sm lg:text-lg"
-                          {...field}
+                          {...field}                          
                         ></Input>
                       </FormControl>
                       <FormMessage />
