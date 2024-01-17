@@ -10,7 +10,6 @@ import Copa from "@/public/images/Customers/Copa.png";
 import Image from "next/image";
 import LinkComponent from "../Link/LinkComponent";
 import VideoComponent from "../Video/VideoComponent";
-import MobileVideoComponent from "../Video/MobileVideoComponent";
 
 import BursanetVideo from "@/videos/Bursanet.mp4";
 import CCPVideo from "@/videos/CCP.mp4";
@@ -299,7 +298,7 @@ export const MobileCardsHome = [
     key="amber-card"
     item={{
       image: Copa,
-      // videoComponent: <MobileVideoComponent video={CopaVideo} />,
+      // videoComponent: <VideoComponent video={CopaVideo} />,
       title: "Copa",
       description:
         "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
@@ -316,7 +315,7 @@ export const MobileCardsHome = [
     key="amber-card"
     item={{
       image: InDrive,
-      // videoComponent: <MobileVideoComponent video={InDriveVideo} />,
+      // videoComponent: <VideoComponent video={InDriveVideo} />,
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -327,7 +326,7 @@ export const MobileCardsHome = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
-      // videoComponent: <MobileVideoComponent video={CCPVideo} />,
+      // videoComponent: <VideoComponent video={CCPVideo} />,
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -338,7 +337,7 @@ export const MobileCardsHome = [
     key="amber-card"
     item={{
       image: Bursanet,
-      // videoComponent: <MobileVideoComponent video={BursanetVideo} />,
+      // videoComponent: <VideoComponent video={BursanetVideo} />,
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
@@ -357,7 +356,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: Copa,
-      // videoComponent: <MobileVideoComponent video={CopaVideo} />,
+      // videoComponent: <VideoComponent video={CopaVideo} />,
       title: "Copa",
       description:
         "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
@@ -374,7 +373,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: InDrive,
-      // videoComponent: <MobileVideoComponent video={InDriveVideo} />,
+      // videoComponent: <VideoComponent video={InDriveVideo} />,
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -385,7 +384,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
-      // videoComponent: <MobileVideoComponent video={CCPVideo} />,
+      // videoComponent: <VideoComponent video={CCPVideo} />,
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -396,7 +395,7 @@ export const MobileCards = [
     key="amber-card"
     item={{
       image: Bursanet,
-      // videoComponent: <MobileVideoComponent video={BursanetVideo} />,
+      // videoComponent: <VideoComponent video={BursanetVideo} />,
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
