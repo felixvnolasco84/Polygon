@@ -1,14 +1,12 @@
 "use client";
 
-import Video from "next-video";
-import { ReactPlayerAsVideo } from "@/components/Video/VideoPlayerComponent";
 import Image from "next/image";
+import VideoComponent from "../Video/VideoComponent";
 
 export default function BackgroundTemplate({
   backgroundVideo,
   backgroundImageDesktop,
   backgroundImageMobile,
-  children,
 }: {
   backgroundVideo: string;
   backgroundImageDesktop: string;
@@ -18,12 +16,9 @@ export default function BackgroundTemplate({
   return (
     <div className="absolute h-full w-full">
       {backgroundVideo && (
-        <Video
-          minResolution="1080p"
-          as={ReactPlayerAsVideo}
-          controls={false}
+        <VideoComponent
           className="h-full w-full object-cover object-center"
-          src={backgroundVideo}
+          video={backgroundVideo}
         />
       )}
 

@@ -1,11 +1,6 @@
 // import { neueXThin } from "@/styles/fonts";
 // import Image from "next/image";
 // import TalkDialog from "../Dialog/TalkDialog";
-import Video from "next-video";
-import HeroIntro from "@/videos/HeroIntro.mp4";
-import AnimacionIntro_Mobile from "@/videos/AnimacionIntro_Mobile.mp4";
-import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
-
 // const bgImageMobile =
 //   "https://res.cloudinary.com/dirtcb7dj/image/upload/v1700867423/Hero/w3iaprxevielkitit5do.png";
 // const bgImageDesktop =
@@ -14,24 +9,23 @@ import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
 // const message =
 //   "Hablemos, nuestro equipo se comunicará contigo en las siguientes 24 horas.";
 
+import HeroIntro from "@/videos/HeroIntro.mp4";
+import AnimacionIntro_Mobile from "@/videos/AnimacionIntro_Mobile.mp4";
+import VideoComponent from "../Video/VideoComponent";
+
+
 export default function GridHomeHero() {
   return (
     <div className="relative min-h-[600px] w-screen lg:min-h-[800px]">
       {/* <Image className="block md:hidden" src={HeroIntroMobile} alt="" /> */}
       <div className="absolute h-full w-full">
-        <Video
-          minResolution="1080p"
-          as={ReactPlayerAsVideo}
-          controls={false}
+        <VideoComponent
           className="hidden h-full w-full object-cover object-center md:block"
-          src={HeroIntro}
+          video={HeroIntro}
         />
-        <Video
-          minResolution="1080p"
-          as={ReactPlayerAsVideo}
-          controls={false}
+        <VideoComponent
           className="block h-full w-full object-cover object-center md:hidden"
-          src={AnimacionIntro_Mobile}
+          video={AnimacionIntro_Mobile}
         />
       </div>
 

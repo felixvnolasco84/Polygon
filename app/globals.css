@@ -242,3 +242,8 @@ video {
 .slide, .slide-current, .slide-visible, .slider-list, .prev-cloned {
   height: fit-content;
 }
+
+mux-player {
+  --media-object-fit: cover;
+  --media-object-position: center;
+}

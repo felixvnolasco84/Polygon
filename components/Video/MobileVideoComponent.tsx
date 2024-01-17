@@ -11,7 +11,7 @@ export default function MobileVideoComponent({
 }) {
   return (
     <Video
-      as={ReactPlayerAsVideo}
+      // as={ReactPlayerAsVideo}
       className={`absolute h-full w-full ${className}`}
       controls={false}
       src={video}

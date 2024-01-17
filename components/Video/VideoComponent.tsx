@@ -1,5 +1,4 @@
 import Video from "next-video";
-import { ReactPlayerAsVideo } from "@/components/Video/VideoPlayerComponent";
 
 export default function VideoComponent({
   video,
@@ -9,8 +8,10 @@ export default function VideoComponent({
   className?: string;
 }) {
   return (
-    <Video      
-      as={ReactPlayerAsVideo}
+    <Video
+      loop={true}
+      autoPlay={true}
+      muted={true}
       className={`absolute h-full w-full ${className}`}
       controls={false}
       src={video}

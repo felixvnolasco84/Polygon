@@ -1,9 +1,8 @@
 "use client";
 
 import { neueXThin } from "@/styles/fonts";
-import Video from "next-video";
-import { ReactPlayerAsVideo } from "../Video/VideoPlayerComponent";
 import Animacion_Blanco from "@/videos/Animacion_Blanco.mp4";
+import VideoComponent from "../Video/VideoComponent";
 // import SliderComponent from "../Slider/SliderComponent";
 
 export default function GridTalent() {
@@ -38,12 +37,9 @@ export default function GridTalent() {
         Talento y tecnología en cada proyecto digital
       </h3>
 
-      <Video
-        minResolution="1080p"
-        as={ReactPlayerAsVideo}
-        controls={false}
+      <VideoComponent                      
         className="h-full w-full"
-        src={Animacion_Blanco}
+        video={Animacion_Blanco}
       />
       {/* <div className="flex h-[640px] items-end bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
         <div className="flex h-fit items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-12 xl:px-24">
