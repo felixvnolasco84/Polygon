@@ -1,5 +1,6 @@
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import { Inter } from "next/font/google";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -29,6 +30,7 @@ export default function RootLayout({
           <Header />
           <div className="flex-1">{children}</div>
           <SpeedInsights />
+          <Analytics />
           <Toaster />
           <Footer />
         </div>
