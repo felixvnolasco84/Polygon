@@ -1,4 +1,5 @@
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
@@ -20,13 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">      
+    <html lang="es">
       <body
         className={`${inter.variable} container font-sans hide-scrollbar-utility`}
       >
         <div className="relative flex min-h-screen flex-col">
           <Header />
           <div className="flex-1">{children}</div>
+          <SpeedInsights />
           <Toaster />
           <Footer />
         </div>
