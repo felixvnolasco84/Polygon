@@ -9,6 +9,7 @@ export default function VideoComponent({
 }) {
   return (
     <Video
+      accentColor="edff00"
       loop={true}
       autoPlay={true}
       muted={true}
