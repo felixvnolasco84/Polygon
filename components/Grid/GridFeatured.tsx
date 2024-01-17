@@ -38,12 +38,12 @@ const SocialData = {
   title: "Social & Paid Media",
   description:
     "Contenido redes sociales para Círculo Laboral, Cícrulo de Proveedores y Aura, campañas de performance marketing en Linkedin, meta y google.",
-  videoComponent: (
-    <VideoComponent
-      className="min-h-[420px] overflow-hidden rounded-[10px] object-cover lg:max-h-none xl:min-h-[565px]"
-      video={CCPVideo}
-    />
-  ),
+  // videoComponent: (
+  //   <VideoComponent
+  //     className="min-h-[420px] overflow-hidden rounded-[10px] object-cover lg:max-h-none xl:min-h-[565px]"
+  //     video={CCPVideo}
+  //   />
+  // ),
 };
 
 const InDriveData = {
