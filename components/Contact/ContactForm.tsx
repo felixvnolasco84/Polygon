@@ -158,6 +158,8 @@ export function ContactForm() {
               </span>
 
               <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"                
+                loading="eager"
                 className="group-hover:bg-flourescent-yellow absolute left-[50%] top-[10%] hidden h-fit cursor-pointer rounded-full bg-flourescentYellow p-2 transition ease-out group-hover:block group-hover:translate-x-28 lg:block"
                 width={48}
                 height={48}

@@ -187,28 +187,27 @@ export function QuoteForm({
                   ¿Tienes un presupuesto aproximado?
                 </FormLabel>
                 <div className="flex w-3/4 flex-col gap-6 md:w-3/5 lg:w-1/2 xl:gap-12">
-
-                <p className="text-center text-xl lg:text-2xl xl:text-4xl">
-                  {" "}
-                  {`$${field.value}`} MXN - {`$${maxNumber}`} MXN
-                </p>
-                <FormControl>
-                  <Slider
-                    {...field}
-                    onValueChange={field.onChange}
-                    defaultValue={[50000]}
-                    min={Number(minNumber)}
-                    max={maxNumber}
-                    step={5000}
-                  />
-                  {/* <Range
+                  <p className="text-center text-xl lg:text-2xl xl:text-4xl">
+                    {" "}
+                    {`$${field.value}`} MXN - {`$${maxNumber}`} MXN
+                  </p>
+                  <FormControl>
+                    <Slider
+                      {...field}
+                      onValueChange={field.onChange}
+                      defaultValue={[50000]}
+                      min={Number(minNumber)}
+                      max={maxNumber}
+                      step={5000}
+                    />
+                    {/* <Range
                     className="range-slider"
                     min={minNumber}
                     max={maxNumber}
                     step={5000}
                     {...field}
                   /> */}
-                </FormControl>
+                  </FormControl>
                 </div>
                 <FormMessage />
               </FormItem>
@@ -304,6 +303,8 @@ export function QuoteForm({
                 width={239}
                 height={155}
                 alt=""
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
               />
 
               <p
@@ -321,12 +322,12 @@ export function QuoteForm({
                   control={form.control}
                   name="name"
                   render={({ field }) => (
-                    <FormItem className="space-y-0">                      
-                      <FormControl>                                                    
+                    <FormItem className="space-y-0">
+                      <FormControl>
                         <Input
-                          placeholder="Nombre"                    
+                          placeholder="Nombre"
                           className="resize-none bg-transparent py-0 text-sm lg:text-lg"
-                          {...field}                          
+                          {...field}
                         ></Input>
                       </FormControl>
                       <FormMessage />
@@ -393,6 +394,8 @@ export function QuoteForm({
                       width={48}
                       height={48}
                       src={rightArrow}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="eager"
                       alt=""
                     />
                   </Button>

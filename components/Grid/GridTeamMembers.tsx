@@ -21,6 +21,8 @@ const GridTeamMembers = ({ items }: any) => {
               className="min-h-[145px] w-full flex-shrink rounded-sm object-cover object-center lg:max-w-none xl:h-[371px]"
               width={313}
               height={371}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
             />
             <div className="flex flex-grow flex-col lg:gap-0 xl:gap-1">
               <span

@@ -28,6 +28,8 @@ export default function GridBlogs() {
                 {service.title}
               </h3>
               <Image
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
                 className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-gray-400 lg:group-hover:block"
                 width={48}
                 height={48}
@@ -43,7 +45,14 @@ export default function GridBlogs() {
                 {service.itemdescription}
               </p>
               <div className="hidden h-fit max-h-[40px] max-w-[40px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
-                <Image src={rightArrow} width={48} height={48} alt="" />
+                <Image
+                  src={rightArrow}
+                  width={48}
+                  height={48}
+                  alt=""
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
+                />
               </div>
             </div>
           </Link>

@@ -2,12 +2,9 @@
 import { neueThin, neueXThin } from "@/styles/fonts";
 import Image from "next/image";
 import React from "react";
-import Aura from "@/public/images/Customers/Aura.png";
 import Bupa from "@/public/images/Customers/Bupa.png";
-import InDrive from "@/public/images/Customers/InDrive.png";
 import InDriveVideo from "@/videos/InDrive.mp4";
 import VideoComponent from "../Video/VideoComponent";
-import CCPVideo from "@/videos/CCP.mp4";
 import { CardShowCase } from "../Slider/cards";
 
 
@@ -122,6 +119,8 @@ export default function GridFeatured() {
               src={Bupa}
               alt=""
               className="h-full rounded-[10px] object-cover object-center"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
             />
             <div className="flex flex-col gap-5">
               <h4

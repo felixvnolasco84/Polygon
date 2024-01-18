@@ -105,6 +105,8 @@ export const GridAssociateCarrousel = () => {
                   {/* FIT image to the container */}
                   <div className={`flex h-fit justify-center lg:justify-start`}>
                     <Image
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      loading="eager"
                       src={item.image}
                       width={item.imageWidth}
                       height={item.imageHeight}

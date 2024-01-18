@@ -40,6 +40,8 @@ export default function TalkDialog({
             </p>
           </div>
           <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
             className={`hidden h-fit cursor-pointer rounded-full ${bgButtonColor} p-2 group-hover:${bgButtonHoverColor} lg:block`}
             width={40}
             height={40}

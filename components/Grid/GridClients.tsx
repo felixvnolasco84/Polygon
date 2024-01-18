@@ -20,8 +20,10 @@ const GridClients = ({ items }: any) => {
                 <Image
                   src={item.image}
                   width={item.width}
-                  height={item.height}                  
+                  height={item.height}
                   alt=""
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                 />
               </div>
             </div>

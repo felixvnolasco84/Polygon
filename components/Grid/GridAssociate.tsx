@@ -22,6 +22,8 @@ const GridAssociate = ({ items }: any) => {
                 className={`lg:w-[${item.imageWidth}px] lg:h-[${item.imageHeight}px]`}
               >
                 <Image
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                   src={item.image}
                   className="" alt=""
                   width={item.imageWidth}

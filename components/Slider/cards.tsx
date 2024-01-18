@@ -38,6 +38,8 @@ export const CardShowCase = ({ item }: CardProps) => {
             width={1650}
             height={1040}
             onClick={() => setIsPlaying(true)}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
+            loading="eager"
           ></Image>
         )
       ) : (
@@ -48,6 +50,8 @@ export const CardShowCase = ({ item }: CardProps) => {
           width={1650}
           height={1040}
           onClick={() => setIsPlaying(true)}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 45vw"
+          loading="eager"
         ></Image>
       )}
       <div className="flex flex-col gap-2 lg:gap-5">
@@ -86,6 +90,8 @@ export const Card = ({ className, slideId, item }: CardProps) => {
               height={1040}
               alt=""
               onClick={() => setIsPlaying(true)}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              loading="eager"
             />
           )
         ) : (
@@ -96,6 +102,8 @@ export const Card = ({ className, slideId, item }: CardProps) => {
             height={1040}
             alt=""
             onClick={() => setIsPlaying(true)}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
         )}
       </div>
@@ -134,6 +142,8 @@ export const Mobile = ({ className, slideId, item }: CardProps) => {
             height={1040}
             alt=""
             // onClick={() => setIsPlaying(true)}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
         )}
       </div>

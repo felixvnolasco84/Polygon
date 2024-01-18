@@ -506,6 +506,8 @@ export default function GridServices() {
                 width={40}
                 height={40}
                 src={rightArrow}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                loading="eager"
                 alt=""
               />
             </div>
@@ -517,7 +519,14 @@ export default function GridServices() {
                 {service.itemdescription}
               </p>
               <div className="hidden h-fit max-h-[40px] max-w-[40px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
-                <Image src={rightArrow} width={48} height={48} alt="" />
+                <Image
+                  src={rightArrow}
+                  width={48}
+                  height={48}
+                  alt=""
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
+                />
               </div>
             </div>
           </Link>
