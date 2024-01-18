@@ -27,7 +27,7 @@ export default function BackgroundTemplate({
           className="hidden h-full w-full object-cover object-center md:block"
           alt=""
           src={backgroundImageDesktop}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw"
           loading="eager"
         />
       )}
@@ -37,7 +37,7 @@ export default function BackgroundTemplate({
           className="block h-full w-full object-cover object-center md:hidden"
           alt=""
           src={backgroundImageDesktop}
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 70vw"
           loading="eager"
         />
       )}
