@@ -8,26 +8,26 @@ import VideoComponent from "../Video/VideoComponent";
 import { CardShowCase } from "../Slider/cards";
 
 
-const featuredWork = [
-  {
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FInDrive.png?alt=media&token=d269ba3a-b0da-4c32-96bc-a08320f48ff3",
-    title: "inDrive ft. Martina la Peligrosa",
-    description:
-      "Campaña para inDrive enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
-  },
-  {
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FBupa.png?alt=media&token=80f41621-ca3e-4c2f-9f1f-19f15c1e5e5a",
-    title: "Content Bupa Nacional Vital",
-    description:
-      "Nuestro equipo está constantemente generando ideas frescas e innovadoras para ayudar a nuestros clientes a destacar y alcanzar sus objetivos.",
-  },
-  {
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FAura.png?alt=media&token=766d7c8c-1b5c-40d7-b5f6-3dd78cca37c6",
-    title: "Social & Paid Media",
-    description:
-      "Contenido redes sociales para Círculo Laboral, Cícrulo de Proveedores y Aura, campañas de performance marketing en Linkedin, meta y google.",
-  },
-];
+// const featuredWork = [
+//   {
+//     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FInDrive.png?alt=media&token=d269ba3a-b0da-4c32-96bc-a08320f48ff3",
+//     title: "inDrive ft. Martina la Peligrosa",
+//     description:
+//       "Campaña para inDrive enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+//   },
+//   {
+//     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FBupa.png?alt=media&token=80f41621-ca3e-4c2f-9f1f-19f15c1e5e5a",
+//     title: "Content Bupa Nacional Vital",
+//     description:
+//       "Nuestro equipo está constantemente generando ideas frescas e innovadoras para ayudar a nuestros clientes a destacar y alcanzar sus objetivos.",
+//   },
+//   {
+//     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Customers%2FAura.png?alt=media&token=766d7c8c-1b5c-40d7-b5f6-3dd78cca37c6",
+//     title: "Social & Paid Media",
+//     description:
+//       "Contenido redes sociales para Círculo Laboral, Cícrulo de Proveedores y Aura, campañas de performance marketing en Linkedin, meta y google.",
+//   },
+// ];
 
 const SocialData = {
   image:

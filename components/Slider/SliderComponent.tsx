@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import { neueThin, neueXThin } from "@/styles/fonts";
-import { motion, AnimatePresence } from "framer-motion";
 
 interface Feature {
   title?: string;
