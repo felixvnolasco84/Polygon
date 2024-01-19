@@ -18,7 +18,7 @@ const items = [
   {
     name: "Manuel Manterola",
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fmanuel_manterola.png?alt=media&token=739a05c4-c72f-4f93-aaeb-72df8dee5551",
-    role: "NB Director & Partner",
+    role: "NB Director & Founder Partner",
   },
   {
     name: "Rodrigo Ogarrio",
@@ -28,7 +28,7 @@ const items = [
   {
     name: "Nicole Woodman",
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fnicole_woodman.png?alt=media&token=ba356584-00ca-4b8f-86df-61ed45c98630",
-    role: "Business Develop Manager",
+    role: "Business Development Manager",
   },
   {
     name: "Gala Gallegos",
