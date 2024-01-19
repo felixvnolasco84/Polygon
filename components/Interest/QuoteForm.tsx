@@ -48,6 +48,15 @@ export function QuoteForm({
   const title = service;
   const interests = services.filter((service) => service.title !== title);
 
+
+  function formatCurrency (value: number): string {
+    return new Intl.NumberFormat("en-US", {
+      style: "decimal",
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0,
+    }).format(value);
+  }
+
   const FormSchema = z.object({
     service: z.string().default(service),
     project: z.enum(titles, {
@@ -189,7 +198,8 @@ export function QuoteForm({
                 <div className="flex w-3/4 flex-col gap-6 md:w-3/5 lg:w-1/2 xl:gap-12">
                   <p className="text-center text-xl lg:text-2xl xl:text-4xl">
                     {" "}
-                    {`$${field.value}`} MXN - {`$${maxNumber}`} MXN
+                    {`$${formatCurrency(field.value[0])}`} MXN -{" "}
+                    {`$${formatCurrency(maxNumber)}`} MXN
                   </p>
                   <FormControl>
                     <Slider
