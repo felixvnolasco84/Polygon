@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title:
     "Polygon Agency - La agencia de marketing creativo que estabas buscando",
   description:
-    "Descubre el poder del marketing digital con Polygon Agency. Estrategias innovadoras y creativas que dan resultados excepcionales. Convierte tu tráfico en ventas hoy.",
+    "Nuestra agencia de marketing ofrece soluciones digitales de alto impacto en SEO, Paid Media, análisis de datos y estrategias creativas. ¡Contáctanos y déjanos ayudarte a alcanzar tus metas!",
 };
 
 export default function RootLayout({

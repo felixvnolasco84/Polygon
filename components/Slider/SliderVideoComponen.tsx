@@ -134,8 +134,6 @@
 // export default SliderVideoComponent;
 
 
-import React from 'react'
-
 export default function SliderVideoComponen() {
   return (
     <div>SliderVideoComponen</div>

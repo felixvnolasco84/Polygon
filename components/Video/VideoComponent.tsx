@@ -9,6 +9,7 @@ export default function VideoComponent({
 }) {
   return (
     <Video
+      minResolution="1080p"
       accentColor="edff00"
       loop={true}
       autoPlay={true}
