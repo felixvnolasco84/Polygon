@@ -11,10 +11,7 @@ const GridTeamMembers = ({ items }: any) => {
       </h4>
       <div className="grid w-fit grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:gap-x-4 xl:gap-y-24 2xl:grid-cols-5">
         {items.map((item: any, index: any) => (
-          <div
-            className="flex w-full flex-shrink flex-col gap-2 lg:gap-4 xl:gap-6"
-            key={index}
-          >
+          <div className="space-y-2 lg:space-y-4 xl:space-y-6" key={index}>
             <Image
               src={item.img}
               alt=""
@@ -24,17 +21,17 @@ const GridTeamMembers = ({ items }: any) => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               loading="eager"
             />
-            <div className="flex flex-grow flex-col lg:gap-0 xl:gap-1">
-              <span
-                className={`${neueThin.className} text-sm lg:text-xl xl:text-2xl text-black-500`}
+            <div className="text-black-500 lg:space-y-0 xl:space-y-1">
+              <p
+                className={`${neueThin.className} text-sm lg:text-xl xl:text-2xl`}
               >
                 {item.name}
-              </span>
-              <span
-                className={`${neueXThin.className} text-xs lg:text-lg xl:text-xl text-black-500`}
+              </p>
+              <p
+                className={`${neueXThin.className} text-xs lg:text-lg xl:text-xl`}
               >
                 {item.role}
-              </span>
+              </p>
             </div>
           </div>
         ))}
