@@ -18,7 +18,7 @@ const GridTeamMembers = ({ items }: any) => {
               className="min-h-[145px] rounded-sm object-cover xl:h-[371px]"
               width={313}
               height={371}
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               loading="eager"
             />
             <div className="text-black-500 lg:space-y-0 xl:space-y-1">

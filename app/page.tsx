@@ -9,70 +9,91 @@ import Slider from "@/components/Slider/Slider";
 import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
 import SliderHome from "@/components/Slider/SliderHome";
 
+import alba from '@/public/images/Members/alba_rodriguez.png';
+import cid from '@/public/images/Members/cid_galvan.png';
+import edgar from '@/public/images/Members/edgar_magana.png';
+import eduardo from '@/public/images/Members/eduardo_ruiz.png';
+import elena from '@/public/images/Members/elena_gas.png';
+import felipe from '@/public/images/Members/felipe_madero.png';
+import felix from '@/public/images/Members/felix_nolasco.png';
+import fernando from '@/public/images/Members/fernando_herrera.png';
+import francisco from '@/public/images/Members/francisco_hernandez.png';
+import gala from '@/public/images/Members/gala_gallegos.png';
+import jimena from '@/public/images/Members/jimena_rivera.png';
+import liliana from '@/public/images/Members/liliana_moctezuma.png';
+import lorena from '@/public/images/Members/lorena_g.png';
+import manuel from '@/public/images/Members/manuel_manterola.png';
+import mariana from '@/public/images/Members/mariana_recinas.png';
+import nicolas from '@/public/images/Members/nicolas_sotelo.png';
+import nicole from '@/public/images/Members/nicole_woodman.png';
+import pablo from '@/public/images/Members/pablo_nogueron.png';
+import pamela from '@/public/images/Members/pamela_ramirez.png';
+import rodrigo from '@/public/images/Members/rodrigo_ogarrio.png';
+
 const items = [
   {
     name: "Felipe Madero",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffelipe_madero.png?alt=media&token=d125bb99-b193-4cf8-9770-1a238b78e70e",
+    img: felipe,
     role: "CEO & Founder Partner",
   },
   {
     name: "Manuel Manterola",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fmanuel_manterola.png?alt=media&token=739a05c4-c72f-4f93-aaeb-72df8dee5551",
+    img: manuel,
     role: "NB Director & Founder Partner",
   },
   {
     name: "Rodrigo Ogarrio",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Frodrigo_ogarrio.png?alt=media&token=2af4b084-88c6-49eb-af95-b202236c92b6",
+    img: rodrigo,
     role: "CCO & Founder Partner",
   },
   {
     name: "Nicole Woodman",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fnicole_woodman.png?alt=media&token=ba356584-00ca-4b8f-86df-61ed45c98630",
+    img: nicole,
     role: "Business Development Manager",
   },
   {
     name: "Gala Gallegos",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fgala_gallegos.png?alt=media&token=44a7ef68-1fc9-4058-b53f-e61ce4e7c579",
+    img: gala,
     role: "Head of Operations",
   },
   {
     name: "Nicolas Sotelo",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fnicolas_sotelo.png?alt=media&token=c5416d45-f7d3-4a8c-bc04-ebb66e72ee1e",
+    img: nicolas,
     role: "Creative Director",
   },
   {
     name: "Alba Rodriguez",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Falba_rodriguez.png?alt=media&token=a5cd5921-af92-4ea1-8c4e-74b5ba87617e",
+    img: alba,
     role: "SEO Director",
   },
   {
     name: "Edgar Magaña",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fedgar_magana.png?alt=media&token=1b4ca568-7e25-481f-a2ac-9f41f6050264",
+    img: edgar,
     role: "Data Analyst",
   },
   {
     name: "Mariana Recinas",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fmariana_recinas.png?alt=media&token=7083c845-8901-4242-9006-9dec3e7f9830",
+    img: mariana,
     role: "Performance Marketing",
   },
   {
     name: "Felix Nolasco",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffelix_nolasco.png?alt=media&token=8ee045fc-0963-4165-a56e-f500a2008bd5",
+    img: felix,
     role: "Software Developer",
   },
   {
     name: "Pablo Noguerón",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fpablo_nogueron.png?alt=media&token=9548753f-0572-4bf1-a3b9-3de01cc9313f",
+    img: pablo,
     role: "Content Designer",
   },
   {
     name: "Franciso Hernández",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffrancisco_hernandez.png?alt=media&token=ab7b4d1c-031f-4f6f-b5dd-c6f4e04d87c7",
+    img: francisco,
     role: "Creative Art Manager",
   },
   {
     name: "Jimena Rivera",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fjimena_rivera.png?alt=media&token=5a853ec2-932f-47b0-ba51-d97e0e489629",
+    img: jimena,
     role: "Junior Designer",
   },
   // {
@@ -82,37 +103,37 @@ const items = [
   // },
   {
     name: "Eduardo Ruiz",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Feduardo_ruiz.png?alt=media&token=c1792b0d-4dc4-4c2e-ae0a-54e65f34e3e8",
+    img: eduardo,
     role: "Production Director",
   },
   {
     name: "Lorena G. Cuaxiloa",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Florena_g.png?alt=media&token=a630c360-8f45-4763-98a7-173724e47743",
+    img: lorena,
     role: "Content Creator",
   },
   {
     name: "Elena Gas",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Felena_gas.png?alt=media&token=1d0eb2b8-72b4-43f5-8f9c-aa64309945b6",
+    img: elena,
     role: "Social Media Manager",
   },
   {
     name: "Pamela Ramírez",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fpamela_ramirez.png?alt=media&token=9157d6da-6da1-4c54-9d59-eec92d1ddfcb",
+    img: pamela,
     role: "SEO Content Writer",
   },
   {
     name: "Cid Galván",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fcid_galvan.png?alt=media&token=2bad2da6-7673-4efe-b1f4-056e4e7cb875",
+    img: cid,
     role: "Content Editor",
   },
   {
     name: "Liliana Moctezuma",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fliliana_moctezuma.png?alt=media&token=0fbe9bc8-441c-4e5c-b762-0db1009bc108",
+    img: liliana,
     role: "Office Administrator",
   },
   {
     name: "Fernando Herrera",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Ffernando_herrera.png?alt=media&token=11414ffc-6f62-482d-93d8-c4171ac51327",
+    img: fernando,
     role: "Production Assistant",
   },
 ];
