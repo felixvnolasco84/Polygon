@@ -15,7 +15,7 @@ const GridTeamMembers = ({ items }: any) => {
             <Image
               src={item.img}
               alt=""
-              className="min-h-[145px] w-full flex-shrink rounded-sm object-cover object-center lg:max-w-none xl:h-[371px]"
+              className="min-h-[145px] rounded-sm object-cover xl:h-[371px]"
               width={313}
               height={371}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

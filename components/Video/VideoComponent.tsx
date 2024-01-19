@@ -9,6 +9,7 @@ export default function VideoComponent({
 }) {
   return (
     <Video
+      minResolution="720p"
       maxResolution="720p"      
       accentColor="edff00"
       loop={true}

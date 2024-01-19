@@ -75,11 +75,11 @@ const items = [
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fjimena_rivera.png?alt=media&token=5a853ec2-932f-47b0-ba51-d97e0e489629",
     role: "Junior Designer",
   },
-  {
-    name: "Sebastián Designer",
-    img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fsebastian_alarcon.png?alt=media&token=eb55d4d0-97b7-4d11-ba5d-903d2ab17b50",
-    role: "Senior Designer",
-  },
+  // {
+  //   name: "Sebastián Designer",
+  //   img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fsebastian_alarcon.png?alt=media&token=eb55d4d0-97b7-4d11-ba5d-903d2ab17b50",
+  //   role: "Senior Designer",
+  // },
   {
     name: "Eduardo Ruiz",
     img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Feduardo_ruiz.png?alt=media&token=c1792b0d-4dc4-4c2e-ae0a-54e65f34e3e8",
