@@ -24,6 +24,7 @@ export default function VideoComponent({
       className={`absolute h-full w-full ${className}`}
       controls={ false }
       src={video}
+      preload="true"
     />
   );
 }
