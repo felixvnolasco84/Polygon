@@ -223,13 +223,21 @@ export const CardsHome = [
     }}
   />,
 ];
+
 export const Cards = [
   <Card
     slideId="Slide 1"
     key="amber-card"
     item={{
       image: Copa,
-      videoComponent: <VideoComponent video={CopaVideo} />,
+      videoComponent: (
+        <VideoComponent
+          hascontrols={true}
+          hasloop={false}
+          hasautoPlay={false}
+          video={CopaVideo}
+        />
+      ),
       title: "Copa",
       description:
         "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
@@ -246,7 +254,14 @@ export const Cards = [
     key="amber-card"
     item={{
       image: InDrive,
-      videoComponent: <VideoComponent video={InDriveVideo} />,
+      videoComponent: (
+        <VideoComponent
+          hascontrols={true}
+          hasloop={false}
+          hasautoPlay={false}
+          video={InDriveVideo}
+        />
+      ),
       title: "inDrive ft. Martina la Peligrosa",
       description:
         "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
@@ -257,7 +272,14 @@ export const Cards = [
     key="amber-card"
     item={{
       image: CCPTaqueria,
-      videoComponent: <VideoComponent video={CCPVideo} />,
+      videoComponent: (
+        <VideoComponent
+          hascontrols={true}
+          hasloop={false}
+          hasautoPlay={false}
+          video={CCPVideo}
+        />
+      ),
       title: "Colaboración CCP x Taquería Gabriel",
       description:
         "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
@@ -268,7 +290,14 @@ export const Cards = [
     key="amber-card"
     item={{
       image: Bursanet,
-      videoComponent: <VideoComponent video={BursanetVideo} />,
+      videoComponent: (
+        <VideoComponent
+          hascontrols={true}
+          hasloop={false}
+          hasautoPlay={false}
+          video={BursanetVideo}
+        />
+      ),
       title: "Vista Trader de Bursanet",
       description:
         "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",

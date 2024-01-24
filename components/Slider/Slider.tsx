@@ -1,13 +1,114 @@
 "use client";
 
-import Carousel from "nuka-carousel";
-import { Cards, MobileCards } from "./cards";
+import BursanetVideo from "@/videos/Bursanet.mp4";
+import CCPVideo from "@/videos/CCP.mp4";
+import CopaVideo from "@/videos/Copa.mp4";
+import InDriveVideo from "@/videos/InDrive.mp4";
+import Bupa from "@/public/images/Customers/Bupa.png";
+import InDrive from "@/public/images/Customers/InDrive.png";
+import Bursanet from "@/public/images/Customers/Bursanet.png";
+import CCP from "@/public/images/Customers/CCP.png";
+import CCPTaqueria from "@/public/images/Customers/CCP-Taqueria.png";
+import Copa from "@/public/images/Customers/Copa.png";
+
+import { Card, CardContent } from "@/components/ui/card";
 import {
-  renderCenterLeftControls,
-  renderCenterRightControls,
-} from "./controls";
-import { neueXThin } from "@/styles/fonts";
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import { neueThin, neueXThin } from "@/styles/fonts";
 import { useEffect, useState } from "react";
+import LinkComponent from "../Link/LinkComponent";
+import VideoComponent from "../Video/VideoComponent";
+import clsx from "clsx";
+import Image from "next/image";
+
+export const Cards = [
+  {
+    image: Copa,
+    videoComponent: (
+      <VideoComponent
+        hascontrols={true}
+        hasloop={false}
+        hasautoPlay={false}
+        video={CopaVideo}
+      />
+    ),
+    title: "Copa",
+    description:
+      "Creación de nombre, desarrollo de marca, diseño web y contenido para Copa (Corcuera Padel), la marca del creador del pádel.",
+    linkComponent: (
+      <LinkComponent
+        link={"https://copapadel.com/"}
+        title="Visitar sitio web."
+      />
+    ),
+  },
+  {
+    image: InDrive,
+    videoComponent: (
+      <VideoComponent
+        hascontrols={true}
+        hasloop={false}
+        hasautoPlay={false}
+        video={InDriveVideo}
+      />
+    ),
+    title: "inDrive ft. Martina la Peligrosa",
+    description:
+      "Campaña enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical.",
+  },
+  {
+    image: CCPTaqueria,
+    videoComponent: (
+      <VideoComponent
+        hascontrols={true}
+        hasloop={false}
+        hasautoPlay={false}
+        video={CCPVideo}
+      />
+    ),
+    title: "Colaboración CCP x Taquería Gabriel",
+    description:
+      "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
+  },
+  {
+    image: Bursanet,
+    videoComponent: (
+      <VideoComponent
+        hascontrols={true}
+        hasloop={false}
+        hasautoPlay={false}
+        video={BursanetVideo}
+      />
+    ),
+    title: "Vista Trader de Bursanet",
+    description:
+      "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
+    linkComponent: (
+      <LinkComponent
+        link={"https://www.youtube.com/watch?v=n6B3NwBiZfQ"}
+        title="Ir a ver el contenido"
+      />
+    ),
+  },
+  {
+    image: CCP,
+    title: "CCP Reposicionamiento Mujeres",
+    description:
+      "Campaña centrada en reposicionar la línea de ropa femenina, que incluye producción audiovisual y marketing de rendimiento.",
+  },
+  {
+    image: Bupa,
+    title: "Diseño Bupa Nacional Vital ID Cards",
+    description:
+      "En 2021, nuestro equipo de diseño trabajó en las nuevas tarjetas de identificación para Bupa Nacional Vital.",
+  },
+];
 
 const Slider = () => {
   const [mounted, setMounted] = useState(false);
@@ -18,52 +119,71 @@ const Slider = () => {
   if (!mounted) return <></>;
 
   return (
-    <div className="flex flex-col gap-8 lg:gap-12">
+    <div className="flex flex-col gap-8 px-4 lg:gap-12 lg:px-12 xl:px-24">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 lg:px-12 xl:px-24`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none`}
       >
         Nuestro Trabajo
       </h4>
-      <div className="hidden w-screen lg:block">
-        <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
-          <Carousel
-            frameAriaLabel="Carousel Demo"
-            slideIndex={0}
-            wrapAround={true}
-            slidesToShow={2}
-            autoplay={false}
-            cellSpacing={24}
-            withoutControls={true}
-          >
-            {Cards}
-          </Carousel>
-        </div>
-      </div>
-      <div className="block w-screen lg:hidden lg:w-full">
-        <div className="flex w-full items-center justify-center gap-5 px-2 lg:px-12 xl:px-4">
-          <Carousel
-            defaultControlsConfig={{
-              containerClassName: "absolute top-5 w-full",
-              pagingDotsContainerClassName: "gap-[10px] spacing-dots",
-              pagingDotsClassName: "w-full px-4 bg-white rounded-md",
-              pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
-            }}
-            frameAriaLabel="Carousel Demo 2"
-            slideIndex={0}
-            wrapAround={true}
-            slidesToShow={1}
-            autoplay={false}
-            cellSpacing={12}
-            autoplayInterval={2000}
-            withoutControls={false}
-            tabbed={true}
-            renderCenterLeftControls={renderCenterLeftControls}
-            renderCenterRightControls={renderCenterRightControls}
-          >
-            {MobileCards}
-          </Carousel>
-        </div>
-      </div>
+      <Carousel
+        opts={{
+          align: "start",
+        }}
+        className="max-w-custom-mobile m-auto max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[1660px]"
+      >
+        <CarouselContent>
+          {Cards.map((item, index) => (
+            <CarouselItem
+              key={index}
+              className="basis-full lg:basis-1/2"
+            >
+              <Card className="border-none border-transparent shadow-none">
+                <CardContent className="flex aspect-square items-center justify-center border-none border-transparent p-0">
+                  <div
+                    data-slide={index}
+                    className={clsx("flex w-full flex-col gap-5")}
+                  >
+                    <div className="h-[520px] overflow-hidden rounded-lg lg:h-[280px] xl:h-[520px]">
+                      {item.videoComponent ? (
+                        item.videoComponent
+                      ) : (
+                        <Image
+                          className="h-full w-full bg-center object-cover object-center"
+                          src={item.image}
+                          width={1650}
+                          height={1040}
+                          alt=""
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          loading="eager"
+                        />
+                      )}
+                    </div>
+                    <div className="flex flex-col gap-2">
+                      <h2
+                        className={`${neueThin.className} leading-none text-xl md:text-2xl lg:text-2xl xl:text-3xl text-black-500`}
+                      >
+                        {item.title}
+                      </h2>
+                      <p
+                        className={`${neueXThin.className} md:leading-[40px] text-lg md:text-xl lg:text-xl xl:text-2xl text-black-500`}
+                      >
+                        {item.description}
+                      </p>
+                    </div>
+                    {item.linkComponent ? (
+                      item.linkComponent
+                    ) : (
+                      <div className="min-h-[40px]"></div>
+                    )}
+                  </div>
+                </CardContent>
+              </Card>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious />
+        <CarouselNext />
+      </Carousel>
     </div>
   );
 };

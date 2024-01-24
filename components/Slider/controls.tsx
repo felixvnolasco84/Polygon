@@ -1,8 +1,6 @@
 import React from "react";
 import clsx from "clsx";
 import { ChevronLeftCircleIcon, ChevronRightCircleIcon } from "lucide-react";
-import leftArrow from "@/public/images/leftArrow.svg";
-import rightArrow from "@/public/images/rightArrow.svg";
 
 export const renderCenterLeftControls = ({ previousDisabled, previousSlide }: any) => (
   <button

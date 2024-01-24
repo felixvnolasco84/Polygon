@@ -99,7 +99,7 @@ module.exports = {
         },
         ".hide-scrollbar-utility::-webkit-scrollbar ": {
           display: "none",
-        }        
+        },
       });
     }),
   ],

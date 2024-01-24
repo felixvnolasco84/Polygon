@@ -247,3 +247,22 @@ mux-player {
   --media-object-fit: cover;
   --media-object-position: center;
 }
+
+
+@media (max-width: 425px) {
+  .max-w-custom-mobile {
+    max-width: 384px !important;
+  }
+}
+
+@media (max-width: 375px) {
+.max-w-custom-mobile {
+    max-width: 320px !important;
+  }
+}
+
+@media (max-width: 320px) {
+.max-w-custom-mobile {
+    max-width: 280px !important;
+  }
+}

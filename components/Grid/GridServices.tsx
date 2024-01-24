@@ -488,12 +488,12 @@ export default function GridServices() {
         Experiencia, pasión y resultados en cada servicio.
       </h2>
 
-      <div className="flex flex-col gap-4 lg:gap-12">
+      <div className="flex flex-col gap-4">
         {services.map((service: any, index: any) => (
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-6"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-6 lg:pt-12"
           >
             <div className="relative w-full lg:w-4/12">
               <h3

@@ -7,7 +7,6 @@ import GridTalent from "@/components/Grid/GridTalent";
 import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
 import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
-import SliderHome from "@/components/Slider/SliderHome";
 
 import alba from '@/public/images/Members/alba_rodriguez.png';
 import cid from '@/public/images/Members/cid_galvan.png';
@@ -29,6 +28,7 @@ import nicole from '@/public/images/Members/nicole_woodman.png';
 import pablo from '@/public/images/Members/pablo_nogueron.png';
 import pamela from '@/public/images/Members/pamela_ramirez.png';
 import rodrigo from '@/public/images/Members/rodrigo_ogarrio.png';
+import SliderHome from "@/components/Slider/SliderHome";
 
 const items = [
   {

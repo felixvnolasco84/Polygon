@@ -1,8 +1,11 @@
+"use client";
+
 import { neueRoman } from "@/styles/fonts";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
 import rightArrow from "@/public/images/rightArrow.svg";
 import Contact from "@/components/Contact/Contact";
+import { useState } from "react";
 
 export default function TalkDialog({
   message,
@@ -17,9 +20,10 @@ export default function TalkDialog({
   bgButtonColor?: string;
   bgButtonHoverColor?: string;
 }) {
+
   return (
     <Dialog>
-      <DialogTrigger>
+      <DialogTrigger >
         <div className="group relative hidden items-center gap-1 focus:outline-none lg:flex">
           <div
             className={`relative w-full overflow-hidden rounded-[15px] ${bgColor}`}
