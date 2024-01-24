@@ -129,7 +129,7 @@ const Slider = () => {
         opts={{
           align: "start",
         }}
-        className="max-w-custom-mobile m-auto max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-7xl 2xl:max-w-[1660px]"
+        className="max-w-custom-mobile m-auto max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-7xl"
       >
         <CarouselContent>
           {Cards.map((item, index) => (

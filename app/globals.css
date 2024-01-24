@@ -272,3 +272,16 @@ mux-player {
     max-width: 280px !important;
   }
 }
+
+@media (min-width: 1440px) {
+.max-w-custom-mobile {
+    max-width: 1320px !important;
+  }
+}
+
+@media (min-width: 1660px) {
+.max-w-custom-mobile {
+    max-width: 1660px !important;
+  }
+}
+
