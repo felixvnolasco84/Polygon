@@ -260,7 +260,7 @@ mux-player {
     max-width: 370px !important;
   }
 }
-
+ 
 @media (max-width: 375px) {
 .max-w-custom-mobile {
     max-width: 320px !important;

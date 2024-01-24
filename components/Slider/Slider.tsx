@@ -47,7 +47,7 @@ export const Cards = [
         title="Visitar sitio web."
       />
     ),
-  },
+  }, 
   {
     image: InDrive,
     videoComponent: (
