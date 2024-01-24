@@ -78,14 +78,14 @@ export const Cards = [
   },
   {
     image: Bursanet,
-    videoComponent: (
-      <VideoComponent
-        hascontrols={true}
-        hasloop={false}
-        hasautoPlay={false}
-        video={BursanetVideo}
-      />
-    ),
+    // videoComponent: (
+    //   <VideoComponent
+    //     hascontrols={true}
+    //     hasloop={false}
+    //     hasautoPlay={false}
+    //     video={BursanetVideo}
+    //   />
+    // ),
     title: "Vista Trader de Bursanet",
     description:
       "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
