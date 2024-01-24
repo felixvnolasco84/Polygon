@@ -64,28 +64,28 @@ export const Cards = [
   },
   {
     image: CCPTaqueria,
-    videoComponent: (
-      <VideoComponent
-        hascontrols={true}
-        hasloop={false}
-        hasautoPlay={false}
-        video={CCPVideo}
-      />
-    ),
+    // videoComponent: (
+    //   <VideoComponent
+    //     hascontrols={true}
+    //     hasloop={false}
+    //     hasautoPlay={false}
+    //     video={CCPVideo}
+    //   />
+    // ),
     title: "Colaboración CCP x Taquería Gabriel",
     description:
       "Producción audiovisual y activación para regalar el 'Taco Perro' el 15 de septiembre mediante un food truck.",
   },
   {
     image: Bursanet,
-    // videoComponent: (
-    //   <VideoComponent
-    //     hascontrols={true}
-    //     hasloop={false}
-    //     hasautoPlay={false}
-    //     video={BursanetVideo}
-    //   />
-    // ),
+    videoComponent: (
+      <VideoComponent
+        hascontrols={true}
+        hasloop={false}
+        hasautoPlay={false}
+        video={BursanetVideo}
+      />
+    ),
     title: "Vista Trader de Bursanet",
     description:
       "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
