@@ -23,7 +23,7 @@ type CardProps = {
 };
 
 export const CardShowCase = ({ item }: CardProps) => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
 
   return (
     <div className="flex h-fit flex-col lg:gap-5">
