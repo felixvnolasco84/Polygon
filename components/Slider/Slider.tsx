@@ -119,9 +119,9 @@ const Slider = () => {
   if (!mounted) return <></>;
 
   return (
-    <div className="flex flex-col gap-8 px-4 lg:gap-12 lg:px-12 xl:px-24">
+    <div className="flex flex-col gap-8 lg:gap-12 lg:px-12 xl:px-24">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 md:px-0`}
       >
         Nuestro Trabajo
       </h4>
@@ -133,10 +133,7 @@ const Slider = () => {
       >
         <CarouselContent>
           {Cards.map((item, index) => (
-            <CarouselItem
-              key={index}
-              className="basis-full lg:basis-1/2"
-            >
+            <CarouselItem key={index} className="basis-full lg:basis-1/2">
               <Card className="border-none border-transparent shadow-none">
                 <CardContent className="flex aspect-square items-center justify-center border-none border-transparent p-0">
                   <div
