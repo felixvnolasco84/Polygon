@@ -1,7 +1,7 @@
-import React from "react";
 import { neueThin, neueXThin } from "@/styles/fonts";
 import GridBlogs from "../Grid/GridBlogs";
 import FooterContact from "./FooterContact";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -33,6 +33,12 @@ export default function Footer() {
             hola@polygonag.com
           </p>
         </div>
+        <Link
+          href={"/politica-de-privacidad"}
+          className={`${neueThin.className} text-lg lg:text-xl xl:text-2xl text-white leading-none`}
+        >
+          Políticas de privacidad{" "}
+        </Link>
       </div>
     </footer>
   );
