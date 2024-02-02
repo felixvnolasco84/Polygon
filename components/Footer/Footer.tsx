@@ -34,7 +34,7 @@ export default function Footer() {
           </p>
         </div>
         <Link
-          href={"/politica-de-privacidad"}
+          href={"/politicas-de-privacidad"}
           className={`${neueThin.className} text-lg lg:text-xl xl:text-2xl text-white leading-none`}
         >
           Políticas de privacidad{" "}
