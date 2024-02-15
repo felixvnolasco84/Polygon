@@ -28,7 +28,7 @@ const FormSchema = z.object({
     .max(160, {
       message: "El nombre no puede ser más de 160 carácteres.",
     }),
-  email: z.string().email({ message: "Correo electrónico Inválido" })
+  email: z.string().email({ message: "Correo electrónico Inválido" }),
 });
 
 export function HeroContactForm() {
@@ -40,7 +40,7 @@ export function HeroContactForm() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       name: "",
-      email: "", 
+      email: "",
     },
   });
 

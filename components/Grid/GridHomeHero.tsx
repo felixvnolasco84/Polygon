@@ -5,7 +5,7 @@ import { HeroContactForm } from "../Contact/HeroContactForm";
 
 export default function GridHomeHero() {
   return (
-    <div className="flex flex-col-reverse items-center px-4 lg:flex-row lg:px-12 xl:px-24">
+    <div className="flex flex-col-reverse items-center px-4 lg:flex-row lg:px-12 xl:px-24 2xl:px-48">
       <div className="flex w-full flex-col lg:w-6/12 xl:gap-6">
         <div className="flex w-full max-w-none flex-col lg:max-w-[80%] lg:gap-3">
           <h1
