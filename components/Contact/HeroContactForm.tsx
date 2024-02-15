@@ -80,11 +80,11 @@ export function HeroContactForm() {
               control={form.control}
               name="name"
               render={({ field }) => (
-                <FormItem className="w-full rounded-md bg-gray-400 p-2 lg:w-1/2">
+                <FormItem className="w-full rounded-md bg-gray-400 lg:w-1/2 lg:p-1 xl:p-2">
                   <FormControl>
                     <Input
                       placeholder="Nombre"
-                      className="resize-none border-b-0 bg-transparent px-1 py-0 text-base lg:text-lg"
+                      className="resize-none border-b-0 bg-transparent px-1 py-0 text-base xl:text-lg"
                       disabled={isLoading}
                       {...field}
                     ></Input>
@@ -97,11 +97,11 @@ export function HeroContactForm() {
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem className="w-full rounded-md bg-gray-400 p-2 lg:w-1/2">
+                <FormItem className="w-full rounded-md bg-gray-400 lg:w-1/2 lg:p-1 xl:p-2">
                   <FormControl>
                     <Input
                       placeholder="Email"
-                      className="resize-none border-b-0 bg-transparent px-1 py-0 text-base lg:text-lg"
+                      className="resize-none border-b-0 bg-transparent px-1 py-0 text-base xl:text-lg"
                       disabled={isLoading}
                       {...field}
                     ></Input>

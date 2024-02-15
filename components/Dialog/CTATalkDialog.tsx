@@ -30,7 +30,7 @@ export default function CTATalkDialog({
               className={`absolute left-0 top-0 h-full w-0 ${bgHoverColor} transition-all duration-700 group-hover:w-full`}
             >
               <p
-                className={`invisible group-hover:visible transition-opacity text-black ${neueRoman.className} text-lg lg:text-xl xl:text-2xl pl-3 py-2 lg:pl-5 lg:py-2 xl:pl-10 xl:py-4 transition-all rounded-[15px] text-left`}
+                className={`invisible group-hover:visible transition-opacity text-black ${neueRoman.className} xl:text-lg 2xl:text-xl  pl-3 py-2 lg:pl-5 lg:py-2 xl:pl-10 xl:py-4 transition-all rounded-[15px] text-left`}
               >
                 {message}
               </p>

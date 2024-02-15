@@ -9,12 +9,12 @@ export default function GridHomeHero() {
       <div className="flex w-full flex-col lg:w-6/12 xl:gap-6">
         <div className="flex w-full max-w-none flex-col lg:max-w-[80%] lg:gap-3">
           <h1
-            className={`${neueThin.className} text-2xl lg:text-5xl xl:text-6xl`}
+            className={`${neueThin.className} text-2xl lg:text-4xl xl:text-6xl`}
           >
             Una agencia creativa dedicada a potenciar tu marca en el mercado.
           </h1>
           <h2
-            className={`${neueXThin.className} text-xl lg:text-3xl xl:text-4xl`}
+            className={`${neueXThin.className} text-xl lg:text-2xl xl:text-4xl`}
           >
             Ayudamos a empresas como la tuya con un enfoque de marketing único.
           </h2>

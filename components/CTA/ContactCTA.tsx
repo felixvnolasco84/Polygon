@@ -13,7 +13,7 @@ export default function ContactCTA() {
       <div className="flex flex-col lg:w-8/12 xl:gap-6">
         <div className="flex w-full flex-col gap-3 lg:max-w-[80%] xl:gap-6">
           <h1
-            className={`text-2xl leading-relaxed lg:text-5xl xl:text-6xl 2xl:leading-[90px]`}
+            className={`text-2xl leading-relaxed lg:text-3xl xl:text-6xl 2xl:leading-[90px]`}
           >
             Trabajamos por el bien de tu negocio y nos enfocamos en hacerlo
             crecer de manera sostenible.
