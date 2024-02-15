@@ -1,10 +1,20 @@
-const SimpleContactEmail = ({ name, email, phoneNumber }: any) => (
+type SimpleContactEmailProps = {
+  name: string;
+  email: string;
+  phoneNumber?: string;
+};
+
+const SimpleContactEmail = ({
+  name,
+  email,
+  phoneNumber,
+}: SimpleContactEmailProps) => (
   <div>
     <h1>Nuevo Contacto</h1>
     <p>
       De <strong>{name}</strong> con el correo {email}
     </p>
-    <p>Telefono: {phoneNumber}</p>
+    {phoneNumber && <p>Telefono: {phoneNumber}</p>}
   </div>
 );
 

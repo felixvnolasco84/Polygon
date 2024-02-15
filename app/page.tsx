@@ -8,27 +8,29 @@ import Grid from "@/components/Grid/GridTeamMembers";
 import Slider from "@/components/Slider/Slider";
 import { GridAssociateCarrousel } from "@/components/Grid/GridAssociateCarrousel";
 
-import alba from '@/public/images/Members/alba_rodriguez.png';
-import cid from '@/public/images/Members/cid_galvan.png';
-import edgar from '@/public/images/Members/edgar_magana.png';
-import eduardo from '@/public/images/Members/eduardo_ruiz.png';
-import elena from '@/public/images/Members/elena_gas.png';
-import felipe from '@/public/images/Members/felipe_madero.png';
-import felix from '@/public/images/Members/felix_nolasco.png';
-import fernando from '@/public/images/Members/fernando_herrera.png';
-import francisco from '@/public/images/Members/francisco_hernandez.png';
-import gala from '@/public/images/Members/gala_gallegos.png';
-import jimena from '@/public/images/Members/jimena_rivera.png';
-import liliana from '@/public/images/Members/liliana_moctezuma.png';
-import lorena from '@/public/images/Members/lorena_g.png';
-import manuel from '@/public/images/Members/manuel_manterola.png';
-import mariana from '@/public/images/Members/mariana_recinas.png';
-import nicolas from '@/public/images/Members/nicolas_sotelo.png';
-import nicole from '@/public/images/Members/nicole_woodman.png';
-import pablo from '@/public/images/Members/pablo_nogueron.png';
-import pamela from '@/public/images/Members/pamela_ramirez.png';
-import rodrigo from '@/public/images/Members/rodrigo_ogarrio.png';
+import alba from "@/public/images/Members/alba_rodriguez.png";
+import cid from "@/public/images/Members/cid_galvan.png";
+import edgar from "@/public/images/Members/edgar_magana.png";
+import eduardo from "@/public/images/Members/eduardo_ruiz.png";
+import elena from "@/public/images/Members/elena_gas.png";
+import felipe from "@/public/images/Members/felipe_madero.png";
+import felix from "@/public/images/Members/felix_nolasco.png";
+import fernando from "@/public/images/Members/fernando_herrera.png";
+import francisco from "@/public/images/Members/francisco_hernandez.png";
+import gala from "@/public/images/Members/gala_gallegos.png";
+import jimena from "@/public/images/Members/jimena_rivera.png";
+import liliana from "@/public/images/Members/liliana_moctezuma.png";
+import lorena from "@/public/images/Members/lorena_g.png";
+import manuel from "@/public/images/Members/manuel_manterola.png";
+import mariana from "@/public/images/Members/mariana_recinas.png";
+import nicolas from "@/public/images/Members/nicolas_sotelo.png";
+import nicole from "@/public/images/Members/nicole_woodman.png";
+import pablo from "@/public/images/Members/pablo_nogueron.png";
+import pamela from "@/public/images/Members/pamela_ramirez.png";
+import rodrigo from "@/public/images/Members/rodrigo_ogarrio.png";
 import SliderHome from "@/components/Slider/SliderHome";
+import GridHomeFeatures from "@/components/Grid/GridHomeFeatures";
+import ContactCTA from "@/components/CTA/ContactCTA";
 
 const items = [
   {
@@ -291,12 +293,14 @@ const partners = [
 export default function Home() {
   return (
     <main className="bg-gray-[#FDFDFD] flex min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden lg:gap-24 xl:gap-48">
-      <GridHomeHero />
       <div className="flex flex-col gap-16 lg:gap-24 xl:gap-48">
+        <GridHomeHero />
+        <GridHomeFeatures />
         <GridServices />
         <SliderHome />
         <GridFeatured />
         <GridTalent />
+        <ContactCTA />
         <Grid items={items} />
         <GridAssociate items={partners} />
         <GridAssociateCarrousel />

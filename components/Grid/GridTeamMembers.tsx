@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const GridTeamMembers = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-8 px-4 lg:gap-12 lg:px-12 xl:px-24">
+    <div className="flex flex-col items-center gap-8 px-4 lg:gap-12 lg:px-12 xl:px-24">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none w-full`}
       >
         Conoce al equipo
       </h4>
