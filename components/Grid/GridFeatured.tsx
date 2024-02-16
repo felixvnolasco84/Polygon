@@ -114,7 +114,7 @@ export default function GridFeatured() {
             </div> */}
           </div>
 
-          <div className="row-span-2 flex h-full flex-col lg:gap-5 xl:pb-5">
+          <div className="row-span-2 flex h-full flex-col lg:gap-5 xl:pb-5 2xl:pb-0">
             <Image
               src={Bupa}
               alt=""
