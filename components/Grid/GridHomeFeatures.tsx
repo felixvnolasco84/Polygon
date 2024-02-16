@@ -43,7 +43,7 @@ const GridHomeFeaturesItems: GridHomeFeaturesProps[] = [
 export default function GridHomeFeatures() {
   return (
     <div
-      className={`${neueXThin.className} flex flex-col lg:flex-row lg:gap-6 xl:gap-12 px-4 text-center lg:px-12 xl:px-24 items-baseline`}
+      className={`${neueXThin.className} flex flex-col lg:flex-row gap-3 lg:gap-6 xl:gap-12 px-4 text-center lg:px-12 xl:px-24 items-baseline`}
     >
       {GridHomeFeaturesItems.map((item, index) => (
         <div
