@@ -9,8 +9,8 @@ type GridHomeFeaturesProps = {
   image: StaticImageData;
   title: string;
   description: string;
-  width?: string;
-  height?: string;
+  maxWidth?: string;
+  maxHeight?: string;
 };
 
 const GridHomeFeaturesItems: GridHomeFeaturesProps[] = [
@@ -44,9 +44,11 @@ export default function GridHomeFeatures() {
           key={index}
           className="flex w-full flex-col items-center justify-center lg:w-4/12 lg:gap-1 xl:gap-3"
         >
-          <div className={`relative flex aspect-square w-8/12 justify-center md:w-4/12 lg:w-full`}>
+          <div
+            className={`relative flex aspect-square w-8/12 max-w-[216px] justify-center md:w-4/12 lg:w-full`}
+          >
             <Image
-              className={`h-full w-full rounded-[10px] object-cover object-center`}
+              className={`h-full w-full rounded-[10px] object-fill object-center`}
               src={item.image}
               alt={item.title}
               fill
@@ -55,7 +57,7 @@ export default function GridHomeFeatures() {
           <h3 className="text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl">
             {item.title}
           </h3>
-          <p className="max-w-lg text-lg xl:text-xl 2xl:text-2xl">
+          <p className="max-w-md text-lg xl:text-xl 2xl:text-2xl">
             {item.description}
           </p>
         </div>

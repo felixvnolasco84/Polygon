@@ -8,8 +8,8 @@ import Link from "next/link";
 
 export default function GridHomeHero() {
   return (
-    <div className="flex flex-col-reverse items-center px-4 lg:flex-row lg:px-12 xl:px-24 2xl:px-48">
-      <div className="flex w-full flex-col gap-3 lg:w-6/12 xl:gap-6">
+    <div className="flex flex-col-reverse items-center justify-center px-4 pt-16 lg:flex-row lg:px-12 lg:pt-24 xl:px-24 2xl:px-48">
+      <div className="flex w-full flex-col gap-3 lg:w-7/12 xl:w-6/12 xl:gap-6">
         <div className="flex w-full max-w-none flex-col lg:max-w-[80%] lg:gap-3">
           <h1
             className={`${neueThin.className} text-2xl lg:text-4xl xl:text-6xl`}
@@ -33,10 +33,10 @@ export default function GridHomeHero() {
         </Link>
       </div>
 
-      <div className="relative aspect-square w-full md:w-3/4 lg:w-6/12">
+      <div className="relative aspect-square max-h-[645px] w-full max-w-[573px] md:w-3/4 lg:w-5/12 xl:w-6/12">
         <Image
           src={HeroImage}
-          className="object-cover object-center"
+          className="object-fill object-center"
           alt="HeroImage"
           fill
         />

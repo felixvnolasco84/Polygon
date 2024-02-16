@@ -22,7 +22,9 @@ export default function CTATalkDialog({
   return (
     <Dialog>
       <DialogTrigger>
-        <div className="group relative flex items-center gap-1 focus:outline-none">
+        <div
+          className={`${neueRoman.className} group relative flex items-center gap-1 focus:outline-none`}
+        >
           <div
             className={`relative w-full overflow-hidden rounded-[15px] ${bgColor}`}
           >
@@ -30,13 +32,13 @@ export default function CTATalkDialog({
               className={`absolute left-0 top-0 h-full w-0 ${bgHoverColor} transition-all duration-700 group-hover:w-full`}
             >
               <p
-                className={`invisible group-hover:visible transition-opacity text-black ${neueRoman.className} xl:text-lg 2xl:text-xl  pl-3 py-2 lg:pl-5 lg:py-2 xl:pl-10 xl:py-4 transition-all rounded-[15px] text-left`}
+                className={`invisible group-hover:visible transition-opacity text-black ${neueRoman.className} xl:text-lg 2xl:text-xl lg:pl-5 lg:py-2 2xl:pl-10 2xl:py-4 transition-all rounded-[15px] text-left`}
               >
                 {message}
               </p>
             </div>
             <p
-              className={`${neueRoman.className} xl:text-lg 2xl:text-xl pl-3 py-2 lg:pl-5 lg:py-2 2xl:pl-10 2xl:py-4 w-full text-left`}
+              className={`${neueRoman.className} text-black xl:text-lg 2xl:text-xl lg:pl-5 lg:py-2 2xl:pl-10 2xl:py-4 w-full text-left`}
             >
               {message}
             </p>

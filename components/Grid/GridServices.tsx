@@ -493,7 +493,7 @@ export default function GridServices() {
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-6 lg:pt-12"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-3 lg:pt-6 xl:pb-6 xl:pt-12"
           >
             <div className="relative w-full lg:w-4/12">
               <h3

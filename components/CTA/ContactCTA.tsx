@@ -28,7 +28,7 @@ export default function ContactCTA() {
         </div>
       </div>
 
-      <div className="relative aspect-square w-8/12">
+      <div className="relative aspect-square w-8/12 lg:w-4/12">
         <Image
           src={CTAContactImage}
           className="object-cover object-center"
