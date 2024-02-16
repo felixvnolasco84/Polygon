@@ -23,14 +23,14 @@ export default function GridHomeHero() {
           </h2>
         </div>
         <HeroContactForm />
-        <Separator className="lg:max-w-[80%]" />
+        {/* <Separator className="lg:max-w-[80%]" />
 
         <Link
           className={`${neueThin.className} inline-flex items-center justify-center ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 lg:group w-full bg-flourescentYellow text-xl font-normal text-black hover:bg-black hover:text-white xl:text-[22px] h-11 rounded-md px-8 lg:max-w-[80%]`}
           href={"https://calendly.com/polygonag/30min"}
         >
           Agendar con Calendly
-        </Link>
+        </Link> */}
       </div>
 
       <div className="relative aspect-square max-h-[645px] w-full max-w-[573px] md:w-3/4 lg:w-5/12 xl:w-6/12">
