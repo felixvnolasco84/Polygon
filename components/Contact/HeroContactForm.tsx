@@ -53,7 +53,8 @@ export function HeroContactForm() {
         body: JSON.stringify(data),
       });
       if (response.ok) {
-        setShowModalMessage(true);
+        window.location.href =
+          "https://calendly.com/polygonag/30min?month=2024-02";
         setIsLoading(false);
       }
     } catch (error) {
