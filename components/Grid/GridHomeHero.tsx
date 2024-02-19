@@ -9,7 +9,7 @@ import Link from "next/link";
 export default function GridHomeHero() {
   return (
     <div className="flex flex-col-reverse items-center justify-center gap-3 px-4 pt-16 lg:flex-row lg:gap-0 lg:px-12 lg:pt-24 xl:px-24 2xl:px-48">
-      <div className="flex w-full flex-col gap-3 lg:w-7/12 xl:w-6/12 xl:gap-6">
+      <div className="flex w-full flex-col gap-5 lg:w-7/12 xl:w-6/12 xl:gap-6">
         <div className="flex w-full max-w-none flex-col lg:max-w-[80%] lg:gap-3">
           <h1
             className={`${neueThin.className} text-2xl lg:text-4xl xl:text-6xl`}
