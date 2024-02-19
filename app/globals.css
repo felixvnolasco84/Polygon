@@ -64,7 +64,7 @@
     --color-black: #000000;
     --color-medium-black: #150c14;
     --color-light-black: #0b0b0b;
-    
+
     --color-flourescent-yellow: #edff00;
 
     --color-dark-green: #0e3128;
@@ -147,7 +147,7 @@
   /* Slider handle height */
   background-image: url("https://www.svgrepo.com/show/533621/arrow-sm-right.svg");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   object-fit: fill;
   /* background-color: #000000; */
   /* Green background */
@@ -163,7 +163,7 @@
   /* Slider handle height */
   background-image: url("https://www.svgrepo.com/show/533621/arrow-sm-right.svg");
   background-size: contain;
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   object-fit: fill;
   /* Green background */
   cursor: pointer;
@@ -224,7 +224,7 @@ video {
 }
 
 [data-next-video] {
-  width: 100% !important;  
+  width: 100% !important;
   height: 100% !important;
 }
 
@@ -239,7 +239,11 @@ video {
   object-fit: cover !important;
 }
 
-.slide, .slide-current, .slide-visible, .slider-list, .prev-cloned {
+.slide,
+.slide-current,
+.slide-visible,
+.slider-list,
+.prev-cloned {
   height: fit-content;
 }
 
@@ -260,33 +264,38 @@ mux-player {
     max-width: 370px !important;
   }
 }
- 
+
 @media (max-width: 375px) {
-.max-w-custom-mobile {
+  .max-w-custom-mobile {
     max-width: 320px !important;
   }
 }
 
 @media (max-width: 320px) {
-.max-w-custom-mobile {
+  .max-w-custom-mobile {
     max-width: 280px !important;
   }
 }
 
 @media (min-width: 1440px) {
-.max-w-custom-mobile {
+  .max-w-custom-mobile {
     max-width: 1320px !important;
   }
 }
 
 @media (min-width: 1660px) {
-.max-w-custom-mobile {
+  .max-w-custom-mobile {
     max-width: 1660px !important;
   }
 }
 
 body {
-    overflow-x: hidden;
-      /* Hide horizontal scrollbar */
+  overflow-x: hidden;
+  /* Hide horizontal scrollbar */
   /* Hide scrollbars */
+}
+
+
+.reverse-image {
+  transform: scaleX(-1);
 }

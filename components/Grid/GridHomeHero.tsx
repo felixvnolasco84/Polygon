@@ -28,7 +28,7 @@ export default function GridHomeHero() {
       <div className="relative aspect-square max-h-[645px] w-full max-w-[573px] md:w-3/4 lg:w-5/12 xl:w-6/12">
         <Image
           src={HeroImage}
-          className="object-fill object-center"
+          className="reverse-image scale-100 object-fill object-center"
           alt="HeroImage"
           fill
         />
