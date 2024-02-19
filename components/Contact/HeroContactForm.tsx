@@ -130,7 +130,7 @@ export function HeroContactForm() {
               disabled={isLoading}
               size={"lg"}
             >
-              <span>Agenda tu consultoría gratuita</span>
+              <span>Agenda tu consulta gratuita</span>
             </Button>
           )}
           <span>No compartimos tu info con nadie.</span>
