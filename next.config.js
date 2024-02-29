@@ -53,7 +53,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "https://www.polygonag.com/index.html",
+        source: "/index.html",
         headers: [
           {
             key: "Content-Type",
