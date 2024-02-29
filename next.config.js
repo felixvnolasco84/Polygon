@@ -9,42 +9,42 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "https://polygonag.com/apetito.html",
+        source: "/apetito.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección permanente (301)
       },
       {
-        source: "https://www.polygonag.com/tuborg.html",
+        source: "/tuborg.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección temporal (302)
       },
       {
-        source: "http://www.polygonag.com/apetito.html",
+        source: "/apetito.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección temporal (302)
       },
       {
-        source: "https://www.polygonag.com/actinver.html",
+        source: "/actinver.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección temporal (302)
       },
       {
-        source: "http://www.polygonag.com/copa.html",
+        source: "/copa.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección temporal (302)
       },
       {
-        source: "http://polygonag.com/copa.html",
+        source: "/copa.html",
         destination: "https://www.polygonag.com/",
         permanent: false, // Esto es una redirección temporal (302)
       },
       {
-        source: "https://polygonag.com/contacto.html",
+        source: "/contacto.html",
         destination: "https://www.polygonag.com/",
         permanent: true, // Esto es una redirección temporal (302)
       },
       {
-        source: "https://polygonag.com/nosotros.html",
+        source: "/nosotros.html",
         destination: "https://www.polygonag.com/",
         permanent: true, // Esto es una redirección temporal (302)
       },
