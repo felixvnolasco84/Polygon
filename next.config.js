@@ -6,6 +6,14 @@ const nextConfig = {
   images: {
     domains: ["res.cloudinary.com", "firebasestorage.googleapis.com"],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/:path*",
+        destination: "/",
+      },
+    ];
+  },
 };
 
 module.exports = withNextVideo(nextConfig);
