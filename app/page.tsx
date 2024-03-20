@@ -302,10 +302,10 @@ export default function Home() {
     <main className="bg-gray-[#FDFDFD] flex min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden lg:gap-24 xl:gap-48">
       <div className="flex flex-col gap-24 xl:gap-48">
         <GridHomeHero />
+        <GridFeatured />
         <GridHomeFeatures />
         <GridServices />
         <SliderHome />
-        <GridFeatured />
         <GridTalent />
         <ContactCTA />
         <Grid items={items} />
