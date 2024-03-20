@@ -6,10 +6,10 @@ import { Metadata, ResolvingMetadata } from "next";
 import SliderComponent from "@/components/Slider/SliderComponent";
 import BackgroundTemplate from "@/components/BackgroundTemplate/BackgroundTemplate";
 
-type Props = {
-  params: { id: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
+  type Props = {
+    params: { id: string };
+    searchParams: { [key: string]: string | string[] | undefined };
+  };
 
 export async function generateMetadata(
   { params, searchParams }: Props,

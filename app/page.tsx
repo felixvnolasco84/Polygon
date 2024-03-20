@@ -21,13 +21,14 @@ import gala from "@/public/images/Members/gala_gallegos.png";
 import jimena from "@/public/images/Members/jimena_rivera.png";
 import liliana from "@/public/images/Members/liliana_moctezuma.png";
 import lorena from "@/public/images/Members/lorena_g.png";
-import manuel from "@/public/images/Members/manuel_manterola.png";
 import mariana from "@/public/images/Members/mariana_recinas.png";
 import nicolas from "@/public/images/Members/nicolas_sotelo.png";
 import nicole from "@/public/images/Members/nicole_woodman.png";
 import pablo from "@/public/images/Members/pablo_nogueron.png";
 import pamela from "@/public/images/Members/pamela_ramirez.png";
 import rodrigo from "@/public/images/Members/rodrigo_ogarrio.png";
+import antonio from '@/public/images/Members/antonio_tamayo.png';
+import tomas from '@/public/images/Members/tomas_saiz.png';
 import SliderHome from "@/components/Slider/SliderHome";
 import GridHomeFeatures from "@/components/Grid/GridHomeFeatures";
 import ContactCTA from "@/components/CTA/ContactCTA";
@@ -39,15 +40,21 @@ const items = [
     role: "CEO & Founder Partner",
   },
   {
-    name: "Manuel Manterola",
-    img: manuel,
-    role: "NB Director & Founder Partner",
-  },
-  {
     name: "Rodrigo Ogarrio",
     img: rodrigo,
     role: "CCO & Founder Partner",
   },
+  {
+    name: "Antonio Tamayo",
+    img: antonio,
+    role: "Senior Partner Business Development",
+  },
+  {
+    name: "Tomás Saiz",
+    img: tomas,
+    role: "Business Development Director",
+  },
+
   {
     name: "Nicole Woodman",
     img: nicole,
