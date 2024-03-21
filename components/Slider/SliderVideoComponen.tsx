@@ -43,7 +43,7 @@
 
 
 //   return (
-//     <div className="flex flex-col gap-4 px-4 py-0 text-black-500 lg:hidden lg:px-24">
+//     <div className="flex flex-col gap-4 py-0 text-black-500 lg:hidden">
 //       {/* <Carousel autoplay={true} speed={1000}>         */}
 //       {/* <div className="relative min-h-[480px] w-full overflow-hidden rounded-md bg-cover bg-center bg-no-repeat">
 
@@ -101,7 +101,7 @@
 //           objectFit="cover"
 //           objectPosition="center"
 //         /> */}
-//         <div className="absolute left-0 top-0 z-10 flex w-full justify-center space-x-2 px-4 py-4">
+//         <div className="absolute left-0 top-0 z-10 flex w-full justify-center space-x-2 py-4">
 //           {features.map((_, index) => (
 //             <span
 //               key={index}

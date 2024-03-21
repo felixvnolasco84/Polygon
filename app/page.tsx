@@ -27,8 +27,8 @@ import nicole from "@/public/images/Members/nicole_woodman.png";
 import pablo from "@/public/images/Members/pablo_nogueron.png";
 import pamela from "@/public/images/Members/pamela_ramirez.png";
 import rodrigo from "@/public/images/Members/rodrigo_ogarrio.png";
-import antonio from '@/public/images/Members/antonio_tamayo.png';
-import tomas from '@/public/images/Members/tomas_saiz.png';
+import antonio from "@/public/images/Members/antonio_tamayo.png";
+import tomas from "@/public/images/Members/tomas_saiz.png";
 import SliderHome from "@/components/Slider/SliderHome";
 import GridHomeFeatures from "@/components/Grid/GridHomeFeatures";
 import ContactCTA from "@/components/CTA/ContactCTA";
@@ -299,8 +299,8 @@ const partners = [
 
 export default function Home() {
   return (
-    <main className="bg-gray-[#FDFDFD] flex min-h-screen w-screen flex-col items-center justify-between gap-16 overflow-hidden lg:gap-24 xl:gap-48">
-      <div className="flex flex-col gap-24 xl:gap-48">
+    <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 xl:gap-y-48">
+      <div className="container flex w-full flex-col gap-24 px-4 xl:gap-48">
         <GridHomeHero />
         <GridFeatured />
         <GridHomeFeatures />

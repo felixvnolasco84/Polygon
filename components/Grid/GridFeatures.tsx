@@ -2,7 +2,7 @@ import { neueXThin, neueThin, neueLight } from "@/fonts";
 
 const GridFeatures = ({ items }: any) => {
   return (
-    <div className="flex max-w-sm flex-col gap-y-[50px] px-4 lg:px-24">
+    <div className="flex max-w-sm flex-col gap-y-[50px] lg:px-24">
       <h4
         className={`${neueLight.className} text-2xl lg:text-7xl text-black-500`}
       >

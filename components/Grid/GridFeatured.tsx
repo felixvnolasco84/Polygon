@@ -61,7 +61,7 @@ const InDriveData = {
 export default function GridFeatured() {
   return (
     <>
-      <div className="hidden flex-col gap-[30px] px-2 lg:flex lg:gap-[50px] lg:px-12 xl:px-24">
+      <div className="hidden flex-col gap-[30px] lg:flex lg:gap-[50px]">
         <h2
           className={`${neueXThin.className} font-bold lg:font-medium text-3xl lg:text-5xl xl:text-6xl xl:leading-[90px]`}
         >

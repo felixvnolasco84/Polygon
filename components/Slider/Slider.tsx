@@ -119,9 +119,9 @@ const Slider = () => {
   if (!mounted) return <></>;
 
   return (
-    <div className="flex flex-col gap-8 lg:gap-12 lg:px-12 xl:px-24">
+    <div className="flex max-w-fit flex-col gap-8 lg:gap-12">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 md:px-0`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none md:px-0`}
       >
         Nuestro Trabajo
       </h4>
@@ -129,7 +129,7 @@ const Slider = () => {
         opts={{
           align: "start",
         }}
-        className="max-w-custom-mobile m-auto max-w-sm md:max-w-xl lg:max-w-4xl xl:max-w-7xl"
+        className=""
       >
         <CarouselContent>
           {Cards.map((item, index) => (

@@ -78,9 +78,9 @@ export const GridAssociateCarrousel = () => {
   };
 
   return (
-    <div className="w-screen lg:hidden">
+    <div className="lg:hidden">
       <div
-        className={`w-full flex flex-col gap-7 px-4 lg:px-24 ${neueLight.className}`}
+        className={` flex flex-col gap-7 lg:px-24 max-w-fit ${neueLight.className}`}
       >
         <h2
           className={`${neueXThin.className} text-2xl sm:text-xl md:text-2xl lg:text-3xl lg:leading-tight lg:tracking-tighter xl:text-4xl`}

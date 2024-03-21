@@ -253,41 +253,6 @@ mux-player {
 }
 
 
-@media (max-width: 425px) {
-  .max-w-custom-mobile {
-    max-width: 384px !important;
-  }
-}
-
-@media (max-width: 400px) {
-  .max-w-custom-mobile {
-    max-width: 370px !important;
-  }
-}
-
-@media (max-width: 375px) {
-  .max-w-custom-mobile {
-    max-width: 320px !important;
-  }
-}
-
-@media (max-width: 320px) {
-  .max-w-custom-mobile {
-    max-width: 280px !important;
-  }
-}
-
-@media (min-width: 1440px) {
-  .max-w-custom-mobile {
-    max-width: 1320px !important;
-  }
-}
-
-@media (min-width: 1660px) {
-  .max-w-custom-mobile {
-    max-width: 1660px !important;
-  }
-}
 
 body {
   overflow-x: hidden;

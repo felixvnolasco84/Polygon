@@ -150,7 +150,7 @@ export function ContactForm() {
           ) : (
             <Button
               type="submit"
-              className="lg:group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:px-4 lg:py-2"
+              className="lg:group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:py-2"
               disabled={isLoading}
             >
               <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-4 text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">

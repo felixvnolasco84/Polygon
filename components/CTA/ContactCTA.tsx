@@ -8,7 +8,7 @@ import CTATalkDialog from "../Dialog/CTATalkDialog";
 export default function ContactCTA() {
   return (
     <div
-      className={`${neueXThin.className} flex flex-col-reverse lg:flex-row items-center px-4 lg:px-12 xl:px-24`}
+      className={`${neueXThin.className} flex flex-col-reverse lg:flex-row items-center`}
     >
       <div className="flex flex-col lg:w-8/12 xl:gap-6">
         <div className="flex w-full flex-col gap-3 lg:max-w-[80%] xl:gap-6">

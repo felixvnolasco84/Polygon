@@ -13,7 +13,7 @@ import AnimacionIntro_Mobile from "@/videos/AnimacionIntro_Mobile.mp4";
 import VideoComponent from "../Video/VideoComponent";
 export default function HeroVideoComponent() {
   return (
-    <div className="relative min-h-[600px] w-screen lg:min-h-[800px]">
+    <div className="relative min-h-[600px] lg:min-h-[800px]">
       {/* <Image className="block md:hidden" src={HeroIntroMobile} alt="" /> */}
       {/* <div className="absolute h-full w-full">
         <VideoComponent
@@ -27,7 +27,7 @@ export default function HeroVideoComponent() {
       </div> */}
 
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
-      <div className="absolute bottom-0 left-0 flex flex-col justify-end px-2 pb-12 md:min-h-full lg:gap-5 lg:px-12 lg:pb-[30px] xl:gap-10 xl:px-24">
+      <div className="absolute bottom-0 left-0 flex flex-col justify-end px-2 pb-12 md:min-h-full lg:gap-5 lg:px-12 lg:pb-[30px] xl:gap-10">
         <h1
           className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white z-10 lg:leading-[70px]`}
         >

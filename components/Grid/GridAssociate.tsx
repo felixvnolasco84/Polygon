@@ -8,7 +8,7 @@ const GridAssociate = ({ items }: any) => {
     "Hablemos, nuestro equipo se comunicará contigo en las siguientes 24 horas.";
 
   return (
-    <div className="hidden flex-col gap-y-7 px-4 lg:flex lg:gap-12 lg:px-12 xl:px-24">
+    <div className="hidden flex-col gap-y-7 lg:flex lg:gap-12">
       <h4
         className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl text-black-500 lg:leading-none`}
       >

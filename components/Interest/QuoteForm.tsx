@@ -139,12 +139,12 @@ export function QuoteForm({
                   <RadioGroup
                     onValueChange={field.onChange}
                     defaultValue={field.value}
-                    className="flex w-full flex-col gap-4 lg:flex-row xl:flex-grow"
+                    className="flex w-full flex-col justify-between gap-4 lg:flex-row xl:flex-grow"
                   >
                     {projects.map((service: any, index: any) => (
                       <FormItem
                         key={index}
-                        className={`relative flex min-h-fit w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:w-4/12 xl:min-h-[237px] xl:max-w-[398px]`}
+                        className={`relative flex min-h-fit w-full flex-col gap-6 rounded-[10px] bg-transparent text-black-500 lg:w-4/12 xl:min-h-[237px]`}
                       >
                         <FormControl
                           onClick={() => handleItemClick(index)}
@@ -304,10 +304,10 @@ export function QuoteForm({
             )}
           />
 
-          <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 px-4 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
+          <div className="flex flex-col items-start gap-8 overflow-hidden rounded-md bg-gray-400 py-4 lg:items-center lg:gap-[110px] lg:px-24 lg:py-24">
             <div className="flex flex-col items-start justify-center gap-4 md:items-center lg:flex-row lg:gap-[70px]">
               <Image
-                className="pr-20 md:px-12 lg:px-8 xl:px-4"
+                className="pr-20 md:px-12 lg:px-8"
                 src={PolygonIsoLogo}
                 width={239}
                 height={155}

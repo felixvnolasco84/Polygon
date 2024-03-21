@@ -32,7 +32,7 @@ export default function GridTalent() {
   return (
     <div className="flex flex-col gap-3 lg:gap-[50px] xl:overflow-hidden">
       <h3
-        className={`${neueXThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-6xl lg:group-hover:bg-white lg:group-hover:translate-x-14 lg:px-12 xl:px-24 px-4`}
+        className={`${neueXThin.className} text-2xl transition ease-out relative z-10 lg:text-5xl xl:text-6xl lg:group-hover:bg-white lg:group-hover:translate-x-14`}
       >
         Talento y tecnología en cada proyecto digital
       </h3>
@@ -42,7 +42,7 @@ export default function GridTalent() {
         video={Animacion_Blanco}
       />
       {/* <div className="flex h-[640px] items-end bg-[url('https://res.cloudinary.com/dirtcb7dj/image/upload/v1695236636/Hero/zqgdrhztqkjuxsadesjb.png')] bg-cover bg-center bg-no-repeat">
-        <div className="flex h-fit items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% px-8 pb-[30px] lg:h-[774px] lg:px-12 xl:px-24">
+        <div className="flex h-fit items-end gap-4 bg-gradient-to-t from-black to-transparent to-60% pb-[30px] lg:h-[774px]">
           <div className="block lg:hidden">
             <SliderComponent features={features} type="talent" />
           </div>

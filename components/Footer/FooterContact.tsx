@@ -12,7 +12,7 @@ import { ContactForm } from "../Contact/ContactForm";
 
 export default function FooterContact() {
   return (
-    <div className="flex flex-col gap-8 bg-transparent text-white">
+    <div className="container flex flex-col gap-8 bg-transparent text-white">
       <h2
         className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-6xl xl:leading-[80px] tracking-normal`}
       >

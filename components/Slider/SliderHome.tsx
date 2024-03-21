@@ -18,14 +18,14 @@ const SliderHome = () => {
   if (!mounted) return <></>;
 
   return (
-    <div className="flex flex-col gap-8 lg:hidden lg:gap-12">
+    <div className="flex max-w-fit flex-col gap-8 lg:hidden lg:gap-12">
       <h4
-        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none px-4 lg:px-12 xl:px-24`}
+        className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl leading-none lg:px-12`}
       >
         Innovación en acción: <br /> nuestro trabajo más reciente.
       </h4>
-      <div className="hidden w-screen lg:block">
-        <div className="flex items-center justify-center gap-5 lg:px-12 xl:px-24">
+      <div className="hidden lg:block">
+        <div className="flex items-center justify-center gap-5 lg:px-12">
           <Carousel
             frameAriaLabel="Carousel Demo"
             slideIndex={0}
@@ -39,13 +39,13 @@ const SliderHome = () => {
           </Carousel>
         </div>
       </div>
-      <div className="block w-screen lg:hidden lg:w-full">
-        <div className="flex w-full items-center justify-center gap-5 px-2 lg:px-12 xl:px-4">
+      <div className="block lg:hidden lg:w-full">
+        <div className="flex w-full items-center justify-center gap-5 lg:px-12">
           <Carousel
             defaultControlsConfig={{
               containerClassName: "absolute top-5 w-full",
               pagingDotsContainerClassName: "gap-[10px] spacing-dots",
-              pagingDotsClassName: "w-full px-4 bg-white rounded-md",
+              pagingDotsClassName: "w-full  bg-white rounded-md",
               pagingDotsStyle: { background: "#FFFFFF", borderRadius: "10px" },
             }}
             frameAriaLabel="Carousel Demo 2"

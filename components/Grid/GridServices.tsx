@@ -481,7 +481,7 @@ export const services = [
 
 export default function GridServices() {
   return (
-    <div className="flex flex-col gap-4 px-4 lg:gap-12 lg:px-12 xl:px-24">
+    <div className="flex flex-col gap-4 lg:gap-12">
       <h2
         className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl text-black-500`}
       >

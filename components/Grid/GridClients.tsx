@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const GridClients = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-y-8 px-0 pb-4 lg:gap-y-12 lg:px-12 lg:pb-12 xl:gap-y-24 xl:px-24 xl:pb-24">
+    <div className="flex flex-col gap-y-8 lg:gap-y-12 xl:gap-y-24">
       <h4
-        className={`${neueXThin.className} px-4 lg:px-0 text-3xl lg:font-medium lg:text-5xl xl:text-6xl text-black-500 max-w-[1097px] xl:leading-[90px]`}
+        className={`${neueXThin.className}  lg:px-0 text-3xl lg:font-medium lg:text-5xl xl:text-6xl text-black-500 max-w-[1097px] xl:leading-[90px]`}
       >
         Logros digitales que impulsan el éxito de nuestros clientes
       </h4>

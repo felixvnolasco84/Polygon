@@ -12,9 +12,9 @@ module.exports = {
   ],
   theme: {
     container: {
-      center: true,       
-      screens: {        
-        "2xl": "1920px",        
+      center: true,
+      screens: {
+        "2xl": "1400px",
       },
     },
     extend: {
@@ -94,8 +94,7 @@ module.exports = {
       addUtilities({
         ".hide-scrollbar-utility": {
           "scrollbar-width": "none",
-          "-ms-overflow-style": "none",
-          "max-width": "100vw",
+          "-ms-overflow-style": "none",         
         },
         ".hide-scrollbar-utility::-webkit-scrollbar ": {
           display: "none",

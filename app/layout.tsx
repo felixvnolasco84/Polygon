@@ -32,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           }}
         />
       </head>
-      <body className={`container hide-scrollbar-utility`}>
+      <body className={`hide-scrollbar-utility`}>
         <Header />
         <div className="flex-1">
           <iframe

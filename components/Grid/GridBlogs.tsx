@@ -7,7 +7,7 @@ import { services } from "./GridServices";
 
 export default function GridBlogs() {
   return (
-    <div className="flex flex-col gap-[20px] bg-black-600 px-4 py-24 lg:gap-[80px] lg:px-12 xl:px-24">
+    <div className="flex flex-col gap-[20px] bg-black-600 py-24 lg:gap-[80px]">
       <h2
         className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-7xl text-white`}
       >

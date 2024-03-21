@@ -44,13 +44,13 @@ export default function Page({ params }: Props) {
           />
 
           <div className="absolute bottom-0 left-0 h-fit w-full lg:h-full">
-            <div className="from-2% flex h-[420px] flex-col justify-end gap-12 bg-gradient-to-t from-black to-transparent to-100% px-4 pb-[30px] lg:h-full lg:px-12 xl:gap-24 xl:px-24">
+            <div className="from-2% flex h-[420px] flex-col justify-end gap-12 bg-gradient-to-t from-black to-transparent to-100% pb-[30px] lg:h-full xl:gap-24">
               <h1
-                className={`${neueXThin.className} text-4xl lg:text-5xl xl:text-7xl text-white`}
+                className={`${neueXThin.className} text-4xl lg:text-5xl xl:text-7xl text-white container px-4`}
               >
                 {service.title}
               </h1>
-              <div className="hidden items-start gap-4 lg:flex">
+              <div className="container hidden items-start gap-4 px-4 lg:flex">
                 {service?.objectives.map((objective: any, index: any) => (
                   <div key={index} className="flex flex-col gap-4">
                     <p
@@ -71,13 +71,13 @@ export default function Page({ params }: Props) {
           </div>
         </div>
         <SliderComponent features={service.features} type="" />
-        <div className="flex flex-col gap-12 px-4 xl:container lg:mb-12 lg:px-12 xl:gap-[74px] xl:px-0">
+        <div className="container flex flex-col gap-12 lg:mb-12 lg:px-12 xl:gap-[74px] xl:px-0">
           <h1
             className={`${neueXThin.className} text-2xl lg:text-7xl text-black-500`}
           >
             {service.tile}
           </h1>
-          <div className="m-auto mb-8 flex max-w-full flex-col justify-start gap-5 lg:mb-0 lg:justify-center lg:gap-8 xl:max-w-[1226px] xl:gap-10">
+          <div className="m-auto mb-8 flex max-w-full flex-col justify-start gap-5 px-4 lg:mb-0 lg:justify-center lg:gap-8 xl:gap-10">
             <h2
               className={`${neueThin.className} text-2xl md:text-3xl xl:text-[40px] text-black-500`}
             >
