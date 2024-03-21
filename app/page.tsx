@@ -302,10 +302,11 @@ export default function Home() {
     <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 xl:gap-y-48">
       <div className="container flex w-full flex-col gap-24 px-4 xl:gap-48">
         <GridHomeHero />
+        <SliderHome />
         <GridFeatured />
         <GridHomeFeatures />
         <GridServices />
-        <SliderHome />
+
         <GridTalent />
         <ContactCTA />
         <Grid items={items} />
