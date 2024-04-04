@@ -110,11 +110,11 @@ const items = [
   //   img: "https://firebasestorage.googleapis.com/v0/b/polygon-website-15608.appspot.com/o/Members%2Fsebastian_alarcon.png?alt=media&token=eb55d4d0-97b7-4d11-ba5d-903d2ab17b50",
   //   role: "Senior Designer",
   // },
-  {
-    name: "Eduardo Ruiz",
-    img: eduardo,
-    role: "Production Director",
-  },
+  // {
+  //   name: "Eduardo Ruiz",
+  //   img: eduardo,
+  //   role: "Production Director",
+  // },
   {
     name: "Lorena G. Cuaxiloa",
     img: lorena,
@@ -299,8 +299,8 @@ const partners = [
 
 export default function Home() {
   return (
-    <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 xl:gap-y-48">
-      <div className="container flex w-full flex-col gap-24 px-4 xl:gap-48">
+    <main className="flex flex-col justify-between items-center gap-y-16 lg:gap-y-24 xl:gap-y-48 bg-gray-[#FDFDFD] py-12">
+      <div className="flex flex-col gap-24 xl:gap-48 px-4 w-full container">
         <GridHomeHero />
         <SliderHome />
         <GridFeatured />
