@@ -45,11 +45,11 @@ const items = [
     img: rodrigo,
     role: "CCO & Founder Partner",
   },
-  {
-    name: "Jose Luis Betancourt",
-    img: jose,
-    role: "Senior Partner Business Development",
-  },
+  // {
+  //   name: "Jose Luis Betancourt",
+  //   img: jose,
+  //   role: "Senior Partner Business Development",
+  // },
 
   {
     name: "Antonio Tamayo",
