@@ -27,6 +27,7 @@ import nicole from "@/public/images/Members/nicole_woodman.png";
 import pablo from "@/public/images/Members/pablo_nogueron.png";
 import pamela from "@/public/images/Members/pamela_ramirez.png";
 import rodrigo from "@/public/images/Members/rodrigo_ogarrio.png";
+import jose from "@/public/images/Members/jose_betancourt.png";
 import antonio from "@/public/images/Members/antonio_tamayo.png";
 import tomas from "@/public/images/Members/tomas_saiz.png";
 import SliderHome from "@/components/Slider/SliderHome";
@@ -44,6 +45,12 @@ const items = [
     img: rodrigo,
     role: "CCO & Founder Partner",
   },
+  {
+    name: "Jose Luis Betancourt",
+    img: jose,
+    role: "Senior Partner Business Development",
+  },
+
   {
     name: "Antonio Tamayo",
     img: antonio,
