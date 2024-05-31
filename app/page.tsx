@@ -33,6 +33,7 @@ import tomas from "@/public/images/Members/tomas_saiz.png";
 import SliderHome from "@/components/Slider/SliderHome";
 import GridHomeFeatures from "@/components/Grid/GridHomeFeatures";
 import ContactCTA from "@/components/CTA/ContactCTA";
+import GridFeaturedWork from "@/components/Grid/GridFeaturedWork";
 
 const items = [
   {
@@ -50,7 +51,6 @@ const items = [
   //   img: jose,
   //   role: "Senior Partner Business Development",
   // },
-
   {
     name: "Antonio Tamayo",
     img: antonio,
@@ -306,14 +306,14 @@ const partners = [
 
 export default function Home() {
   return (
-    <main className="flex flex-col justify-between items-center gap-y-16 lg:gap-y-24 xl:gap-y-48 bg-gray-[#FDFDFD] py-12">
-      <div className="flex flex-col gap-24 xl:gap-48 px-4 w-full container">
+    <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 xl:gap-y-48">
+      <div className="container flex w-full flex-col gap-24 px-4 xl:gap-48">
         <GridHomeHero />
         <SliderHome />
-        <GridFeatured />
+        {/* <GridFeatured /> */}
+        <GridFeaturedWork />
         <GridHomeFeatures />
         <GridServices />
-
         <GridTalent />
         <ContactCTA />
         <Grid items={items} />
