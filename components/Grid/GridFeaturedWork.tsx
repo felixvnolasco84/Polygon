@@ -4,8 +4,7 @@ import { cn } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image from "next/image";
 
-
-import Indrive from '@/public/images/Customers/InDriveColors.png'
+import Indrive from "@/public/images/Customers/InDriveColors.png";
 import { Button } from "../ui/button";
 import { Plus, PlusCircle, PlusCircleIcon } from "lucide-react";
 import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
@@ -35,7 +34,11 @@ const Card = React.forwardRef<
       </CardTitle>
     </CardHeader>
     <CardFooter>
-      <p className={`${neueMedium.className} text-xs text-[#150C14] xl:text-sm font-normal`}>{description}</p>
+      <p
+        className={`${neueLight.className} text-xs text-[#150C14] xl:text-sm font-normal`}
+      >
+        {description}
+      </p>
     </CardFooter>
   </div>
 ));
@@ -43,8 +46,11 @@ Card.displayName = "Card";
 
 export default function GridFeaturedWork() {
   return (
-    <div className="flex flex-col gap-4">
-      <h2>Nuestro Trabajo</h2>
+    <div className="flex flex-col gap-12">
+      <h2 className={`${neueLight.className} text-2xl xl:text-4xl text-center`}>
+      {/* <h2 className={`${neueMedium.className} text-2xl xl:text-4xl text-center`}> */}
+        Nuestro Trabajo
+      </h2>
       <div className="grid-rows-12 grid grid-cols-6 gap-3">
         <div className="rows-span-12 relative col-span-6 aspect-square overflow-hidden rounded-md bg-gray-400 shadow-sm lg:col-span-3">
           <Image
@@ -60,8 +66,10 @@ export default function GridFeaturedWork() {
             <div className="flex w-full flex-col justify-between lg:w-10/12">
               <CardHeader className="p-0">
                 <CardTitle
-                  className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
-                >
+                  className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}>
+                {/* <CardTitle
+                  className={`${neueMedium.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
+                > */}
                   inDrive Martina la Peligrosa
                 </CardTitle>
                 <CardDescription

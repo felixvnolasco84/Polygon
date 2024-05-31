@@ -15,8 +15,8 @@ export default function VideoComponent({
 }) {
   return (
     <Video
-      minResolution="720p"
-      maxResolution="720p"      
+      minResolution="1080p"
+      maxResolution="1440p"      
       accentColor="edff00"
       loop={ hasloop ? hasloop : true }
       autoPlay={ hasautoPlay ? hasautoPlay : true}

@@ -481,7 +481,7 @@ export const services = [
   },
 ];
 
-export default function GridServices() {
+export default function NewGridServices() {
   return (
     <div className="flex flex-col gap-4 lg:gap-12">
       <h2
@@ -495,41 +495,21 @@ export default function GridServices() {
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 lg:gap-4 lg:pb-3 lg:pt-6 xl:pb-6 xl:pt-12"
+            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 opacity-50 transition-all duration-300 ease-in-out hover:opacity-100 lg:gap-4 lg:pb-3 lg:pt-6 xl:pb-6 xl:pt-12"
           >
-            <div className="relative w-full lg:w-4/12">
-              <h3
-                className={`${neueThin.className} text-xl transition ease-out relative z-10 lg:text-3xl xl:text-4xl lg:group-hover:bg-white lg:group-hover:translate-x-14`}
-              >
-                {service.title}
-              </h3>
-              <Image
-                className="lg:group-hover:bg-flourescent-yellow absolute left-[0%] top-[0%] hidden h-fit cursor-pointer rounded-full p-2 lg:bg-gray-400 lg:group-hover:block"
-                width={40}
-                height={40}
-                src={rightArrow}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                loading="eager"
-                alt=""
-              />
-            </div>
+            <h3
+              className={`${neueThin.className} text-xl lg:text-3xl xl:text-4xl`}
+            >
+              {service.title}
+            </h3>
 
-            <div className="flex items-center gap-12 lg:w-8/12">
-              <p
-                className={`${neueXThin.className} hidden lg:block lg:text-lg xl:text-2xl group-hover:text-transparent w-11/12`}
+            <div className="flex">
+              <Button
+                className="h-12 w-12 rounded-full transition-all duration-300 ease-in-out group-hover:bg-black group-hover:text-white"
+                variant={"link"}
               >
-                {service.itemdescription}
-              </p>
-              <div className="hidden h-fit max-h-[40px] max-w-[40px] rounded-full bg-flourescentYellow p-2 lg:block lg:group-hover:invisible">
-                <Image
-                  src={rightArrow}
-                  width={48}
-                  height={48}
-                  alt=""
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  loading="eager"
-                />
-              </div>
+                <Plus width={40} />
+              </Button>
             </div>
           </Link>
         ))}

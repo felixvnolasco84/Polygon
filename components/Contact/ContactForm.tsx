@@ -80,7 +80,7 @@ export function ContactForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-10/12 xl:w-8/12 lg:flex-row`}
         >
-          <div className="flex w-full flex-col gap-8 bg-transparent lg:flex-row lg:rounded-2xl lg:bg-gray-400 lg:p-4 lg:text-black-500">
+          <div className="flex w-full flex-col gap-8 bg-transparent lg:flex-row lg:rounded-2xl lg:bg-gray-400 lg:px-4 lg:py-2 lg:text-black-500">
             <FormField
               control={form.control}
               name="name"
@@ -150,10 +150,13 @@ export function ContactForm() {
           ) : (
             <Button
               type="submit"
-              className="lg:group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:py-2"
+              variant={"ghost"}
+              className="bg-gray-400 px-12 py-4 text-black hover:bg-gray-900 hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-8 xl:text-2xl"
+              // className="lg:group relative h-fit w-fit bg-transparent px-0 py-2 hover:bg-transparent lg:py-2"
               disabled={isLoading}
             >
-              <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-4 text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
+              Enviar
+              {/* <span className="relative z-10 h-fit gap-4 rounded-[15px] bg-flourescentYellow px-12 py-4 text-xl font-normal text-gray-600 hover:bg-black hover:text-white lg:px-[48px] lg:py-[12px] lg:text-xl xl:px-[64px] xl:py-[16px] xl:text-2xl">
                 Enviar
               </span>
 
@@ -165,7 +168,7 @@ export function ContactForm() {
                 height={48}
                 src={rightArrow}
                 alt=""
-              />
+              /> */}
             </Button>
           )}
         </form>
