@@ -80,11 +80,11 @@ const NewGridClients = ({ items }: any) => {
         Nuestros Clientes
       </h2>
       <div className="flex flex-col gap-3">
-        <div className="grid grid-cols-2 gap-3">
+        {/* <div className="grid grid-cols-2 gap-3">
           {testimonials.map((item: any, index: any) => (
             <TestimonialCard item={item} />
           ))}
-        </div>
+        </div> */}
         <div className="grid grid-cols-3 gap-3 lg:grid-cols-5">
           {items.map((item: any, index: any) => (
             <div className="flex aspect-square items-center justify-center rounded-md bg-[#F7F7F7] shadow-sm">

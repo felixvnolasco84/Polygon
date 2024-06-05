@@ -15,7 +15,7 @@ export default function FooterContact() {
   return (
     <div className="container flex flex-col gap-8 bg-transparent text-white">
       <h2
-        className={`${neueXThin.className} text-2xl md:text-4xl lg:text-5xl xl:text-6xl xl:leading-[80px] tracking-normal`}
+        className={`${neueXThin.className} text-2xl md:text-4xl lg:text-4xl tracking-normal`}
       >
         Hablemos de cómo llevar tu negocio <br /> o marca al siguiente nivel.
       </h2>

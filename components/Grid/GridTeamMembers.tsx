@@ -5,7 +5,7 @@ const GridTeamMembers = ({ items }: any) => {
   return (
     <div className="flex flex-col gap-8 lg:gap-12">
       <h4 className={`${neueLight.className} text-2xl xl:text-4xl text-center`}>
-        Conoce al equipo
+        NUESTRO EQUIPO
       </h4>
       <div className="grid w-fit w-full grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 lg:gap-y-12">
         {items.map((item: any, index: any) => (

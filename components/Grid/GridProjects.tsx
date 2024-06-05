@@ -1,13 +1,8 @@
 import * as React from "react";
 
-import { cn } from "@/lib/utils";
+import { cn, Project } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
-
-import Indrive from "@/public/images/Customers/InDriveColors.png";
-
-import Copa from "@/public/images/Customers/COPA-Hat-Colors.png";
-import Bupa from "@/public/images/Customers/Bupa.png";
 
 import { neueLight, neueMedium } from "@/styles/fonts";
 
@@ -53,24 +48,22 @@ const Card = React.forwardRef<
 ));
 Card.displayName = "Card";
 
-export default function GridProjects() {
+type GridProjectsProps = {
+  projects: Project[];
+};
+
+export default function GridProjects({ projects }: GridProjectsProps) {
   return (
     <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-      <Card
-        img={Indrive}
-        title="inDrive ft. Martina la Peligrosa"
-        description="Campaña para inDrive enfocada en generación de UGC, estrategia, creatividad, producción audiovisual y musical."
-      />
-      <Card
-        img={Bupa}
-        title="Content Bupa Nacional Vital"
-        description="En 2021, nuestro equipo de diseño trabajó en las nuevas tarjetas de identificación para Bupa Nacional Vital."
-      />
-      <Card
-        img={Copa}
-        title="Copa"
-        description="Desarrollo de identidad, branding, diseño de producto y contenido."
-      />
+      {projects.length > 0 &&
+        projects.map((project, index) => (
+          <Card
+            key={index}
+            img={project.img}
+            title={project.title}
+            description={project.description}
+          />
+        ))}
     </div>
   );
 }

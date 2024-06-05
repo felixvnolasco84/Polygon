@@ -495,7 +495,7 @@ export default function NewGridServices() {
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
-            className="group flex items-center justify-between border-b border-gray pb-3 text-black-600 opacity-50 transition-all duration-300 ease-in-out hover:opacity-100 lg:gap-4 lg:pb-3 lg:pt-6 xl:pb-6 xl:pt-12"
+            className="group flex items-center justify-between border-b border-gray text-black-600 opacity-50 transition-all duration-300 ease-in-out hover:opacity-100 lg:pb-4"
           >
             <h3
               className={`${neueThin.className} text-xl lg:text-3xl xl:text-4xl`}

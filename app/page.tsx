@@ -15,11 +15,12 @@ import GridFeaturedWork from "@/components/Grid/GridFeaturedWork";
 import GridProjects from "@/components/Grid/GridProjects";
 import CTABrainstorming from "@/components/CTA/CTABrainstorming";
 import NewGridClients from "@/components/Grid/NewGridClients";
-import { clients } from "@/lib/utils";
+import { clients, firstProjects, secondProjects } from "@/lib/utils";
 import { members } from "@/lib/members";
 import CTAHeroSection from "@/components/Grid/CTAHeroSection";
 import NewGridServices from "@/components/Grid/NewGridServices";
 import NewGridBlogs from "@/components/Grid/NewGridBlogs";
+import GridFeaturedWorkTuborg from "@/components/Grid/GridFeaturedWorkTuborg";
 
 // const partners = [
 //   {
@@ -67,8 +68,10 @@ export default function Home() {
         {/* <SliderHome /> */}
         {/* <GridFeatured /> */}
         <GridFeaturedWork />
-        <GridProjects />
+        <GridProjects projects={firstProjects} />
         <CTABrainstorming />
+        <GridFeaturedWorkTuborg />
+        <GridProjects projects={secondProjects} />
         <NewGridClients items={clients} />
         {/* <GridClients items={clients} /> */}
         {/* <GridHomeFeatures /> */}
