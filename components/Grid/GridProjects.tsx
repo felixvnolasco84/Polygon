@@ -43,7 +43,7 @@ const Card = React.forwardRef<
       </div>
       <CardTitle
         // className={`${neueMedium.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
-        className={`${neueLight.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
+        className={`${neueThin.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
       >
         {title}
       </CardTitle>
@@ -65,7 +65,7 @@ type GridProjectsProps = {
 
 export default function GridProjects({ projects }: GridProjectsProps) {
   return (
-    <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-x-3 gap-y-5 lg:grid-cols-3">
       {projects.length > 0 &&
         projects.map((project, index) => (
           <Card

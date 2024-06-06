@@ -1,6 +1,7 @@
 "use client";
 
 import { neueLight, neueXThin } from "@/styles/fonts";
+import "@/styles/main.css";
 import { Button } from "../ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
@@ -28,7 +29,7 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
           </h3>
         </div>
         <div
-          className={`transition-all duration-500 ${
+          className={`transition-all duration-500 custom-fade ${
             showFeature ? "block" : "hidden"
           }`}
         >

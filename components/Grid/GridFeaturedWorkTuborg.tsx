@@ -71,12 +71,12 @@ export default function GridFeaturedWorkTuborg() {
               </CardDescription>
             </CardHeader>
           </div>
-          <Button className="p-0" variant={"link"}>
+          {/* <Button className="p-0" variant={"link"}>
             <Plus
               className="rounded-full hover:bg-black hover:text-white"
               size={24}
             />
-          </Button>
+          </Button> */}
         </div>
 
         <Card

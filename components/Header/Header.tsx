@@ -11,7 +11,7 @@ export default function Header() {
     <div className="sticky top-0 z-40 w-full bg-white">
       <div className="container flex h-16 items-center justify-between px-4 lg:h-20 xl:h-[104px]">
         <Link
-          className="min-h-[22px] max-w-[90px] md:max-w-[110px] lg:max-w-[160px] xl:max-w-[180px]"
+          className="min-h-[22px] max-w-[120px] md:max-w-[140px] lg:max-w-[160px] xl:max-w-[180px]"
           href={"/"}
         >
           <Image src={Logo} alt="Logo" />

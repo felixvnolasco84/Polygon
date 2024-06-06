@@ -5,6 +5,10 @@
 
     p {
         font-size: 21px;
+
+            @media (max-width: 480px) {
+                    font-size: 18px;
+                }
     }
 
     >*+* {
@@ -40,6 +44,9 @@
 
     h3 {
         font-size: 28px;
+        @media (max-width: 480px) {
+                font-size: 24px;
+            }
     }
 
     h4 {

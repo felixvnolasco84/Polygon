@@ -133,7 +133,7 @@ export const clients = [
   },
 ];
 
-import Copa from "@/public/images/Customers/COPA-Hat-Colors.png";
+import Copa from "@/videos/Copa.mp4.json";
 import Bupa from "@/public/images/Customers/Bupa.png";
 import InDriveAcapulco from "@/videos/inDrive_Cancún_CGI.mp4.json";
 import Apetito from "@/public/images/Customers/Apetito_Portada.png";
@@ -158,7 +158,7 @@ export const firstProjects: Project[] = [
       "En 2021, nuestro equipo de diseño trabajó en las nuevas tarjetas de identificación para Bupa Nacional Vital.",
   },
   {
-    img: Copa,
+    video: Copa,
     title: "Copa",
     description:
       "Copa es la marca del creador del padel Don Enrique Corcuera (Corcuera Padel 1969). Desarrollo de identidad, branding, diseño de producto y contenido.",
@@ -707,6 +707,17 @@ export const services = [
 ];
 
 export const newServices = [
+  {
+    title: "Brand Challenge",
+    items: [
+      "Brand and Creative Strategy.",
+      "SEO & Content.",
+      "Social Media Marketing.",
+      "Online & Traditional Media.",
+      "BTL."
+
+    ],
+  },
   {
     title: "Reputation",
     items: [

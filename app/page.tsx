@@ -15,7 +15,7 @@ import GridFeaturedWorkTuborg from "@/components/Grid/GridFeaturedWorkTuborg";
 
 export default function Home() {
   return (
-    <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 xl:gap-y-48">
+    <main className="bg-gray-[#FDFDFD] flex flex-col items-center justify-between gap-y-16 py-12 lg:gap-y-24 lg:py-24 xl:gap-y-48">
       <div className="container flex w-full flex-col gap-12 px-4 xl:gap-24">
         <CTAHeroSection />
         <NewGridServices />

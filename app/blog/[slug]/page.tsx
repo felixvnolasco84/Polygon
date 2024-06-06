@@ -41,7 +41,7 @@ export default function page({ params }: { params: { slug: string } }) {
   return (
     <div className="mx-auto my-12 flex max-w-5xl flex-col gap-12 px-4">
       <div className="flex flex-col gap-2">
-        <div className="relative aspect-square h-64 w-full overflow-hidden rounded-md shadow-sm">
+        <div className="relative aspect-square h-48 w-full overflow-hidden rounded-md shadow-sm lg:h-64">
           <Image
             src={post?.image as StaticImageData}
             layout="fill"
@@ -49,7 +49,7 @@ export default function page({ params }: { params: { slug: string } }) {
             alt="Blog Image"
           />
           <div className="absolute bottom-0 left-0 right-0 flex h-full w-full items-end bg-[#150C14] bg-opacity-10">
-            <h1 className="p-8 text-2xl text-white">{post?.title}</h1>
+            <h1 className="p-4 text-2xl text-white lg:p-8">{post?.title}</h1>
           </div>
         </div>
         <TipTapOnlyContent content={post?.content as string} />
