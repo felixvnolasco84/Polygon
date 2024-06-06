@@ -37,12 +37,7 @@ const blogs: Blog[] = [
 ];
 
 export default function page({ params }: { params: { slug: string } }) {
-  console.log(params);
-
-  //   const post = blogs.find((blog) => blog.slug === slug);
   const post = blogs.find((blog) => blog.slug == params.slug);
-
-  console.log(post);
   return (
     <div className="mx-auto my-12 flex max-w-5xl flex-col gap-2 px-4">
       <div className="relative aspect-square h-64 overflow-hidden rounded-md shadow-sm">

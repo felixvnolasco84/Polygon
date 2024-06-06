@@ -21,7 +21,6 @@ const resend = new Resend("re_SWujrBS8_LVE4q4EQnF9F6wJvqtz7Q7fM");
 
 export async function sendEmail(data: any) {
   const { name, email, phoneNumber, service, project, budget, interest } = data;
-  console.log(data);
   try {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
@@ -37,7 +36,6 @@ export async function sendEmail(data: any) {
         interest,
       }),
     });
-    console.log(data);
     return { success: true, data };
   } catch (error) {
     return { success: false, error };

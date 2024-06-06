@@ -2,12 +2,12 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import Image from "next/image";
 
-import Tuborg from "@/public/images/Customers/Tuborg_Portada.png";
+import Tuborg from "@/videos/Tuborg_Proyecto_Video.mp4.json";
 import { Button } from "../ui/button";
-import { Plus, PlusCircle, PlusCircleIcon } from "lucide-react";
-import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
+import { Plus } from "lucide-react";
+import { neueLight, neueMedium, neueThin } from "@/styles/fonts";
+import VideoComponent from "../Video/VideoComponent";
 
 type CardProps = {
   title: string;
@@ -48,17 +48,14 @@ export default function GridFeaturedWorkTuborg() {
   return (
     <div className="grid-rows-12 grid grid-cols-6 gap-3">
       <div className="rows-span-12 relative col-span-6 aspect-square overflow-hidden rounded-md bg-gray-400 shadow-sm lg:col-span-3">
-        <Image
+        <VideoComponent
           className="h-full w-full object-cover object-center"
-          src={Tuborg}
-          alt="Tuborg"
-          fill
-          sizes="100vw"
+          video={Tuborg}
         />
       </div>
       <div className="grid-rows-9 col-span-6 grid grid-cols-12 gap-3 lg:col-span-3">
-        <div className="col-span-12 flex items-center justify-between gap-4 rounded-lg bg-[#F6F6F6] p-6 shadow-sm">
-          <div className="flex w-full flex-col justify-between lg:w-10/12">
+        <div className="col-span-12 flex items-center justify-between rounded-lg bg-[#F6F6F6] p-6 shadow-sm">
+          <div className="flex w-full flex-col justify-between lg:w-11/12">
             <CardHeader className="p-0">
               <CardTitle
                 className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
@@ -96,7 +93,7 @@ export default function GridFeaturedWorkTuborg() {
             <div
               className={`${neueMedium.className} text-xl text-[#150C14] xl:text-3xl font-normal`}
             >
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col lg:gap-2 xl:gap-4">
                 <h3 className="leading-none">Phil Vinall</h3>
                 <h3 className="leading-none">Jesús Baez (Zoé)</h3>
                 <h3 className="leading-none">Ángel Mosqueda (Zoé)</h3>

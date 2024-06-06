@@ -1,6 +1,6 @@
 "use client";
 
-import { neueXThin } from "@/styles/fonts";
+import { neueLight, neueXThin } from "@/styles/fonts";
 import { Button } from "../ui/button";
 import { Plus } from "lucide-react";
 import { useState } from "react";
@@ -14,7 +14,7 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
   const [showFeature, setShowFeature] = useState<boolean>(false);
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="opacity group flex items-center justify-between border-b border-gray-800/20 pb-4 xl:pb-8">
       <div className="flex w-full flex-col gap-4 lg:gap-12">
         <div
           className={`transition-all duration-500 ${
@@ -22,7 +22,7 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
           }`}
         >
           <h3
-            className={`${neueXThin.className} text-2xl lg:text-4xl xl:text-7xl text-[#150C14]`}
+            className={`${neueXThin.className} text-2xl lg:text-4xl xl:text-5xl text-[#150C14] opacity-50 group-hover:opacity-100`}
           >
             {item.title}
           </h3>
@@ -32,11 +32,11 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
             showFeature ? "block" : "hidden"
           }`}
         >
-          <ul className="flex flex-col lg:flex-row lg:gap-2">
+          <ul className="flex flex-col lg:flex-row lg:gap-4">
             {item.items.map((service, index) => (
               <li
                 key={index}
-                className={`${neueXThin.className} text-base lg:text-lg xl:text-2xl text-[#150C14]`}
+                className={`${neueLight.className} text-base lg:text-lg xl:text-2xl text-[#150C14]`}
               >
                 {service}
               </li>
@@ -52,10 +52,9 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
           onClick={() => setShowFeature(!showFeature)}
         >
           <Plus
-            size={24}
             className={`${
               showFeature && "bg-black text-white"
-            } rounded-full hover:bg-black hover:text-white`}
+            } rounded-full hover:bg-black hover:text-white h-4 w-4 lg:h-6 lg:w-6  transition-all duration-500`}
           />
         </Button>
       </div>

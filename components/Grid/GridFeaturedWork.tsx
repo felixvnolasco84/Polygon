@@ -2,12 +2,10 @@ import * as React from "react";
 
 import { cn } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
-import Image from "next/image";
 
-// import Indrive from "@/public/images/Customers/InDriveColors.png";
 import { Button } from "../ui/button";
-import { Plus, PlusCircle, PlusCircleIcon } from "lucide-react";
-import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
+import { Plus } from "lucide-react";
+import { neueLight, neueMedium, neueThin } from "@/styles/fonts";
 
 import InDrive from "@/videos/InDrive.mp4.json";
 import VideoComponent from "../Video/VideoComponent";
@@ -59,13 +57,6 @@ export default function GridFeaturedWork() {
             className="h-full w-full object-cover object-center"
             video={InDrive}
           />
-          {/* <Image
-            className="h-full w-full object-cover object-center"
-            src={Indrive}
-            alt="InDrive"
-            fill
-            sizes="100vw"
-          /> */}
         </div>
         <div className="grid-rows-9 col-span-6 grid grid-cols-12 gap-3 lg:col-span-3">
           <div className="col-span-12 flex items-center justify-between gap-4 rounded-lg bg-[#F6F6F6] p-6 shadow-sm">
@@ -74,9 +65,6 @@ export default function GridFeaturedWork() {
                 <CardTitle
                   className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
                 >
-                  {/* <CardTitle
-                  className={`${neueMedium.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
-                > */}
                   inDrive Martina la Peligrosa
                 </CardTitle>
                 <CardDescription
@@ -101,18 +89,18 @@ export default function GridFeaturedWork() {
             className="col-span-5 row-span-2"
           />
           <Card
-            title="+1.35%"
-            description="Engagement rate"
+            title="2M"
+            description="Esuchas en Spotify"
             className="col-span-7 row-span-2"
           />
           <Card
-            title="120%"
-            description="Aumento en ventas"
+            title="100K"
+            description="Interacciones TikTok Challenge"
             className="col-span-7 row-span-2"
           />
           <Card
-            title="30%"
-            description="Aumento en tráfico Social Media"
+            title="3.8M"
+            description="Views en Youtube"
             className="col-span-5 row-span-2"
           />
         </div>

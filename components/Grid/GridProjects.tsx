@@ -64,7 +64,6 @@ type GridProjectsProps = {
 };
 
 export default function GridProjects({ projects }: GridProjectsProps) {
-  console.log(projects[0]);
   return (
     <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
       {projects.length > 0 &&

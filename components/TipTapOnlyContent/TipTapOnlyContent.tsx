@@ -527,7 +527,6 @@ const TipTapOnlyContent = ({ onStateChange, content }: Props) => {
           if (editor) {
             onStateChange && onStateChange(editor.getHTML());
           }
-          console.log(editor.getHTML());
         }}
         editorProps={{
           attributes: {
