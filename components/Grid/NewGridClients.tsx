@@ -76,8 +76,8 @@ function TestimonialCard({ item }: TestimonialCardProps) {
 const NewGridClients = ({ items }: any) => {
   return (
     <div className="flex flex-col gap-y-8 lg:gap-y-12">
-      <h2 className={`${neueLight.className} text-2xl xl:text-4xl text-center`}>
-        Nuestros Clientes
+      <h2 className={`${neueLight.className} text-2xl text-center`}>
+        CLIENTES
       </h2>
       <div className="flex flex-col gap-3">
         {/* <div className="grid grid-cols-2 gap-3">
@@ -88,12 +88,12 @@ const NewGridClients = ({ items }: any) => {
         <div className="grid grid-cols-3 gap-3 lg:grid-cols-5">
           {items.map((item: any, index: any) => (
             <div className="flex aspect-square items-center justify-center rounded-md bg-[#F7F7F7] shadow-sm">
-              <div className="relative aspect-[16/9] h-12 w-3/4">
+              <div className={`relative h-16 w-3/4`}>
                 <Image
                   src={item.image}
                   alt=""
                   fill
-                  className="h-full w-full object-contain object-center"
+                  className={`${item.aspect == "square" ? "object-cover": "object-contain"} h-full w-full object-contain object-center`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>

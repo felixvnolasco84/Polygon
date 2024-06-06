@@ -80,7 +80,7 @@ export function ContactForm() {
           onSubmit={form.handleSubmit(onSubmit)}
           className={`${neueThin.className} flex w-full flex-col lg:items-center gap-5 rounded-2xl lg:w-10/12 xl:w-8/12 lg:flex-row`}
         >
-          <div className="flex w-full flex-col gap-8 bg-transparent lg:flex-row lg:rounded-2xl lg:bg-gray-400 lg:px-4 lg:py-2 lg:text-black-500">
+          <div className="flex w-full flex-col gap-8 rounded-md bg-transparent lg:flex-row lg:bg-gray-400 lg:px-4 lg:py-2 lg:text-black-500">
             <FormField
               control={form.control}
               name="name"

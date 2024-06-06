@@ -49,7 +49,7 @@ const Card = React.forwardRef<
     </CardHeader>
     <CardFooter className="pl-0">
       <p
-        className={`${neueThin.className} tracking-tight text-2xl text-[#150C14] xl:text-4xl font-light`}
+        className={`${neueLight.className} tracking-tight text-2xl text-[#150C14] xl:text-4xl font-light`}
       >
         {description}
       </p>

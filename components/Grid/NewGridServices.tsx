@@ -23,6 +23,7 @@ import Content_Solutions from "@/videos/Content Solutions.mp4";
 import Brand_and_Creative_Strategy from "@/videos/Brand & Creative Strategy.mp4";
 import { Plus } from "lucide-react";
 import { Button } from "../ui/button";
+import NewGridServicesItem from "./NewGridServicesItem";
 
 export const services = [
   {
@@ -481,17 +482,61 @@ export const services = [
   },
 ];
 
+
+const newServices = [
+  {
+    title: "Reputation",
+    items: [
+      "Purpose and ESG",
+      "Risk and Crisis",
+      "Online & Traditional Media",
+      "Thought Leadership",
+      "Event Marketing",
+      "Employer Ambassadors",
+    ],
+  },
+  {
+    title: "Transition and growth",
+    items: [
+      "Content Solutions",
+      "Brand and Creative Strategy",
+      "Social Media Marketing",
+      "Influencer Marketing",
+      "Online & Traditional Media",
+    ],
+  },
+  {
+    title: "Busieness Focus",
+    items: [
+      "Performance Marketing",
+      "SEO & Content",
+      "E-commerce",
+      "Data Analysis",
+      "Issues Management & Crisis",
+    ],
+  },
+  {
+    title: "Social Impact",
+    items: ["Creación y ejecución de campañas de alto impacto social"],
+  },
+];
+
 export default function NewGridServices() {
   return (
     <div className="flex flex-col gap-4 lg:gap-12">
-      <h2
+      {/* <h2
         className={`${neueXThin.className} text-2xl lg:text-5xl xl:text-6xl text-black-500`}
       >
         Experiencia, pasión y resultados en cada servicio.
-      </h2>
+      </h2> */}
 
-      <div className="flex flex-col gap-4">
-        {services.map((service: any, index: any) => (
+      <div className="flex flex-col gap-4 xl:gap-12">
+        {
+          newServices.map((service: any, index: any) => ( 
+            <NewGridServicesItem item={service} key={index} />
+          ))
+        }
+        {/* {services.map((service: any, index: any) => (
           <Link
             href={`/servicios/${service.slug}`}
             key={index}
@@ -512,7 +557,7 @@ export default function NewGridServices() {
               </Button>
             </div>
           </Link>
-        ))}
+        ))} */}
       </div>
     </div>
   );

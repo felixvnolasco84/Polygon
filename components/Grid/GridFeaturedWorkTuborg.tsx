@@ -94,7 +94,7 @@ export default function GridFeaturedWorkTuborg() {
         >
           <CardHeader>
             <div
-              className={`${neueMedium.className} text-xl text-[#150C14] xl:text-4xl font-normal`}
+              className={`${neueMedium.className} text-xl text-[#150C14] xl:text-3xl font-normal`}
             >
               <div className="flex flex-col gap-1">
                 <h3 className="leading-none">Phil Vinall</h3>

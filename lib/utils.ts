@@ -107,6 +107,12 @@ export const clients = [
     width: "201",
     height: "51",
   },
+  {
+    image: "/images/Logo/Clients/City-Market-Logo.png",
+    width: "201",
+    height: "51",
+    aspect: "square"
+  },
 ];
 
 import CitiMarket from "@/public/images/Customers/Citi_Market_Portada.png";
@@ -152,9 +158,9 @@ export const firstProjects: Project[] = [
   },
   {
     img: ZoePortada,
-    title: "Velur Zoe",
+    title: "Mitzu",
     description:
-      "Nos encargamos de la producción del video musical para la canción “Velur” del grupo Zoé.",
+      "Desde el desarrollo de estrategias digitales hasta la producción de contenido multimedia, gestionamos campañas publicitarias, optimizamos SEO, administramos redes sociales y realizamos activaciones BTL.",
   },
 ];
 

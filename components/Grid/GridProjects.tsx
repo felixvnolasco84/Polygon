@@ -4,7 +4,7 @@ import { cn, Project } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
-import { neueLight, neueMedium } from "@/styles/fonts";
+import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
 
 type CardProps = {
   img: StaticImageData;
@@ -39,7 +39,7 @@ const Card = React.forwardRef<
     </CardHeader>
     <CardFooter className="pl-0">
       <p
-        className={`${neueLight.className} text-xs text-[#150C14] xl:text-sm font-normal`}
+        className={`${neueThin.className} text-base text-[#150C14] xl:text-lg font-normal`}
       >
         {description}
       </p>
