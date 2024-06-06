@@ -7,8 +7,8 @@ export const POST = async (req: any) => {
     const body = await req.json();
     const customer = await prisma.customer.create({
       data: { ...body },
-    });    
-    return new NextResponse(JSON.stringify(customer));
+    });
+    return NextResponse.json(JSON.stringify(customer));
   } catch (err) {
     console.log(err);
     return new NextResponse(
