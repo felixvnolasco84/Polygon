@@ -120,17 +120,22 @@ import Copa from "@/public/images/Customers/COPA-Hat-Colors.png";
 import Bupa from "@/public/images/Customers/Bupa.png";
 import InDriveAcapulco from "@/public/images/Customers/Indrive_Acapulco_Portada.png";
 import Apetito from "@/public/images/Customers/Apetito_Portada.png";
-import ZoePortada from "@/public/images/Customers/Zoe_Portada.png";
-import LaComer from "@/public/images/Customers/LaComer_Instagram.png";
-import CCPortada from "@/public/images/Customers/CCP_Portada_Peanut.png";
-import BursaNetPortada from "@/public/images/Customers/Bursanet_Portada.png";
+// import ZoePortada from "@/public/images/Customers/Zoe_Portada.png";
+// import LaComer from "@/public/images/Customers/LaComer_Instagram.png";
+// import CCPortada from "@/public/images/Customers/CCP_Portada_Peanut.png";
+// import BursaNetPortada from "@/public/images/Customers/Bursanet_Portada.png";
+import MitzuVideo from '@/videos/Mitzu.mp4.json'
+import CitiMarketVideo from '@/videos/Repostería_01.mp4.json'
+import BursanetVideo from '@/videos/Bursanet.mp4.json'
+import LaComerVideo from '@/videos/LaComer_Video.mp4.json'
+import CCPVideo from '@/videos/CCP_Proyecto_Video.mp4.json'
 
 export const firstProjects: Project[] = [
   {
-    img: CitiMarket,
     title: "City Market",
     description:
       "Creamos contenido integral para City Market, incluyendo videos para redes sociales, recetas culinarias, y contenido de foto en tienda.",
+    video: CitiMarketVideo,
   },
   {
     img: Bupa,
@@ -157,28 +162,31 @@ export const firstProjects: Project[] = [
       "Desarrollamos la identidad, logotipo y estrategia de comunicación para Apetito, la innovadora app de delivery de Pane En Vía.",
   },
   {
-    img: ZoePortada,
     title: "Mitzu",
     description:
       "Desde el desarrollo de estrategias digitales hasta la producción de contenido multimedia, gestionamos campañas publicitarias, optimizamos SEO, administramos redes sociales y realizamos activaciones BTL.",
+    video: MitzuVideo,
   },
 ];
 
 export const secondProjects: Project[] = [
   {
-    img: LaComer,
+    // img: LaComer,
+    video:  LaComerVideo,
     title: "Instagram La Comer",
     description:
       "Nuestro equipo se enfoca en crear publicaciones atractivas y coherentes que resalten los productos, promociones y eventos de la tienda, fortaleciendo la conexión con los seguidores y potenciando el engagement en redes sociales.",
   },
   {
-    img: CCPortada,
+    // img: CCPortada,
+    video: CCPVideo,
     title: "Cuidado con el Perro",
     description:
       "Trabajamos el desarrollo y la producción de contenido para campañas, gestión de licencias, activaciones BTL, redes sociales y SEO.",
   },
   {
-    img: BursaNetPortada,
+    // img: BursaNetPortada,
+    video: BursanetVideo,
     title: "Vista Trader de Bursanet",
     description:
       "La nueva forma de monitorear comprar y vender acciones de Bursanet. Generamos el guión, diseño, animación y locución.",
@@ -186,7 +194,8 @@ export const secondProjects: Project[] = [
 ];
 
 export type Project = {
-  img: StaticImageData;
+  img?: StaticImageData;
   title: string;
   description: string;
+  video?: any;
 };

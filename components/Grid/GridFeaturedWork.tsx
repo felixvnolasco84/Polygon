@@ -4,10 +4,13 @@ import { cn } from "@/lib/utils";
 import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image from "next/image";
 
-import Indrive from "@/public/images/Customers/InDriveColors.png";
+// import Indrive from "@/public/images/Customers/InDriveColors.png";
 import { Button } from "../ui/button";
 import { Plus, PlusCircle, PlusCircleIcon } from "lucide-react";
 import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
+
+import InDrive from "@/videos/InDrive.mp4.json";
+import VideoComponent from "../Video/VideoComponent";
 
 type CardProps = {
   title: string;
@@ -52,21 +55,26 @@ export default function GridFeaturedWork() {
       </h2> */}
       <div className="grid-rows-12 grid grid-cols-6 gap-3">
         <div className="rows-span-12 relative col-span-6 aspect-square overflow-hidden rounded-md bg-gray-400 shadow-sm lg:col-span-3">
-          <Image
+          <VideoComponent
+            className="h-full w-full object-cover object-center"
+            video={InDrive}
+          />
+          {/* <Image
             className="h-full w-full object-cover object-center"
             src={Indrive}
             alt="InDrive"
             fill
             sizes="100vw"
-          />
+          /> */}
         </div>
         <div className="grid-rows-9 col-span-6 grid grid-cols-12 gap-3 lg:col-span-3">
           <div className="col-span-12 flex items-center justify-between gap-4 rounded-lg bg-[#F6F6F6] p-6 shadow-sm">
             <div className="flex w-full flex-col justify-between lg:w-10/12">
               <CardHeader className="p-0">
                 <CardTitle
-                  className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}>
-                {/* <CardTitle
+                  className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
+                >
+                  {/* <CardTitle
                   className={`${neueMedium.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
                 > */}
                   inDrive Martina la Peligrosa

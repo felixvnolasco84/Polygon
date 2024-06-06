@@ -2,7 +2,9 @@ import { neueLight } from "@/styles/fonts";
 import React from "react";
 import Link from "next/link";
 import ContactDialog from "../Dialog/ContactDialog";
-import PolygonLogo from "../Logo/PolygonLogo";
+// import PolygonLogo from "../Logo/PolygonLogo";
+import Logo from "@/public/images/Logo/polygonplus.png";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -12,7 +14,8 @@ export default function Header() {
           className="min-h-[22px] max-w-[90px] md:max-w-[110px] lg:max-w-[160px] xl:max-w-[180px]"
           href={"/"}
         >
-          <PolygonLogo fillColor="" />
+          <Image src={Logo} alt="Logo" />
+          {/* <PolygonLogo fillColor="" /> */}
         </Link>
         <div
           className={`${neueLight.className} hidden lg:flex text-2xl gap-[55px] items-center`}
