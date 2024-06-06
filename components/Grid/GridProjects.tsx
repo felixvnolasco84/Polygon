@@ -24,7 +24,7 @@ const Card = React.forwardRef<
     {...props}
   >
     <CardHeader className="space-y-2 p-0 lg:space-y-4">
-      <div className="relative aspect-square overflow-hidden rounded-md shadow-sm lg:aspect-[10/12]">
+      <div className="relative aspect-[10/12] overflow-hidden rounded-md shadow-sm">
         <>
           {video ? (
             <VideoComponent

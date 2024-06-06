@@ -14,7 +14,7 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
   const [showFeature, setShowFeature] = useState<boolean>(false);
 
   return (
-    <div className="opacity group flex items-center justify-between border-b border-gray-800/20 pb-4 xl:pb-8">
+    <div className="opacity group flex items-center justify-between border-b border-gray-800/20 py-4 xl:py-8">
       <div className="flex w-full flex-col gap-4 lg:gap-12">
         <div
           className={`transition-all duration-500 ${

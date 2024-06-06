@@ -61,7 +61,7 @@ export function ContactFormOnlyEmail() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={`${neueThin.className} flex items-center rounded-full bg-black opacity-60 hover:opacity-100 px-4 py-1.5 `}
+          className={`${neueThin.className} flex items-center rounded-full bg-black opacity-60 hover:opacity-100 px-3 lg:px-4 py-1.5`}
         >
           <FormField
             control={form.control}
@@ -83,7 +83,7 @@ export function ContactFormOnlyEmail() {
 
           <Button
             type="submit"
-            className="flex h-fit w-full items-center gap-2 rounded-full bg-white px-12 py-2 text-[#000000] hover:bg-[#F7F7F7] hover:text-[#000000] lg:w-fit"
+            className="flex h-fit w-full items-center gap-2 rounded-full bg-white px-0 py-1.5 text-[#000000] hover:bg-[#F7F7F7] hover:text-[#000000] lg:w-fit lg:px-12 lg:py-2"
             disabled={isLoading}
           >
             {isLoading ? (

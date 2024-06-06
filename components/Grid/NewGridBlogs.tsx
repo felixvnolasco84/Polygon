@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
 import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
@@ -41,18 +41,18 @@ const Card = React.forwardRef<
         />
       </Link>
       <CardTitle
-        // className={`${neueMedium.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
         className={`${neueMedium.className} text-sm lg-text-base text-[#150C14]`}
       >
         {title}
       </CardTitle>
     </CardHeader>
     <CardFooter className="pl-0">
-      <p
-        className={`${neueThin.className} tracking-tight text-2xl text-[#150C14] xl:text-4xl font-light`}
+      <Link
+        href={path}
+        className={`${neueThin.className} hover:underline tracking-tight text-2xl text-[#150C14] xl:text-4xl font-light`}
       >
         {description}
-      </p>
+      </Link>
     </CardFooter>
   </div>
 ));

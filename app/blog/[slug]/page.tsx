@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image";
-
 import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
 import VIDEO from "@/public/images/Customers/Video_Blog.png";
 import CONTENIDO from "@/public/images/Customers/Contenido_Blog.png";
 import TipTapOnlyContent from "@/components/TipTapOnlyContent/TipTapOnlyContent";
+import GridBlogsRecommendations from "@/components/Grid/GridBlogsRecommendations";
 
 type Blog = {
   title: string;
@@ -39,19 +39,22 @@ const blogs: Blog[] = [
 export default function page({ params }: { params: { slug: string } }) {
   const post = blogs.find((blog) => blog.slug == params.slug);
   return (
-    <div className="mx-auto my-12 flex max-w-5xl flex-col gap-2 px-4">
-      <div className="relative aspect-square h-64 overflow-hidden rounded-md shadow-sm">
-        <Image
-          src={post?.image as StaticImageData}
-          layout="fill"
-          objectFit="cover"
-          alt="Blog Image"
-        />
-        <div className="absolute bottom-0 left-0 right-0 flex h-full w-full items-end bg-[#150C14] bg-opacity-10">
-          <h1 className="p-8 text-2xl text-white">{post?.title}</h1>
+    <div className="mx-auto my-12 flex max-w-5xl flex-col gap-12 px-4">
+      <div className="flex flex-col gap-2">
+        <div className="relative aspect-square h-64 w-full overflow-hidden rounded-md shadow-sm">
+          <Image
+            src={post?.image as StaticImageData}
+            layout="fill"
+            objectFit="cover"
+            alt="Blog Image"
+          />
+          <div className="absolute bottom-0 left-0 right-0 flex h-full w-full items-end bg-[#150C14] bg-opacity-10">
+            <h1 className="p-8 text-2xl text-white">{post?.title}</h1>
+          </div>
         </div>
+        <TipTapOnlyContent content={post?.content as string} />
       </div>
-      <TipTapOnlyContent content={post?.content as string} />
+      <GridBlogsRecommendations currentBlog={params.slug} />
     </div>
   );
 }
