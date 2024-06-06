@@ -24,11 +24,11 @@ import { phoneRegex } from "@/components/Regex/Regex";
 import { Loader2 } from "lucide-react";
 import { Range } from "../ui/range";
 import { sendEmail } from "@/app/_actions";
-import { services } from "../Grid/GridServices";
 import SuccessMessage from "../Contact/SuccessMessage";
 import { Slider } from "@/components/ui/slider";
 import PolygonIsoLogo from "@/public/images/Logo/PolygonIsoLogo.png";
 import RangeSlider from "../RangeSlider/RangeSlider";
+import { services } from "@/lib/utils";
 
 export function QuoteForm({
   service,
@@ -47,8 +47,7 @@ export function QuoteForm({
   const title = service;
   const interests = services.filter((service) => service.title !== title);
 
-
-  function formatCurrency (value: number): string {
+  function formatCurrency(value: number): string {
     return new Intl.NumberFormat("en-US", {
       style: "decimal",
       minimumFractionDigits: 0,
@@ -91,7 +90,6 @@ export function QuoteForm({
   });
 
   async function onSubmit(data: z.infer<typeof FormSchema>) {
-  
     try {
       setIsLoading(true);
       await sendEmail(data);
