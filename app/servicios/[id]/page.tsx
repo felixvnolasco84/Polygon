@@ -1,15 +1,15 @@
 import { neueLight, neueThin, neueXThin } from "@/styles/fonts";
 import { QuoteForm } from "@/components/Interest/QuoteForm";
-import { services } from "@/components/Grid/GridServices";
 import Head from "next/head";
 import { Metadata, ResolvingMetadata } from "next";
 import SliderComponent from "@/components/Slider/SliderComponent";
 import BackgroundTemplate from "@/components/BackgroundTemplate/BackgroundTemplate";
+import { services } from "@/lib/utils";
 
-  type Props = {
-    params: { id: string };
-    searchParams: { [key: string]: string | string[] | undefined };
-  };
+type Props = {
+  params: { id: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
 export async function generateMetadata(
   { params, searchParams }: Props,
