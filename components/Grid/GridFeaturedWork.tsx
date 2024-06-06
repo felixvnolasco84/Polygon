@@ -29,7 +29,7 @@ const Card = React.forwardRef<
   >
     <CardHeader>
       <CardTitle
-        className={`${neueMedium.className} text-5xl text-[#150C14] xl:text-7xl font-normal`}
+        className={`${neueMedium.className} text-3xl  lg:text-4xl text-[#150C14] xl:text-6xl font-normal`}
       >
         {title}
       </CardTitle>

@@ -28,7 +28,7 @@ const Card = React.forwardRef<
   >
     <CardHeader>
       <CardTitle
-        className={`${neueMedium.className} text-5xl text-[#150C14] xl:text-7xl font-normal`}
+        className={`${neueMedium.className}  text-3xl  lg:text-4xl text-[#150C14] xl:text-6xl font-normal`}
       >
         {title}
       </CardTitle>
@@ -101,7 +101,7 @@ export default function GridFeaturedWorkTuborg() {
               </div>
             </div>
           </CardHeader>
-          <CardFooter>
+          <CardFooter className="p-4 lg:p-6">
             <p
               className={`${neueLight.className} text-xs text-[#150C14] xl:text-sm font-normal`}
             >
