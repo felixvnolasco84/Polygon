@@ -1,5 +1,4 @@
 import { neueThin, neueXThin } from "@/styles/fonts";
-import GridBlogs from "../Grid/GridBlogs";
 import FooterContact from "./FooterContact";
 import Link from "next/link";
 
