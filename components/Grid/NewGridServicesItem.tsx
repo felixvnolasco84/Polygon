@@ -43,7 +43,6 @@ export default function NewGridServicesItem({ item }: { item: Service }) {
             ))}
           </ul>
         </div>
-        <p className="float-left">dlenkdkel</p>
       </div>
 
       <div className="flex">
