@@ -1,11 +1,10 @@
-import * as React from "react";
-
 import { cn, Project } from "@/lib/utils";
-import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { CardFooter, CardHeader, CardTitle, Card } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
-import { neueLight, neueMedium, neueThin, neueXThin } from "@/styles/fonts";
+import { neueThin } from "@/styles/fonts";
 import VideoComponent from "../Video/VideoComponent";
+import { forwardRef } from "react";
 
 type CardProps = {
   img?: StaticImageData;
@@ -14,11 +13,11 @@ type CardProps = {
   video?: any;
 };
 
-const Card = React.forwardRef<
+const ProjectCard = forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardProps
 >(({ title, description, img, video, className, ...props }, ref) => (
-  <div
+  <Card
     ref={ref}
     className={cn(" rounded-lg  flex flex-col justify-start", className)}
     {...props}
@@ -35,6 +34,8 @@ const Card = React.forwardRef<
             <Image
               src={img || ""}
               className="h-full w-full object-cover object-center"
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt="InDrive"
               fill
             />
@@ -42,22 +43,21 @@ const Card = React.forwardRef<
         </>
       </div>
       <CardTitle
-        // className={`${neueMedium.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
         className={`${neueThin.className} text-2xl text-[#150C14] xl:text-3xl font-normal`}
       >
         {title}
       </CardTitle>
     </CardHeader>
-    <CardFooter className="pl-0">
+    <CardFooter className="p-0">
       <p
         className={`${neueThin.className} text-base text-[#150C14] xl:text-lg font-normal`}
       >
         {description}
       </p>
     </CardFooter>
-  </div>
+  </Card>
 ));
-Card.displayName = "Card";
+ProjectCard.displayName = "ProjectCard";
 
 type GridProjectsProps = {
   projects: Project[];
@@ -65,10 +65,10 @@ type GridProjectsProps = {
 
 export default function GridProjects({ projects }: GridProjectsProps) {
   return (
-    <div className="grid grid-cols-1 gap-x-3 gap-y-5 lg:grid-cols-3">
+    <section className="grid grid-cols-1 gap-x-3 gap-y-5 lg:grid-cols-3">
       {projects.length > 0 &&
         projects.map((project, index) => (
-          <Card
+          <ProjectCard
             key={index}
             img={project?.img}
             title={project.title}
@@ -76,6 +76,6 @@ export default function GridProjects({ projects }: GridProjectsProps) {
             video={project?.video}
           />
         ))}
-    </div>
+    </section>
   );
 }

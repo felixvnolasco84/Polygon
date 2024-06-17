@@ -61,7 +61,7 @@ export function ContactFormOnlyEmail() {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className={`${neueThin.className} flex items-center rounded-full bg-black opacity-60 hover:opacity-100 px-3 lg:px-4 py-1.5`}
+          className={`${neueThin.className} flex items-center rounded-full bg-black opacity-60 hover:opacity-100 px-3 lg:px-4 py-1.5 transition-opacity`}
         >
           <FormField
             control={form.control}

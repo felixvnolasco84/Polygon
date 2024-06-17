@@ -49,6 +49,7 @@ export default function CTATalkDialog({
             className={`h-fit cursor-pointer rounded-full ${bgButtonColor} p-2 group-hover:${bgButtonHoverColor} lg:block`}
             width={40}
             height={40}
+            
             src={rightArrow}
             alt=""
           />

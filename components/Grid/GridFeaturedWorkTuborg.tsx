@@ -1,7 +1,13 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card";
+import {
+  Card,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 import Tuborg from "@/videos/Tuborg_Proyecto_Video.mp4.json";
 import { Button } from "../ui/button";
@@ -14,11 +20,11 @@ type CardProps = {
   description: string;
 };
 
-const Card = React.forwardRef<
+const WorkCard = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardProps
 >(({ title, description, className, ...props }, ref) => (
-  <div
+  <Card
     ref={ref}
     className={cn(
       "bg-[#F6F6F6] rounded-lg shadow-sm flex flex-col justify-between",
@@ -40,13 +46,13 @@ const Card = React.forwardRef<
         {description}
       </p>
     </CardFooter>
-  </div>
+  </Card>
 ));
 Card.displayName = "Card";
 
 export default function GridFeaturedWorkTuborg() {
   return (
-    <div className="grid-rows-12 grid grid-cols-6 gap-3">
+    <section className="grid-rows-12 grid grid-cols-6 gap-3">
       <div className="rows-span-12 relative col-span-6 aspect-square overflow-hidden rounded-md bg-gray-400 shadow-sm lg:col-span-3">
         <VideoComponent
           className="h-full w-full object-cover object-center"
@@ -55,7 +61,7 @@ export default function GridFeaturedWorkTuborg() {
       </div>
       <div className="grid-rows-9 col-span-6 grid grid-cols-12 gap-3 lg:col-span-3">
         <div className="col-span-12 flex items-center justify-between rounded-lg bg-[#F6F6F6] p-6 shadow-sm">
-          <div className="flex w-full flex-col justify-between lg:w-11/12">
+          <Card className="flex w-full flex-col justify-between lg:w-11/12">
             <CardHeader className="p-0">
               <CardTitle
                 className={`${neueLight.className} font-light text-[#150C14] lg:text-2xl xl:text-4xl`}
@@ -70,7 +76,7 @@ export default function GridFeaturedWorkTuborg() {
                 durante 8 capítulos.
               </CardDescription>
             </CardHeader>
-          </div>
+          </Card>
           {/* <Button className="p-0" variant={"link"}>
             <Plus
               className="rounded-full hover:bg-black hover:text-white"
@@ -79,12 +85,12 @@ export default function GridFeaturedWorkTuborg() {
           </Button> */}
         </div>
 
-        <Card
+        <WorkCard
           title="08"
           description="Mini capítulos en Youtube"
           className="col-span-5 row-span-2"
         />
-        <div
+        <Card
           className={
             "bg-[#F6F6F6] rounded-lg shadow-sm flex flex-col justify-between col-span-7 row-span-2"
           }
@@ -108,18 +114,18 @@ export default function GridFeaturedWorkTuborg() {
               Productores Musicales
             </p>
           </CardFooter>
-        </div>
-        <Card
+        </Card>
+        <WorkCard
           title="1M"
           description="Reproducciones en Spotify"
           className="col-span-7 row-span-2"
         />
-        <Card
+        <WorkCard
           title="03"
           description="Canciones en Spotify"
           className="col-span-5 row-span-2"
         />
       </div>
-    </div>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
 import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
@@ -19,15 +19,11 @@ type CardProps = {
   path: string;
 };
 
-const Card = React.forwardRef<
+const BlogCard = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardProps
 >(({ title, description, img, path, className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(" rounded-lg  flex flex-col justify-start", className)}
-    {...props}
-  >
+  <Card ref={ref} className="flex flex-col justify-start rounded-lg" {...props}>
     <CardHeader className="space-y-2 p-0 lg:space-y-4">
       <Link
         href={path}
@@ -35,9 +31,11 @@ const Card = React.forwardRef<
       >
         <Image
           src={img}
-          className="h-full w-full object-cover object-center"
+          className="duration-30 h-full w-full object-cover object-center transition-opacity hover:opacity-50"
           alt="InDrive"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          loading="lazy"
         />
       </Link>
       <CardTitle
@@ -46,7 +44,7 @@ const Card = React.forwardRef<
         {title}
       </CardTitle>
     </CardHeader>
-    <CardFooter className="pl-0">
+    <CardFooter className="p-0">
       <Link
         href={path}
         className={`${neueThin.className} hover:underline tracking-tight text-2xl text-[#150C14] xl:text-4xl font-light`}
@@ -54,36 +52,36 @@ const Card = React.forwardRef<
         {description}
       </Link>
     </CardFooter>
-  </div>
+  </Card>
 ));
-Card.displayName = "Card";
+BlogCard.displayName = "BlogCard";
 
 export default function NewGridBlogs() {
   return (
-    <div className="flex flex-col gap-8 lg:gap-12">
-      <h4 className={`${neueLight.className} text-2xl  text-center`}>
+    <section className="flex flex-col gap-8 lg:gap-12">
+      <h2 className={`${neueLight.className} text-2xl  text-center`}>
         TENDENCIAS Y NOTICIAS
-      </h4>
+      </h2>
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
-        <Card
+        <BlogCard
           path="/blog/la-importancia-del-ux-ui-en-la-retencion-de-usuarios"
           img={UXUI}
           title="WEB DESIGN"
           description="La importancia del UX/UI en la retención de usuarios"
         />
-        <Card
+        <BlogCard
           path="/blog/guia-completa-de-seo-para-principiantes"
           img={CONTENIDO}
           title="SEO"
           description="Guía completa de SEO para principiantes"
         />
-        <Card
+        <BlogCard
           path="/blog/el-poder-del-video-marketing-en-las-redes-sociales"
           img={VIDEO}
           title="CONTENIDO"
           description="El Poder del Video Marketing en las Redes Sociales"
         />
       </div>
-    </div>
+    </section>
   );
 }

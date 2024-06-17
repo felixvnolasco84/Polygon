@@ -6,7 +6,7 @@ import Image from "next/image";
 import { ContactFormOnlyEmail } from "../Contact/ContactFormOnlyEmail";
 export default function CTABrainstorming() {
   return (
-    <div className="flex aspect-[10/12] items-center justify-center rounded-md bg-[#F7F7F7] px-4 py-8 shadow-sm lg:aspect-[16/9] lg:px-0 lg:py-0">
+    <section className="flex aspect-[10/12] items-center justify-center rounded-md bg-[#F7F7F7] px-4 py-8 shadow-sm lg:aspect-[16/9] lg:px-0 lg:py-0">
       <div className="flex flex-col items-center justify-between gap-6 lg:gap-12">
         <div className="flex w-full flex-col items-center justify-center gap-4 text-center lg:w-3/5">
           <div className="flex">
@@ -17,7 +17,8 @@ export default function CTABrainstorming() {
                 fill
                 className="h-full w-full object-cover object-center"
                 objectFit="cover"
-                sizes="100vw"
+                loading="lazy"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
             <div className="relative -ml-4 h-20 w-20 overflow-hidden rounded-full shadow-sm lg:h-24 lg:h-32 lg:w-24 lg:w-32">
@@ -27,7 +28,7 @@ export default function CTABrainstorming() {
                 fill
                 className="h-full w-full object-cover object-center"
                 objectFit="cover"
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
           </div>
@@ -45,6 +46,6 @@ export default function CTABrainstorming() {
         </div>
         <ContactFormOnlyEmail />
       </div>
-    </div>
+    </section>
   );
 }

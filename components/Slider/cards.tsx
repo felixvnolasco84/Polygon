@@ -232,9 +232,8 @@ export const Cards = [
       image: Copa,
       videoComponent: (
         <VideoComponent
-          hascontrols={true}
-          hasloop={false}
-          hasautoPlay={false}
+          
+          
           video={CopaVideo}
         />
       ),
@@ -256,9 +255,8 @@ export const Cards = [
       image: InDrive,
       videoComponent: (
         <VideoComponent
-          hascontrols={true}
-          hasloop={false}
-          hasautoPlay={false}
+          
+          
           video={InDriveVideo}
         />
       ),
@@ -274,9 +272,8 @@ export const Cards = [
       image: CCPTaqueria,
       videoComponent: (
         <VideoComponent
-          hascontrols={true}
-          hasloop={false}
-          hasautoPlay={false}
+          
+          
           video={CCPVideo}
         />
       ),
@@ -292,9 +289,8 @@ export const Cards = [
       image: Bursanet,
       videoComponent: (
         <VideoComponent
-          hascontrols={true}
-          hasloop={false}
-          hasautoPlay={false}
+          
+          
           video={BursanetVideo}
         />
       ),

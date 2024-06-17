@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function page() {
   return (
     <div
-      className={`${neueThin.className} px-4 flex flex-col gap-y-7 py-12 lg:flex lg:gap-12 text-justify`}
+      className={`${neueThin.className} px-4 flex flex-col gap-y-7 py-12 lg:flex lg:gap-12 text-justify container`}
     >
       <h1 className="text-2xl leading-relaxed lg:text-3xl xl:text-4xl">
         Política de Privacidad Polígono Estudio SA de CV

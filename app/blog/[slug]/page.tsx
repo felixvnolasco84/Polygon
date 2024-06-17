@@ -47,8 +47,9 @@ export default function page({ params }: { params: { slug: string } }) {
             layout="fill"
             objectFit="cover"
             alt="Blog Image"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          <div className="absolute bottom-0 left-0 right-0 flex h-full w-full items-end bg-[#150C14] bg-opacity-10">
+          <div className="absolute bottom-0 left-0 right-0 flex h-full w-full items-end bg-gradient-to-t from-[#0000007a] from-10% to-transparent">
             <h1 className="p-4 text-2xl text-white lg:p-8">{post?.title}</h1>
           </div>
         </div>

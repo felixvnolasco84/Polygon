@@ -35,6 +35,7 @@ import { EditorProvider } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import { Button } from "../ui/button";
 import { neueLight } from "@/styles/fonts";
+import { uploadFile } from "@/app/utils/uploadImage";
 
 type Props = {
   onStateChange?: (state: any) => void;
@@ -70,13 +71,13 @@ const TipTap = () => {
     editor.chain().focus().extendMarkRange("link").setLink({ href: url }).run();
   }, [editor]);
 
-  //   const addImage = async (e: any) => {
-  //     const urlFile = await uploadFile(e.target.files[0]);
+    const addImage = async (e: any) => {
+      const urlFile = await uploadFile(e.target.files[0]);
 
-  //     if (urlFile) {
-  //       editor?.chain().focus().setImage({ src: urlFile }).run();
-  //     }
-  //   };
+      if (urlFile) {
+        editor?.chain().focus().setImage({ src: urlFile }).run();
+      }
+    };
 
   if (!editor) {
     return (
@@ -257,7 +258,7 @@ const TipTap = () => {
           <Link2OffIcon className="h-4 w-4" />
         </Button>
 
-        {/* <input
+        <input
             type="file"
             style={{ display: "none" }}
             id="image"
@@ -269,7 +270,7 @@ const TipTap = () => {
             className="inline-flex h-10 items-center justify-center rounded-md px-4 py-2 text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
           >
             <ImageIcon className="h-4 w-4" />
-          </label> */}
+          </label>
 
         <Button
           type="button"

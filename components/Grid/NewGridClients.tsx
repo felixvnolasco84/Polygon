@@ -75,7 +75,7 @@ function TestimonialCard({ item }: TestimonialCardProps) {
 
 const NewGridClients = ({ items }: any) => {
   return (
-    <div className="flex flex-col gap-y-8 lg:gap-y-12">
+    <section className="flex flex-col gap-y-8 lg:gap-y-12">
       <h2 className={`${neueLight.className} text-2xl text-center`}>
         CLIENTES
       </h2>
@@ -95,13 +95,14 @@ const NewGridClients = ({ items }: any) => {
                   fill
                   className={`${item.aspect == "square" ? "object-cover": "object-contain"} h-full w-full object-contain object-center`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
                 />
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

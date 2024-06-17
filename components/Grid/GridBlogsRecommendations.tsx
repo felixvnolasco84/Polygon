@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-import { CardFooter, CardHeader, CardTitle } from "../ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
 import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
@@ -21,16 +21,13 @@ type CardProps = {
   slug: string;
 };
 
-const Card = React.forwardRef<
+const BlogCard = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CardProps
 >(({ title, description, img, path, className, isCurrent, ...props }, ref) => (
-  <div
+  <Card
     ref={ref}
-    className={cn(
-      `${isCurrent && "opacity-50"} rounded-lg  flex flex-col justify-start `,
-      className
-    )}
+    className={cn(`rounded-lg  flex flex-col justify-start `, className)}
     {...props}
   >
     <CardHeader className="space-y-2 p-0 lg:space-y-4">
@@ -40,7 +37,9 @@ const Card = React.forwardRef<
       >
         <Image
           src={img}
-          className={`h-full w-full object-cover object-center`}
+          className={` ${
+            isCurrent && "opacity-50"
+          } h-full w-full object-cover object-center transition-opacity hover:opacity-50`}
           alt="InDrive"
           fill
         />
@@ -49,7 +48,7 @@ const Card = React.forwardRef<
         {title}
       </CardTitle>
     </CardHeader>
-    <CardFooter className="pl-0">
+    <CardFooter className="p-0">
       <Link
         href={isCurrent ? "#" : path}
         className={`${neueThin.className} ${
@@ -59,9 +58,9 @@ const Card = React.forwardRef<
         {description}
       </Link>
     </CardFooter>
-  </div>
+  </Card>
 ));
-Card.displayName = "Card";
+BlogCard.displayName = "BlogCard";
 
 const blogs: CardProps[] = [
   {
@@ -92,16 +91,16 @@ export default function GridBlogsRecommendations({
 }: {
   currentBlog: string;
 }) {
-  console.log( currentBlog == blogs[0].slug);
+  console.log(currentBlog == blogs[0].slug);
 
   return (
     <div className="flex flex-col gap-8 lg:gap-12">
-      <h4 className={`${neueLight.className} text-2xl  text-center`}>
+      <h2 className={`${neueLight.className} text-2xl  text-center`}>
         TENDENCIAS Y NOTICIAS
-      </h4>
+      </h2>
       <div className="grid grid-cols-1 gap-3 lg:grid-cols-3">
         {blogs.map((blog) => (
-          <Card
+          <BlogCard
             key={blog.title}
             title={blog.title}
             path={blog.path}

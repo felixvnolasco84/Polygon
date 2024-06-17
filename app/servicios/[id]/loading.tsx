@@ -3,8 +3,9 @@ import { Loader } from "lucide-react";
 
 const loading = () => {
   return (
-    <div className="container flex h-screen w-full items-center justify-center">
+    <div role="status" aria-live="polite">
       <Loader className="h-12 w-12 animate-spin" />
+      <span className="sr-only">Cargando...</span>
     </div>
   );
 };

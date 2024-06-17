@@ -8,7 +8,7 @@ import Bupa from "@/public/images/Customers/Bupa.png";
 
 export default function CTAHeroSection() {
   return (
-    <div className="flex flex-col items-center justify-center gap-6 lg:gap-12">
+    <section className="flex flex-col items-center justify-center gap-6 lg:gap-12">
       <h1
         className={`${neueThin.className} text-2xl lg:text-4xl w-full lg:w-1/2 text-center`}
       >
@@ -23,7 +23,7 @@ export default function CTAHeroSection() {
             fill
             className="h-full w-full object-cover object-center"
             objectFit="cover"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="relative z-10 -ml-4 h-48 w-48 overflow-hidden rounded-2xl shadow-2xl lg:h-96 lg:w-96">
@@ -33,7 +33,7 @@ export default function CTAHeroSection() {
             fill
             className="h-full w-full object-cover object-center"
             objectFit="cover"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
         <div className="relative -ml-4 h-24 w-24 overflow-hidden rounded-2xl shadow-xl shadow-gray-200 lg:h-64 lg:w-64">
@@ -43,13 +43,13 @@ export default function CTAHeroSection() {
             fill
             className="h-full w-full object-cover object-center"
             objectFit="cover"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       </div>
       <div className="w-11/12 lg:w-full">
         <ContactFormOnlyEmail />
       </div>
-    </div>
+    </section>
   );
 }
