@@ -740,7 +740,7 @@ export const newServices = [
     ],
   },
   {
-    title: "Busieness Focus",
+    title: "Business Focus",
     items: [
       "Performance Marketing.",
       "SEO & Content.",
