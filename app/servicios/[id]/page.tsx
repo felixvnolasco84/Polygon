@@ -21,6 +21,9 @@ export async function generateMetadata(
   return {
     title: service?.pageTitle,
     description: service?.metadescription,
+    alternates: {
+      canonical: `https://www.polygonag.com/${service?.slug}`,
+    },
   };
 }
 

@@ -1,8 +1,30 @@
 import Image, { StaticImageData } from "next/image";
-
+import { Metadata, ResolvingMetadata } from "next";
 import TipTapOnlyContent from "@/components/TipTapOnlyContent/TipTapOnlyContent";
 import GridBlogsRecommendations from "@/components/Grid/GridBlogsRecommendations";
 import { blogs } from "@/lib/utils";
+
+type Props = {
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
+
+export async function generateMetadata(
+  { params, searchParams }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug;
+  console.log;
+  const post = blogs.find((post: any) => post.slug === slug);
+
+  return {
+    title: post?.title,
+    description: post?.description,
+    alternates: {
+      canonical: `https://www.polygonag.com/blog/${post?.slug}`,
+    },
+  };
+}
 
 export default function page({ params }: { params: { slug: string } }) {
   const post = blogs.find((blog) => blog.slug == params.slug);

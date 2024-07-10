@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "Polygon Agency - La agencia de marketing creativo que estabas buscando",
   description:
     "Nuestra agencia de marketing ofrece soluciones digitales de alto impacto en SEO, Paid Media, análisis de datos y estrategias creativas. ¡Contáctanos y déjanos ayudarte a alcanzar tus metas!",
+  alternates: {
+    canonical: "https://www.polygonag.com/",
+  },
 };
 
 const jsonLd: WithContext<Organization> = {
@@ -293,4 +296,3 @@ export default function RootLayout({
     </html>
   );
 }
- 

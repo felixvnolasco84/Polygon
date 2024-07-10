@@ -4,6 +4,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Polygon Agency - Políticas de Privacidad",
   description: "Conoce nuestras Políticas de Privacidad.",
+  alternates: {
+    canonical: "https://www.polygonag.com/politicas-de-privacidad",
+  }
 };
 
 export default function page() {
