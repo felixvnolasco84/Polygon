@@ -714,8 +714,7 @@ export const newServices = [
       "SEO & Content.",
       "Social Media Marketing.",
       "Online & Traditional Media.",
-      "BTL."
-
+      "BTL.",
     ],
   },
   {
@@ -755,3 +754,64 @@ export const newServices = [
   },
 ];
 
+import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
+import VIDEO from "@/public/images/Customers/Video_Blog.png";
+import CONTENIDO from "@/public/images/Customers/Contenido_Blog.png";
+
+type Blog = {
+  title: string;
+  description: string;
+  slug: string;
+  autor: string;
+  publisher: string;
+  publisherImageUrl: string;
+  imageUrl: string;
+  image: StaticImageData;
+  publishDate: string;
+  content: string;
+};
+
+export const blogs: Blog[] = [
+  {
+    title: "Guía completa de SEO para principiantes",
+    description:
+      "Aprende los conceptos básicos del SEO y cómo implementarlos para mejorar la visibilidad en línea.",
+    slug: "guia-completa-de-seo-para-principiantes",
+    autor: "Polygon Agency",
+    publisher: "Polygon Agency",
+    publisherImageUrl: "https://www.polygonag.com/images/Logo/Logo_Polygon.png",
+    imageUrl: "https://www.polygonag.com/images/Customers/Contenido_Blog.png",
+    image: CONTENIDO,
+    content:
+      "<p>El SEO (Search Engine Optimization) es una herramienta fundamental para cualquier estrategia de marketing digital. Esta guía está diseñada para principiantes que buscan comprender los conceptos básicos del SEO y cómo implementarlos para mejorar la visibilidad en línea.</p><p></p><h3><strong>Conceptos Básicos del SEO:</strong></h3><p><strong>Palabras Clave:</strong> La base del SEO. Identifica y utiliza palabras clave relevantes para tu negocio. </p><p><strong>SEO On-Page:</strong> Optimización de elementos dentro de tu sitio web, como títulos, meta descripciones y contenido. </p><p><strong>SEO Off-Page:</strong> Factores externos como enlaces entrantes (backlinks) que afectan el ranking de tu sitio. </p><p> </p><h3><strong>Técnicas Avanzadas de SEO:</strong></h3><p><strong>Optimización de Imágenes:</strong> Utiliza nombres de archivos descriptivos y textos alternativos (alt text). </p><p><strong>SEO Técnico:</strong> Asegúrate de que tu sitio web sea fácil de rastrear por los motores de búsqueda. </p><p><strong>Contenido de Calidad:</strong> Crea contenido valioso y relevante que responda a las preguntas de tus usuarios. </p><p></p><h3><strong>Herramientas Útiles para el SEO:</strong></h3><p><strong>Google Analytics:</strong> Para monitorear el tráfico del sitio web.</p><p><strong>Google Search Console:</strong> Para rastrear el rendimiento de tu sitio en los resultados de búsqueda. </p><p><strong>Ahrefs:</strong> Para analizar enlaces entrantes y la competencia. </p><p></p><p>El SEO es una estrategia continua que requiere tiempo y esfuerzo. Sin embargo, los beneficios de una mejor visibilidad en los motores de búsqueda y un aumento en el tráfico orgánico hacen que valga la pena la inversión.</p>",
+    publishDate: "2024-06-13",
+  },
+  {
+    title: "La importancia del UX/UI en la retención de usuarios",
+    description:
+      "Descubre cómo un buen diseño de UX/UI puede mejorar la retención de usuarios y la lealtad de los clientes.",
+    slug: "la-importancia-del-ux-ui-en-la-retencion-de-usuarios",
+    autor: "Polygon Agency",
+    publisher: "Polygon Agency",
+    publisherImageUrl: "https://www.polygonag.com/images/Logo/Logo_Polygon.png",
+    imageUrl: "https://www.polygonag.com/images/Customers/UX-UI-Blog.png",
+    image: UXUI,
+    content:
+      "<p>En el mundo digital actual, la experiencia del usuario (UX) y la interfaz de usuario (UI) juegan un papel crucial en la retención de usuarios. Un diseño eficiente no solo atrae a los usuarios, sino que también los mantiene comprometidos y satisfechos, lo que resulta en una mayor lealtad y conversiones.</p><p></p><h3><strong>El Impacto del UX/UI en la Retención de Usuarios:</strong></h3><p>Un buen diseño de UX/UI puede marcar la diferencia entre un usuario que abandona rápidamente tu sitio web y uno que se convierte en un cliente fiel. Las estadísticas muestran que el 88% de los usuarios son menos propensos a regresar a un sitio web después de una mala experiencia.</p><p></p><h3><strong>Elementos Clave de un Buen Diseño UX/UI:</strong></h3><p><strong>Facilidad de Navegación:</strong> Un sitio web debe ser intuitivo y fácil de navegar.</p><p><strong>Tiempo de Carga Rápido:</strong> Los usuarios esperan que las páginas se carguen en menos de 3 segundos.</p><p><strong>Diseño Atractivo y Coherente:</strong> Una apariencia visual atractiva y consistente mantiene a los usuarios interesados.</p><p><strong>Contenido Relevante y Claro:</strong> La información debe ser fácil de encontrar y comprender.</p><p></p><h3><strong>Estudios de Caso de Sitios Web con Excelente UX/UI:</strong></h3><p><strong>Apple:</strong> Con su diseño minimalista y navegación intuitiva, Apple proporciona una experiencia de usuario sin problemas.</p><p><strong>Airbnb:</strong> Con su interfaz limpia y procesos de reserva sencillos, Airbnb ofrece una experiencia de usuario satisfactoria.</p><p></p><p>Invertir en un buen diseño de UX/UI no solo mejora la experiencia del usuario, sino que también aumenta la retención y la lealtad de los clientes. A medida que el entorno digital continúa evolucionando, la importancia del UX/UI solo seguirá creciendo.</p>",
+    publishDate: "2024-06-13",
+  },
+  {
+    title: "El Poder del Video Marketing en las Redes Sociales",
+    description:
+      "Descubre cómo el video marketing puede aumentar el engagement y las conversiones en las redes sociales.",
+    slug: "el-poder-del-video-marketing-en-las-redes-sociales",
+    autor: "Polygon Agency",
+    publisher: "Polygon Agency",
+    publisherImageUrl: "https://www.polygonag.com/images/Logo/Logo_Polygon.png",
+    imageUrl: "https://www.polygonag.com/images/Customers/Video_Blog.png",
+    image: VIDEO,
+    content:
+      "<p>El video marketing se ha convertido en una herramienta poderosa en el arsenal de cualquier especialista en marketing digital. Los videos no solo aumentan el engagement en las redes sociales, sino que también mejoran la retención de información y las conversiones.</p><p></p><h3><strong>Beneficios del Video Marketing:</strong></h3><p><strong>Mayor Engagement:</strong> Los videos tienden a recibir más likes, comentarios y compartidos que otros tipos de contenido.</p><p><strong>Mejor Retención de Información:</strong> Los usuarios retienen el 95% de un mensaje cuando lo ven en un video, en comparación con solo el 10% cuando lo leen en texto.</p><p><strong>Aumento de Conversiones: </strong>Las páginas de destino con videos pueden aumentar las conversiones en un 80% .</p><p></p><h3><strong>Estrategias para el Video Marketing en Redes Sociales:</strong></h3><p><strong>Videos Cortos y Concisos:</strong> Mantén los videos cortos para captar la atención rápidamente.</p><p><strong>Historias en Instagram y Facebook:</strong> Utiliza las historias para contenido detrás de escenas y promociones rápidas.</p><p><strong>Contenido en Vivo:</strong> Los videos en vivo pueden generar un alto nivel de interacción y participación en tiempo real.</p><p> </p><h3><strong>Ejemplos de Campañas Exitosas:</strong></h3><p><strong>GoPro: </strong>Con su contenido generado por usuarios, GoPro ha construido una comunidad sólida y comprometida.</p><p><strong>Tasty de BuzzFeed:</strong> Sus videos de recetas rápidas y fáciles han alcanzado millones de visualizaciones y compartidos.</p><p></p><p>El video marketing es una estrategia esencial para cualquier marca que busque aumentar su presencia y engagement en las redes sociales. Con la planificación y ejecución adecuadas, los videos pueden transformar la manera en que te conectas con tu audiencia.</p>",
+    publishDate: "2024-06-13",
+  },
+];
