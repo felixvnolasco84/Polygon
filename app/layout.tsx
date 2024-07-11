@@ -1,4 +1,5 @@
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { WithContext, Organization, ItemList } from "schema-dts";
 import { Analytics } from "@vercel/analytics/react";
@@ -274,8 +275,9 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
-        <SpeedInsights />
-        <Analytics />
+        <GoogleAnalytics gaId="G-PQPW5C5R4W" />
+        {/* <SpeedInsights />
+        <Analytics /> */}
         <Toaster />
         <Footer />
         <Script
