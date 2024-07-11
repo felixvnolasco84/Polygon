@@ -57,7 +57,6 @@ export default function GridFeaturedWorkTuborg() {
         <VideoComponent
           className="h-full w-full object-cover object-center"
           video={Tuborg}
-          // poster="https://www.polygonag.com/images/Customers/Tuborg_Portada.png"
         />
       </div>
       <div className="grid-rows-9 col-span-6 grid grid-cols-12 gap-3 lg:col-span-3">
