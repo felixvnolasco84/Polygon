@@ -4,6 +4,7 @@ import Video from "next-video";
 type VideoComponentProps = {
   video: any;
   className?: string;
+  poster?: string;
 };
 
 export default function VideoComponent({
@@ -14,7 +15,6 @@ export default function VideoComponent({
     <Video
       minResolution="1080p"
       maxResolution="1080p"
-      accentColor="ffffff"
       loop={true}
       autoPlay={true}
       muted={true}

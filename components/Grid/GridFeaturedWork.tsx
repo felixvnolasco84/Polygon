@@ -51,9 +51,6 @@ Card.displayName = "Card";
 export default function GridFeaturedWork() {
   return (
     <section className="flex flex-col gap-12">
-      {/* <h2 className={`${neueLight.className} text-2xl xl:text-4xl text-center`}>
-        Nuestro Trabajo
-      </h2> */}
       <div className="grid-rows-12 grid grid-cols-6 gap-3">
         <div className="rows-span-12 relative col-span-6 aspect-square overflow-hidden rounded-md bg-gray-400 shadow-sm lg:col-span-3">
           <VideoComponent

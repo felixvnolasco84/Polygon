@@ -24,6 +24,7 @@ export default function CTAHeroSection() {
             className="h-full w-full object-cover object-center"
             objectFit="cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
         </div>
         <div className="relative z-10 -ml-4 h-48 w-48 overflow-hidden rounded-2xl shadow-2xl lg:h-96 lg:w-96">
@@ -34,6 +35,7 @@ export default function CTAHeroSection() {
             className="h-full w-full object-cover object-center"
             objectFit="cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
         </div>
         <div className="relative -ml-4 h-24 w-24 overflow-hidden rounded-2xl shadow-xl shadow-gray-200 lg:h-64 lg:w-64">
@@ -44,10 +46,11 @@ export default function CTAHeroSection() {
             className="h-full w-full object-cover object-center"
             objectFit="cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            loading="eager"
           />
         </div>
       </div>
-      <div className="w-11/12 lg:w-full">
+    <div className="w-11/12 lg:w-full">
         <ContactFormOnlyEmail />
       </div>
     </section>
