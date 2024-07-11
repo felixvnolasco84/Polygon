@@ -250,6 +250,7 @@ video {
 mux-player {
   --media-object-fit: cover;
   --media-object-position: center;
+  --media-background-color: transparent;
 }
 
 

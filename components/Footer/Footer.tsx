@@ -26,11 +26,13 @@ export default function Footer() {
           >
             Contáctanos
           </p>
-          <p
-            className={`${neueXThin.className} text-lg lg:text-xl  text-white leading-none`}
-          >
-            hola@polygonag.com
-          </p>
+          <a href="mailto:hola@polygonag.com">
+            <p
+              className={`${neueXThin.className} text-lg lg:text-xl  text-white leading-none`}
+            >
+              hola@polygonag.com
+            </p>
+          </a>
         </div>
         <Link
           href={"/politicas-de-privacidad"}
