@@ -2,16 +2,16 @@ import { type ClassValue, clsx } from "clsx";
 import { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 
-import Data_Analysis from "@/public/images/Hero/Data Analysis.jpg";
-import Data_Analysis_Mobile from "@/public/images/Hero/Data-Analysis_Mobile.jpg";
+import Data_Analysis from "@/public/images/Hero/Data Analysis.webp";
+import Data_Analysis_Mobile from "@/public/images/Hero/Data-Analysis_Mobile.webp";
 
-import Key_Web_Development from "@/public/images/Hero/Key-Web-Development.jpg";
-import Key_Web_Development_Mobile from "@/public/images/Hero/Key-Web-Development_Mobile.jpg";
+import Key_Web_Development from "@/public/images/Hero/Key-Web-Development.webp";
+import Key_Web_Development_Mobile from "@/public/images/Hero/Key-Web-Development_Mobile.webp";
 
-import Paid_Media_Marketing from "@/public/images/Hero/Paid Media Marketing.jpg";
-import Paid_Media_Marketing_Mobile from "@/public/images/Hero/Paid-Media-Marketing_Mobile.jpg";
+import Paid_Media_Marketing from "@/public/images/Hero/Paid Media Marketing.webp";
+import Paid_Media_Marketing_Mobile from "@/public/images/Hero/Paid-Media-Marketing_Mobile.webp";
 
-import SEO_and_Content from "@/public/images/Hero/SEO & Content.jpg";
+import SEO_and_Content from "@/public/images/Hero/SEO & Content.webp";
 import SEO_and_Content_Mobile from "@/public/images/Hero/SEO-&-Content_Mobile.jpg";
 
 import Social_Media_Marketing from "@/public/images/Hero/Social Media Marketing.jpg";
@@ -134,9 +134,9 @@ export const clients = [
 ];
 
 import Copa from "@/videos/Copa.mp4.json";
-import Bupa from "@/public/images/Customers/Bupa.png";
+import Bupa from "@/public/images/Customers/Bupa.webp";
 import InDriveAcapulco from "@/videos/inDrive_Cancún_CGI.mp4.json";
-import Apetito from "@/public/images/Customers/Apetito_Portada.png";
+import Apetito from "@/public/images/Customers/Apetito_Portada.webp";
 
 import MitzuVideo from "@/videos/Mitzu.mp4.json";
 import CitiMarketVideo from "@/videos/Repostería_01.mp4.json";
@@ -754,9 +754,9 @@ export const newServices = [
   },
 ];
 
-import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
-import VIDEO from "@/public/images/Customers/Video_Blog.png";
-import CONTENIDO from "@/public/images/Customers/Contenido_Blog.png";
+import UXUI from "@/public/images/Customers/UX-UI-Blog.webp";
+import VIDEO from "@/public/images/Customers/Video_Blog.webp";
+import CONTENIDO from "@/public/images/Customers/Contenido_Blog.webp";
 
 type Blog = {
   title: string;

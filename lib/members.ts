@@ -1,27 +1,27 @@
 
 
-import alba from "@/public/images/Members/alba_rodriguez.png";
-import cid from "@/public/images/Members/cid_galvan.png";
-import edgar from "@/public/images/Members/edgar_magana.png";
-import eduardo from "@/public/images/Members/eduardo_ruiz.png";
-import elena from "@/public/images/Members/elena_gas.png";
-import felipe from "@/public/images/Members/felipe_madero.png";
-import felix from "@/public/images/Members/felix_nolasco.png";
-import fernando from "@/public/images/Members/fernando_herrera.png";
-import francisco from "@/public/images/Members/francisco_hernandez.png";
-import gala from "@/public/images/Members/gala_gallegos.png";
-import jimena from "@/public/images/Members/jimena_rivera.png";
-import liliana from "@/public/images/Members/liliana_moctezuma.png";
-import lorena from "@/public/images/Members/lorena_g.png";
-import mariana from "@/public/images/Members/mariana_recinas.png";
-import nicolas from "@/public/images/Members/nicolas_sotelo.png";
-import nicole from "@/public/images/Members/nicole_woodman.png";
-import pablo from "@/public/images/Members/pablo_nogueron.png";
-import pamela from "@/public/images/Members/pamela_ramirez.png";
-import rodrigo from "@/public/images/Members/rodrigo_ogarrio.png";
-import jose from "@/public/images/Members/jose_betancourt.png";
-import antonio from "@/public/images/Members/antonio_tamayo.png";
-import tomas from "@/public/images/Members/tomas_saiz.png";
+import alba from "@/public/images/Members/alba_rodriguez.webp";
+import cid from "@/public/images/Members/cid_galvan.webp";
+import edgar from "@/public/images/Members/edgar_magana.webp";
+import eduardo from "@/public/images/Members/eduardo_ruiz.webp";
+import elena from "@/public/images/Members/elena_gas.webp";
+import felipe from "@/public/images/Members/felipe_madero.webp";
+import felix from "@/public/images/Members/felix_nolasco.webp";
+import fernando from "@/public/images/Members/fernando_herrera.webp";
+import francisco from "@/public/images/Members/francisco_hernandez.webp";
+import gala from "@/public/images/Members/gala_gallegos.webp";
+import jimena from "@/public/images/Members/jimena_rivera.webp";
+import liliana from "@/public/images/Members/liliana_moctezuma.webp";
+import lorena from "@/public/images/Members/lorena_g.webp";
+import mariana from "@/public/images/Members/mariana_recinas.webp";
+import nicolas from "@/public/images/Members/nicolas_sotelo.webp";
+import nicole from "@/public/images/Members/nicole_woodman.webp";
+import pablo from "@/public/images/Members/pablo_nogueron.webp";
+import pamela from "@/public/images/Members/pamela_ramirez.webp";
+import rodrigo from "@/public/images/Members/rodrigo_ogarrio.webp";
+import jose from "@/public/images/Members/jose_betancourt.webp";
+import antonio from "@/public/images/Members/antonio_tamayo.webp";
+import tomas from "@/public/images/Members/tomas_saiz.webp";
 
 export const members = [
   {

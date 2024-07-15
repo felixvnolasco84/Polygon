@@ -1,7 +1,7 @@
 import { neueLight, neueRoman } from "@/styles/fonts";
 
-import felix from "@/public/images/Members/felix_nolasco.png";
-import alba from "@/public/images/Members/alba_rodriguez.png";
+import felix from "@/public/images/Members/felix_nolasco.webp";
+import alba from "@/public/images/Members/alba_rodriguez.webp";
 import Image from "next/image";
 import { ContactFormOnlyEmail } from "../Contact/ContactFormOnlyEmail";
 export default function CTABrainstorming() {
