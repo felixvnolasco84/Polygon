@@ -2,9 +2,9 @@ import { neueThin } from "@/styles/fonts";
 import Image from "next/image";
 import { ContactFormOnlyEmail } from "../Contact/ContactFormOnlyEmail";
 
-import Copa from "@/public/images/Customers/COPA-Hat-Colors.png";
-import Indrive from "@/public/images/Customers/InDriveColors.png";
-import Bupa from "@/public/images/Customers/Bupa.png";
+import Copa from "@/public/images/Customers/COPA-Hat-Colors.webp";
+import Indrive from "@/public/images/Customers/InDriveColors.webp";
+import Bupa from "@/public/images/Customers/Bupa.webp";
 
 export default function CTAHeroSection() {
   return (

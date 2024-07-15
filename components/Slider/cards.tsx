@@ -1,10 +1,10 @@
 import { useState } from "react";
 import clsx from "clsx";
 import { neueThin, neueXThin } from "@/styles/fonts";
-import Bupa from "@/public/images/Customers/Bupa.png";
-import InDrive from "@/public/images/Customers/InDrive.png";
-import Bursanet from "@/public/images/Customers/Bursanet.png";
-import CCP from "@/public/images/Customers/CCP.png";
+import Bupa from "@/public/images/Customers/Bupa.webp";
+import InDrive from "@/public/images/Customers/InDrive.webp";
+import Bursanet from "@/public/images/Customers/Bursanet.webp";
+import CCP from "@/public/images/Customers/CCP_Portada_Peanut.webp";
 import CCPTaqueria from "@/public/images/Customers/CCP-Taqueria.png";
 import Copa from "@/public/images/Customers/Copa.png";
 import Image from "next/image";

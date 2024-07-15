@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 import { Card, CardFooter, CardHeader, CardTitle } from "../ui/card";
 import Image, { StaticImageData } from "next/image";
 
-import UXUI from "@/public/images/Customers/UX-UI-Blog.png";
+import UXUI from "@/public/images/Customers/UX-UI-Blog.webp";
 
-import VIDEO from "@/public/images/Customers/Video_Blog.png";
-import CONTENIDO from "@/public/images/Customers/Contenido_Blog.png";
+import VIDEO from "@/public/images/Customers/Video_Blog.webp";
+import CONTENIDO from "@/public/images/Customers/Contenido_Blog.webp";
 
 import { neueLight, neueMedium, neueThin } from "@/styles/fonts";
 import Link from "next/link";

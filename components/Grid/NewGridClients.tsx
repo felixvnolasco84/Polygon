@@ -1,8 +1,8 @@
 import { neueLight, neueMedium, neueXThin } from "@/fonts";
 import Image, { StaticImageData } from "next/image";
 
-import alba_rodriguez from "@/public/images/Members/alba_rodriguez.png";
-import felix from "@/public/images/Members/felix_nolasco.png";
+import alba_rodriguez from "@/public/images/Members/alba_rodriguez.webp";
+import felix from "@/public/images/Members/felix_nolasco.webp";
 
 const testimonials = [
   {
