@@ -21,11 +21,11 @@ export const POST = async (req: any) => {
       })
       .then((message: any) => {
         console.log("Mensaje enviado con SID: " + message.sid);
-        return NextResponse.json(JSON.stringify(message));        
+        return new NextResponse(JSON.stringify({message: message}));        
       } )
       .catch((error: any) => {
         console.log(error);
-        return NextResponse.json(JSON.stringify({ message: error }));
+        return new NextResponse(JSON.stringify({ message: error }));
       });
   } catch (err) {
     console.log(err);
