@@ -16,8 +16,8 @@ export const POST = async (req: any) => {
     await client.messages
       .create({
         body: "¡Hola! Este es un mensaje enviado desde la API de WhatsApp de Twilio.",
-        from: "whatsapp:+525578136020", // Este es un número de WhatsApp de Twilio
-        to: "whatsapp:+525543897808", // Reemplázalo con el número de WhatsApp del destinatario 
+        from: "whatsapp:+5215564598976", // Este es un número de WhatsApp de Twilio
+        to: "whatsapp:+525543897808", // Reemplázalo con el número de WhatsApp del destinatario
       })
       .then((message: any) => {
         console.log("Mensaje enviado con SID: " + message.sid);
