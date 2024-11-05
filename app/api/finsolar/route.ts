@@ -19,8 +19,14 @@ export const POST = async (req: any) => {
         from: "whatsapp:+525578136020", // Este es un número de WhatsApp de Twilio
         to: "whatsapp:+525578136020", // Reemplázalo con el número de WhatsApp del destinatario
       })
-      .then((message: any) => console.log("Mensaje enviado con SID: " + message.sid))
-      .catch((error: any) => console.error("Error al enviar mensaje: ", error));
+      .then((message: any) => {
+        console.log("Mensaje enviado con SID: " + message.sid);
+        return NextResponse.json(JSON.stringify(message));        
+      } )
+      .catch((error: any) => {
+        console.log(error);
+        return NextResponse.json(JSON.stringify({ message: error }));
+      });
   } catch (err) {
     console.log(err);
     return new NextResponse(
