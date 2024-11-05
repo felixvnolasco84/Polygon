@@ -19,7 +19,7 @@ export const POST = async (req: any) => {
       .create({
         contentSid: templateSID,
         from: "whatsapp:+5215564598976", // Este es un número de WhatsApp de Twilio
-        to: "whatsapp:+525543897808", // Reemplázalo con el número de WhatsApp del destinatario
+        to: "whatsapp:+525578136020", // Reemplázalo con el número de WhatsApp del destinatario
       })
       .then((message: any) => {
         console.log("Mensaje enviado con SID: " + message.sid);
