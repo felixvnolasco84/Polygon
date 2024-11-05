@@ -13,7 +13,7 @@ export const POST = async (req: any) => {
     console.log(req.body);
 
     // Envía el mensaje
-    client.messages
+    await client.messages
       .create({
         body: "¡Hola! Este es un mensaje enviado desde la API de WhatsApp de Twilio.",
         from: "whatsapp:+525578136020", // Este es un número de WhatsApp de Twilio
