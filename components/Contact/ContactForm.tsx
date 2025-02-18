@@ -12,15 +12,14 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "../ui/input";
-import rightArrow from "@/public/images/rightArrow.svg";
-import Image from "next/image";
 import React, { useState } from "react";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { phoneRegex } from "@/components/Regex/Regex";
 import { neueThin } from "@/styles/fonts";
-import { sendContactEmail, sendEmail } from "@/app/_actions";
+import { sendContactEmail } from "@/app/_actions";
 import SuccessMessage from "./SuccessMessage";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
   name: z
@@ -38,6 +37,7 @@ const FormSchema = z.object({
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showModalMessage, setShowModalMessage] = useState<boolean>(false);
+  const router = useRouter();
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -58,7 +58,8 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
       if (response.ok) {
-        setShowModalMessage(true);
+        router.push("/thankyou");
+        // setShowModalMessage(true);
         setIsLoading(false);
       }
     } catch (error) {

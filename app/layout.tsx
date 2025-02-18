@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.polygonag.com/",
   },
+  metadataBase: new URL("https://www.polygonag.com/"),
 };
 
 const jsonLd: WithContext<Organization> = {

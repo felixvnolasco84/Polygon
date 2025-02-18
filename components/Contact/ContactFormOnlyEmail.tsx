@@ -18,6 +18,7 @@ import { useToast } from "@/components/ui/use-toast";
 import { neueThin } from "@/styles/fonts";
 import { sendContactEmail } from "@/app/_actions";
 import SuccessMessage from "./SuccessMessage";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
   email: z.string().email({ message: "Correo electrónico Inválido" }),
@@ -27,6 +28,8 @@ export function ContactFormOnlyEmail() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [showModalMessage, setShowModalMessage] = useState<boolean>(false);
   const { toast } = useToast();
+
+  const router = useRouter(); 
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -39,9 +42,9 @@ export function ContactFormOnlyEmail() {
     try {
       setIsLoading(true);
       const response = await sendContactEmail(data);
-
       if (response.success) {
         setShowModalMessage(true);
+        router.push("/thankyou");
       }
     } catch (error) {
       console.log(error);
