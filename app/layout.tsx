@@ -1,8 +1,6 @@
 import "./globals.css";
-import { GoogleAnalytics } from "@next/third-parties/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { WithContext, Organization, ItemList } from "schema-dts";
-import { Analytics } from "@vercel/analytics/react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { Toaster } from "@/components/ui/toaster";
@@ -277,6 +275,7 @@ export default function RootLayout({
         <Header />
         {children}
         <GoogleAnalytics gaId="G-PQPW5C5R4W" />
+        <GoogleTagManager gtmId="GTM-PJZ693SP" />
         {/* <SpeedInsights />
         <Analytics /> */}
         <Toaster />
