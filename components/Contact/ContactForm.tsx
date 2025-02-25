@@ -20,6 +20,7 @@ import { neueThin } from "@/styles/fonts";
 import { sendContactEmail } from "@/app/_actions";
 import SuccessMessage from "./SuccessMessage";
 import { useRouter } from "next/navigation";
+import { sendGTMEvent } from "@next/third-parties/google";
 
 const FormSchema = z.object({
   name: z
@@ -59,6 +60,7 @@ export function ContactForm() {
       });
       if (response.ok) {
         router.push("/thankyou");
+        sendGTMEvent({ event: "conversion_event_submit_lead_form" });
         // setShowModalMessage(true);
         setIsLoading(false);
       }
