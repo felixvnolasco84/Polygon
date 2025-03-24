@@ -25,6 +25,7 @@ export async function sendEmail(data: any) {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
       to: ["hola@polygonag.com"],
+      cc: ["felipe@polygonag.com"],
       subject: "Nuevo contacto",
       react: ContactFormEmail({
         name,
@@ -52,6 +53,7 @@ export async function sendContactEmail(data: any) {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
       to: ["hola@polygonag.com"],
+      cc: ["felipe@polygonag.com"],
       subject: "Nuevo contacto",
       react: SimpleContactEmail({
         name,
@@ -75,6 +77,7 @@ export async function sendContactOnlyEmail(data: any) {
     const data = await resend.emails.send({
       from: "hola@polygonag.com",
       to: ["hola@polygonag.com"],
+      cc: ["felipe@polygonag.com"],
       subject: "Nuevo contacto",
       react: SimpleContactOnlyEmail({
         email,
