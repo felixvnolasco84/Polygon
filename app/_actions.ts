@@ -17,7 +17,7 @@ export async function addEntry(data: any) {
   }
 }
 
-const resend = new Resend("re_SWujrBS8_LVE4q4EQnF9F6wJvqtz7Q7fM");
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function sendEmail(data: any) {
   const { name, email, phoneNumber, service, project, budget, interest } = data;
